@@ -56,7 +56,7 @@ jsBtn.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.cards-box');
     const projectsSection = document.querySelector('.projects-section');
-    const offset = 300;
+    const offset = 100;
 
     function onScroll() {
         const sectionTop = projectsSection.getBoundingClientRect().top;
@@ -75,14 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', onScroll);
     onScroll();
 });
-// Projects Counter // 
-const proCount = document.createElement('p');
-proCount.innerText = `(${allCards.length})`
-proCount.style = "color:white; font-size: .7rem; position:absolute; top: 25%; right: 25px;";
-stickyTitle.insertBefore(proCount, stickyTitle.children[1]);
 
-
-
+// Typing Text Animation // 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
     const words = ["Wedding Ceremony.", "Custom Event.", "Bar / Bat Mitzvah.", "Hina Ceremony.", "Catering Menu."];
@@ -111,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     startAnimation();
 });
+// Typing Text Animation // 
 
-
-
+// Home Background Image Rotation // 
 const homeSection = document.querySelector('.home-section');
 const basePath = window.location.pathname.includes('alegro-events')
     ? '/alegro-events/public/'
@@ -133,10 +127,10 @@ setInterval(() => {
     currentHomePic = (currentHomePic + 1) % images.length;
     homeSection.style.backgroundImage = `url('${basePath}${images[currentHomePic]}')`;
 }, 4000); 
+// Home Background Image Rotation // 
 
 
-
-/* Load Gallry Images */
+// Load Gallery Images // 
 const cardsBasePath = window.location.pathname.includes('alegro-events')
     ? '/alegro-events/public/gallery/dishes/'
     : '/public/gallery/dishes/';
@@ -146,7 +140,8 @@ const imageFilenames = [
     'dishes-2.JPG',
     'dishes-3.JPG',
     'dishes-4.JPG',
-    'dishes-5.JPG'
+    'dishes-5.JPG',
+    'dishes-6.JPG',
 ];
 
 const cardsContainer = document.querySelector('.cards-container');
@@ -165,7 +160,7 @@ imageFilenames.forEach((filename, index) => {
     `;
     cardsContainer.appendChild(card);
 });
-
+// Load Gallery Images // 
 
 // Scroll Snap About // 
 let wrapper = document.querySelector('.about-content-wrapper');
@@ -176,3 +171,4 @@ wrapper.addEventListener('wheel', (e) => {
         behavior: 'smooth',
     });
 }, { passive: false });
+// Scroll Snap About // 

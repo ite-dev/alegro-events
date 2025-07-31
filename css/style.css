@@ -784,16 +784,11 @@ img {
 
     position: absolute;
     max-width: 100%;
-    min-height: 100%;
     justify-self: center;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../public/KARELA-09530-3.JPG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
 }
 
 .cards-box:hover img,
@@ -1564,24 +1559,25 @@ img {
     }
 
     .cards-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 275px));
-        grid-template-rows: repeat(auto-fill, 400px);
+        grid-template-columns: repeat(auto-fit, minmax(275px, 275px));
+        grid-template-rows: repeat(auto-fill, 475px);
         width: 90% !important;
         row-gap: 3.5em !important;
     }
 
     .cards-box {
         min-width: 250px;
+        
     }
 
     .cards-box.visible {
+        margin: 2em 0;
         transform: scale(1.09);
-        border-radius: 2.2em;
+        border-radius: 15px;
         -webkit-backdrop-filter: blur(2px);
         backdrop-filter: blur(2px);
-        border: 1px solid var(--secondary);
+        border: 1px solid goldenrod;
         opacity: 1;
-        margin: 3em 0em;
     }
 
     .cards-box.visible p {
