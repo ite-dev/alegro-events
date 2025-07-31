@@ -278,6 +278,7 @@ img {
     min-height: calc(100vh - 65px);
     max-width: 100%;
     margin: unset;
+    padding-top: 2em;
     gap: .5emx;
     
     color: black;
@@ -877,9 +878,7 @@ img {
     font-family: poppins, sans-serif;
     min-height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
-    scrollbar-width: none;
-    padding: 0;
+    padding: 2em;
     gap: 1.5em;
     display: flex;
     flex-direction: column;
@@ -896,16 +895,84 @@ img {
 }
 
 .about-content-wrapper {
-    box-shadow: 0px 0px 5px 2px white;
-    min-width: 80%;
-    min-height: 100%;
-    overflow: scroll;
-    scrollbar-width: none;
-    padding: 3em 0em;
+    scrollbar-color: goldenrod black;
+    scrollbar-width: thin;
+    
+    box-shadow: 0px 0px 5px 2px goldenrod;
+    height: auto;
+    max-height: 80%;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scroll-padding-top: 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em;
+}
+
+.about-content-wrapper::-webkit-scrollbar {
+    width: 12px;
+}
+
+.about-content-wrapper::-webkit-scrollbar-track {
+    background: black;
+    /* Track background */
+}
+
+.about-content-wrapper::-webkit-scrollbar-thumb {
+    background-color: goldenrod;
+    /* Thumb color */
+    border-radius: 6px;
+    border: 2px solid black;
+    /* Optional border around thumb */
+}
+
+.about-content-wrapper::-webkit-scrollbar-button {
+    background-color: black;
+    /* Arrows */
+}
+
+#btn-contact {
+    padding: 5px 25px;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .2em;
+}
+
+#about-section h2 {
+    font-size: var(--fs-h2);
+    color: goldenrod;
+}
+
+#about-section p {
+    scroll-snap-align: center;
+    scroll-snap-stop:always;
+    margin: 2em 0;
+    width: 80%;
+    height: auto;
+
+    background: rgba(0, 0, 0, 0.744);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px black;
+
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: right;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .img-btn-box {
@@ -938,50 +1005,12 @@ img {
     display: none;
 }
 
-#btn-contact {
-    padding: 5px 25px;
-}
-
-.about-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .2em;
-}
-
-#about-section h2 {
-    font-size: var(--fs-h2);
-    color: goldenrod;
-}
-
-#about-section p {
-    width: 80%;
-    color: white !important;
-    white-space: pre-wrap;
-    text-align: right !important;
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
-
-#about-section p {
-    padding-right: 2em;
-    color: var(--accent3);
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-align: justify;
-    background: rgba(0, 0, 0, 0.744);
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 2px black;
-    text-justify: right;
-}
-
 /* <!-- ----About Section----------------> */
 
 /* <!-- ----Contact Section----------------> */
 #contact-section {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
     min-height: 350px;
     padding: 50px 25px 50px 25px;

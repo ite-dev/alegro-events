@@ -115,18 +115,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const homeSection = document.querySelector('.home-section');
+const basePath = window.location.pathname.includes('alegro-events')
+    ? '/alegro-events/public/'
+    : 'public/';
 const images = [
-    "/alegro-events/public/KARELA-09530-2.JPG",
-    "/alegro-events/public/KARELA-09530-3.JPG",
-    "/alegro-events/public/gallery/venue-arrangements/arrangement-1.JPG",
-    "/alegro-events/public/gallery/venue-arrangements/arrangement-2.JPG",
-    "/alegro-events/public/gallery/venue-arrangements/arrangement-3.JPG",
-    "/alegro-events/public/gallery/venue-arrangements/arrangement-4.JPG",
-    "/alegro-events/public/gallery/venue-arrangements/bar-1.JPG",
+    "KARELA-09530-2.JPG",
+    "KARELA-09530-3.JPG",
+    "gallery/venue-arrangements/arrangement-1.JPG",
+    "gallery/venue-arrangements/arrangement-2.JPG",
+    "gallery/venue-arrangements/arrangement-3.JPG",
+    "gallery/venue-arrangements/arrangement-4.JPG",
+    "gallery/venue-arrangements/bar-1.JPG",
 ];
 
 let currentHomePic = 0;
 setInterval(() => {
     currentHomePic = (currentHomePic + 1) % images.length;
-    homeSection.style.backgroundImage = `url('${images[currentHomePic]}')`;
+    homeSection.style.backgroundImage = `url('${basePath}${images[currentHomePic]}')`;
 }, 4000); 
+
+
+
+/* Load Gallry Images */
+const cardsBasePath = window.location.pathname.includes('alegro-events')
+    ? '/alegro-events/public/gallery/dishes/'
+    : '/public/gallery/dishes/';
+
+const imageFilenames = [
+    'dishes-1.JPG',
+    'dishes-2.JPG',
+    'dishes-3.JPG',
+    'dishes-4.JPG',
+    'dishes-5.JPG'
+];
+
+const cardsContainer = document.querySelector('.cards-container');
+
+imageFilenames.forEach((filename, index) => {
+    const card = document.createElement('div');
+    card.className = 'cards-box js-card';
+    card.onclick = () => true;
+
+    card.innerHTML = `
+        <div class="cards-img-box">
+            <img src="${cardsBasePath}${filename}" alt="Event Image ${index + 1}">
+        </div>
+        <p>
+        Enjoy our unique dishes by Chef Aaron Shasha.
+        </p>
+    `;
+
+    cardsContainer.appendChild(card);
+});
+
+
+// Scroll Snap About // 
+let wrapper = document.querySelector('.about-content-wrapper');
+wrapper.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    wrapper.scrollBy({
+        top: e.deltaY > 0 ? wrapper.clientHeight : -wrapper.clientHeight,
+        behavior: 'smooth',
+    });
+}, { passive: false });
