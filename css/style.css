@@ -171,7 +171,7 @@ header {
 .nav-bar .logoImage:hover {
     transform: scale(1.05) translateY(-2%);
     border-bottom: 2px solid var(--accent3);
-    color: var(--accent3);
+    color: goldenrod;
 }
 
 .nav-bar ul {
@@ -203,7 +203,7 @@ header {
 
 .nav-bar ul li:hover a,
 .nav-bar ul li.active a {
-    color: var(--secondary);
+    color: goldenrod;
     border-bottom: 2px solid var(--accent3);
 
 }
@@ -1034,7 +1034,7 @@ header {
 
 #about-section h2 {
     font-size: var(--fs-h2);
-    color: var(--secondary);
+    color: goldenrod;
 }
 
 #about-section p {
@@ -1070,7 +1070,7 @@ header {
 
 #contact-section h2 {
     font-size: var(--fs-h2);
-    color: var(--accent3);
+    color: goldenrod;
 }
 
 #contact-section p {
@@ -1099,15 +1099,19 @@ header {
     height: 100%;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: black;
+    background: rgba(0, 0, 0, 0.281);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-sizing: border-box;
     box-shadow: 0px 0px 15px 2px #afc0ff23;
     border-radius: 10px;
 }
 
 .contact-box form {
-    display: flex;
-    flex-direction: column;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
     width: 100%;
 }
 
@@ -1188,14 +1192,15 @@ header {
 }
 
 .form-btn {
+    grid-column: -1/1;
     display: inline-block;
     padding: 10px 30px;
-    background: var(--secondary);
-    border: 2px solid var(--secondary);
+    background: black;
+    border: 2px solid goldenrod;
     border-radius: 40px;
     box-shadow: 0 0 10px var(--secondary);
     font-size: var(--fs-rebtn);
-    color: var(--backcolor1);
+    color: goldenrod;
     font-weight: 600;
     width: 50%;
     align-self: center;
@@ -1204,9 +1209,9 @@ header {
 }
 
 .form-btn:hover {
-    background-color: var(--secondary);
-    color: var(--backcolor3);
-    border: 2px solid var(--backcolor3);
+    background-color: goldenrod;
+    color: black;
+    border: 2px solid black;
     box-shadow: 0 0 5px var(--secondary);
     transform: scale(1.1) translateY(-5%) !important;
 }
