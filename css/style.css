@@ -32,8 +32,8 @@
     --accent3: #94accb;
     --lightpurpleTrans: rgba(55, 7, 67, 0.162);
 
-    --fs-h1: 3.25rem;
-    --fs-h1-span: 3.35rem;
+    --fs-h1: 2.5rem;
+    --fs-h1-span: 2.5rem;
     --fs-h2: 3.5rem;
     --fs-h3: 2rem;
     --fs-h4: 1.4rem;
@@ -93,7 +93,7 @@ img {
 }
 
 .nav-bar {
-    background: black;
+    background: rgb(39, 38, 38);
     position: fixed;
     min-width: 100%;
     max-width: 100%;
@@ -293,20 +293,19 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    z-index: 1;
+
     transition: background-image 0.5s ease-in-out;
 }
 
 .home-logo-wrapper{
-    height: 380px;
     width: 450px;
     border-radius: 50% 50% 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(40px);
-    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, .5);
     box-shadow: 0px 0px 15px 5px black;
 }
 
@@ -356,7 +355,6 @@ img {
     animation: show-content 1s linear forwards;
     animation-delay: 1s;
     border-radius: 50%;
-    z-index: 5 !important;
 }
 
 .logo-img .logo-img-box::before {
@@ -402,8 +400,8 @@ img {
     position: relative;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    z-index: 1;
+    background: rgba(255, 255, 255, 0);
+
     overflow: visible;
     border-radius: 50%;
 }
@@ -429,13 +427,13 @@ img {
 }
 
 .home-section-header {
-    transform: translateY(5px) translateX(15px);
-    padding: 0px 85px;
+    transform: translateY(0px) translateX(0px);
+    width: 120%;
+    padding: 0px 100px;
     border-radius: 15px;
     background: rgb(31, 30, 30);
     display: flex;
     gap: 4.5em;
-    
     box-shadow: 0px 0px 20px 2px rgba(218, 165, 32, 0.555);
 }
 
@@ -640,7 +638,6 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    z-index: 1;
     transition: background-image 0.5s ease-in-out;
 
     display: flex;
@@ -740,7 +737,6 @@ img {
     font-size: 1.8rem;
     color: snow;
     max-width: 100vw;
-    z-index: 2;
 }
 
 .cards-box h4 {
@@ -813,7 +809,6 @@ img {
     overflow: hidden;
     transition: 4s;
     animation: tags-anim 4s linear infinite;
-    z-index: 2;
 }
 
 @keyframes tags-anim {
@@ -885,7 +880,6 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    z-index: 1;
     transition: background-image 0.5s ease-in-out;
 }
 
@@ -1175,29 +1169,34 @@ img {
 /* <!-- ----Scroll-up Button----------------> */
 .btn-up {
     display: inline-flex;
+    background: rgba(0, 0, 0, 0.747);
     position: fixed;
     bottom: 1em;
     right: 0.25em;
     padding: 0;
     margin: 0;
     font-size: var(--fs-scbtn);
-    color: var(--secondary);
     transition: 0.5s;
+    animation: btn-up-anim 3s linear infinite;
+    border: 3px solid goldenrod;
 }
 
 .btn-up a {
     display: inline-flex;
     font-size: 3.5rem;
-    color: rgb(255, 255, 255);
+    color: goldenrod;
     transition: 0.5s;
-    opacity: 0.3;
+    opacity: 1;
     text-decoration: none;
-    animation: btn-up-anim 3s linear infinite;
+}
+.btn-up:hover i, .btn-up i:hover{
+    color: black;
 }
 
-.btn-up:hover,
-.btn-up a:hover {
-    color: var(--backcolor1);
+.btn-up:hover{
+    color: black;
+    border: 3px solid black;
+    background: goldenrod;
     border-radius: 50%;
     transform: scale(1.1) translateY(-5%) rotate(-5deg);
     opacity: 1;
@@ -1206,19 +1205,18 @@ img {
 .btn-up a:hover {
     animation-delay: .5s;
     color: rgb(255, 255, 255) !important;
-    z-index: 0;
+    z-index: 1;
 }
 
 @keyframes btn-up-anim {
 
-    33% {
+    0%, 100% {
         border-radius: 25%;
     }
 
     50% {
         transform: rotate(5deg);
         border-radius: 50%;
-        box-shadow: 0 0 5px white;
     }
 
 }
