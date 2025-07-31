@@ -1068,6 +1068,22 @@ header {
     align-content: center;
 }
 
+.contact-bgImage {
+    position: absolute;
+    max-width: 100%;
+    min-height: 100%;
+    justify-self: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../public/bg9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: -1;
+}
+
 #contact-section h2 {
     font-size: var(--fs-h2);
     color: goldenrod;
