@@ -150,7 +150,6 @@ const imageFilenames = [
 ];
 
 const cardsContainer = document.querySelector('.cards-container');
-
 imageFilenames.forEach((filename, index) => {
     const card = document.createElement('div');
     card.className = 'cards-box js-card';
@@ -164,7 +163,6 @@ imageFilenames.forEach((filename, index) => {
         Enjoy our unique dishes by Chef Aaron Shasha.
         </p>
     `;
-
     cardsContainer.appendChild(card);
 });
 
