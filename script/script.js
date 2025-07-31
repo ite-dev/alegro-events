@@ -114,5 +114,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const homeSection = document.querySelector('.home-section');
+const images = [
+    "../public/KARELA-09530-2.JPG",
+    "../public/KARELA-09530-3.JPG",
+    "../public/gallery/venue-arrangements/arrangement-1.JPG",
+    "../public/gallery/venue-arrangements/arrangement-2.JPG",
+    "../public/gallery/venue-arrangements/arrangement-3.JPG",
+    "../public/gallery/venue-arrangements/arrangement-4.JPG",
+    "../public/gallery/venue-arrangements/bar-1.JPG",
+];
 
-
+let currentHomePic = 0;
+setInterval(() => {
+    currentHomePic = (currentHomePic + 1) % images.length;
+    homeSection.style.backgroundImage = `url('${images[currentHomePic]}')`;
+}, 4000); 
