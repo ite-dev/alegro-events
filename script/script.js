@@ -134,12 +134,12 @@ const cardsBasePath = window.location.pathname.includes('alegro-events')
     : '/public/gallery/tempbgs/';
 
 const imageFilenames = [
-    'dishes-1.JPG',
-    'dishes-2.JPG',
-    'dishes-3.JPG',
-    'dishes-4.JPG',
-    'dishes-5.JPG',
-    'dishes-6.JPG',
+    'dishes-1.jpg',
+    'dishes-2.jpg',
+    'dishes-3.jpg',
+    'dishes-4.jpg',
+    'dishes-5.jpg',
+    'dishes-6.jpg',
 ];
 
 const cardsContainer = document.querySelector('.cards-container');
