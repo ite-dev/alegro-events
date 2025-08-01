@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Typing Text Animation // 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
-    const words = ["Wedding Ceremony.", "Custom Event.", "Bar / Bat Mitzvah.", "Hina Ceremony.", "Catering Menu."];
+    const words = ["Wedding.", "Custom  Event.", "Bar / Bat  Mitzvah.", "Hina  Ceremony.", "Catering  Menu."];
 
     let currentWordIndex = 0;
     const animateText = (textToAnimate) => {
@@ -113,8 +113,6 @@ const basePath = window.location.pathname.includes('alegro-events')
     ? '/alegro-events/public/'
     : 'public/';
 const images = [
-    "KARELA-09530-2.JPG",
-    "KARELA-09530-3.JPG",
     "gallery/venue-arrangements/arrangement-1.JPG",
     "gallery/venue-arrangements/arrangement-2.JPG",
     "gallery/venue-arrangements/arrangement-3.JPG",
@@ -132,8 +130,8 @@ setInterval(() => {
 
 // Load Gallery Images // 
 const cardsBasePath = window.location.pathname.includes('alegro-events')
-    ? '/alegro-events/public/gallery/dishes/'
-    : '/public/gallery/dishes/';
+    ? '/alegro-events/public/gallery/tempbgs/'
+    : '/public/gallery/tempbgs/';
 
 const imageFilenames = [
     'dishes-1.JPG',
