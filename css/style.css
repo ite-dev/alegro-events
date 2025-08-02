@@ -113,6 +113,18 @@ img {
     opacity: 0;
     animation: show-content 1.2s linear forwards;
     animation-delay: 0.5s;
+
+    box-shadow: 2px 5px 10px 3px black;
+}
+
+.navbar-logo{
+    overflow: visible;
+}
+.navbar-logo img{ 
+    transform: translateY(15px);
+    width: 158px !important;
+    height: 115px !important;
+    z-index: 2;
 }
 
 .nav-bar a {
@@ -697,7 +709,6 @@ img {
     top: 75px !important;
     height: 70px;
     z-index: 1 !important;
-    border: 1px solid white;
     overflow: hidden !important;
     background: #00000025;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.80);
@@ -897,6 +908,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    box-shadow: 0px 0px 10px 1px black;
 }
 
 .about-content-wrapper::-webkit-scrollbar {
@@ -960,10 +973,12 @@ img {
 
 .img-btn-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
+
+    align-self: flex-end;
 }
 
 #about-img-box {
@@ -981,7 +996,6 @@ img {
     width: 160px;
     height: 160px;
     border-left: 1px solid white;
-    border-right: 1px solid white;
 }
 
 #about-img-box::after {
@@ -1457,29 +1471,28 @@ img {
 
     .logo-img .logo-img-box {
                 transform: translateY(10px);
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
     }
 
     .logo-img .logo-img-box::before {
         background: unset;
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
         border-right: 1px solid white;
         border-left: unset;
     }
 
     .logo-img .logo-img-box::after {
         background: unset;
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
         border-right: 1px solid white;
         border-left: unset;
         border-radius: 50%;
     }
 
     .logo-img-item{
-                background: rgba(255, 255, 255, 0.8) !important;
     }
     .logo-img-item img {
         min-width: 225px !important;
@@ -1593,10 +1606,11 @@ img {
         padding: 25px 25px 50px;
     }
     .about-content-wrapper{
-        box-shadow: none;
+        width: 90%;
     }
 
     #about-img-box {
+        display: none;
         width: 100px !important;
         height: 100px !important;
     }
