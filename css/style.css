@@ -281,7 +281,15 @@ img {
 }
 
 /* <!-- ----Wrapper Animation End----> */
-
+button{
+    opacity: .8;
+    background: transparent; 
+    font-size: .9rem !;
+    font-weight: bold;
+    color: black;
+    padding: 1px 5px !important;
+    border-radius: 15px;
+}
 /* <!-- ----Home Section--------> */
 .home-section {
     position: relative;
@@ -1457,11 +1465,16 @@ img {
         font-size: 2rem;
     }
 
+    .animated-typing{
+        transform: translateY(15px) translateX(-18px);
+    }
     .typing-text-container{
-        display: none;
+        min-width: 98vw !important;
+        max-width: 100vw !important;
         transform: unset;
-        min-width: 90%;
-        max-width: 90%;
+    }
+    .home-info .social-icons{
+        padding: 3px 0px;
     }
     .typing-text{
         font-size: .9rem;
@@ -1500,7 +1513,7 @@ img {
         background: unset;
         width: 150px;
         height: 150px;
-        border-right: 1px solid white;
+        border-right: unset;
         border-left: unset;
         border-radius: 50%;
     }

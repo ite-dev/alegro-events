@@ -174,6 +174,7 @@ wrapper.addEventListener('wheel', (e) => {
 
 
 const hideBtn = document.querySelector('.hide-btn');
+hideBtn.style = "color: cyan";
 
 hideBtn.addEventListener('click', () => {
     const homeP = document.querySelector('.home-paragraph');
@@ -181,10 +182,12 @@ hideBtn.addEventListener('click', () => {
     if(hideBtn.innerHTML === "Hide Text"){
         homeP.style = "color: transparent; background: transparent;";
         hideBtn.innerHTML = "Show";
+        hideBtn.style = "color: white; background: black;"
     }
     else{
         homeP.style = "color: white; background: rgb(0,0,0,.5);";
         hideBtn.innerHTML = "Hide Text";
+        hideBtn.style = "color: white; background: transparent;"
     }
 });
 
@@ -199,6 +202,6 @@ hideTypingBtn.addEventListener('click', () => {
     } else{
         typingTextContainer.style = "display: unset !important";
         hideTypingBtn.innerHTML = "Hide"
-        hideTypingBtn.style = "background: white; color: black; opacity: 1;"
+        hideTypingBtn.style = "background: transparent; color: black; opacity: 1;"
     };
 });
