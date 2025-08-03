@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Typing Text Animation // 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
-    const words = ["Wedding.", "Custom  Event.", "Bar / Bat  Mitzvah.", "Hina  Ceremony.", "Catering  Menu."];
+    const words = ["אולמי אלגרו ירושלים".split('').reverse().join(''),"Weddings.", "Events.", "Bar / Bat  Mitzvah.", "Hina  Ceremony.", "Catering.", "Brit Mila", "עליה לתורה".split('').reverse().join('')];
 
     let currentWordIndex = 0;
     const animateText = (textToAnimate) => {
@@ -169,9 +169,14 @@ wrapper.addEventListener('wheel', (e) => {
 }, { passive: false });
 // Scroll Snap About // 
 
-const homeP = document.querySelector('.home-paragraph');
+
+
+
+
 const hideBtn = document.querySelector('.hide-btn');
+
 hideBtn.addEventListener('click', () => {
+    const homeP = document.querySelector('.home-paragraph');
 
     if(hideBtn.innerHTML === "Hide Text"){
         homeP.style = "color: transparent; background: transparent;";
@@ -181,6 +186,19 @@ hideBtn.addEventListener('click', () => {
         homeP.style = "color: white; background: rgb(0,0,0,.5);";
         hideBtn.innerHTML = "Hide Text";
     }
-    
+});
 
+const hideTypingBtn = document.querySelector('.hide-typing-btn');
+hideTypingBtn.addEventListener('click', () => {
+    const typingTextContainer = document.querySelector('.animated-typing');
+
+    if(hideTypingBtn.innerHTML === "Hide"){
+        typingTextContainer.style = "display: none !important;";
+        hideTypingBtn.innerHTML = "show";
+        hideTypingBtn.style = "background: black; color: white; opacity: .5;"
+    } else{
+        typingTextContainer.style = "display: unset !important";
+        hideTypingBtn.innerHTML = "Hide"
+        hideTypingBtn.style = "background: white; color: black; opacity: 1;"
+    };
 });
