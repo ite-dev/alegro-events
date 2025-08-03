@@ -110,14 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // Home Background Image Rotation // 
 const homeSection = document.querySelector('.home-section');
 const basePath = window.location.pathname.includes('alegro-events')
-    ? '/alegro-events/public/'
-    : 'public/';
+    ? '/alegro-events/public/gallery/tempbgs/'
+    : 'public/gallery/tempbgs/';
 const images = [
-    "gallery/venue-arrangements/arrangement-1.JPG",
-    "gallery/venue-arrangements/arrangement-2.JPG",
-    "gallery/venue-arrangements/arrangement-3.JPG",
-    "gallery/venue-arrangements/arrangement-4.JPG",
-    "gallery/venue-arrangements/bar-1.JPG",
+    'table-bg.jpg',
+    'table-bg2.jpg',
+    'dishes-5.jpg',
 ];
 
 let currentHomePic = 0;
@@ -170,3 +168,19 @@ wrapper.addEventListener('wheel', (e) => {
     });
 }, { passive: false });
 // Scroll Snap About // 
+
+const homeP = document.querySelector('.home-paragraph');
+const hideBtn = document.querySelector('.hide-btn');
+hideBtn.addEventListener('click', () => {
+
+    if(hideBtn.innerHTML === "Hide Text"){
+        homeP.style = "color: transparent; background: transparent;";
+        hideBtn.innerHTML = "Show";
+    }
+    else{
+        homeP.style = "color: white; background: rgb(0,0,0,.5);";
+        hideBtn.innerHTML = "Hide Text";
+    }
+    
+
+});
