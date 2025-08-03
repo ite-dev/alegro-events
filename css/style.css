@@ -348,7 +348,7 @@ button{
 }
 
 .logo-img {
-    transform: translateY(25px) !important;
+    transform: translateY(-20px) !important;
     width: 350px;
     display: flex;
     justify-content: center;
@@ -377,7 +377,7 @@ button{
 }
 
 .typing-text-container{
-    transform: translateY(-90px) translateX(5px) !important;
+    transform: translateY(-80px) translateX(5px) !important;
 }
 .social-icons{
     transform: translateY(-0px) !important;
