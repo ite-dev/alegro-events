@@ -298,7 +298,7 @@ button{
     flex-direction: column;
 
     margin-top: 15px;
-    min-height: calc(100vh - 80px);
+
     max-height: calc(100vh - 80px);
     max-width: 100%;
     
@@ -673,29 +673,41 @@ button{
 /* --------Carousel Base-------- */
 .carousel-container {
     margin-top: 3em !important;
-    background: rgba(255, 255, 255, 0.247);
+    backdrop-filter: blur(1px);
 
-    width: 65%;
-    height: 325px;
+    width: 49%;
+    height: 260px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
     perspective: 1000px;
-    border-radius: 15px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
+
+    /* box-shadow: 15px 20px 20px 1px rgba(0, 0, 0, 0.193); */
 }
 h4{
     transform: translateY(-22px);
 }
 
 .carousel {
-    width: 100%;
+    transform: translateY(20px);
+    min-width: 101%;
+    
     display: flex;
     gap: 1.5em;
     transition: transform 0.5s ease-in-out;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
+    
+   /*  border-image: url('../public/gallery/tempbgs/bg8.jpg'); */
+    border-image-width: 200px;
+    border-image-slice:50%;
+    border-image-outset: 10px;
+    border-image-repeat:stretch;
+    overflow: visible;
+
 }
 
 .carousel-item.active {
@@ -703,8 +715,9 @@ h4{
     transition: opacity 1.5s ease;
 }
 
-.carousel-item {
-    border-radius: 10px;
+.carousel-item {    
+    
+    border-radius: 2px;
     width: 400px;
     height: 250px;
     position: relative;
@@ -718,13 +731,21 @@ h4{
     transform-style: preserve-3d;
     transform-origin: center center;
     transition: opacity .5s ease;
-    overflow: hidden;
+    border: 1px solid black;
+    
+
+    border-image: url('../public/gallery/tempbgs/pic-frame12.jpg') !important;
+    border-image-width: 1000px !important;
+    border-image-slice: 10% !important;
+    
+    border-image-outset: 0px;
+    border-image-repeat: stretch;   
+    padding: 1px;
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     box-shadow: 0px 0px 10px 1px black;
     transition: transform 0.3s ease;
     object-fit: cover;
@@ -738,31 +759,35 @@ h4{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+    backdrop-filter: blur(1px);
+    color: black;    
     padding: 15px;
     cursor: pointer;
     z-index: 10;
-    font-size: 2rem;
+    font-size: 4rem;
     transition: background-color 0.3s;
+
+    width: 50px;
+    height: 100%;
+    border-radius: unset;
+    opacity: .8;
 }
 
 .carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    opacity: .7;
+    color: snow;
+    
 }
 
 .prev-btn {
-    left: 10px;
+    left: -0px;
     
 } 
 .next-btn {
-    right: 10px;
+    right: -0px;
 }
-.prev-btn, .next-btn{
-    width: 50px;
-    height: 150px;
-    border-radius: unset;
+.prev-btn button{
+    font-size: 5rem;
 }
 /* --------Carousel Base-------- */
 @media (max-width:975px){
@@ -791,10 +816,17 @@ h4{
 }
 /* <!-- ----Projects Section---------------> */
 .projects-section {
-    background-color: rgb(112, 112, 112);
+    background-image: url('/public/gallery/tempbgs/gallery-bg8.jpg');
+    background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    
+
+    background-color:rgb(24, 24, 24);
+    
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
     transition: background-image 0.5s ease-in-out;
 
     display: flex;
@@ -803,12 +835,13 @@ h4{
     align-items: center;
     max-width: 100vw;
     height: 100%;
-    padding: 0 0 5em 0;
+    padding: 2em 0 5em 0;
     position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
 }
 
 .cards-container {
+    display: none !important;
     background: transparent;
     width: 90%;
     display: grid;
@@ -1032,10 +1065,11 @@ h4{
     justify-content: center;
     position: relative;
 
-    background-image: url('../public/gallery/tempbgs/wood-bg2.jpg');
+    background-image: url('../public/gallery/tempbgs/gallery-bg22.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    background-color: black;
     transition: background-image 0.5s ease-in-out;
 }
 
@@ -1180,10 +1214,11 @@ h4{
     align-items: center;
     align-content: center;
 
-    background-image: url('../public/gallery/tempbgs/wood-bg.jpg');
+    background-image: url('../public/gallery/tempbgs/gallery-bg20.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top;
+    background-attachment: fixed;
 }
 
 #contact-section h2 {

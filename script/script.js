@@ -224,90 +224,115 @@ document.addEventListener('scroll', function() {
 // Scroll Position: scroll-up btn display,  //
 
 
-// Image Carousel
-const carouselBasePath = window.location.pathname.includes('alegro-events')
-    ? '/alegro-events/public/gallery/tempbgs/'
-    : '/public/gallery/tempbgs/';
+// Image Carousel //
+function createCarousel(containerSelector, imageFilenames){
+    const container = document.querySelector(containerSelector);
+    const carousel = container.querySelector('.carousel');
+    const prevBtn = container.querySelector('.prev-btn');
+    const nextBtn = container.querySelector('.next-btn');
 
-const carouselFilenames = [
+    imageFilenames.forEach((filename, index) => {
+        const galleryPic = document.createElement('div');
+        galleryPic.className = 'carousel-item';
+        galleryPic.innerHTML= `<img src="${basePath}${filename}" alt="Image ${index + 1}">`;
+        carousel.appendChild(galleryPic);
+    });
+    
+    const galleryPics = carousel.querySelectorAll('.carousel-item');
+    let index = 1;
+    const totalPics = galleryPics.length;
+
+    function updateCarousel(){
+        galleryPics.forEach(pic => {
+            pic.classList.remove('active');
+            pic.style.display = "none";
+            pic.style.transform = "none";
+            pic.style.opacity = 0.4;
+            pic.style.border = '4px solid black';
+        });
+        const centerIndexLane = (index + totalPics) % totalPics;
+        const leftIndexLane = (centerIndexLane - 1 + totalPics) % totalPics;
+        const rightIndexLane = (centerIndexLane + 1) % totalPics;
+
+        const styleItem = (
+                indexLane, transform, height, width,
+                borderB, borderL = "", borderR = "", 
+            ) => {
+            indexLane.classList.add('active');
+            indexLane.style.display = "block";
+            indexLane.style.opacity = 1;
+            indexLane.style.transform = transform;
+            indexLane.style.height = height;
+            indexLane.style.width = width;
+            indexLane.style.borderBottom = borderB;
+            if(borderL !== "") indexLane.style.borderLeft = borderL;
+            if(borderR !== "") indexLane.style.borderRight = borderR;
+            
+        };
+
+        styleItem(galleryPics[centerIndexLane], 'rotateY(0deg)', '225px', '375px', '3px solid black');
+        styleItem(galleryPics[leftIndexLane], 'rotateY(20deg)', '150px', '200px');
+        styleItem(galleryPics[rightIndexLane], 'rotateY(-20deg)', '150px', '200px');
+    };
+
+    prevBtn.addEventListener('click', () => {
+        index--;
+        if (index <= 0) {
+            index = totalPics - 2;
+        }
+        updateCarousel();
+    });
+    nextBtn.addEventListener('click', () => {
+        index++;
+
+        if (index >= totalPics) {
+            index = 1;
+        }
+        if (index >= totalPics - 1) {
+            index = 1;
+        }
+        updateCarousel();
+    });
+    updateCarousel();
+};
+
+createCarousel('.carousel-container-1', [
     'dishes-1.jpg',
     'dishes-2.jpg',
     'dishes-3.jpg',
     'dishes-4.jpg',
     'dishes-5.jpg',
     'dishes-6.jpg',
+], basePath);
+createCarousel('.carousel-container-2', [
+    'dishes-1.jpg',
+    'dishes-2.jpg',
+    'dishes-3.jpg',
+    'dishes-4.jpg',
+    'dishes-5.jpg',
+    'dishes-6.jpg',
+], basePath);
+
+// Image Carousel //
+
+// Gallery Backgound Image Rotation // 
+const gallerySection = document.querySelector('.projects-section');
+
+const galleryImages = [
+    'gallery-bg8.jpg',
+    'gallery-bg10.jpg',
+    'gallery-bg12.jpg',
+    'gallery-bg13.jpg',
+    'gallery-bg14.jpg',
+    'gallery-bg19.jpg',
+    'gallery-bg21.jpg',
+    'gallery-bg22.jpg',
+    'gallery-bg23.jpg',
 ];
 
-const carousel = document.querySelector('.carousel');
-carouselFilenames.forEach((filename, index) => {
-    const carouselItem = document.createElement('div');
-    carouselItem.className = 'carousel-item';
-    carouselItem.innerHTML = `
-        <img src="${carouselBasePath}${filename}" alt="Image ${index + 1}">
-    `;
-    carousel.appendChild(carouselItem);
-});
-
-const totalItems = carouselFilenames.length;
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-let index = 1;
-
-function updateCarousel(){
-    const items = document.querySelectorAll('.carousel-item');
-
-    items.forEach(item => {
-        item.classList.remove('active');
-        item.style.transform = "none";
-        item.style.display = "none";
-        item.style.opacity = .4;
-    });
-
-    const centerIndex = (index + totalItems) % totalItems;
-    const leftIndex = (centerIndex - 1 + totalItems) % totalItems;
-    const rightIndex = (centerIndex + 1) % totalItems;
-
-    items[centerIndex].classList.add('active');
-    items[centerIndex].style.opacity = 1;
-    items[centerIndex].style.display = "block";
-    items[centerIndex].style.transform = 'rotateY(0deg)';
-    items[centerIndex].style.height = "unset";
-    items[centerIndex].style.width = "400px";
-    items[centerIndex].style.minWidth = "250px";
-
-    items[leftIndex].classList.add('active');
-    items[centerIndex].style.opacity = 1;
-    items[leftIndex].style.display = "block";
-    items[leftIndex].style.transform = 'rotateY(20deg)';
-    items[leftIndex].style.height = "200px";
-    items[leftIndex].style.width = "250px";
-
-    items[rightIndex].classList.add('active');
-    items[centerIndex].style.opacity = 1;
-    items[rightIndex].style.display = "block";
-    items[rightIndex].style.transform = 'rotateY(-20deg)';
-    items[rightIndex].style.height = "200px";
-    items[rightIndex].style.width = "250px";
-};
-
-prevBtn.addEventListener('click', () => {
-    index--;
-    if (index <= 0) {
-        index = totalItems -2;
-    }
-    updateCarousel();
-});
-nextBtn.addEventListener('click', () => {
-    index++;
-
-    if(index >= totalItems){
-        index = 1;
-    }
-    if(index >= totalItems -1){
-        index = 1;
-    }
-    updateCarousel();
-});
-
-updateCarousel();
-// Image Carousel //
+let currentPic = 0;
+setInterval(() => {
+    currentPic = (currentPic + 1) % galleryImages.length;
+    gallerySection.style.backgroundImage = `url('${basePath}${galleryImages[currentPic]}')`;
+}, 7000);
+// Gallery Background Image Rotation // 
