@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Typing Text Animation // 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
-    const words = ["אולמי אלגרו ירושלים".split('').reverse().join(''),"Weddings.", "Events.", "Bar / Bat  Mitzvah.", "Hina  Ceremony.", "Catering.", "Brit Mila", "עליה לתורה".split('').reverse().join('')];
+    const words = ["אולמי אלגרו ירושלים".split('').reverse().join(''),"Weddings.", "Events.", "Bar / Bat  Mitzvah.", "Henna  Ceremony.", "Catering.", "Brit Mila", "עליה לתורה".split('').reverse().join('')];
 
     let currentWordIndex = 0;
     const animateText = (textToAnimate) => {
@@ -172,7 +172,7 @@ wrapper.addEventListener('wheel', (e) => {
 
 
 
-
+// Temp Controllers //
 const hideBtn = document.querySelector('.hide-btn');
 hideBtn.style = "color: cyan";
 
@@ -182,7 +182,7 @@ hideBtn.addEventListener('click', () => {
     if(hideBtn.innerHTML === "Hide Text"){
         homeP.style = "color: transparent; background: transparent;";
         hideBtn.innerHTML = "Show";
-        hideBtn.style = "color: white; background: black;"
+        hideBtn.style = "color: white; background: transparent;"
     }
     else{
         homeP.style = "color: white; background: rgb(0,0,0,.5);";
@@ -198,10 +198,116 @@ hideTypingBtn.addEventListener('click', () => {
     if(hideTypingBtn.innerHTML === "Hide"){
         typingTextContainer.style = "display: none !important;";
         hideTypingBtn.innerHTML = "show";
-        hideTypingBtn.style = "background: black; color: white; opacity: .5;"
+        hideTypingBtn.style = "background: none; color: white; opacity: .5;"
     } else{
         typingTextContainer.style = "display: unset !important";
         hideTypingBtn.innerHTML = "Hide"
         hideTypingBtn.style = "background: transparent; color: black; opacity: 1;"
     };
 });
+// Temp Controllers //
+
+// Scroll Position: scroll-up btn display,  //
+document.addEventListener('scroll', function() {
+    const scrollButton = document.querySelector('.btn-up');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= 100) {
+        scrollButton.style.bottom = '50px';
+        scrollButton.style.opacity = 1;
+    }
+    else if (scrollPosition < 100 || scrollPosition > 200) {
+        scrollButton.style.bottom = '-100px';
+        scrollButton.style.opacity = 0;
+    }
+});
+// Scroll Position: scroll-up btn display,  //
+
+
+// Image Carousel
+const carouselBasePath = window.location.pathname.includes('alegro-events')
+    ? '/alegro-events/public/gallery/tempbgs/'
+    : '/public/gallery/tempbgs/';
+
+const carouselFilenames = [
+    'dishes-1.jpg',
+    'dishes-2.jpg',
+    'dishes-3.jpg',
+    'dishes-4.jpg',
+    'dishes-5.jpg',
+    'dishes-6.jpg',
+];
+
+const carousel = document.querySelector('.carousel');
+carouselFilenames.forEach((filename, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.className = 'carousel-item';
+    carouselItem.innerHTML = `
+        <img src="${carouselBasePath}${filename}" alt="Image ${index + 1}">
+    `;
+    carousel.appendChild(carouselItem);
+});
+
+const totalItems = carouselFilenames.length;
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let index = 1;
+
+function updateCarousel(){
+    const items = document.querySelectorAll('.carousel-item');
+
+    items.forEach(item => {
+        item.classList.remove('active');
+        item.style.transform = "none";
+        item.style.display = "none";
+        item.style.opacity = .4;
+    });
+
+    const centerIndex = (index + totalItems) % totalItems;
+    const leftIndex = (centerIndex - 1 + totalItems) % totalItems;
+    const rightIndex = (centerIndex + 1) % totalItems;
+
+    items[centerIndex].classList.add('active');
+    items[centerIndex].style.opacity = 1;
+    items[centerIndex].style.display = "block";
+    items[centerIndex].style.transform = 'rotateY(0deg)';
+    items[centerIndex].style.height = "unset";
+    items[centerIndex].style.width = "400px";
+    items[centerIndex].style.minWidth = "250px";
+
+    items[leftIndex].classList.add('active');
+    items[centerIndex].style.opacity = 1;
+    items[leftIndex].style.display = "block";
+    items[leftIndex].style.transform = 'rotateY(20deg)';
+    items[leftIndex].style.height = "200px";
+    items[leftIndex].style.width = "250px";
+
+    items[rightIndex].classList.add('active');
+    items[centerIndex].style.opacity = 1;
+    items[rightIndex].style.display = "block";
+    items[rightIndex].style.transform = 'rotateY(-20deg)';
+    items[rightIndex].style.height = "200px";
+    items[rightIndex].style.width = "250px";
+};
+
+prevBtn.addEventListener('click', () => {
+    index--;
+    if (index <= 0) {
+        index = totalItems -2;
+    }
+    updateCarousel();
+});
+nextBtn.addEventListener('click', () => {
+    index++;
+
+    if(index >= totalItems){
+        index = 1;
+    }
+    if(index >= totalItems -1){
+        index = 1;
+    }
+    updateCarousel();
+});
+
+updateCarousel();
+// Image Carousel //

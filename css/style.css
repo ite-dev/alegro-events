@@ -68,9 +68,9 @@ body {
     z-index: -1;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 75px);
+    max-height: calc(100vh - 75px);
     max-width: 100%;
-    margin-top: 65px;
+    margin-top: 63px;
     overflow-x: hidden;
     background: black;
 }
@@ -114,7 +114,7 @@ img {
     animation: show-content 1.2s linear forwards;
     animation-delay: 0.5s;
 
-    box-shadow: 2px 5px 10px 3px black;
+    box-shadow: 0px 5px 15px 2px black;
 }
 
 .navbar-logo{
@@ -289,6 +289,7 @@ button{
     color: black;
     padding: 1px 5px !important;
     border-radius: 15px;
+    border: none;
 }
 /* <!-- ----Home Section--------> */
 .home-section {
@@ -345,6 +346,8 @@ button{
     backdrop-filter: blur(8px);
     background: rgba(255, 255, 255, 0);
     box-shadow: 0px 0px 10px 1px black;
+    
+    
 }
 
 .logo-img {
@@ -356,9 +359,9 @@ button{
     opacity: 1;
     cursor: pointer;
     border-radius: 50%;
-
-    animation: float 5s linear infinite;
     z-index: 1;
+
+    animation: float 2s linear infinite;
 }
 .logo-img img {
     transform: translateY(-175px) !important;
@@ -390,15 +393,15 @@ button{
 
 @keyframes float {
     0% {
-            transform: translateY(7.5px);
+            transform: translateY(-15.5px);
         }
     
     50% {
-        transform: translateY(15px);
+        transform: translateY(-20px);
     }
 
     100% {
-        transform: translateY(7.5px);
+        transform: translateY(-15.5px);
     }
 }
 
@@ -429,7 +432,7 @@ button{
     position: absolute;
     width: 800px;
     height: 800px;
-    border-left: 1px solid rgba(255, 255, 255, 0.384);
+    border-left: 2px solid rgba(255, 255, 255, 0.384);
     transform: rotate(0deg);
     animation: rotate-border 3.5s linear infinite;
     z-index: -1;
@@ -612,7 +615,7 @@ button{
 
 .home-info p {
     color: snow;
-    margin-top: .5em;
+    margin-bottom: 2em;
     background: rgba(0, 0, 0, 0.651);
     text-align: right;
     padding: 1em 20px;
@@ -667,9 +670,128 @@ button{
 /* <!-- ----End Home Section--------> */
 
 
+/* --------Carousel Base-------- */
+.carousel-container {
+    margin-top: 3em !important;
+    background: rgba(255, 255, 255, 0.247);
+
+    width: 65%;
+    height: 325px;
+    margin: 0 auto;
+    overflow: hidden;
+    perspective: 1000px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+h4{
+    transform: translateY(-22px);
+}
+
+.carousel {
+    width: 100%;
+    display: flex;
+    gap: 1.5em;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.carousel-item.active {
+    display: block; 
+    transition: opacity 1.5s ease;
+}
+
+.carousel-item {
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+    position: relative;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: opacity .5s ease;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px black;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    
+}
+.carousel-item img:hover{
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2rem;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+    
+} 
+.next-btn {
+    right: 10px;
+}
+.prev-btn, .next-btn{
+    width: 50px;
+    height: 150px;
+    border-radius: unset;
+}
+/* --------Carousel Base-------- */
+@media (max-width:975px){
+    .carousel-container {
+        height: 250px;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .carousel {
+        width: 100% !important;
+        gap: .5em;
+    }
+
+    .carousel-item{
+        min-width: 200px !important;
+        max-width: 200px !important;
+        height: 180px !important;
+    }
+    .prev-btn {
+        left: 0px;
+    }
+    .next-btn {
+        right: 0px;
+    }
+}
 /* <!-- ----Projects Section---------------> */
 .projects-section {
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(112, 112, 112);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -684,7 +806,6 @@ button{
     padding: 0 0 5em 0;
     position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
-
 }
 
 .cards-container {
@@ -1034,6 +1155,8 @@ button{
         min-height: 150px;
         max-height: 150px;
     border-left: 1px solid white;
+    background: transparent;
+    background-color: transparent;
 }
 
 #about-img-box::after {
@@ -1218,14 +1341,14 @@ button{
     display: inline-flex;
     background: rgba(0, 0, 0, 0.747);
     position: fixed;
-    bottom: 1em;
-    right: 0.25em;
+    right: 35px;
     padding: 0;
     margin: 0;
     font-size: var(--fs-scbtn);
     transition: 0.5s;
     animation: btn-up-anim 3s linear infinite;
-    border: 3px solid goldenrod;
+    border: 2px solid goldenrod;
+    z-index: 10;
 }
 
 .btn-up a {
@@ -1242,7 +1365,7 @@ button{
 
 .btn-up:hover{
     color: black;
-    border: 3px solid black;
+    border: 2px solid black;
     background: goldenrod;
     border-radius: 50%;
     transform: scale(1.1) translateY(-5%) rotate(-5deg);
@@ -1252,7 +1375,7 @@ button{
 .btn-up a:hover {
     animation-delay: .5s;
     color: rgb(255, 255, 255) !important;
-    z-index: 1;
+
 }
 
 @keyframes btn-up-anim {
@@ -1538,20 +1661,9 @@ button{
     }
 
     /* <!-- ----@Media Home Section End----------> */
-
-    /* <!-- ----@Media Aside Bar--------------> */
-    .aside-item a {
-        min-width: 70px;
-        min-height: 70px;
-        padding: 1px;
-    }
-
-    /* <!-- ----@Media Aside Bar End----------> */
-
     /* <!-- ----@Media Projects Section--------------> */
     .projects-section {
     background-image: unset;
-    background-color: #0e1116;
     /* overflow-y: scroll;
     scrollbar-width: none; */
     padding: 2.5em 0px 0em;
@@ -1697,8 +1809,8 @@ button{
 
     /* <!-- ----@Media Scroll-up Button-------------> */
     .btn-up {
-        right: 15px !important;
-        bottom: 25px !important;
+        right: 10px !important;
+        bottom: 35px !important;
     }
 
     .btn-up a {
