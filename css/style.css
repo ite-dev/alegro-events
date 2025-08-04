@@ -791,6 +791,10 @@ h4{
 }
 /* --------Carousel Base-------- */
 @media (max-width:975px){
+
+    .projects-section, .contact-section, .home-section{
+        background-attachment: scroll !important;
+    }
     .carousel-container {
         margin-top: 0 !important;
         padding: 0;
