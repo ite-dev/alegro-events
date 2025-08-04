@@ -267,12 +267,11 @@ function createCarousel(containerSelector, imageFilenames){
             indexLane.style.borderBottom = borderB;
             if(borderL !== "") indexLane.style.borderLeft = borderL;
             if(borderR !== "") indexLane.style.borderRight = borderR;
-            
         };
 
         styleItem(galleryPics[centerIndexLane], 'rotateY(0deg)', '225px', '375px', '3px solid black');
-        styleItem(galleryPics[leftIndexLane], 'rotateY(20deg)', '150px', '200px');
-        styleItem(galleryPics[rightIndexLane], 'rotateY(-20deg)', '150px', '200px');
+        styleItem(galleryPics[leftIndexLane], 'rotateY(50deg)', '150px', '200px', "", "4px solid snow");
+        styleItem(galleryPics[rightIndexLane], 'rotateY(-50deg)', '150px', '200px', "", "", '4px solid snow');
     };
 
     prevBtn.addEventListener('click', () => {

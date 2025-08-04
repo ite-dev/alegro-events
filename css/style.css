@@ -792,8 +792,12 @@ h4{
 /* --------Carousel Base-------- */
 @media (max-width:975px){
 
-    .projects-section, .contact-section, .home-section{
-        background-attachment: scroll !important;
+    .projects-section, #contact-section{
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% 100% !important;
+        background-position: top !important;
+        box-shadow: inset 0px 0px 15 5px black !important;
     }
     .carousel-container {
         margin-top: 0 !important;
@@ -801,6 +805,7 @@ h4{
         height: 250px;
         width: 100%;
         border-radius: 0px;
+        perspective: 400px;
     }
 
     .carousel {
@@ -810,9 +815,11 @@ h4{
     }
 
     .carousel-item{
-        min-width: 200px !important;
-        max-width: 200px !important;
+        transform: rotateY(0) !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
         height: 180px !important;
+        perspective: 400px;
     }
     .prev-btn {
         left: 0px;
@@ -1212,9 +1219,9 @@ h4{
     border-top: 1px solid goldenrod;
     border-bottom: 1px solid goldenrod;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
-    min-height: 350px;
+    min-height: 70vh;
     padding: 50px 25px 50px 25px;
-    gap: 15px;
+    gap: 2em;
     font-family: Poppins, sans-serif;
     display: flex;
     flex-direction: column;
@@ -1245,8 +1252,9 @@ h4{
 
 .form-container {
     width: 35%;
-    height: 380px;
+    height: 285px;
     position: relative;
+    margin-top: 3em;
 }
 
 .contact-box {
@@ -1257,7 +1265,7 @@ h4{
     left: 50%;
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 15px;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.281);
     -webkit-backdrop-filter: blur(10px);
@@ -1312,11 +1320,14 @@ h4{
     transition: .5s;
 }
 
-.contact-box .user-box input:focus~label {
+.contact-box .user-box input:focus~label{
     top: -20px;
     left: 0;
     color: var(--secondary);
     font-size: 0.9rem;
+}
+.user-box input:focus{
+    border: 1px solid orange;
 }
 
 .contact-box .user-box input:not(:placeholder-shown)~label {
@@ -1327,6 +1338,15 @@ h4{
     transition: .5s;
     text-shadow: rgb(255, 0, 0) 1px 0 5px;
 }
+.user-box input:not(:placeholder-shown){
+    border: 1px solid rgb(255, 72, 0);
+}
+
+.user-box:has(input:not(:valid)) .form-btn {
+    outline: 3px solid red;
+    background: green !important;
+    pointer-events: none !important;
+}
 
 .contact-box .user-box input:valid~label {
     top: -20px;
@@ -1334,6 +1354,17 @@ h4{
     color: greenyellow;
     font-size: 0.9rem;
     text-shadow: none;
+}
+.user-box input:valid{
+    border: 1px solid rgb(0, 255, 136);
+}
+.user-box input:valid~.form-btn{
+    pointer-events: all !important;
+}
+.form-btn:disabled{
+    background: grey !important;
+    pointer-events:none;
+    cursor: not-allowed;
 }
 
 
@@ -1811,39 +1842,48 @@ h4{
 
     /* <!-- ----@Media Contact Section--------------> */
     #contact-section {
-        padding: 25px 20px 70px;
+        padding: 150px 20px 70px;
         height: 85vh;
         justify-content: center;
-        gap: 2em;
+        gap: 0em;
     }
 
     #contact-section p {
-        padding: 0 !important;
-        margin-top: 1em;
         font-size: .98rem !important;
+        color: cyan;
+        background: black;
+        width: 100%;
+        text-align: center;
+        margin-top: unset;
+        padding: unset;
     }
 
     .form-container {
         width: 100% !important;
-        height: 20em !important;
     }
 
     .contact-box .user-box input {
         width: 100% !important;
+        margin: 0px 0px 0px 0px;
     }
 
     .contact-box form {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1em !important;
+        gap: .5em !important;
+        row-gap: 1em !important;
     }
-
+    .contact-box {
+        height: unset !important;
+        padding: 25px !important;
+    }
     .contact-box .user-box label {
         left: 10px;
     }
 
     .form-btn {
-        width: 100% !important;
+        width: 50%;
+        padding: 5px 0px !important;
         grid-column: span 2;
     }
 
