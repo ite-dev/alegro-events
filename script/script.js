@@ -160,6 +160,7 @@ imageFilenames.forEach((filename, index) => {
 
 // Scroll Snap About // 
 let wrapper = document.querySelector('.about-content-wrapper');
+
 wrapper.addEventListener('wheel', (e) => {
     e.preventDefault();
     wrapper.scrollBy({
@@ -168,8 +169,6 @@ wrapper.addEventListener('wheel', (e) => {
     });
 }, { passive: false });
 // Scroll Snap About // 
-
-
 
 
 // Temp Controllers //
@@ -225,7 +224,7 @@ document.addEventListener('scroll', function() {
 
 
 // Image Carousel //
-function createCarousel(containerSelector, imageFilenames){
+function createCarousel(containerSelector, imageFilenames) {
     const container = document.querySelector(containerSelector);
     const carousel = container.querySelector('.carousel');
     const prevBtn = container.querySelector('.prev-btn');
@@ -234,67 +233,73 @@ function createCarousel(containerSelector, imageFilenames){
     imageFilenames.forEach((filename, index) => {
         const galleryPic = document.createElement('div');
         galleryPic.className = 'carousel-item';
-        galleryPic.innerHTML= `<img src="${basePath}${filename}" alt="Image ${index + 1}">`;
+        galleryPic.innerHTML = `<img src="${basePath}${filename}" alt="Image ${index + 1}">`;
         carousel.appendChild(galleryPic);
     });
-    
+
     const galleryPics = carousel.querySelectorAll('.carousel-item');
     let index = 1;
     const totalPics = galleryPics.length;
 
-    function updateCarousel(){
+    function triggerFlipAnimation(pic) {
+        pic.classList.add('is-flipping');
+        
+        setTimeout(() => {
+            pic.classList.remove('is-flipping');
+        }, 1000);
+    }
+
+    function updateCarousel() {
         galleryPics.forEach(pic => {
-            pic.classList.remove('active');
+            pic.className = 'carousel-item';
             pic.style.display = "none";
-            pic.style.transform = "none";
             pic.style.opacity = 0.4;
+
             pic.style.border = '4px solid black';
         });
-        const centerIndexLane = (index + totalPics) % totalPics;
-        const leftIndexLane = (centerIndexLane - 1 + totalPics) % totalPics;
-        const rightIndexLane = (centerIndexLane + 1) % totalPics;
 
-        const styleItem = (
-                indexLane, transform, height, width,
-                borderB, borderL = "", borderR = "", 
-            ) => {
-            indexLane.classList.add('active');
-            indexLane.style.display = "block";
-            indexLane.style.opacity = 1;
-            indexLane.style.transform = transform;
-            indexLane.style.height = height;
-            indexLane.style.width = width;
-            indexLane.style.borderBottom = borderB;
-            if(borderL !== "") indexLane.style.borderLeft = borderL;
-            if(borderR !== "") indexLane.style.borderRight = borderR;
-        };
+        const centerIndex = ((index % totalPics) + totalPics) % totalPics;
+        const leftIndex = (centerIndex - 1 + totalPics) % totalPics;
+        const rightIndex = (centerIndex + 1) % totalPics;
 
-        styleItem(galleryPics[centerIndexLane], 'rotateY(0deg)', '225px', '375px', '3px solid black');
-        styleItem(galleryPics[leftIndexLane], 'rotateY(50deg)', '150px', '200px', "", "4px solid snow");
-        styleItem(galleryPics[rightIndexLane], 'rotateY(-50deg)', '150px', '200px', "", "", '4px solid snow');
-    };
+        const centerPic = galleryPics[centerIndex];
+        const leftPic = galleryPics[leftIndex];
+        const rightPic = galleryPics[rightIndex];
+
+        // Apply flipping animation
+        triggerFlipAnimation(rightPic);
+        triggerFlipAnimation(centerPic);
+        triggerFlipAnimation(leftPic);
+
+
+        while (carousel.firstChild) {
+            carousel.removeChild(carousel.firstChild);
+        }
+        carousel.appendChild(leftPic);
+        carousel.appendChild(centerPic);
+        carousel.appendChild(rightPic);
+
+        leftPic.classList.add('active', 'left');
+        centerPic.classList.add('active', 'center');
+        rightPic.classList.add('active', 'right');
+    }
 
     prevBtn.addEventListener('click', () => {
         index--;
-        if (index <= 0) {
-            index = totalPics - 2;
-        }
         updateCarousel();
     });
+
     nextBtn.addEventListener('click', () => {
         index++;
-
-        if (index >= totalPics) {
-            index = 1;
-        }
-        if (index >= totalPics - 1) {
-            index = 1;
-        }
         updateCarousel();
     });
-    updateCarousel();
-};
 
+    updateCarousel();
+}
+
+
+
+// Create Carousels //
 createCarousel('.carousel-container-1', [
     'dishes-1.jpg',
     'dishes-2.jpg',
@@ -304,14 +309,13 @@ createCarousel('.carousel-container-1', [
     'dishes-6.jpg',
 ], basePath);
 createCarousel('.carousel-container-2', [
-    'dishes-1.jpg',
-    'dishes-2.jpg',
-    'dishes-3.jpg',
+    'dishes-6.jpg',
+    'champagne.jpg',
+    'dishes-7.jpg',
     'dishes-4.jpg',
     'dishes-5.jpg',
-    'dishes-6.jpg',
+    'dishes-2.jpg',
 ], basePath);
-
 // Image Carousel //
 
 // Gallery Backgound Image Rotation // 
