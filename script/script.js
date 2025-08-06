@@ -158,18 +158,6 @@ imageFilenames.forEach((filename, index) => {
 });
 // Load Gallery Images // 
 
-// Scroll Snap About // 
-let wrapper = document.querySelector('.about-content-wrapper');
-
-wrapper.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    wrapper.scrollBy({
-        top: e.deltaY > 0 ? wrapper.clientHeight : -wrapper.clientHeight,
-        behavior: 'smooth',
-    });
-}, { passive: false });
-// Scroll Snap About // 
-
 
 // Temp Controllers //
 const hideBtn = document.querySelector('.hide-btn');
@@ -261,7 +249,7 @@ function createCarousel(containerSelector, imageFilenames) {
         const centerIndex = ((index % totalPics) + totalPics) % totalPics;
         const leftIndex = (centerIndex - 1 + totalPics) % totalPics;
         const rightIndex = (centerIndex + 1) % totalPics;
-
+        
         const centerPic = galleryPics[centerIndex];
         const leftPic = galleryPics[leftIndex];
         const rightPic = galleryPics[rightIndex];

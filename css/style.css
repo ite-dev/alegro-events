@@ -71,9 +71,8 @@ body {
     z-index: -1;
     display: flex;
     flex-direction: column;
-    max-height: calc(100vh - 75px);
     max-width: 100%;
-    margin-top: 63px;
+    margin-top: 62px;
     overflow-x: hidden;
     background: black;
 }
@@ -117,7 +116,8 @@ img {
     animation: show-content 1.2s linear forwards;
     animation-delay: 0.5s;
 
-    box-shadow: 0px 5px 15px 2px black;
+    box-shadow: 0px 0px 30px 5px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.353);
 }
 
 .navbar-logo{
@@ -733,22 +733,21 @@ h4{
     border: 1px solid black;
     
 
-    border-image: url('../public/gallery/tempbgs/pic-frame15.jpg') !important;
-    border-image-width: 1000px !important;
-    border-image-slice: 10% !important;
+    border-image: url('../public/gallery/tempbgs/pic-frame5.jpg') !important;
+    border-image-width: 50px !important;
+    border-image-slice: 40% !important;
     
     border-image-outset: 0px;
     border-image-repeat: stretch;   
-    padding: 1px;
+    padding: 10px;
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
-    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.342);
+    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.242);
     transition: transform 0.3s ease;
     object-fit: cover;
-    border: 1px solid black;
 }
 .carousel-item img:hover{
     transform: scale(1.05);
@@ -758,8 +757,8 @@ h4{
     position: absolute;
     top: 33%;
     transform: translateY();
-    background-color: rgba(255, 255, 255, 0.459);
-    color: black;    
+    background-color: rgba(0, 0, 0, 0.11);
+    color: white;    
     padding: 15px;
     cursor: pointer;
     z-index: 10;
@@ -828,17 +827,16 @@ h4{
 
 @keyframes flipY {
     0% {
-        transform: scale(1);
-        opacity: .2 !important;
+        transform: scale(1)  ;
     }
 
     50% {
-        transform: rotateY(10deg) scale(.9);
+        transform: scale(1) skew(2deg, 0deg);
+        
     }
 
     100% {
-        transform: scale(1);
-        opacity: 1;
+        transform: scale(1) ; 
     }
 }
 
@@ -979,7 +977,7 @@ h4{
     background-image:
         linear-gradient(to right, rgba(255, 174, 0, 0.05) 8px, transparent 1px),
         linear-gradient(to bottom, rgb(255, 174, 0, 0.05) 8px, transparent 1px);
-    background-size: calc(100% / 2) calc(100% / 2);
+    background-size: calc(100% / 0) calc(100% / 0);
     width: 100%;
     height: 100%;
     display: block;
@@ -1219,47 +1217,6 @@ h4{
     border-top: 1px solid goldenrod;
 }
 
-.about-content-wrapper {
-    scrollbar-color: goldenrod black;
-    scrollbar-width: thin;
-    height: auto;
-    max-height: 425px;
-
-
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scroll-padding-top: 0;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.203);
-    z-index:1;
-}
-
-.about-content-wrapper::-webkit-scrollbar {
-    width: 12px;
-}
-
-.about-content-wrapper::-webkit-scrollbar-track {
-    background: black;
-}
-
-.about-content-wrapper::-webkit-scrollbar-thumb {
-    background-color: goldenrod;
-    border-radius: 6px;
-    border: 2px solid black;
-}
-
-.about-content-wrapper::-webkit-scrollbar-button {
-    background-color: black;
-}
 
 #btn-contact {
     padding: 5px 25px;
@@ -1279,33 +1236,68 @@ h4{
     color: goldenrod;
 }
 
+.about-content-wrapper{
+    margin: 2em 0 5em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    background: goldenrod;
+    gap: 8px;
+}
 .about-content-wrapper p {
     
-    z-index: 5;
-    min-height: 315px;
-    max-height: 310px;
-    overflow: hidden;
-    scroll-snap-align: center;
-    scroll-snap-stop:always;
-    margin: 2em 0;
-    padding: 2em;
-    width: 80%;
+    z-index: 1;
+    min-height: 450px;
+    max-height: 450px;
+    padding: 1em;
+    width: 100%;
+    
     height: auto;
+    background: rgb(48, 48, 48);
 
-    background: rgb(218, 218, 218);
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 2px black;
-
-    color: black;
+    color: seashell;
     font-size: 1.4rem;
     font-weight: 500;
     text-align: right;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     word-break: break-word;
+    overflow: hidden;
+}
 
-    scrollbar-width: thin;
-    scrollbar-color: pink black;
+.about-info-box-left, .about-info-box-right{
+    width: 100%;
+    display: flex;
+    padding: 0;
+    gap: 10px;
+    background: black;
+}
+.about-info-box-right{
+    
+}
+.about-info-box-left{
+    flex-direction: row-reverse;
+}
+.info-box-cube1{
+    background-image: url('../public/gallery/tempbgs/dishes-2.jpg');
+    background-size: cover;
+}
+.info-box-cube2{
+    background-image: url('../public/gallery/tempbgs/dishes-3.jpg');
+    background-size: cover;
+}
+.info-box-cube3{
+    background-image: url('../public/gallery/tempbgs/dishes-5.jpg');
+    background-size: cover;
+}
+.info-box-cube4{
+    background-image: url('../public/gallery/tempbgs/dishes-1.jpg');
+    background-size: cover;
+}
+.info-box-border{
+    background: silver;
+    width: 5px;
 }
 
 /* <!-- ----About Section----------------> */
@@ -1918,14 +1910,23 @@ h4{
 
     /* <!-- ----@Media About Section--------------> */
     #about-section {
-        padding: 25px 25px 50px;
+        padding: 25px 0 50px;
     }
     .about-content-wrapper{
-        width: 90%;
-    }
+        width: 95%;
+        gap: 4px;
 
+        grid-template-columns: ;
+    }
+    .about-info-box-right, .about-info-box-left{
+        gap: 0px;
+    }
+    .info-box-border{
+        background: goldenrod;
+    }
     #about-section p {
-        padding: 0 !important;
+        width: 100%
+        padding: 3px;
         font-size: var(--fs-p) !important;
     }
 
