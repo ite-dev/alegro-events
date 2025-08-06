@@ -236,11 +236,20 @@ function createCarousel(containerSelector, imageFilenames) {
             pic.classList.remove('is-flipping');
         }, 5000);
     }
+    function expandPic(pic, status = true){
+        
+        if(status === false){
+            pic.style.transform = 'scale(1)';
+            pic.onclick = () => { expandPic(pic, true) }
+        } else{
+            pic.style.transform = 'scale(1.5)';
+            pic.onclick = () => {expandPic(pic, false)}
+        }
+    };
 
     function updateCarousel() {
         galleryPics.forEach(pic => {
             pic.className = 'carousel-item';
-            /* pic.style.display = "none"; */
             pic.style.opacity = 0.4;
 
             pic.style.border = '4px solid black';
@@ -253,6 +262,21 @@ function createCarousel(containerSelector, imageFilenames) {
         const centerPic = galleryPics[centerIndex];
         const leftPic = galleryPics[leftIndex];
         const rightPic = galleryPics[rightIndex];
+
+        leftPic.style.transform = 'scale(1)';
+        rightPic.style.transform = 'scale(1)';
+        centerPic.onclick = () => {
+            expandPic(centerPic);
+        };
+        rightPic.onclick = () => {
+            index++;
+            updateCarousel();
+        };
+        leftPic.onclick = () => {
+            index--;
+            updateCarousel();
+        };
+        
 
         triggerFlipAnimation(rightPic);
         triggerFlipAnimation(centerPic);
