@@ -252,7 +252,7 @@ function createCarousel(containerSelector, imageFilenames) {
     function updateCarousel() {
         galleryPics.forEach(pic => {
             pic.className = 'carousel-item';
-            pic.style.display = "none";
+            /* pic.style.display = "none"; */
             pic.style.opacity = 0.4;
 
             pic.style.border = '4px solid black';
