@@ -115,14 +115,14 @@ const basePath = window.location.pathname.includes('alegro-events')
 const images = [
     'table-bg.jpg',
     'table-bg2.jpg',
-    'dishes-5.jpg',
+    /*'dishes-5.jpg', */
 ];
 
 let currentHomePic = 0;
 setInterval(() => {
     currentHomePic = (currentHomePic + 1) % images.length;
     homeSection.style.backgroundImage = `url('${basePath}${images[currentHomePic]}')`;
-}, 4000); 
+}, 10000); 
 // Home Background Image Rotation // 
 
 
@@ -223,7 +223,7 @@ document.addEventListener('scroll', function() {
 // Scroll Position: scroll-up btn display,  //
 
 
-// Image Carousel //
+// Carousel Factory //
 function createCarousel(containerSelector, imageFilenames) {
     const container = document.querySelector(containerSelector);
     const carousel = container.querySelector('.carousel');
@@ -246,7 +246,7 @@ function createCarousel(containerSelector, imageFilenames) {
         
         setTimeout(() => {
             pic.classList.remove('is-flipping');
-        }, 1000);
+        }, 5000);
     }
 
     function updateCarousel() {
@@ -266,7 +266,6 @@ function createCarousel(containerSelector, imageFilenames) {
         const leftPic = galleryPics[leftIndex];
         const rightPic = galleryPics[rightIndex];
 
-        // Apply flipping animation
         triggerFlipAnimation(rightPic);
         triggerFlipAnimation(centerPic);
         triggerFlipAnimation(leftPic);
@@ -334,8 +333,8 @@ const galleryImages = [
 ];
 
 let currentPic = 0;
-setInterval(() => {
+/* setInterval(() => {
     currentPic = (currentPic + 1) % galleryImages.length;
     gallerySection.style.backgroundImage = `url('${basePath}${galleryImages[currentPic]}')`;
-}, 7000);
+}, 1000); */
 // Gallery Background Image Rotation // 

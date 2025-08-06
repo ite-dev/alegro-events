@@ -97,7 +97,7 @@ img {
 }
 
 .nav-bar {
-    background: rgb(30, 38, 38);
+    background: rgb(0, 0, 0);
     position: fixed;
     min-width: 100%;
     max-width: 100%;
@@ -717,7 +717,7 @@ h4{
     border-radius: 2px;
     width: 400px;
     height: 250px;
-    position: relative;
+    
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -727,7 +727,7 @@ h4{
 
     transform-style: preserve-3d;
     transform-origin: center center;
-    transition: opacity .5s ease;
+    transition: transform 3.5s ease, opacity 0.5 ease;
     border: 1px solid black;
     
 
@@ -743,9 +743,10 @@ h4{
 .carousel-item img {
     width: 100%;
     height: 100%;
-    box-shadow: 0px 0px 10px 1px black;
+    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.342);
     transition: transform 0.3s ease;
     object-fit: cover;
+    border: 1px solid black;
 }
 .carousel-item img:hover{
     transform: scale(1.05);
@@ -794,7 +795,7 @@ h4{
 }
 
 .carousel-item.left {
-    transform: rotateY(45deg) !important;
+    transform: translateX(0px) rotateY(45deg);
     z-index: 1;
     opacity: 0.8 !important;
     width: 200px;
@@ -802,7 +803,7 @@ h4{
 }
 
 .carousel-item.right {
-    transform: rotateY(-45deg) !important;
+    transform: translateX(0px) rotateY(-45deg);
     z-index: 1;
     opacity: 0.8 !important;
     width: 200px;
@@ -818,32 +819,25 @@ h4{
 }
 
 .carousel-item.is-flipping {
-    animation: flipY 1s ease;
+    animation: flipY .6s ease;
 }
 
 @keyframes flipY {
     0% {
-        width: 0px;
-        height: 0px;
-        border: none;
+        transform: scale(1);
         opacity: .2 !important;
     }
 
     50% {
-        width: 75px;
-        height: 75px;
-        transform:  rotateY(-230deg) scale(.5);
-        border: none;
-
+        transform: rotateY(10deg) scale(.9);
     }
 
     100% {
-        transform: rotateY(0deg) scale(1);
+        transform: scale(1);
         opacity: 1;
-        border: none;
     }
-    
 }
+
 /* --------Carousel Base-------- */
 @media (max-width:975px){
 
@@ -885,15 +879,17 @@ h4{
     }
 }
 /* <!-- ----Projects Section---------------> */
-.projects-section {
-    background-image: url('/public/gallery/tempbgs/gallery-bg8.jpg');
+.gallery-section {
+    background-image: url('/public/gallery/tempbgs/gallery-bg24.jpg');
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-repeat: repeat;
+/*     background-position-x: -300px;
+    background-position-y: -500px; */
         
     min-height: calc(100vh);
 
-    background-color:rgb(24, 24, 24);
+    background-color:rgb(0, 0, 0);
     
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -910,6 +906,52 @@ h4{
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
 
     overflow-x: hidden;
+    animation: floatingbg 400s linear infinite;
+}
+.gallery-bg-overlay{
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(to right,
+            rgba(0, 0, 0, .85) 0%,
+            rgba(0, 0, 0, .85) 33%,
+            rgba(0, 0, 0, .6) 33%,
+            rgba(0,0,0,.2) 80%,
+            rgba(0, 0, 0, .2) 100%);
+}
+@keyframes floatingbg {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 0 10000px;
+    }
+}
+
+.home-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    pointer-events: none;
+}
+
+.home-bg-overlay::before,
+.home-bg-overlay::after {
+    content: '';
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: calc(100% / 32) calc(100% / 16);
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .cards-container {
@@ -994,7 +1036,7 @@ h4{
     font-size: 1rem !important;
 }
 
-.projects-section h2 {
+.gallery-section h2 {
     font-size: 1.8rem;
     color: snow;
     max-width: 100vw;
@@ -1803,7 +1845,7 @@ h4{
 
     /* <!-- ----@Media Home Section End----------> */
     /* <!-- ----@Media Projects Section--------------> */
-    .projects-section {
+    .gallery-section {
     padding: 2.5em 0px 0em;
     min-height: calc(100vh - 65px);
     }
@@ -1839,12 +1881,12 @@ h4{
         cursor: pointer;
     }
 
-    .projects-section h2 {
+    .gallery-section h2 {
         min-width: 100%;
         font-size: 1.4rem;
     }
 
-    .projects-section p {
+    .gallery-section p {
         font-size: .75rem;
         border-radius: 0px !important;
     }
