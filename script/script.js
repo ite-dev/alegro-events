@@ -359,36 +359,57 @@ function handlePairExpanded(pairs){
     let activePair = null;
     const grid = document.querySelector('.about-content-wrapper')
     
-    pairs.forEach(pair => {
+    pairs.forEach((pair, index) => {
         pair.addEventListener('click', () => {
             const isExpanded = pair.classList.contains('expanded');
 
             pairs.forEach(p => p.classList.remove('expanded'));
+
             if (!isExpanded) {
                 pair.classList.add('expanded');
                 activePair = pair;
                 
                 grid.style.background = 'black';
                 grid.style.boxShadow = 'unset';
-                
-                const topOffset = pair.getBoundingClientRect().top + window.scrollY - 400;
-                window.scrollTo({
-                    top: topOffset,
-                    behavior: 'smooth'
-                });
+
+                const previousPair = pair.previousElementSibling;
+                const isLast = index === pairs.length - 1;
+
+                if(isLast){
+                    const topOffset = pair.getBoundingClientRect().top + window.scrollY - 100;
+                    window.scrollTo({
+                        top: topOffset,
+                        behavior: 'smooth'
+                    });
+                } else{
+                    if (previousPair?.classList.contains('info-box-pair')) {
+                        previousPair.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        const topOffset = pair.getBoundingClientRect().top + window.scrollY - 300;
+                        window.scrollTo({
+                            top: topOffset,
+                            behavior: 'smooth'
+                        });
+                    };
+                };
+
             } else {
                 activePair = null;
                 grid.style.background = 'goldenrod';
                 grid.style.boxShadow = '0px 0px 20px 1px rgba(255, 255, 255, 0.274)';
-            }
+            };
 
             pairs.forEach(p => {
                 const shrinkEm = p.classList.contains('expanded');
                 if (activePair && !shrinkEm) {
+                    const isMobile = window.innerWidth <= 768;
                     p.style.transform = 'scale(0.99, 0.59)';
                     p.style.background = 'goldenrod';
                     p.style.gap = '10px';
-                    grid.style.gridAutoRows = 'minmax(0, 250px)';
+                    grid.style.gridAutoRows = isMobile ? 'minmax(0, 200px)' : 'minmax(0,200px)';
                 }
                 else{
                     p.style.transform = 'scale(1)';

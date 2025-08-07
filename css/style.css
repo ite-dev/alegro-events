@@ -748,6 +748,7 @@ h4{
     box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.242);
     transition: transform 0.3s ease;
     object-fit: cover;
+    transform: opacity(1);
 }
 .carousel-item img:hover{
     transform: scale(1.05);
@@ -1733,22 +1734,20 @@ h4{
         display: flex;
         justify-content: center !important;
         font-size: 1.2em;
-        color: var(--accent3) !important;
-        background-color: var(--backcolor3);
         box-shadow: unset;
     }
 
     .nav-bar ul {
         gap: .8em;
-        margin-top: 25px;
-        background-color: #1f242d;
-        padding: 2em;
+        background-color: #080808;
         justify-content: center;
         align-items: center;
+        min-height: 475px;
     }
 
     .nav-bar ul li {
-        border: unset;
+        
+        border: 1px solid goldenrod;
         width: 80%;
     }
 
@@ -1759,7 +1758,6 @@ h4{
     }
 
     .nav-bar ul li a {
-        border-radius: 7px;
         width: 100%;
     }
 
@@ -1774,9 +1772,9 @@ h4{
 
     .nav-bar ul li a:hover,
     .nav-bar ul li.active a:hover {
-        background-color: var(--accent3);
-        color: var(--backcolor3) !important;
-        box-shadow: 0 0 5px var(--secondary);
+        background-color: goldenrod;
+        color: black;
+        border: 1px solid black;
     }
 
     .checkON,
@@ -1792,16 +1790,15 @@ h4{
     }
 
     #checkbox-status:checked~.checkbox-container {
-
         top: 0;
     }
 
     #checkbox-status:checked~#coverlay,
     #checkbox-status:checked~#coverlay:hover {
-        background: rgba(0, 0, 0, 0.066);
-        -webkit-backdrop-filter: blur(3px) !important;
-        backdrop-filter: blur(3px) !important;
-        height: 100% !important;
+        background: rgba(0, 0, 0, .4);
+        -webkit-backdrop-filter: blur(4px) !important;
+        backdrop-filter: blur(4px) !important;
+        min-height: 1000px !important;
         width: 100% !important;
         position: fixed;
         top: 0;
@@ -2006,9 +2003,13 @@ h4{
         width: 87%;
     }
     .info-box{
-        min-height: 250px;
-        max-height: 250px;
+        min-height: 200px;
+        max-height: 200px;
         overflow: hidden;
+    }
+    .info-box-pair.expanded{
+        min-height: 300px;
+        max-height: 300px;
     }
 
     .info-box.text p{
