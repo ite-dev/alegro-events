@@ -865,20 +865,12 @@ h4{
     padding: 3em 0 0;
     position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
-}
 
-.gallery-bg{
     background-image: url('../public/gallery/tempbgs/gallery-bg24.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: repeat;
     animation: floatingbg 400s linear infinite;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
 }
 @keyframes floatingbg {
     from {
