@@ -295,12 +295,14 @@ function createCarousel(containerSelector, imageFilenames) {
         rightPic.classList.add('active', 'right');
     }
 
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         index--;
         updateCarousel();
     });
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         index++;
         updateCarousel();
     });
@@ -359,10 +361,12 @@ function handlePairExpanded(pairs){
     let activePair = null;
     const grid = document.querySelector('.about-content-wrapper')
     
+
     pairs.forEach((pair, index) => {
+
         pair.addEventListener('click', () => {
             const isExpanded = pair.classList.contains('expanded');
-
+            const isMobile = window.innerWidth <= 768;
             pairs.forEach(p => p.classList.remove('expanded'));
 
             if (!isExpanded) {
@@ -376,7 +380,7 @@ function handlePairExpanded(pairs){
                 const isLast = index === pairs.length - 1;
 
                 if(isLast){
-                    const topOffset = pair.getBoundingClientRect().top + window.scrollY - 100;
+                    const topOffset = pair.getBoundingClientRect().top + window.scrollY - 250;
                     window.scrollTo({
                         top: topOffset,
                         behavior: 'smooth'
@@ -399,25 +403,24 @@ function handlePairExpanded(pairs){
             } else {
                 activePair = null;
                 grid.style.background = 'goldenrod';
-                grid.style.boxShadow = '0px 0px 20px 1px rgba(255, 255, 255, 0.274)';
+                grid.style.boxShadow = '0px 0px 20px 1px rgba(255, 255, 255, 0.174)';
             };
 
             pairs.forEach(p => {
                 const shrinkEm = p.classList.contains('expanded');
                 if (activePair && !shrinkEm) {
-                    const isMobile = window.innerWidth <= 768;
-                    p.style.transform = 'scale(0.99, 0.59)';
+                    p.style.height = isMobile ? "175px" : '250px';
                     p.style.background = 'goldenrod';
                     p.style.gap = '10px';
-                    grid.style.gridAutoRows = isMobile ? 'minmax(0, 200px)' : 'minmax(0,200px)';
+                    grid.style.gridAutoRows = isMobile ? 'minmax(0, 175px)' : 'minmax(0,250px)';
                 }
                 else{
-                    p.style.transform = 'scale(1)';
+                    p.style.height = isMobile? "200px" : "400px";
                     p.style.background = 'goldenrod';
                     p.style.gap = '8px';
-                    grid.style.gridAutoRows = 'unset';
-                }
-            })
+                    grid.style.gridAutoRows = isMobile? 'minmax(0, 200px)' : 'unset';
+                };
+            });
         });
 
         
