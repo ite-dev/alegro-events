@@ -167,7 +167,7 @@ hideBtn.addEventListener('click', () => {
     const homeP = document.querySelector('.home-paragraph');
 
     if(hideBtn.innerHTML === "Hide Text"){
-        homeP.style = "color: transparent; background: transparent;";
+        homeP.style = "color: transparent; background: transparent; text-shadow: none;";
         hideBtn.innerHTML = "Show";
         hideBtn.style = "color: white; background: transparent;"
     }
@@ -245,6 +245,7 @@ function createCarousel(containerSelector, imageFilenames) {
             pic.style.transform = 'scale(1.5)';
             pic.onclick = () => {expandPic(pic, false)}
         }
+
     };
 
     function updateCarousel() {
@@ -310,8 +311,6 @@ function createCarousel(containerSelector, imageFilenames) {
     updateCarousel();
 }
 
-
-
 // Create Carousels //
 createCarousel('.carousel-container-1', [
     'dishes-1.jpg',
@@ -328,6 +327,14 @@ createCarousel('.carousel-container-2', [
     'dishes-4.jpg',
     'dishes-5.jpg',
     'dishes-2.jpg',
+], basePath);
+createCarousel('.carousel-container-3', [
+    'gallery-bg18.jpg',
+    'gallery-bg23.jpg',
+    'gallery-bg21.jpg',
+    'gallery-bg8.jpg',
+    'gallery-bg19.jpg',
+    'bg-violin.jpg',
 ], basePath);
 // Image Carousel //
 
