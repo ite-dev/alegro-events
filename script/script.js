@@ -373,7 +373,7 @@ function handlePairExpanded(pairs){
 
         pair.addEventListener('click', () => {
             const isExpanded = pair.classList.contains('expanded');
-            const isMobile = window.innerWidth <= 768;
+            const isMobile = window.innerWidth <= 980;
             pairs.forEach(p => p.classList.remove('expanded'));
 
             if (!isExpanded) {

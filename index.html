@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="apple-touch-icon" sizes="180x180" href="/public/alegro-logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/alegro-logo.png">
@@ -118,6 +119,7 @@
         <!-- --------------Home Section End-------------- -->
         <!-- --------------Projects Section-------------- -->
         <section class="gallery-section" id="gallery-section" onclick="return true">
+        <div class="gallery-bg"></div>
         <div class="gallery-bg-overlay"></div>
             <div class="sticky-title">
                 <h2>Gallery</h2>
@@ -177,6 +179,7 @@
 
         <!-- ----------------About Section---------------- -->
         <section id="about-section">
+            <div class="about-bg"></div>
             <div class="about-bg-overlay"></div>
             <div class="about-header">
                 <h2> About Us </h2>
@@ -272,6 +275,7 @@
 
         <!-- ----------------Contact Section---------------- -->
         <section id="contact-section">
+            <div class="contact-bg"></div>
             <div class="contact-bg-overlay"></div>
             <h2> Let's Talk </h2>
             <div class="form-container"><!----Contact Form---->
@@ -279,8 +283,8 @@
                     <form>
                         <div class="user-box">
                             <input id="userName" type="text" name="name" required placeholder=" "
-                                pattern="([a-zA-Z]{3,30}) ([a-zA-Z]{3,25}|\.| |-|')+$"
-                                title="Must Contain: First and Last Name, 3-30 letters only | Example: John Dough |"
+                                pattern="([a-zA-Z]{2,30}) ([a-zA-Z]{2,25}|\.| |-|')+$"
+                                title="Must Contain: First and Last Name, 2-30 letters only | Example: John Dough |"
                                 autocomplete="on">
                             <label for="userName">Name</label>
                         </div>
