@@ -52,6 +52,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         scrollbar-width: none;
+        min-height: 500px;
         max-height: 80vh;
         display: flex;
         flex-direction: column;
@@ -60,7 +61,7 @@
         padding: 2em;
     }
 
-    .nav-bar ul li a {
+    .nav-bar ul li a, .nav-bar ul li p {
         width: 100%;
         height: auto;
         padding: 0.5em !important;
@@ -71,12 +72,10 @@
         text-shadow: none;
     }
 
-
-
     .nav-bar ul li {
-
         border: 1px solid goldenrod;
         width: 80%;
+        max-width: 400px;
     }
 
     .nav-bar ul li:hover {
@@ -89,7 +88,7 @@
         width: 100%;
     }
 
-    .nav-bar ul li:hover a {
+    .nav-bar ul li:hover a, .nav-bar ul li:hover p {
         border-bottom: unset;
 
     }

@@ -195,7 +195,7 @@ img {
     transform: scale(1.1) translateY(-5%);
 }
 
-.nav-bar ul li a {
+.nav-bar ul li a, .nav-bar ul li p {
     font-size: var(--fs-navli);
     font-weight: 800;
     color: whitesmoke;
@@ -204,9 +204,11 @@ img {
     align-items: center;
     text-decoration: none;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .nav-bar ul li:hover a,
+.nav-bar ul li:hover p,
 .nav-bar ul li.active a {
     color: goldenrod;
     border-bottom: 2px solid var(--accent3);
@@ -1414,19 +1416,28 @@ h4{
     overflow: hidden;
 }
 .contact-bg {
-    background-image: url('../public/gallery/tempbgs/bg6.jpg');
+    background-image: url('../public/gallery/tempbgs/bg1.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: repeat;
-    background-position: 0px 1750px;
+
 
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    animation: floatingbg1 400s linear infinite;
+    animation: floatingbg-x 400s linear infinite;
     transform: scaleX(-1) translateY();
+}
+@keyframes floatingbg-x {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0px;
+    }
 }
 .contact-bg-overlay {
     position: absolute;

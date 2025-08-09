@@ -75,6 +75,30 @@ jsBtn.addEventListener('click', () => {
     window.addEventListener('scroll', onScroll);
     onScroll();
 }); */
+function resetDropdownStyles() {
+    document.querySelectorAll(".dropdown").forEach(menu => {
+        menu.classList.remove("open");
+        menu.style.maxHeight = "";
+        menu.style.minHeight = "";
+        const toggle = menu.closest(".expandable-nav-item");
+        if (toggle) {
+            toggle.style.marginBottom = "";
+            const arrow = toggle.querySelector("span");
+            if (arrow) arrow.style.transform = "";
+        }
+    });
+    const menuContainer = document.querySelector(".checkbox-container ul");
+    if (menuContainer) menuContainer.style.paddingTop = "";
+}
+
+let isMobile = window.innerWidth <= 980;
+window.addEventListener("resize", () => {
+    const currentlyMobile = window.innerWidth <= 980;
+    if (currentlyMobile !== isMobile) {
+        resetDropdownStyles();
+        isMobile = currentlyMobile;
+    }
+});
 
 // setup Drowndown Menues // 
 function setupDropdown(toggleSelector, menuSelector, arrowSelector) {
