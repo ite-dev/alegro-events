@@ -492,7 +492,7 @@ function handlePairExpanded(pairs){
 
             } else {
                 activePair = null;
-                grid.style.background = 'goldenrod';
+                grid.style.background = 'rgba(154, 126, 76, 1)';
                 grid.style.boxShadow = '0px 0px 20px 1px rgba(255, 255, 255, 0.174)';
             };
 
@@ -500,13 +500,13 @@ function handlePairExpanded(pairs){
                 const shrinkEm = p.classList.contains('expanded');
                 if (activePair && !shrinkEm) {
                     p.style.height = isMobile ? "175px" : '250px';
-                    p.style.background = 'goldenrod';
+                    p.style.background = 'rgba(154, 126, 76)';
                     p.style.gap = '10px';
                     grid.style.gridAutoRows = isMobile ? 'minmax(0, 175px)' : 'minmax(0,250px)';
                 }
                 else{
                     p.style.height = isMobile? "200px" : "400px";
-                    p.style.background = 'goldenrod';
+                    p.style.background = 'rgba(154, 126, 76, 1)';
                     p.style.gap = '8px';
                     grid.style.gridAutoRows = isMobile? 'minmax(0, 200px)' : 'unset';
                 };
