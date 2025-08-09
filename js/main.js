@@ -411,14 +411,14 @@ createCarousel('.carousel-container-2', [
     'dishes-5.jpg',
     'dishes-2.jpg',
 ], basePath);
-createCarousel('.carousel-container-3', [
+/* createCarousel('.carousel-container-3', [
     'gallery-bg18.jpg',
     'gallery-bg23.jpg',
     'gallery-bg21.jpg',
     'gallery-bg8.jpg',
     'gallery-bg19.jpg',
     'bg-violin.jpg',
-], basePath);
+], basePath); */
 // Image Carousel //
 
 // Gallery Backgound Image Rotation // 
@@ -463,7 +463,7 @@ function handlePairExpanded(pairs){
                 pair.classList.add('expanded');
                 activePair = pair;
                 
-                grid.style.background = 'black';
+                grid.style.background = 'transparent';
                 grid.style.boxShadow = 'unset';
 
                 const previousPair = pair.previousElementSibling;
