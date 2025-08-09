@@ -49,16 +49,15 @@
         background-color: #080808;
         justify-content: center;
         align-items: center;
-        min-height: 475px;
         overflow-y: scroll;
         overflow-x: hidden;
         scrollbar-width: none;
-
+        max-height: 80vh;
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-top: 1em;
-        position: relative;
+        padding: 2em;
     }
 
     .nav-bar ul li a {
@@ -71,6 +70,8 @@
         box-shadow: unset;
         text-shadow: none;
     }
+
+
 
     .nav-bar ul li {
 
@@ -141,12 +142,20 @@
 
     .events-list.dropdown,
     .gallery-list.dropdown{
-        min-height: unset;
+        max-height: 0;
         left: 0;
         width: 100%;
+        padding: 0px 10px;
     }
-    .events-list.dropdown a{
-        border: none !important;
+    .events-list.dropdown li,
+    .gallery-list.dropdown li{
+        padding: 0px 2px !important;
+        width: 100%;
+    }
+    .events-list.dropdown li a,
+    .gallery-list.dropdown li a{
+        padding: 0px 1px !important;
+        width: 100%;
     }
 
 

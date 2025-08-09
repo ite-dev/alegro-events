@@ -247,12 +247,14 @@ img {
     align-items: center;
 }
 .events-list.dropdown.open, .gallery-list.dropdown.open{
+    
     transform: translateX(0);
     display: flex;
 }
 .events-dropdown-arrow, .gallery-dropdown-arrow{
     font-size: 30px;
     transform: translateY(4px);
+    
 }
 .events-list.dropdown a, .gallery-list.dropdown a{
     font-size: 1.2rem;
