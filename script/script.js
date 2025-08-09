@@ -76,6 +76,30 @@ jsBtn.addEventListener('click', () => {
     onScroll();
 }); */
 
+// setup Drowndown Menues // 
+function setupDropdown(toggleSelector, menuSelector, arrowSelector) {
+    const toggle = document.querySelector(toggleSelector);
+    const menu = document.querySelector(menuSelector);
+    const arrow = document.querySelector(arrowSelector);
+    if (!toggle || !menu || !arrow) return;
+
+    toggle.addEventListener('click', (e) => {
+        const isMobile = window.innerWidth <= 980;
+        e.preventDefault();
+        menu.classList.toggle('open');
+        const isOpen = menu.classList.contains('open');
+        if(isMobile){
+            toggle.style.marginBottom = isOpen ? '27em' : '0em';
+        }
+        arrow.style.transform = isOpen
+            ? 'rotate(180deg) translateY(-5px)'
+            : 'rotate(0deg) translateY(4px)';
+    });
+}
+setupDropdown('.gallery-li.expandable-nav-item', '.gallery-list.dropdown', '.gallery-dropdown-arrow');
+setupDropdown('.events-li.expandable-nav-item', '.events-list.dropdown', '.events-dropdown-arrow');
+// setup Drowndown Menues // 
+
 // Typing Text Animation // 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
