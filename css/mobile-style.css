@@ -471,12 +471,9 @@
         height: 85vh;
         justify-content: center;
         gap: 0em;
-
-        background-size: 130% 150%;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-attachment: scroll !important;
-        background-position-y: 00px !important;
+    }
+    .contact-bg{
+        background-attachment: scroll;
     }
 
     #contact-section p {
