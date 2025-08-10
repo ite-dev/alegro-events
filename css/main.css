@@ -1788,9 +1788,6 @@ h4{
     transform:
         rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
     
-    -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        will-change: transform;
     transition: 1s ease;
 }
 
@@ -1812,9 +1809,6 @@ h4{
 .banner .slider .item img:hover{
     border: 2px solid rgba(154, 126, 76, 1);
     box-shadow: -3px 3px 10px 5px black;
-}
-.banner .slider .item.centered{
-    z-index: 50 !important;
 }
 .banner .slider .item.centered img {
     border: 2px solid rgba(154, 126, 76, 1);
@@ -1875,6 +1869,7 @@ h4{
         width: 160px;
         height: 200px;
         left: calc(50% - 80px);
+        transition: 1s ease;
     }
 
     .banner .slider .item {
@@ -1917,7 +1912,7 @@ h4{
 
     .banner .slider .item {
         transform:
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(250px);
     }
 
 }

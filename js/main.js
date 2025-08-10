@@ -631,11 +631,13 @@ function resumeAutoRotate() {
 }
 
 // Arrow buttons
-document.querySelector('.arrow.left').addEventListener('click', () => {
+document.querySelector('.arrow.left').addEventListener('click', (e) => {
+    e.preventDefault();
     rotateLeft();
 });
 
-document.querySelector('.arrow.right').addEventListener('click', () => {
+document.querySelector('.arrow.right').addEventListener('click', (e) => {
+    e.preventDefault();
     rotateRight();
 });
 
