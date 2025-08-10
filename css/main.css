@@ -1767,7 +1767,7 @@ h4{
     z-index: 2;
 
 
-    transition: transform 2.6s ease;
+    transition: transform 2s ease;
     will-change: transform;
 
 }
@@ -1788,6 +1788,9 @@ h4{
     transform:
         rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
     
+    -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: transform;
     transition: 1s ease;
 }
 
@@ -1810,6 +1813,9 @@ h4{
     border: 2px solid rgba(154, 126, 76, 1);
     box-shadow: -3px 3px 10px 5px black;
 }
+.banner .slider .item.centered{
+    z-index: 50 !important;
+}
 .banner .slider .item.centered img {
     border: 2px solid rgba(154, 126, 76, 1);
     box-shadow: 0px 0px 10px 2px black;
@@ -1817,7 +1823,6 @@ h4{
     height: 280px;
     transform: translateX(-124px) scale(1);
     transition: transform 0.4s ease;
-    z-index: 15;
 }
  .content {
     width: 100%;
