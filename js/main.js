@@ -75,6 +75,7 @@ jsBtn.addEventListener('click', () => {
     window.addEventListener('scroll', onScroll);
     onScroll();
 }); */
+
 function resetDropdownStyles() {
     document.querySelectorAll(".dropdown").forEach(menu => {
         menu.classList.remove("open");
@@ -109,7 +110,6 @@ function setupDropdown(toggleSelector, menuSelector, arrowSelector) {
     if (!toggle || !menu || !arrow) return;
 
     toggle.addEventListener('click', (e) => {
-        const isMobile = window.innerWidth <= 980;
         e.preventDefault();
 
         if(!isMobile){
@@ -153,7 +153,7 @@ function setupDropdown(toggleSelector, menuSelector, arrowSelector) {
             ? "rotate(180deg) translateY(-5px)"
             : "rotate(0deg) translateY(4px)";
     });
-}
+};
 
 setupDropdown('.gallery-li.expandable-nav-item', '.gallery-list.dropdown', '.gallery-dropdown-arrow');
 setupDropdown('.events-li.expandable-nav-item', '.events-list.dropdown', '.events-dropdown-arrow');
@@ -618,7 +618,7 @@ function resetInactivityTimer() {
 
 function resumeAutoRotate() {
     isLocked = false;
-    slider.style.animation = 'autoRun 60s linear infinite';
+    slider.style.animation = 'autoRun 40s linear infinite';
     slider.style.transform = '';
     slider.dataset._startTime = performance.now();
 

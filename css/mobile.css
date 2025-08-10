@@ -1,6 +1,5 @@
 @media (max-width:980px) {
     :root {
-        --secondary: #B8F3FF;
         --fs-h1: 2.3rem;
         --fs-h1-span: 4rem;
         --fs-h2: 2.8rem;
@@ -173,7 +172,7 @@
 
     .home-bg-overlay::before,
     .home-bg-overlay::after {
-        background-size: calc(100% / 5) calc(100% / 10);
+        background-size: calc(100% / 0) calc(100% / 0);
     }
 
     .home-info {

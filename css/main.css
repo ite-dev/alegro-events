@@ -120,7 +120,7 @@ img {
     animation: show-content 1.2s linear forwards;
     animation-delay: 0.5s;
 
-    box-shadow: 0px 0px 30px 5px black;
+    box-shadow: 0px 0px 30px 5px rgb(0, 0, 0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.353);
 }
 
@@ -251,9 +251,11 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+
 }
 .events-list.dropdown.open, .gallery-list.dropdown.open{
-    
+    z-index: 100;
     transform: translateX(0);
     display: flex;
 }
@@ -403,9 +405,9 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 10px 1px black;
     
     
@@ -1031,7 +1033,8 @@ h4{
     position: sticky;
     top: 75px;
     height: 70px;
-    z-index: 100;
+    margin-bottom: 50px;
+    
     overflow: hidden;
     background: #00000025;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.80);
@@ -1041,6 +1044,7 @@ h4{
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 50;
 }
 
 .projects-menu {
@@ -1461,7 +1465,7 @@ h4{
 .contact-bg-overlay {
     position: absolute;
     inset: 0;
-    box-shadow: inset 0px 0px 50px 10px rgba(154, 126, 76, 0.2);
+    box-shadow: inset 0px 0px 50px 10px rgba(154, 126, 76, 0.1);
     background: rgba(0, 0, 0, 0.7);
     z-index: 0;
 }
@@ -1746,12 +1750,18 @@ h4{
 
 .carousel-controls .arrow {
     pointer-events: auto;
-    background: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+    height: 100px;
     border: none;
-    font-size: 2rem;
-    padding: 0.5em 1em;
+    font-size: 5rem;
+    -webkit-text-stroke: 2px var(--secondary);
+
+    margin: 0 10px;
     cursor: pointer;
     user-select: none;
+    display: flex;
+
+    align-items: center;
 }
 
 .banner .slider {
@@ -1763,11 +1773,11 @@ h4{
     transform-style: preserve-3d;
     transform: translate(-50%, -50%) perspective(1000px) rotateX(var(--x-angle)) rotateY(var(--y-angle));
     
-    animation: autoRun 60s linear infinite;
+    animation: autoRun 30s linear infinite;
     z-index: 2;
 
 
-    transition: transform 2s ease;
+    transition: transform 2.5s ease;
     will-change: transform;
 
 }
@@ -1802,7 +1812,7 @@ h4{
     transition: transform 0.4s ease;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    -webkit-backface-visibility: hidden;
+
     transform: translateZ(0);
     filter: contrast(1.05) brightness(1.02);
 }
@@ -1871,6 +1881,9 @@ h4{
         left: calc(50% - 80px);
         transition: 1s ease;
     }
+    .carousel-controls .arrow{
+        margin: 0px;
+    }
 
     .banner .slider .item {
         transform:
@@ -1880,9 +1893,9 @@ h4{
     .banner .slider .item.centered img {
         border: 2px solid rgba(154, 126, 76, 1);
         box-shadow: 0px 0px 10px 2px black;
-        width: 280px;
+        width: 200px;
         height: 200px;
-        transform: translateX(-90px) scale(1);
+        transform: translateX(-50px) scale(1);
         transition: transform 0.4s ease;
     }
     .content{
