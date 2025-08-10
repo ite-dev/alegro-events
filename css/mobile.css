@@ -16,149 +16,6 @@
         --fs-asidebtn: 2rem;
     }
 
-/* <!-- ----Mobile Header--------------> */
-    .nav-bar {
-        flex-direction: row;
-        align-content: center !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        justify-items: center !important;
-        padding: unset !important;
-        padding-left: 2.5em !important;
-        gap: 2em !important;
-    }
-
-    .checkON {
-        right: 0;
-    }
-
-    .checkbox-container {
-        flex-direction: column;
-        position: fixed;
-        top: -250%;
-        right: 0;
-        width: 100%;
-        z-index: 100;
-        background-color: var(--gradient1);
-        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-        transition: 0.7s ease-out;
-    }
-    .nav-bar ul {
-        gap: .8em;
-        background-color: #080808;
-        justify-content: center;
-        align-items: center;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        scrollbar-width: none;
-        min-height: 500px;
-        max-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 1em;
-        padding: 2em;
-    }
-
-    .nav-bar ul li a, .nav-bar ul li p {
-        width: 100%;
-        height: auto;
-        padding: 0.5em !important;
-        display: flex;
-        justify-content: center !important;
-        font-size: 1.2em;
-        box-shadow: unset;
-        text-shadow: none;
-    }
-
-    .nav-bar ul li {
-        border: 1px solid goldenrod;
-        width: 80%;
-        max-width: 400px;
-    }
-
-    .nav-bar ul li:hover {
-        width: 80%;
-        align-self: center;
-        margin: 15px;
-    }
-
-    .nav-bar ul li a {
-
-    }
-
-    .nav-bar ul li:hover a, .nav-bar ul li:hover p {
-        border-bottom: unset;
-
-    }
-
-    .nav-bar ul li.active a {
-        border-bottom: unset;
-    }
-
-    .nav-bar ul li a:hover,
-    .nav-bar ul li.active a:hover {
-        background-color: goldenrod;
-        color: black;
-        border: 1px solid black;
-    }
-
-    .checkON,
-    .checkOFF {
-        display: flex !important;
-        flex-direction: column;
-        align-self: center;
-    }
-
-    .checkON,
-    .checkOFF {
-        display: block;
-    }
-
-    #checkbox-status:checked~.checkbox-container {
-        top: 0;
-    }
-
-    #checkbox-status:checked~#coverlay,
-    #checkbox-status:checked~#coverlay:hover {
-        background: rgba(0, 0, 0, .4);
-        -webkit-backdrop-filter: blur(4px) !important;
-        backdrop-filter: blur(4px) !important;
-        min-height: 1000px !important;
-        width: 100% !important;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100 !important;
-        transition: 0s !important;
-        overflow: visible;
-    }
-
-    #checkbox-status:checked~.checkON {
-        display: none !important;
-    }
-
-    .events-list.dropdown,
-    .gallery-list.dropdown{
-        max-height: 0;
-        left: 0;
-        width: 100%;
-        padding: 0px 10px;
-    }
-    .events-list.dropdown li,
-    .gallery-list.dropdown li{
-        padding: 0px !important;
-        width: 100%;
-    }
-    .events-list.dropdown li a,
-    .gallery-list.dropdown li a{
-        padding: 0px 1px !important;
-        width: 100%;
-    }
-
-
-/* <!-- ----Mobile Header End--------------> */
-
 /* <!-- ----Mobile Wrapper Animation-------> */
 /* <!-- ----Mobile Wrapper Animation End---> */
 
@@ -340,62 +197,6 @@
         right: 0px;
     }
 
-    .projects-menu {
-        display: flex;
-        gap: .3em;
-
-        font-weight: 600;
-        color: white;
-    }
-
-    .projects-filter:hover {
-        font-size: .75rem !important;
-        padding: .3em .1em;
-        color: #00fbff !important;
-    }
-
-    .projects-filter {
-        font-size: .75rem !important;
-        padding: .3em .1em;
-        cursor: pointer;
-    }
-
-    .gallery-section h2 {
-        min-width: 100%;
-        font-size: 1.4rem;
-    }
-
-    .gallery-section p {
-        font-size: .75rem;
-        border-radius: 0px !important;
-    }
-
-    .cards-container {
-        grid-template-columns: repeat(auto-fit, minmax(275px, 275px));
-        grid-template-rows: repeat(auto-fill, 475px);
-        width: 90% !important;
-        row-gap: 3.5em !important;
-    }
-
-    .cards-box {
-        min-width: 250px;
-        box-shadow: 0px 0px 15px 2px black;
-    }
-
-    .cards-box.visible {
-        margin: 2em 0;
-        transform: scale(1.09);
-        border-radius: 15px;
-        -webkit-backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
-        opacity: 1;
-    }
-
-    .cards-box.visible p {
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-        transition: background 1.25s ease-in-out;
-    }
 
 
 /* <!-- ----Mobile Projects Section End----------> */
@@ -446,57 +247,6 @@
 /* <!-- ----Mobile About Section End--------------> */
 
 /* <!-- ----Mobile Contact Section--------------> */
-    #contact-section {
-        padding: 150px 20px 70px;
-        height: 85vh;
-        justify-content: center;
-        gap: 0em;
-    }
-    .contact-bg{
-        background-attachment: scroll;
-    }
-
-    #contact-section p {
-        font-size: .98rem !important;
-
-        background: rgba(0, 0, 0, 0.479);
-        text-align: center;
-        margin-top: unset;
-        padding: 2px 15px;
-        border-radius: 15px;
-    }
-
-    .form-container {
-        width: 100% !important;
-    }
-
-    .contact-box {
-        min-width: 80cqw;
-        min-height: 28cqh;
-    }
-
-    .contact-box .user-box input {
-        width: 100% !important;
-        margin: 0px 0px 0px 0px;
-    }
-
-    .contact-box form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: .5em !important;
-        row-gap: 1em !important;
-    }
-
-    .contact-box .user-box label {
-        left: 10px;
-    }
-
-    .form-btn {
-        width: 50%;
-        padding: 5px 0px !important;
-        grid-column: span 2;
-    }
-
 /* <!-- ----Mobile Contact Section End----------> */
 
 /* <!-- ----Mobile Scroll-up Button-------------> */
@@ -509,8 +259,8 @@
         font-size: 3rem !important;
         opacity: 0.7 !important;
     }
-
 /* <!-- ----Mobile Scroll-up Button End---------> */
+
 
 /* <!-- ----Mobile Footer-----------------------> */
     #footer h5 {
@@ -521,5 +271,4 @@
         font-size: var(--fs-h6);
     }
 }
-
 /* <!-- ----Mobile Footer End-------------------> */
