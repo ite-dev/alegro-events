@@ -79,9 +79,9 @@ jsBtn.addEventListener('click', () => {
 
 
 // Mobile Scroll Animation // 
-/* document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.cards-box');
-    const projectsSection = document.querySelector('.projects-section');
+    const projectsSection = document.querySelector('.gallery-section');
     const offset = 100;
 
     function onScroll() {
@@ -100,7 +100,7 @@ jsBtn.addEventListener('click', () => {
     };
     window.addEventListener('scroll', onScroll);
     onScroll();
-}); */
+});
 
 // Home Background Image Rotation // 
 const homeSection = document.querySelector('.home-section');
