@@ -19,15 +19,15 @@
 }
 
 .cards-container {
-    display: none !important;
+    display: none;
     background: transparent;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
     grid-template-rows: repeat(auto-fill, 450px);
     justify-content: center;
-    gap: 10px;
-    row-gap: 10px;
+    gap: 15px;
+    row-gap: 15px;
     padding: 5em 0 3em;
     height: 100%;
 }
@@ -50,18 +50,18 @@
 }
 
 .cards-box:hover {
-    transform: scale(1.03);
+    transform: scale(1.2);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     border-radius: 2.2em;
     border: 1px solid rgba(0, 255, 255, 0.586);
+    z-index: 1;
 }
 
 .cards-box:hover h4,
 .cards-box:hover p {
     background: rgba(0, 0, 0, 0.6);
 }
-
 
 
 .projects-menu {

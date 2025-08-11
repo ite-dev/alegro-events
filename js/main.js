@@ -1,3 +1,15 @@
+import {initNav} from './components/navigation/navbar/navbar.js';
+import {initCarousel} from './components/image-carousel/carousel.js';
+import {initInfoBox} from './components/info-box/info-box.js'
+import { initGallery } from './components/image-gallery/gallery.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initNav();
+    initCarousel();
+    initInfoBox();
+});
+
+
 const stickyTitle = document.querySelector('.sticky-title');
 const allProjectsBtn = document.querySelector('#AP');
 const beBtn = document.querySelector('#BE');
@@ -22,8 +34,8 @@ let cardTypes = {
     all: allCards
 };
 
-const projectsTop = document.querySelector('.projects-section');
 
+const projectsTop = document.querySelector('.projects-section');
 function filterDisplay(type) {
     if (type !== "all") {
         Object.values(cardTypes).forEach((cards) => {
@@ -76,88 +88,6 @@ jsBtn.addEventListener('click', () => {
     onScroll();
 }); */
 
-function resetDropdownStyles() {
-    document.querySelectorAll(".dropdown").forEach(menu => {
-        menu.classList.remove("open");
-        menu.style.maxHeight = "";
-        menu.style.minHeight = "";
-        const toggle = menu.closest(".expandable-nav-item");
-        if (toggle) {
-            toggle.style.marginBottom = "";
-            const arrow = toggle.querySelector("span");
-            if (arrow) arrow.style.transform = "";
-        }
-    });
-    const menuContainer = document.querySelector(".checkbox-container ul");
-    if (menuContainer) menuContainer.style.paddingTop = "";
-}
-
-let isMobile = window.innerWidth <= 980;
-window.addEventListener("resize", () => {
-    const currentlyMobile = window.innerWidth <= 980;
-    if (currentlyMobile !== isMobile) {
-        resetDropdownStyles();
-        isMobile = currentlyMobile;
-    }
-});
-
-// setup Drowndown Menues // 
-function setupDropdown(toggleSelector, menuSelector, arrowSelector) {
-    const toggle = document.querySelector(toggleSelector);
-    const menu = document.querySelector(menuSelector);
-    const menuContainer = document.querySelector(".checkbox-container ul");
-    const arrow = document.querySelector(arrowSelector);
-    if (!toggle || !menu || !arrow) return;
-
-    toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        if(!isMobile){
-            toggle.style.marginBottom = "0px";
-            menu.style.maxHeight = "300px";
-            menu.style.minHeight = "150px";
-            menuContainer.style.paddingTop = "0px";
-        };
-        
-        if (isMobile) {
-            document.querySelectorAll(".dropdown.open").forEach((openMenu) => {
-                if (openMenu !== menu) {
-                    openMenu.classList.remove("open");
-                    openMenu.style.maxHeight = "0px";
-                    openMenu.style.minHeight = "0px";
-
-                    const otherArrow = openMenu
-                        .closest(".expandable-nav-item")
-                        ?.querySelector("span");
-                    if (otherArrow) {
-                        otherArrow.style.transform = 'rotate(0deg) translateY(4px)';
-                    }
-                    const otherToggle = openMenu.closest(".expandable-nav-item");
-                    if (otherToggle) {
-                        otherToggle.style.marginBottom = "0px";
-                    }
-                }
-            });
-        };
-
-        menu.classList.toggle("open");
-        const isOpen = menu.classList.contains("open");
-        if (isMobile) {
-            toggle.style.marginBottom = isOpen ? "325px" : "0px";
-            menu.style.maxHeight = isOpen ? "100%" : "0px";
-            menu.style.minHeight = isOpen ? "300px" : "0px";
-            menuContainer.style.paddingTop = isOpen ? "350px" : "1em";
-        };
-
-        arrow.style.transform = isOpen
-            ? "rotate(180deg) translateY(-5px)"
-            : "rotate(0deg) translateY(4px)";
-    });
-};
-
-setupDropdown('.gallery-li.expandable-nav-item', '.gallery-list.dropdown', '.gallery-dropdown-arrow');
-setupDropdown('.events-li.expandable-nav-item', '.events-list.dropdown', '.events-dropdown-arrow');
-// setup Drowndown Menues // 
 
 // Typing Text Animation // 
 document.addEventListener("DOMContentLoaded", function () {
@@ -209,37 +139,7 @@ setInterval(() => {
 // Home Background Image Rotation // 
 
 
-// Load Gallery Images // 
-const cardsBasePath = window.location.pathname.includes('alegro-events')
-    ? '/alegro-events/public/gallery/tempbgs/'
-    : '/public/gallery/tempbgs/';
 
-const imageFilenames = [
-    'dishes-1.jpg',
-    'dishes-2.jpg',
-    'dishes-3.jpg',
-    'dishes-4.jpg',
-    'dishes-5.jpg',
-    'dishes-6.jpg',
-];
-
-const cardsContainer = document.querySelector('.cards-container');
-imageFilenames.forEach((filename, index) => {
-    const card = document.createElement('div');
-    card.className = 'cards-box js-card';
-    card.onclick = () => true;
-
-    card.innerHTML = `
-        <div class="cards-img-box">
-            <img src="${cardsBasePath}${filename}" alt="Event Image ${index + 1}">
-        </div>
-        <p>
-        Enjoy our unique dishes by Chef Aaron Shasha.
-        </p>
-    `;
-    cardsContainer.appendChild(card);
-});
-// Load Gallery Images // 
 
 
 // Temp Controllers //
@@ -293,136 +193,8 @@ document.addEventListener('scroll', function() {
 });
 // Scroll Position: scroll-up btn display,  //
 
-
-// Carousel Factory //
-function createCarousel(containerSelector, imageFilenames) {
-    const container = document.querySelector(containerSelector);
-    const carousel = container.querySelector('.carousel');
-    const prevBtn = container.querySelector('.prev-btn');
-    const nextBtn = container.querySelector('.next-btn');
-
-    imageFilenames.forEach((filename, index) => {
-        const galleryPic = document.createElement('div');
-        galleryPic.className = 'carousel-item';
-        galleryPic.innerHTML = `<img src="${basePath}${filename}" alt="Image ${index + 1}">`;
-        carousel.appendChild(galleryPic);
-    });
-
-    const galleryPics = carousel.querySelectorAll('.carousel-item');
-    let index = 1;
-    const totalPics = galleryPics.length;
-
-    function triggerFlipAnimation(pic) {
-        pic.classList.add('is-flipping');
-        
-        setTimeout(() => {
-            pic.classList.remove('is-flipping');
-        }, 5000);
-    }
-    function expandPic(pic, status = true){
-        
-        if(status === false){
-            pic.style.transform = 'scale(1)';
-            pic.onclick = () => { expandPic(pic, true) }
-        } else{
-            pic.style.transform = 'scale(1.5)';
-            pic.onclick = () => {expandPic(pic, false)}
-        }
-
-    };
-
-    function updateCarousel() {
-        galleryPics.forEach(pic => {
-            pic.className = 'carousel-item';
-            pic.style.opacity = 0.4;
-
-            pic.style.border = '4px solid black';
-        });
-
-        const centerIndex = ((index % totalPics) + totalPics) % totalPics;
-        const leftIndex = (centerIndex - 1 + totalPics) % totalPics;
-        const rightIndex = (centerIndex + 1) % totalPics;
-        
-        const centerPic = galleryPics[centerIndex];
-        const leftPic = galleryPics[leftIndex];
-        const rightPic = galleryPics[rightIndex];
-
-        leftPic.style.transform = 'scale(1)';
-        rightPic.style.transform = 'scale(1)';
-        centerPic.onclick = () => {
-            expandPic(centerPic);
-        };
-        rightPic.onclick = () => {
-            index++;
-            updateCarousel();
-        };
-        leftPic.onclick = () => {
-            index--;
-            updateCarousel();
-        };
-        
-
-        triggerFlipAnimation(rightPic);
-        triggerFlipAnimation(centerPic);
-        triggerFlipAnimation(leftPic);
-
-
-        while (carousel.firstChild) {
-            carousel.removeChild(carousel.firstChild);
-        }
-        carousel.appendChild(leftPic);
-        carousel.appendChild(centerPic);
-        carousel.appendChild(rightPic);
-
-        leftPic.classList.add('active', 'left');
-        centerPic.classList.add('active', 'center');
-        rightPic.classList.add('active', 'right');
-    }
-
-    prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        index--;
-        updateCarousel();
-    });
-
-    nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        index++;
-        updateCarousel();
-    });
-
-    updateCarousel();
-}
-
-// Create Carousels //
-/* createCarousel('.carousel-container-1', [
-    'dishes-1.jpg',
-    'dishes-2.jpg',
-    'dishes-3.jpg',
-    'dishes-4.jpg',
-    'dishes-5.jpg',
-    'dishes-6.jpg',
-], basePath);
-createCarousel('.carousel-container-2', [
-    'dishes-6.jpg',
-    'champagne.jpg',
-    'dishes-7.jpg',
-    'dishes-4.jpg',
-    'dishes-5.jpg',
-    'dishes-2.jpg',
-], basePath); */
-/* createCarousel('.carousel-container-3', [
-    'gallery-bg18.jpg',
-    'gallery-bg23.jpg',
-    'gallery-bg21.jpg',
-    'gallery-bg8.jpg',
-    'gallery-bg19.jpg',
-    'bg-violin.jpg',
-], basePath); */
-// Image Carousel //
-
 // Gallery Backgound Image Rotation // 
-const gallerySection = document.querySelector('.projects-section');
+/* const gallerySection = document.querySelector('.projects-section');
 
 const galleryImages = [
     'gallery-bg8.jpg',
@@ -437,238 +209,14 @@ const galleryImages = [
 ];
 
 let currentPic = 0;
-/* setInterval(() => {
+setInterval(() => {
     currentPic = (currentPic + 1) % galleryImages.length;
     gallerySection.style.backgroundImage = `url('${basePath}${galleryImages[currentPic]}')`;
 }, 1000); */
 // Gallery Background Image Rotation // 
 
 
-// About Info Box Expand // 
-const pairs = document.querySelectorAll('.info-box-pair');
 
-function handlePairExpanded(pairs){
-    let activePair = null;
-    const grid = document.querySelector('.about-content-wrapper')
-    
-
-    pairs.forEach((pair, index) => {
-
-        pair.addEventListener('click', () => {
-            const isExpanded = pair.classList.contains('expanded');
-            const isMobile = window.innerWidth <= 980;
-            pairs.forEach(p => p.classList.remove('expanded'));
-
-            if (!isExpanded) {
-                pair.classList.add('expanded');
-                activePair = pair;
-                
-                grid.style.background = 'transparent';
-                grid.style.boxShadow = 'unset';
-
-                const previousPair = pair.previousElementSibling;
-                const isLast = index === pairs.length - 1;
-
-                if(isLast){
-                    const topOffset = pair.getBoundingClientRect().top + window.scrollY - 250;
-                    window.scrollTo({
-                        top: topOffset,
-                        behavior: 'smooth'
-                    });
-                } else{
-                    if (previousPair?.classList.contains('info-box-pair')) {
-                        previousPair.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    } else {
-                        const topOffset = pair.getBoundingClientRect().top + window.scrollY - 300;
-                        window.scrollTo({
-                            top: topOffset,
-                            behavior: 'smooth'
-                        });
-                    };
-                };
-
-            } else {
-                activePair = null;
-                grid.style.background = 'rgba(154, 126, 76, 1)';
-                grid.style.boxShadow = '0px 0px 20px 1px rgba(255, 255, 255, 0.174)';
-            };
-
-            pairs.forEach(p => {
-                const shrinkEm = p.classList.contains('expanded');
-                if (activePair && !shrinkEm) {
-                    p.style.height = isMobile ? "175px" : '250px';
-                    p.style.background = 'rgba(154, 126, 76)';
-                    p.style.gap = '10px';
-                    grid.style.gridAutoRows = isMobile ? 'minmax(0, 175px)' : 'minmax(0,250px)';
-                }
-                else{
-                    p.style.height = isMobile? "200px" : "400px";
-                    p.style.background = 'rgba(154, 126, 76, 1)';
-                    p.style.gap = '8px';
-                    grid.style.gridAutoRows = isMobile? 'minmax(0, 200px)' : 'unset';
-                };
-            });
-        });
-
-        
-    });
-};
-handlePairExpanded(pairs);
-// About Info Box Expand // 
-
-
-// 3D Carousel Viewer //
-const slider = document.querySelector('.slider');
-const items = document.querySelectorAll('.slider .item');
-const quantity = parseInt(getComputedStyle(slider).getPropertyValue('--quantity'));
-const anglePerItem = 360 / quantity;
-
-let currentPosition = 1;
-let isLocked = false;
-let lockedRotation = 0;
-let autoRotateInterval = null;
-let inactivityTimer = null;
-const inactivityDelay = 5000;
-
-// Vertical tilt angle - adjusted for less tilt (around 20% straighter)
-const verticalTilt = -12; // instead of -16 deg, less tilt
-
-function updateRotation(position) {
-    const rotateY = -((position - 1) * anglePerItem);
-    slider.style.animation = 'none';
-    slider.style.transform = `perspective(1000px) rotateX(${verticalTilt}deg) rotateY(${rotateY}deg)`;
-
-    // Highlight centered item
-    items.forEach((item, index) => {
-        if (index + 1 === position) {
-            item.classList.add('centered');
-        } else {
-            item.classList.remove('centered');
-        }
-    });
-
-}
-
-function rotateToItem(position) {
-    if (position === currentPosition) {
-        // Toggle lock on same card click
-        if (isLocked) {
-            resumeAutoRotate();
-        } else {
-            lockRotation(position);
-        }
-    } else {
-        // Rotate shortest direction to new position
-        rotateShortestPath(position);
-    }
-    resetInactivityTimer();
-}
-
-function lockRotation(position) {
-    currentPosition = position;
-    updateRotation(position);
-    isLocked = true;
-    lockedRotation = -((position - 1) * anglePerItem);
-}
-
-function rotateLeft() {
-    currentPosition = (currentPosition - 2 + quantity) % quantity + 1;
-    lockRotation(currentPosition);
-    resetInactivityTimer();
-}
-
-function rotateRight() {
-    currentPosition = (currentPosition % quantity) + 1;
-    lockRotation(currentPosition);
-    resetInactivityTimer();
-}
-
-function rotateShortestPath(targetPosition) {
-    // Calculate difference
-    let diff = targetPosition - currentPosition;
-    if (diff > quantity / 2) {
-        diff -= quantity;
-    } else if (diff < -quantity / 2) {
-        diff += quantity;
-    }
-
-    // Rotate step by step in shortest direction
-    if (diff > 0) {
-        // rotate right diff times
-        currentPosition = targetPosition;
-    } else {
-        // rotate left abs(diff) times
-        currentPosition = targetPosition;
-    }
-
-    lockRotation(currentPosition);
-}
-
-function resetInactivityTimer() {
-    clearTimeout(inactivityTimer);
-    clearInterval(autoRotateInterval);
-
-    inactivityTimer = setTimeout(() => {
-        resumeAutoRotate();
-    }, inactivityDelay);
-}
-
-function resumeAutoRotate() {
-    isLocked = false;
-    slider.style.animation = 'autoRun 40s linear infinite';
-    slider.style.transform = '';
-    slider.dataset._startTime = performance.now();
-
-    items.forEach(item => item.classList.remove('centered'));
-    
-    clearTimeout(inactivityTimer);
-    clearInterval(autoRotateInterval);
-    inactivityTimer = setTimeout(resumeAutoRotate, inactivityDelay);
-    
-}
-
-// Arrow buttons
-document.querySelector('.arrow.left').addEventListener('click', (e) => {
-    e.preventDefault();
-    rotateLeft();
-});
-
-document.querySelector('.arrow.right').addEventListener('click', (e) => {
-    e.preventDefault();
-    rotateRight();
-});
-
-// Item click toggles lock and unlock
-items.forEach(item => {
-    item.addEventListener('click', () => {
-        const position = parseInt(getComputedStyle(item).getPropertyValue('--position'));
-        rotateToItem(position);
-    });
-});
-
-// Pause on hover
-slider.addEventListener('mouseenter', () => {
-    clearInterval(autoRotateInterval);
-    slider.style.animationPlayState = 'paused';
-});
-
-// Resume on leave (after delay)
-slider.addEventListener('mouseleave', () => {
-    if (!isLocked) {
-        slider.style.animationPlayState = 'running';
-    }
-    resetInactivityTimer();
-});
-
-// Init
-isLocked = false;
-autoRotateInterval = setInterval(() => {
-    rotateRight();
-}, 5000);
-// 3D Carousel Viewer //
 
 
 

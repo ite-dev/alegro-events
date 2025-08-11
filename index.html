@@ -15,7 +15,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/public/alegro-logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/alegro-logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/public/alegro-logo.png">
-    <script src="js/main.js" defer></script>
+
+    <script type="module" src="js/main.js" defer></script>
 
     <title>Alegro Events - Weddings | Events | Catering | Bar/bat Mitzvah | Henna | Jerusalem </title>
 </head>
@@ -24,7 +25,6 @@
     <!-- --------------Header Start-------------- -->
     <header class="nav-header">
         <nav class="nav-bar">
-            <!-- --Logo-- -->
             <div>
                 <a href="#" class="navbar-logo"><img src="./public/alegro-menu-logo.webp" alt="alegro-logo"></a>
             </div>
@@ -35,29 +35,28 @@
             
                 <div class="checkbox-container">
                     <label for="checkbox-status" class="checkOFF"><img src="public/close-menu-btn.svg" alt="close menu" /></label>
-                    <!-- --Menu-- -->
                     <ul>
                         <li class="active"><a href="#">ראשי</a></li>
                         <li class="gallery-li expandable-nav-item">
                             <p><span class="gallery-dropdown-arrow">&#128315;</span>גלריה</p>
                             <ul class="gallery-list dropdown">
                                 <li>
-                                    <a href="/pages/weddings">Weddings</a>
+                                    <a href="/pages/weddings.html">Weddings</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/private-events">Private Events</a>
+                                    <a href="/pages/weddings.html">Private Events</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/henna-ceremony">Henna Ceremony</a>
+                                    <a href="/pages/weddings.html">Henna Ceremony</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/bar-bat-mitzvah">Bar / Bat Mitzvah</a>
+                                    <a href="/pages/weddings.html">Bar / Bat Mitzvah</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/aliya-la-tora">Aliya la Tora</a>
+                                    <a href="/pages/weddings.html">Aliya la Tora</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/brit-brita">Brit / Brita</a>
+                                    <a href="/pages/weddings.html">Brit / Brita</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,22 +65,22 @@
                             <p><span class="events-dropdown-arrow">&#128315;</span>אירועים</p>
                                 <ul class="events-list dropdown">
                                     <li>
-                                        <a href="/pages/weddings">Weddings</a>
+                                        <a href="/pages/weddings.html">Weddings</a>
                                     </li>
                                     <li>
-                                        <a href="/pages/private-events">Private Events</a>
+                                        <a href="/pages/weddings.html">Private Events</a>
                                     </li>
                                     <li>
-                                        <a href="/pages/henna-ceremony">Henna Ceremony</a>
+                                        <a href="/pages/weddings.html">Henna Ceremony</a>
                                     </li>
                                     <li>
-                                        <a href="/pages/bar-bat-mitzvah">Bar / Bat Mitzvah</a>
+                                        <a href="/pages/weddings.html">Bar / Bat Mitzvah</a>
                                     </li>
                                     <li>
-                                        <a href="/pages/aliya-la-tora">Aliya la Tora</a>
+                                        <a href="/pages/weddings.html">Aliya la Tora</a>
                                     </li>
                                     <li>
-                                        <a href="/pages/brit-brita">Brit / Brita</a>
+                                        <a href="/pages/weddings.html">Brit / Brita</a>
                                     </li>
                                 </ul>
                         </li>
@@ -111,10 +110,10 @@
         <!-- --------------Home Section-------------- -->
         <section class="home-section">
             <div class="home-bg-overlay"></div>
-            <div class="home-info"><!-- --Home Info-- -->
+            <div class="home-info">
 
                 <div class="home-logo-wrapper">
-                    <div class="logo-img"> <!-- --Headshot Image-- -->
+                    <div class="logo-img">
                         <div class="logo-img-box">
                             <div class="logo-img-item">
                                 <img src="./public/alegro-logo.png" alt="Alegro Logo">
@@ -139,8 +138,6 @@
                     </div>
                 </div>
 
-                
-
                 <p class="home-paragraph" style="text-align: center;">
                     <button class="hide-btn">Hide Text</button>
                     ברוכים הבאים למרכז האירועים אלגרו שבירושלים!
@@ -153,7 +150,7 @@
                     בנוסף מקיימים שירותי קייטרינג לכל מטרה. אירועים פרטיים ועסקיים, סעודות מצווה ועוד.
                 </p>
 
-                <div class="social-icons"> <!-- --Social Icons-- -->
+                <div class="social-icons">
                     <div class="social-icons-box">
                         <a href="https://www.facebook.com/AlegroEvents/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
                         <a href="https://www.instagram.com/alegro_event/" target="_blank"><i class='bx bxl-instagram'></i></a>
@@ -164,12 +161,9 @@
                     </div>
                 </div>
             </div>
-            
         </section>
         <!-- --------------Home Section End-------------- -->
-        <!-- --------------Projects Section-------------- -->
-        
-
+        <!-- --------------Gallery Section-------------- -->
 
         <section class="gallery-section" id="gallery-section" onclick="return true">
         <div class="gallery-bg-overlay"></div>
@@ -212,21 +206,19 @@
             
             </div>
 
-            <div class="cards-container">
-                <!-- --Cards Container-- -->
-                <!-- --NodeJS Backend Card 1-- -->
-                <!-- <div class="cards-box be-card" onclick="return true">
+            <!-- <div class="cards-container">
+                <div class="cards-box be-card" onclick="return true">
                     <div class="cards-img-box">
                         <img src="" alt="photo alt">
                     </div>
                     <p>
                         photo info
                     </p>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
             
         </section>
-        <!-- ------------End Projects Section------------ -->
+        <!-- ------------End Gallery Section------------ -->
 
         <!-- ----------------About Section---------------- -->
         <section id="about-section">
@@ -354,7 +346,7 @@
                         <div class="user-box">
                             <input id="userMessage" type="text" name="message" placeholder=" "
                                 pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{2,250}" title="250 Max Characters.">
-                            <label for="userMessage" class="msg-label">Message:</label>
+                            <label for="userMessage" class="msg-label">Message</label>
                         </div>
                         <button type="submit" class="form-btn">Submit</button>
                     </form>

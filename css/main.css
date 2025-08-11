@@ -366,7 +366,6 @@ button{
 .logo-img .logo-img-box .logo-img-item img {
     object-fit: cover;
     mix-blend-mode: multiply;
-    overflow: visible;
 }
 
 .logo-img-item img {
