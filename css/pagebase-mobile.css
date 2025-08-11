@@ -1,0 +1,191 @@
+@media (max-width:980px) {
+    :root {
+        --fs-h1: 2.3rem;
+        --fs-h1-span: 4rem;
+        --fs-h2: 2.8rem;
+        --fs-h3: 1.5rem;
+        --fs-h4: 1.4rem;
+        --fs-h5: 0.8rem;
+        --fs-h6: 0.5rem;
+        --fs-p: 1rem;
+
+        --fs-navlogo: 1.5rem;
+        --fs-navli: 0.7rem;
+        --fs-rebtn: 0.7rem;
+        --fs-scbtn: 1rem;
+        --fs-asidebtn: 2rem;
+    }
+
+    /* <!-- ----Mobile Wrapper Animation-------> */
+    /* <!-- ----Mobile Wrapper Animation End---> */
+
+    /* <!-- ----Mobile Home Section--------------> */
+    .home-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 175px;
+        padding: 0;
+    }
+
+    .home-bg-overlay::before,
+    .home-bg-overlay::after {
+        background-size: calc(100% / 0) calc(100% / 0);
+    }
+
+    .home-info {
+        display: flex;
+        align-items: center;
+        height: 175px;
+        gap: 1em;
+    }
+
+    .home-section-header {}
+
+    .home-section-header span,
+    .home-section-header h1 {
+        font-size: 2rem;
+    }
+
+    .animated-typing {
+        transform: translateY(-5px) translateX(-18px);
+    }
+
+    .typing-text-container {
+        min-width: 95vw;
+        transform: unset;
+    }
+
+    .home-section .social-icons-box {
+        display: none;
+        max-width: 80cqw;
+        gap: 1px;
+    }
+
+    .home-info .social-icons {
+        padding: 3px 0px;
+        transform: translateY(-15px) !important;
+    }
+
+    .home-paragraph {
+        transform: translateY(-20px) !important;
+        max-height: 125px;
+        overflow: hidden;
+    }
+
+    .typing-text {
+        font-size: .9rem;
+    }
+
+    .animated-typing span {
+        font-size: .9rem !important;
+    }
+
+    .typing-text span {
+        -webkit-text-stroke: .7px var(--secondary);
+    }
+
+    .home-logo-wrapper {
+        margin-top: 2.5em;
+        min-height: 80px;
+        max-height: 80px;
+    }
+
+    .logo-img:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .logo-img .logo-img-box {
+        transform: translateY(10px);
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-img .logo-img-box::before {
+        background: transparent !important;
+        width: 150px !important;
+        height: 150px !important;
+        border-right: 1px solid rgb(255, 255, 255);
+        border-left: unset;
+    }
+
+    .logo-img .logo-img-box::after {
+        background: transparent !important;
+        width: 150px;
+        height: 150px;
+        border-right: unset;
+        border-left: unset;
+        border-radius: 50%;
+    }
+
+    .logo-img-item {}
+
+    .logo-img-item img {
+
+        min-width: 225px !important;
+        height: unset;
+        transform: unset !important;
+    }
+
+    .home-info p {
+        text-align: center;
+        width: 95%;
+    }
+
+    /* <!-- ----Mobile Home Section End----------> */
+    /* <!-- ----Mobile Projects Section--------------> */
+    .gallery-section {
+        background-size: 115cqw auto;
+        background-attachment: scroll;
+        min-height: calc(100vh - 65px);
+        padding: 3em 0 0;
+    }
+
+    .sticky-title {
+        min-width: 100%;
+        overflow: hidden;
+        border: none;
+        height: 70px;
+        z-index: 5;
+    }
+
+    .sticky-title h2,
+    .projects-menu {
+        z-index: 5;
+        position: relative;
+    }
+
+    .cards-container{
+        padding: 0em 0em 5em !important;
+    }
+
+    /* <!-- ----Mobile Projects Section End----------> */
+
+    /* <!-- ----Mobile Contact Section--------------> */
+    /* <!-- ----Mobile Contact Section End----------> */
+
+    /* <!-- ----Mobile Scroll-up Button-------------> */
+    .btn-up {
+        right: 10px !important;
+        bottom: 35px !important;
+    }
+
+    .btn-up a {
+        font-size: 3rem !important;
+        opacity: 0.7 !important;
+    }
+
+    /* <!-- ----Mobile Scroll-up Button End---------> */
+
+
+    /* <!-- ----Mobile Footer-----------------------> */
+    #footer h5 {
+        font-size: var(--fs-h5);
+    }
+
+    #footer h6 {
+        font-size: var(--fs-h6);
+    }
+}
+
+/* <!-- ----Mobile Footer End-------------------> */
