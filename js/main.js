@@ -121,21 +121,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // Typing Text Animation // 
 
 // Home Background Image Rotation // 
-const homeSection = document.querySelector('.home-section');
+/* const homeSection = document.querySelector('.home-section');
 const basePath = window.location.pathname.includes('alegro-events')
     ? '/alegro-events/public/gallery/tempbgs/'
     : 'public/gallery/tempbgs/';
 const images = [
     'table-bg.jpg',
     'table-bg2.jpg',
-    /*'dishes-5.jpg', */
 ];
 
 let currentHomePic = 0;
 setInterval(() => {
     currentHomePic = (currentHomePic + 1) % images.length;
     homeSection.style.backgroundImage = `url('${basePath}${images[currentHomePic]}')`;
-}, 10000); 
+}, 10000);  */
 // Home Background Image Rotation // 
 
 

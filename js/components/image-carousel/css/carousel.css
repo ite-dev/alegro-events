@@ -30,14 +30,13 @@
     cursor: pointer;
     user-select: none;
     display: flex;
-
     align-items: center;
 }
 
 .banner .slider {
     position: absolute;
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 200px;
     top: 10%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
@@ -45,7 +44,6 @@
 
     animation: autoRun 30s linear infinite;
     z-index: 2;
-
 
     transition: transform 2s ease;
     will-change: transform;
@@ -66,7 +64,7 @@
     position: absolute;
     inset: 0 0 0 0;
     transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(450px);
 
     transition: 1s ease;
 }
@@ -93,8 +91,8 @@
 .banner .slider .item.centered img {
     border: 2px solid rgba(154, 126, 76, 1);
     box-shadow: 0px 0px 10px 2px black;
-    width: 450px;
-    height: 280px;
+    width: 400px;
+    height: 250px;
     transform: translateX(-124px) scale(1);
     transition: transform 0.4s ease;
 }

@@ -1,7 +1,7 @@
 .nav-header {
     min-width: 100vw;
     max-width: 100vw;
-    position: fixed;
+    position: absolute;
     height: 75px;
     left: 0;
     top: 0;
@@ -11,7 +11,7 @@
 
 .nav-bar {
     background: rgb(0, 0, 0);
-    position: fixed;
+    position: absolute;
     min-width: 100%;
     max-width: 100%;
     height: 75px;
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 100;
 
     visibility: hidden;
@@ -30,7 +30,7 @@
     animation: show-content 1.2s linear forwards;
     animation-delay: 0.5s;
 
-    box-shadow: 0px 0px 30px 5px rgb(0, 0, 0);
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.353);
 }
 
@@ -39,11 +39,15 @@
 }
 
 .navbar-logo img {
-    transform: translateY(17px);
+     position: absolute;
+    top: 0px;
+    left: 25px;
+    transform: translateY(-5px);
     width: 158px !important;
     height: 115px !important;
     z-index: 2;
 }
+
 
 .nav-bar a {
     width: fit-content;
@@ -96,7 +100,7 @@
 .nav-bar ul {
     display: flex;
     flex-direction: row-reverse;
-    column-gap: 4em;
+    column-gap: 1.5em;
     box-sizing: border-box;
 }
 
@@ -127,7 +131,7 @@
 .nav-bar ul li:hover p,
 .nav-bar ul li.active a {
     color: goldenrod;
-    border-bottom: 2px solid var(--accent3);
+    border-bottom: 2px solid var(--secondary);
 }
 
 .expandable-nav-item {
@@ -149,9 +153,14 @@
     color: rgba(154, 126, 76, 1);
 }
 
+.events-list.dropdown{
+        transform: translateX(1200px);
+}
+.gallery-list.dropdown{
+        transform: translateX(900px);
+}
 .events-list.dropdown,
 .gallery-list.dropdown {
-    transform: translateX(900px);
     transition: .8s;
     width: 220px;
     position: absolute;
@@ -180,7 +189,7 @@
 .events-dropdown-arrow,
 .gallery-dropdown-arrow {
     font-size: 30px;
-    transform: translateY(4px);
+    transform: translateY(-50px);
 
 }
 
@@ -235,7 +244,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         scrollbar-width: none;
-        min-height: 500px;
+        min-height: auto;
         max-height: 80vh;
         display: flex;
         flex-direction: column;
@@ -247,7 +256,8 @@
     .nav-bar ul li a,
     .nav-bar ul li p {
         width: 100%;
-        height: auto;
+        min-height: 100%;
+        max-height: 40px;
         padding: 0.5em !important;
         display: flex;
         justify-content: center !important;
@@ -259,6 +269,9 @@
     .nav-bar ul li {
         border: 1px solid goldenrod;
         width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-width: 400px;
     }
 
@@ -325,6 +338,7 @@
     .events-list.dropdown,
     .gallery-list.dropdown {
         max-height: 0;
+        top: 35px;
         left: 0;
         width: 100%;
         padding: 0px 10px;
