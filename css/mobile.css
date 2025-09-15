@@ -24,34 +24,56 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-
+        min-height: 0;
     }
+    .home-bg-overlay{
+        width: 100%;
+        height: 150px;
 
-    .home-bg-overlay::before,
-    .home-bg-overlay::after {
-        background-size: calc(100% / 0) calc(100% / 0);
+        opacity: .5;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        z-index: -1;
+
+
+        display: none;
     }
 
     .home-info {
         display: flex;
         align-items: center;
         gap: 1em;
+
+        padding-top: 0px;
     }
 
-    .home-section-header {}
+    .home-info-text{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding: 0 1em;
+    }
 
-    .home-section-header span,
-    .home-section-header h1 {
+    .home-info-text h1{
         font-size: 2rem;
+        text-align: center;
     }
 
-    .animated-typing {
-        transform: translateY(-5px) translateX(-18px);
+    .home-paragraph{
+        font-size: 1.3rem;
     }
 
-    .typing-text-container {
-        min-width: 95vw;
-        transform: unset;
+    .home-info .social-icons{
+        margin-top: 5em;
+
+    }
+
+    .meet-us{
+        margin-top: 2em;
+        font-size: 2rem;
     }
 
     .home-section .social-icons-box {
@@ -60,14 +82,8 @@
     }
 
     .home-info .social-icons {
-        padding: 3px 0px;
+        padding: 3px 0px 1em;
         transform: translateY(-25px) !important;
-    }
-
-    .home-paragraph {
-        transform: translateY(-20px) !important;
-        max-height: 125px;
-        overflow: hidden;
     }
 
     .typing-text {
@@ -129,10 +145,17 @@
     }
 
 /* <!-- ----Mobile Home Section End----------> */
+
+.intro-section{
+    padding: 2em 0;
+    margin: 0;
+}
+.intro-text{
+    width: 80%;
+    font-size: 1.25rem;
+}
 /* <!-- ----Mobile Projects Section--------------> */
     .gallery-section {
-        background-size: 115cqw auto;
-        background-attachment: scroll;
         min-height: calc(100vh - 65px);
         padding: 3em 0 0;
     }
@@ -247,6 +270,7 @@
 /* <!-- ----Mobile About Section End--------------> */
 
 /* <!-- ----Mobile Contact Section--------------> */
+
 /* <!-- ----Mobile Contact Section End----------> */
 
 /* <!-- ----Mobile Scroll-up Button-------------> */
@@ -263,6 +287,9 @@
 
 
 /* <!-- ----Mobile Footer-----------------------> */
+    #footer{
+        flex-direction: row-reverse;
+    }
     #footer h5 {
         font-size: var(--fs-h5);
     }

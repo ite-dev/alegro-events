@@ -253,7 +253,7 @@ button{
 
 .home-info .social-icons {
     margin-top: 10em;
-    padding: 3px 15px;
+    padding: 3px 15px 1em;
     border-bottom: 1px solid rgba(218, 165, 32, 0.226);
     transform: translateY(15px);
     display: flex;
@@ -579,6 +579,10 @@ button{
     font-size: var(--fs-p);
     color: #626060;
     text-align: center;
+    transition: .5s;
+}
+.intro-text:hover{
+    transform: scale(1.005);
 }
 /* <!-- ----End Intro Section--------> */
 
@@ -649,11 +653,24 @@ button{
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 2em 2.5em 2em 3em;
+    padding: 2em 2.5em 2em 2.5em;
+
 }
 
+.info-box-text p{
+    transition: .5s;
+}
+.info-box-text p:hover{
+    transform: scale(1.005);
+}
 .event-types{
     text-decoration: underline;
+    cursor: pointer;
+
+    transition: .5s;
+}
+.event-types:hover{
+    transform: scale(1.015);
 }
 /* <!-- ----End General Info Section--------> */
 
@@ -911,13 +928,13 @@ button{
     position: relative;
 /*     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642); */
     min-height: 30vh;
-    max-height: 30vh;
+
     gap: 2em;
     display: flex;
     flex-direction: row-reverse;
     
-    padding: 1em 3em 0 0;
-    overflow: hidden;
+    padding: 1em 3em 2em 0;
+
 }
 
 @keyframes floatingbg-x {
