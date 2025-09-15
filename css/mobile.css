@@ -154,9 +154,41 @@
     width: 80%;
     font-size: 1.25rem;
 }
+
+.general-info{
+    gap: 2em;
+}
+
+.gen-info-box{
+    grid-template-columns: 40% 60%;
+}
+.info-box-reverse{
+    grid-template-columns: 60% 40%;
+}
+
+.info-img-box-left{
+    margin-top: 10em;
+    height: 60%;
+    width: 100%;
+}
+.info-img-left{
+    width: 100%;
+}
+.info-img-box-right{
+    height: 60%;
+    margin-top: 7em;
+}
+
+.info-img-left{
+    margin: 2em 0em 3em 1em;
+}
+.info-img-right{
+    margin: 2em 0em 3em 0em;
+    transform: translateX(-1em);
+}
 /* <!-- ----Mobile Projects Section--------------> */
     .gallery-section {
-        min-height: calc(100vh - 65px);
+        min-height: 350px;
         padding: 3em 0 0;
     }
 

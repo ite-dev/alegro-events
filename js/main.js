@@ -177,11 +177,11 @@ hideTypingBtn.addEventListener('click', () => {
 // Temp Controllers //
 
 // Scroll Position: scroll-up btn display,  //
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function(){
     const scrollButton = document.querySelector('.btn-up');
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition >= 100) {
+    if (scrollPosition >= 200) {
         scrollButton.style.bottom = '50px';
         scrollButton.style.opacity = 1;
     }

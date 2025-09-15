@@ -3,11 +3,12 @@ import {onScreenResize, getIsMobile} from '../../../utils/screen-utils.js'
 export function initNav(){
     let isMobile = getIsMobile();
 
-    function resetDropdownStyles() {
+    function resetDropdownStyles(){
         document.querySelectorAll(".dropdown").forEach(menu => {
             menu.classList.remove("open");
             menu.style.maxHeight = "";
             menu.style.minHeight = "";
+
             const toggle = menu.closest(".expandable-nav-item");
             if (toggle) {
                 toggle.style.marginBottom = "";
@@ -19,12 +20,15 @@ export function initNav(){
         if (menuContainer) menuContainer.style.paddingTop = "";
     };
 
-    function setupDropdown(toggleSelector, menuSelector, arrowSelector) {
+    function setupDropdown(toggleSelector, menuSelector, arrowSelector){
         const toggle = document.querySelector(toggleSelector);
         const menu = document.querySelector(menuSelector);
         const menuContainer = document.querySelector(".checkbox-container ul");
         const arrow = document.querySelector(arrowSelector);
         if (!toggle || !menu || !arrow) return;
+        if (!toggle) console.warn("Toggle not found:", toggleSelector);
+        if (!menu) console.warn("Menu not found:", menuSelector);
+        if (!arrow) console.warn("Arrow not found:", arrowSelector);
 
         toggle.addEventListener('click', (e) => {
             if(!isMobile){
@@ -32,6 +36,8 @@ export function initNav(){
                 menu.style.maxHeight = "300px";
                 menu.style.minHeight = "150px";
                 menuContainer.style.paddingTop = "0px";
+                arrow.style.color = "black";
+                
             };
             if(isMobile){
                 document.querySelectorAll(".dropdown.open").forEach((openMenu) => {
