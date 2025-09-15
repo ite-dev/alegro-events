@@ -1,38 +1,43 @@
 .form-container {
-    max-width: 40%;
-    height: 285px;
     position: relative;
-    margin-top: 3em;
+    margin: 2em 2em 0 0;
+    padding-top: 3em;
+    height: 200px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.form-container h3{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #dfbd79;
+
 }
 
 .contact-box {
-    min-width: 60cqh;
-    min-height: 30cqh;
+    min-width: 40cqh;
     max-height: 30cqh;
-    position: absolute;
     display: flex;
     align-items: center;
-    top: 50%;
-    left: 50%;
     width: 100%;
-    height: 100%;
+
     padding: 10px 25px;
-    transform: translate(-50%, -50%);
-    background: rgb(0, 0, 0);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 15px 5px #000000;
+    box-sizing: border-box; 
     border-radius: 10px;
-    border: 1px solid goldenrod;
+    border-bottom: 1px solid #E7D8BA;
 }
 
 .contact-box form {
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: .5em;
-    column-gap: 2em;
+
     width: 100%;
 }
 
@@ -46,14 +51,13 @@
     font-size: 16px;
     color: goldenrod;
     font-weight: 500;
-    margin-bottom: 30px;
-    border: 1px solid goldenrod;
+    border: 1px solid #E7D8BA;
     outline: none;
     background: transparent;
 }
 
 #userMessage {
-    border: 1px solid goldenrod !important;
+    border: 1px solid #E7D8BA !important;
 }
 
 .msg-label {
@@ -121,7 +125,6 @@
     pointer-events: all !important;
 }
 
-
 .contact-box form a {
     position: relative;
     display: inline-block;
@@ -138,25 +141,26 @@
 
 .form-btn {
     grid-column: -1/1;
+    margin-top: .5em;
     display: inline-block;
     padding: 5px 0px !important;
-    background: black;
-    border: 2px solid goldenrod;
-    border-radius: 40px;
-    box-shadow: 0 0 10px var(--secondary);
+    border: 1px solid #E7D8BA;
+    border-radius: 6px;
+    box-shadow: 0 0 1px var(--secondary);
     font-size: var(--fs-rebtn);
-    color: goldenrod;
+    color: var(--secondary);
     font-weight: 600;
-    width: 50%;
+    width: 150px;
     align-self: center;
     justify-self: center;
+    text-align: center;
     transition: .5s;
 }
 
 .form-btn:hover {
-    background-color: goldenrod;
+    background-color: #E7D8BA;
     color: black;
-    border: 2px solid black;
+    border: 1px solid black;
     box-shadow: 0 0 5px var(--secondary);
     transform: scale(1.1) translateY(-5%) !important;
 }

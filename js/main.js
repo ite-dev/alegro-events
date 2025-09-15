@@ -5,12 +5,12 @@ import { initGallery } from './components/image-gallery/gallery.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
-    initCarousel();
-    initInfoBox();
+/*     initCarousel(); */
+/*     initInfoBox(); */
 });
 
 
-const stickyTitle = document.querySelector('.sticky-title');
+/* const stickyTitle = document.querySelector('.sticky-title');
 const allProjectsBtn = document.querySelector('#AP');
 const beBtn = document.querySelector('#BE');
 const rpBtn = document.querySelector('#RP');
@@ -61,7 +61,7 @@ rpBtn.addEventListener('click', () => {
 });
 jsBtn.addEventListener('click', () => {
     filterDisplay("js");
-});
+}); */
 
 
 // Mobile Scroll Animation // 
@@ -90,7 +90,7 @@ jsBtn.addEventListener('click', () => {
 
 
 // Typing Text Animation // 
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
     const words = ["אולמי אלגרו ירושלים".split('').reverse().join(''),"Weddings.", "Events.", "Bar / Bat  Mitzvah.", "Henna  Ceremony.", "Catering.", "Brit Mila", "עליה לתורה".split('').reverse().join('')];
 
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, word.length * 100 + 2000);
     };
     startAnimation();
-});
+}); */
 // Typing Text Animation // 
 
 // Home Background Image Rotation // 
@@ -142,7 +142,7 @@ setInterval(() => {
 
 
 // Temp Controllers //
-const hideBtn = document.querySelector('.hide-btn');
+/* const hideBtn = document.querySelector('.hide-btn');
 hideBtn.style = "color: cyan";
 
 hideBtn.addEventListener('click', () => {
@@ -173,7 +173,7 @@ hideTypingBtn.addEventListener('click', () => {
         hideTypingBtn.innerHTML = "Hide"
         hideTypingBtn.style = "background: transparent; color: black; opacity: 1;"
     };
-});
+}); */
 // Temp Controllers //
 
 // Scroll Position: scroll-up btn display,  //

@@ -30,7 +30,7 @@
 
     --fs-h1: 2.5rem;
     --fs-h1-span: 2.5rem;
-    --fs-h2: 3.5rem;
+    --fs-h2: 3rem;
     --fs-h3: 2rem;
     --fs-h4: 1.4rem;
     --fs-h5: 1rem;
@@ -584,9 +584,21 @@ button{
 
 /* <!-- ----General Info Section--------> */
 
+.general-info{
+    padding: 0 0 7.5em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
 .gen-info-box{
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.gen-info-box h2{
+    color: #222222 !important;
+    font-weight: 500;
 }
 
 .info-img-box-left{
@@ -647,7 +659,7 @@ button{
 
 /* <!-- ----Gallery Section---------------> */
 .gallery-section {
-    min-height: calc(100vh);
+    min-height: calc(90vh);
     border-top: 1px solid white;
     transition: background-image 0.5s ease-in-out;
 
@@ -660,7 +672,12 @@ button{
     position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
 
-    animation: floatingbg 400s linear infinite;
+    background-image: url('../public/gallery/bg4.jpg');
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-position: center center;
+
+    /* animation: floatingbg 400s linear infinite; */
 }
 @keyframes floatingbg {
     from {
@@ -892,19 +909,14 @@ button{
 /* <!-- ----Contact Section----------------> */
 #contact-section {
     position: relative;
-    border-top: 1px solid goldenrod;
-    border-bottom: 1px solid goldenrod;
-    box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
-    min-height: 80vh;
-    padding: 50px 25px 50px 25px;
+/*     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642); */
+    min-height: 30vh;
+    max-height: 30vh;
     gap: 2em;
-    font-family: Poppins, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-
-
+    flex-direction: row-reverse;
+    
+    padding: 1em 3em 0 0;
     overflow: hidden;
 }
 
@@ -920,43 +932,86 @@ button{
 
 #contact-section h2 {
     font-size: var(--fs-h2);
-    color: goldenrod;
+    font-weight: 400;
+    color: #222222 !important;
     z-index: 1;
+    margin-bottom: .5em;
 }
 
 #contact-section p {
-    color: whitesmoke;
+    color: #222222;
     font-size: var(--fs-p);
-    font-weight: 700;
+    font-weight: 300;
     text-align: justify;
-    padding-left: 25%;
-    padding-right: 25%;
-    margin-top: .5em;
     z-index: 1;
 }
 
+.contact-info{
+    width: 24cqw;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    border-left: 1px solid #E7D8BA;
+}
+
+.contact-info-item{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5em;
+}
+
+.contact-info-item a{
+    font-size: 2.8rem;
+    color: black;
+    font-weight: 200;
+}
+
+#contact-map{
+    width: 26vw;
+    border-right: 1px solid #E7D8BA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    padding: .8em 1em;
+}
+#contact-map iframe{
+    border-radius: 12px;
+    opacity: .8;
+    filter: grayscale(90%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#contact-map iframe:hover{
+    filter:grayscale(40%);
+}
+
+#contact-map i{
+    font-size: 4em;
+    color: #E7D8BA;
+}
 
 /* <!-- ----End Contact Section----------------> */
 
 /* <!-- ----Scroll-up Button----------------> */
 .btn-up {
     display: inline-flex;
-    background: rgba(0, 0, 0, 0.747);
+    background: E7D8BA;
     position: fixed;
-    right: 35px;
+    right: 15px;
     padding: 0;
     margin: 0;
     font-size: var(--fs-scbtn);
     transition: 0.5s;
-    animation: btn-up-anim 3s linear infinite;
-    border: 2px solid goldenrod;
+    animation: btn-up-anim 30s linear infinite;
+    border: 2px solid #E7D8BA;
     z-index: 10;
 }
 
 .btn-up a {
     display: inline-flex;
     font-size: 3.5rem;
-    color: goldenrod;
+    color: black;
     transition: 0.5s;
     opacity: 1;
     text-decoration: none;
