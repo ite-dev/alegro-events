@@ -1023,7 +1023,7 @@ button{
 .btn-up:hover{
     color: black;
     border: 2px solid black;
-    background: goldenrod;
+    background: #E7D8BA;
     border-radius: 50%;
     transform: scale(1.1) translateY(-5%) rotate(-5deg);
     opacity: 1;
