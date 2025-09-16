@@ -2,9 +2,11 @@ import {initNav} from './components/navigation/navbar/navbar.js';
 import {initCarousel} from './components/image-carousel/carousel.js';
 import {initInfoBox} from './components/info-box/info-box.js'
 import { initGallery } from './components/image-gallery/gallery.js';
+import { initForm } from './components/forms/formHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
+    initForm();
 /*     initCarousel(); */
 /*     initInfoBox(); */
 });

@@ -395,31 +395,35 @@
             <div class="form-container"><!----Contact Form---->
                 <h3>תיאום פגישה</h3>
                 <div class="contact-box">
-                    <form>
-                        <div class="user-box">
-                            <input id="userEmail" required type="email" name="email" placeholder=" "
+                    <form id="contactForm">
+                    
+                    <label for="website" style="display: none;">website</label>
+                    <input type="text" name="website" id="website" style="display: none;"/>
+
+                        <div class="input-box">
+                            <input id="email" required type="email" name="email" placeholder=" "
                                 pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}"
                                 title="Must be a valid email | Example: Person@Company.com |" autocomplete="on">
-                            <label for="userEmail">אימייל</label>
+                            <label for="email">אימייל</label>
                         </div>
-                        <div class="user-box">
-                            <input id="userName" type="text" name="name" required placeholder=" "
+                        <div class="input-box">
+                            <input id="name" type="text" name="name" required placeholder=" "
                                 pattern="([a-zA-Z]{2,30}) ([a-zA-Z]{2,25}|\.| |-|')+$"
                                 title="Must Contain: First and Last Name, 2-30 letters only | Example: John Dough |"
                                 autocomplete="on">
-                            <label for="userName">שם</label>
+                            <label for="name">שם</label>
                         </div>
 
-                        <div class="user-box">
-                            <input id="userPhone" required type="text" name="phone" placeholder=" " inputmode="numeric"
+                        <div class="input-box">
+                            <input id="phone" required type="text" name="phone" placeholder=" " inputmode="numeric"
                                 pattern="[0-9]{9,14}" title="Must Contain 9 - 15 Numbers | Example: 3477549099 |"
                                 autocomplete="on">
-                            <label for="userPhone">טלפון</label>
+                            <label for="phone">טלפון</label>
                         </div>
-                        <div class="user-box">
-                            <input id="userMessage" type="text" name="message" placeholder=" "
-                                pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{2,250}" title="250 Max Characters.">
-                            <label for="userMessage" class="msg-label">הודעה</label>
+                        <div class="input-box">
+                            <input id="message" type="text" name="message" placeholder=" "
+                                pattern="[a-zA-Z0-9 \! \. \, \- \= \@ \# \: \; \+]{500}" title="500 Max Characters.">
+                            <label for="message" class="msg-label">הודעה</label>
                         </div>
                         <button type="submit" class="form-btn">שליחה</button>
                     </form>
