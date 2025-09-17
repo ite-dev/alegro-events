@@ -108,7 +108,15 @@
 .input-box:has(input:not(:valid)) .form-btn {
     outline: 3px solid red;
     background: green !important;
-    pointer-events: none !important;
+}
+
+form:invalid .form-btn {
+    pointer-events: none;
+    opacity: 0.5;
+}
+form:valid .form-btn {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .contact-box .input-box input:valid~label {
