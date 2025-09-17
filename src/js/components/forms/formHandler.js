@@ -34,12 +34,14 @@ export function initForm(){
                 return;
             };
 
+            submitBtn.disabled = true;
+            statusMessage("Sending message, please wait...", "info");
+
             try {
-                submitBtn.disabled = true;
-                const res = await fetch(API_URL, {
+                const res = await fetchWithTimeout(API_URL, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email, phone, message, website }),
+                    body: JSON.stringify({ name, email, phone, message, website}, 120000),
                 });
 
                 const data = await res.json();
@@ -94,4 +96,19 @@ function inputValidation(data){
     };
 
     return true;
+};
+
+async function fetchWithTimeout(url, options, timeout = 120000){
+    return new Promise((resolve, reject) => {
+        const timer = setTimeout(() => reject(new Error("Request timed out")), timeout);
+        fetch(url, options)
+            .then(res => {
+                clearTimeout(timer);
+                resolve(res);
+            })
+            .catch(err => {
+                clearTimeout(timer);
+                reject(err);
+            });
+    });
 };
