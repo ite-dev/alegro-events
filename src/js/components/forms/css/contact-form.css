@@ -25,12 +25,13 @@
     align-items: center;
     width: 100%;
 
-    padding: 10px 25px;
+    padding: 0px 25px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-sizing: border-box; 
     border-radius: 10px;
     border-bottom: 1px solid #E7D8BA;
+
 }
 
 .contact-box form {

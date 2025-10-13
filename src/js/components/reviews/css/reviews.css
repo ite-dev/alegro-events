@@ -13,6 +13,11 @@
     font-size: 3.2rem;
     font-weight: 400;
     color: #222222 !important;
+    /* text-decoration: underline; */
+    text-underline-offset: 15px;
+    text-decoration-color: var(--secondary);
+    text-decoration-thickness: 1px;
+
 }
 
 .reviews-container{
@@ -87,7 +92,7 @@ gap: 1.2em;
     .reviews-container{
         flex-direction: column;
         height: 100%;
-        padding-bottom: 3em;
+        padding-bottom: 5em;
         position: relative;
     }
 
@@ -100,12 +105,12 @@ gap: 1.2em;
     }
     .arrow-right{
         position: absolute;
-        bottom: 0;
+        bottom: 25px;
         right: 0;
     }
     .arrow-left{
         position: absolute;
-        bottom: 0;
+        bottom: 25px;
         left: 0;
     }
 
