@@ -130,6 +130,10 @@ form:valid .form-btn {
     border: 1px solid rgb(0, 255, 136);
 }
 
+#message{
+    border: 1px solid #E7D8BA !important;
+}
+
 .input-box input:valid~.form-btn {
     pointer-events: all !important;
 }

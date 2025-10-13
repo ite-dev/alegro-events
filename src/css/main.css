@@ -22,20 +22,20 @@
 
     --gradient1: linear-gradient(to top, #accbee 0%, #94accb 100%);
 
-    --secondary: rgba(154, 126, 76);
+    --secondary: #E7D8BA;
     --accent: #63768D;
     --accent2: #554971;
     --accent3: #94accb;
     --lightpurpleTrans: rgba(55, 7, 67, 0.162);
 
-    --fs-h1: 2.5rem;
-    --fs-h1-span: 2.5rem;
-    --fs-h2: 3rem;
+    --fs-h1: 2.2rem;
+    --fs-h1-span: 2rem;
+    --fs-h2: 1.8rem;
     --fs-h3: 2rem;
     --fs-h4: 1.4rem;
     --fs-h5: 1rem;
     --fs-h6: 0.8rem;
-    --fs-p: 2.3rem;
+    --fs-p: 2rem;
 
     --fs-icon-text: 0.65rem;
     --fs-navlogo: 2rem;
@@ -64,7 +64,7 @@ html {
 body {
     position: relative;
     min-height: calc(100vh - 75px);
-    z-index: -1;
+
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -177,11 +177,12 @@ button{
 }
 /* <!-- ----Home Section--------> */
 .home-section {
-    position: relative;
-    display: grid;
-    grid-template-columns: 58% 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin-top: 75px;
-    min-height: 1300px;
+    height: 100vh;
     min-width: 100%;
     max-width: 100%;
     
@@ -191,37 +192,59 @@ button{
     animation-delay: 0.5s;
 
     transition: background-image 0.5s ease-in-out;
+
+    position: relative;
+
+    box-shadow: 0px 0px 15px 1px black;
+}
+
+.home-bg-overlay {
+    height: 100%;
+    width: 100%;
+    background-image: url('../public/gallery/bg1-f.jpg');
+
+    background-image: url('../public/gallery/venue-arrangements/arrangement-6.jpg');
+
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .home-info {
-    padding-top: 3em;
+    padding-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100%;
-    width: 100%;
+    height: 100cqh;
+    width: 50%;
+    
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+
+    background: rgba(255, 255, 255, 0.884);
+    box-shadow: 0px -10px 15px 4px black;
 }
 
 .home-info-logo{
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    min-height: 300px;
 
-    background-image: url('../public/logo-s.png');
+    background-image: url('../public/alegro-logo.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.home-bg-overlay{
-    height: 100%;
-    background-image: url('../public/gallery/bg1-f.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+
 
 .home-info-text {
-    margin: 12em 5em 2em 6em;
+    margin: 1em 6em 2em 6em;
 }
 
 .home-info-text h1 {
@@ -231,7 +254,6 @@ button{
 
 .home-paragraph {
     margin-top: .5em;
-    color: #222222;
     font-size: var(--fs-p);
     visibility: hidden;
     opacity: 0;
@@ -239,6 +261,11 @@ button{
     animation-delay: 0.8s;
     transition: 0.5s;
     border-radius: 15px;
+}
+
+.home-paragraph span{
+
+    font-weight: 700;
 }
 
 .meet-us {
@@ -252,13 +279,12 @@ button{
 }
 
 .home-info .social-icons {
-    margin-top: 10em;
+    margin-top: 3em;
     padding: 3px 15px 1em;
-    border-bottom: 1px solid rgba(218, 165, 32, 0.226);
+    border-bottom: 1px solid var(--secondary);
     transform: translateY(15px);
     display: flex;
     align-items: center;
-    visibility: hidden;
     opacity: 0;
     animation: show-content 1s linear forwards;
     animation-delay: 1.1s;
@@ -268,10 +294,10 @@ button{
     display: inline-flex;
     padding: 10px;
     margin: 0 8px;
-    border: 2px solid #9D7D3F;
+    border: 2px solid var(--secondary);
     border-radius: 50%;
     font-size: var(--fs-scbtn);
-    color: #9D7D3F;
+    color: var(--secondary);
     transition: 0.3s;
 
     box-shadow: 0px 4px 10px 1px rgba(218, 165, 32, 0.137);
@@ -279,7 +305,7 @@ button{
 
 .home-section .social-icons .social-icons-box a:hover {
     color: rgb(44, 41, 41);
-    border: 2px solid goldenrod;
+    border: 2px solid var(--secondary);
     box-shadow: 0 0 1px var(--secondary);
     transform: scale(1.1) translateY(-5%);
 }
@@ -463,7 +489,7 @@ button{
     line-height: unset;
     font-size: var(--fs-h1-span);
     font-weight: 800;
-    color: goldenrod;
+    color: var(--secondary);
     opacity: 0;
     animation: show-content 1s linear forwards;
     animation-delay: 0.9s;
@@ -568,7 +594,7 @@ button{
 
 /* <!-- ----Intro Section--------> */
 .intro-section{
-    padding: 5em 0;
+    padding: 7em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -607,15 +633,15 @@ button{
 
 .info-img-box-left{
     margin-top: 3em;
-    background: #E7D8BA;
-    width: 85%;
-    height: 75%;
+    border: 3px solid #E7D8BA;
+    width: 75%;
+    height: 85%;
 }
 .info-img-left{
-    margin: 3em 0em 5em 5em;
+    margin: 1.6em 0em 0em 3em;
 
-    height: 95%;
-    width: 95%;
+    height: 90%;
+    width: 105%;
     background-image: url('../public/gallery/bg2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -631,7 +657,7 @@ button{
     right: 0;
     top: 0;
     margin-top: 5em;
-    background: #E7D8BA;
+    border: 3px solid #E7D8BA;
     width: 40%;
     height: 75%;
 }
@@ -689,12 +715,25 @@ button{
     position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
 
-    background-image: url('../public/gallery/bg4.jpg');
-    background-size: 100% 100%;
-    background-repeat: repeat;
+    background-image: url('../public/gallery/bg5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
 
     /* animation: floatingbg 400s linear infinite; */
+/*     animation: switchbg 10s infinite;  */
+}
+
+@keyframes switchbg{
+    0% {
+        background-image: url('../public/gallery/bg4.jpg');
+    }
+    50%{
+        background-image: url('../public/gallery/bg5.jpg');
+    }
+    100%{
+        background-image: url('../public/gallery/bg4.jpg');
+    }
 }
 @keyframes floatingbg {
     from {
@@ -927,7 +966,7 @@ button{
 #contact-section {
     position: relative;
 /*     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642); */
-    min-height: 30vh;
+    min-height: 33vh;
 
     gap: 2em;
     display: flex;
