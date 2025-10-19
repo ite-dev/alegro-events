@@ -77,7 +77,8 @@ function statusMessage(msg, type = "info"){
 };
 
 function inputValidation(data){
-    const nameRegex = /^([A-Za-z]{2,25}) ([A-Za-z]{2,25}|\.| |-|')+$/;
+    const nameRegex = /^([A-Za-z\u0590-\u05FF]{2,25}) ([A-Za-z\u0590-\u05FF]{2,25}|\.| |-|')+$/;
+
     const emailRegex = /^[A-Za-z0-9 +\-\.]+@([a-z]+\.)+[A-Za-z]{2,8}$/;
     const phoneRegex = /^[0-9]{9,14}$/;
     const messageRegex = /^[a-zA-Z0-9 !\.,\-=\@#\:\;\+]{0,500}$/;
