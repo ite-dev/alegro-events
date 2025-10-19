@@ -7,9 +7,7 @@ import { initForm } from './components/forms/formHandler.js';
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initForm();
-    window.scrollTo(0, 75);
 
-    
 /*     initCarousel(); */
 /*     initInfoBox(); */
 });

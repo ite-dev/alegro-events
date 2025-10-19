@@ -108,15 +108,17 @@
 
 .input-box:has(input:not(:valid)) .form-btn {
     outline: 3px solid red;
-    background: green !important;
 }
 
 form:invalid .form-btn {
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 form:valid .form-btn {
+    color: var(--accent);
+    border: 1px solid rgb(54, 233, 54);
     pointer-events: auto;
+    background: white;
     opacity: 1;
 }
 
