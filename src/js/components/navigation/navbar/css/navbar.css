@@ -11,6 +11,10 @@
     padding-right: .8em;
 }
 
+.mobile-featured-menu{
+    display: none !important;
+}
+
 .nav-bar {
     min-width: 350px;
     max-width: 100%;
@@ -45,7 +49,6 @@
     height: 115px !important;
     z-index: 2;
 }
-
 
 .nav-bar a {
     width: fit-content;
@@ -207,22 +210,28 @@
     /* <!-- ----Mobile Header--------------> */
     .nav-header{
         padding-right: unset;
-        height: 60px;
+        height: 50px;
     }
     .nav-bar {
-        height: 65px;
+        width: 100%;
+        height: 55px;
         flex-direction: row;
-        align-content: center !important;
-        align-items: center !important;
+        align-items: center!important;
         justify-content: space-between !important;
-        justify-items: center !important;
-        padding: unset !important;
+        padding: 0 10px !important;
 
-        gap: 2em !important;
+        gap: 0 !important;
     }
 
     .checkON {
-        right: 0;
+    
+    }
+    .nav-bar svg{
+        width: 50px;
+        height: 45px;
+        stroke: rgb(233, 233, 233);
+        stroke-width: 3;
+        stroke-linecap: butt;
     }
 
     .checkbox-container {
@@ -320,8 +329,8 @@
     #checkbox-status:checked~#coverlay,
     #checkbox-status:checked~#coverlay:hover {
         background: rgba(0, 0, 0, .4);
-        -webkit-backdrop-filter: blur(4px) !important;
-        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
         min-height: 1000px !important;
         width: 100% !important;
         position: fixed;
@@ -360,6 +369,30 @@
     .events-dropdown-arrow,
     .gallery-dropdown-arrow {
     color: white;
+    }
+
+    .mobile-featured-menu{
+        all: unset;
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-y: unset;
+        background-color: transparent !important;
+        min-height: unset !important;
+        margin-top: unset !important;
+        padding: unset !important;
+        gap: 1px !important;
+        justify-content: flex-end !important;
+    }
+    .mobile-featured-item{
+        all: unset;
+        border: unset !important;
+        padding: 0 !important;
+        width: unset !important;
+        max-width: unset !important;
+    }
+    .mobile-featured-item a{
+        all: unset;
+        color: var(--accent) !important;
     }
 }
     /* <!-- ----Mobile Header End--------------> */

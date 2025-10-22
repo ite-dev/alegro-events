@@ -24,7 +24,7 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-
+        height: 100svh;
 
     }
     .home-bg-overlay{
@@ -41,22 +41,33 @@
         gap: 1em;
         width: 100%;
         height: 100%;
-        padding: 0px .5em;
-        background: rgba(255, 255, 255, 0.681);
+        padding: 222px 0 0;
+        background: rgba(255, 255, 255, 0.081);
+
+        backdrop-filter: blur(0px);
     }
 
     .home-info-logo{
         width: 275px;
         min-height: 200px;
+        position: absolute;
+        top: 50px;
+        border-radius: 50%;
+
+        filter: invert(100%) hue-rotate(180deg);
     }
 
     .home-info-text{
+        height: 50cqh;
         margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1em;
-        padding: 0 .25em;
+        padding: 1em 1em 1em;
+        background: rgba(255, 250, 250, 0.55);
+
+        text-shadow: 2px 0px 1px rgba(90, 90, 90, 0.4);
     }
 
     .home-info-text h1{
@@ -65,27 +76,30 @@
     }
 
     .home-paragraph{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-
-    .home-info .social-icons{
-        margin-top: 5em;
-
-    }
-
-    .meet-us{
-        margin-top: 2em;
+    .meet-us {
+        width: 100%;
+        margin-top: .8em;
         font-size: 2rem;
+        height: 50px;
+    }
+    .home-info .social-icons{
+        margin-top: 2.5em;
     }
 
     .home-section .social-icons-box {
-        max-width: 80cqw;
+
         gap: 1px;
+    }
+    .home-section .social-icons .social-icons-box a{
+        font-size: 2.3rem;
     }
 
     .home-info .social-icons {
         padding: 3px 0px 1em;
         transform: translateY(-25px) !important;
+        border-bottom: unset;
     }
 
     .typing-text {

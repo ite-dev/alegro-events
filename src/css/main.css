@@ -293,7 +293,6 @@ button{
 .home-info .social-icons {
     margin-top: 3em;
     padding: 3px 15px 1em;
-    border-bottom: 1px solid var(--accent);
     transform: translateY(15px);
     display: flex;
     align-items: center;
@@ -306,18 +305,13 @@ button{
     display: inline-flex;
     padding: 10px;
     margin: 0 8px;
-    border: 2px solid var(--accent);
     border-radius: 50%;
-    font-size: var(--fs-scbtn);
+    font-size: 2.7rem;
     color: var(--accent);
     transition: 0.3s;
-
-    box-shadow: 0px 4px 10px 1px rgba(218, 165, 32, 0.137);
 }
 
 .home-section .social-icons .social-icons-box a:hover {
-    color: rgb(44, 41, 41);
-    border: 2px solid var(--accent);
     box-shadow: 0 0 1px var(--accent);
     transform: scale(1.1) translateY(-5%);
 }
