@@ -1,4 +1,4 @@
-import { onScreenResize, getIsMobile } from '../../utils/screen-utils.js';
+import { onScreenResize, getIsMobile } from '/src/js//utils/screen-utils.js';
 
 export function initInfoBox() {
     const pairs = document.querySelectorAll('.info-box-pair');

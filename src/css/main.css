@@ -35,7 +35,7 @@
     --fs-h4: 1.4rem;
     --fs-h5: 1rem;
     --fs-h6: 0.8rem;
-    --fs-p: 2rem;
+    --fs-p: 1.5rem;
 
     --fs-icon-text: 0.65rem;
     --fs-navlogo: 2rem;
@@ -198,9 +198,9 @@ button{
 .home-bg-overlay {
     height: 100%;
     width: 100%;
-    background-image: url('../public/gallery/bg1-f.jpg');
+    background-image: url('/src/assets/gallery/bg1-f.jpg');
 
-    background-image: url('../public/gallery/venue-arrangements/arrangement-6.jpg');
+    background-image: url('/src/assets/gallery/venue-arrangements/arrangement-6.jpg');
 
 
     background-size: cover;
@@ -232,7 +232,7 @@ button{
     flex-direction: column;
     align-items: center;
     height: 100cqh;
-    width: 38%;
+    width: 33%;
     max-width: 100vw;
     
     overflow: hidden;
@@ -241,26 +241,31 @@ button{
     background: rgba(255, 255, 255, 0.784);
     box-shadow: 2px -5px 15px 1px var(--secondary);
     resize: horizontal;
+
+    transition: 1.5s;
+}
+
+.home-info:hover{
+    background: rgba(255, 255, 255, 0.65);
 }
 
 .home-info-logo{
-    width: 450px;
+    margin-top: 1.5em;
+    width: 400px;
     min-height: 300px;
 
-    background-image: url('../public/alegro-logo.png');
+    background-image: url('/public/alegro-logo.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
 }
-
-
 
 .home-info-text {
     margin: 1em 6em 2em 6em;
 }
 
 .home-info-text h1 {
-    font-size: 3.4rem;
+    font-size: 2.8rem;
     font-weight: 400;
 }
 
@@ -284,6 +289,9 @@ button{
     margin-top: 2.5em;
     font-size: 2.4rem;
     text-decoration: underline;
+}
+.meet-us a{
+    color: black;
 }
 
 .home-info p:hover {
@@ -608,7 +616,7 @@ button{
 }
 .intro-text{
     width: 60%;
-    font-size: var(--fs-p);
+    font-size: 2rem;
     color: #626060;
     text-align: center;
     transition: .5s;
@@ -628,6 +636,7 @@ button{
 }
 
 .gen-info-box{
+    height: 500px;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -641,15 +650,15 @@ button{
     margin-top: 3em;
     border: 3px solid #E7D8BA;
     border-left: none;
-    width: 75%;
-    height: 90%;
+    width: 70%;
+    height: 100%;
 }
 .info-img-left{
-    margin: 2em 0em 0em 3em;
+    margin: 4% 0em 0em 2.5em;
 
     height: 88%;
     width: 110%;
-    background-image: url('../public/gallery/bg2.jpg');
+    background-image: url('/src/assets/gallery/bg2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -666,20 +675,20 @@ button{
     margin-top: 5em;
     border: 3px solid #E7D8BA;
     border-right: none;
-    width: 40%;
-    height: 90%;
+    width: 35%;
+    height: 100%;
 }
 .info-img-right{
-    margin: 2em 5em 5em 0em;
+    margin: 2em 0em 0em 0em;
     
-    height: 90%;
-    width: 105%;
-    background-image: url('../public/gallery/bg3.jpg');
+    height: 88%;
+    width: 110%;
+    background-image: url('/src/assets/gallery/bg3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
 
-    transform: translateX(-5.5em);
+    transform: translateX(-7em);
 }
 
 .info-box-text{
@@ -723,7 +732,7 @@ button{
     position: relative;
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.642);
 
-    background-image: url('../public/gallery/bg5.jpg');
+    background-image: url('/src/assets/gallery/bg5.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -734,13 +743,13 @@ button{
 
 @keyframes switchbg{
     0% {
-        background-image: url('../public/gallery/bg4.jpg');
+        background-image: url('/src/assets/gallery/bg4.jpg');
     }
     50%{
-        background-image: url('../public/gallery/bg5.jpg');
+        background-image: url('/src/assets/gallery/bg5.jpg');
     }
     100%{
-        background-image: url('../public/gallery/bg4.jpg');
+        background-image: url('/src/assets/gallery/bg4.jpg');
     }
 }
 @keyframes floatingbg {
@@ -944,23 +953,23 @@ button{
 }
 
 .info-box-cube1{
-    background-image: url('../public/gallery/tempbgs/dishes-2.jpg');
+    background-image: url('/public/gallery/tempbgs/dishes-2.jpg');
     background-size: cover;
 }
 .info-box-cube2{
-    background-image: url('../public/gallery/tempbgs/dishes-3.jpg');
+    background-image: url('/public/gallery/tempbgs/dishes-3.jpg');
     background-size: cover;
 }
 .info-box-cube3{
-    background-image: url('../public/gallery/tempbgs/dishes-5.jpg');
+    background-image: url('/public/gallery/tempbgs/dishes-5.jpg');
     background-size: cover;
 }
 .info-box-cube4{
-    background-image: url('../public/gallery/tempbgs/dishes-1.jpg');
+    background-image: url('/public/gallery/tempbgs/dishes-1.jpg');
     background-size: cover;
 }
 .info-box-cube5{
-    background-image: url('../public/gallery/tempbgs/dishes-4.jpg');
+    background-image: url('/public/gallery/tempbgs/dishes-4.jpg');
     background-size: cover;
 }
 .info-box-border{

@@ -4,21 +4,20 @@
     background: transparent;
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
-    grid-template-rows: repeat(auto-fill, 450px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
     justify-content: center;
     gap: 15px;
     row-gap: 15px;
-    padding: 5em 0 3em;
+    padding: 2em 0 3em;
     height: 100%;
 }
 
 .cards-box {
     background: rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    min-width: 500px;
-    min-height: 450px;
-    max-height: 450px;
+    min-width: 250px;
+    min-height: 250px;
+    max-height: 300px;
     padding: 0 0 0 0;
     position: relative;
     display: flex;
@@ -30,12 +29,16 @@
     cursor: pointer;
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 .cards-box:hover {
-    transform: scale(1.2);
+    transform: scale(1.04);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
-    border-radius: 2.2em;
-    border: 1px solid rgba(0, 255, 255, 0.586);
+    border-radius: 10px;
+    border: 1px solid var(--secondary);
     z-index: 1;
 }
 
@@ -47,6 +50,7 @@
 
 .projects-menu {
     display: flex;
+    flex-direction: row-reverse;
     gap: 1em;
     font-size: .9rem;
     font-weight: 700;
@@ -156,7 +160,6 @@
 }
 
 .cards-btn {
-
     display: block;
     position: absolute;
     margin: .2em 0 .5em;
@@ -223,14 +226,14 @@
     }
 
     .cards-container {
-        grid-template-columns: repeat(auto-fit, minmax(275px, 275px));
-        grid-template-rows: repeat(auto-fill, 475px);
-        width: 90% !important;
-        row-gap: 3.5em !important;
+        grid-template-columns: repeat(auto-fit, minmax(175px, 150px));
+        width: 98%;
+        row-gap: 1em;
     }
 
     .cards-box {
-        min-width: 250px;
+        min-width: 175px;
+        min-height: 175px;
         box-shadow: 0px 0px 15px 2px black;
     }
 
