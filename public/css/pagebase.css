@@ -249,7 +249,7 @@ h1{
 
     height: 90%;
     width: 110%;
-    background-image: url('/src/assets/gallery/bg2.jpg');
+    background-image: url('/layout/bg2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -275,7 +275,7 @@ h1{
 
     height: 90%;
     width: 105%;
-    background-image: url('/public/gallery/bg3.jpg');
+    background-image: url('/layout/bg3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
