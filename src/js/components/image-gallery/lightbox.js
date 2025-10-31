@@ -1,4 +1,5 @@
 
+
 export function initLightbox(containerSelector = ".cards-container"){
     const container = document.querySelector(containerSelector);
     if (!container) return;
