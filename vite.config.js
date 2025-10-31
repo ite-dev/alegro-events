@@ -4,7 +4,7 @@ export default defineConfig({
     root: '.',
     build: {
         rollupOptions: {
-            inpurt: {
+            input: {
                 main: 'index.html',
                 weddings: 'pages/weddings.html',
             },
