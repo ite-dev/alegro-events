@@ -252,7 +252,7 @@ button{
     width: 400px;
     min-height: 300px;
 
-    background-image: url('/public/alegro-logo.png');
+    background-image: url('/alegro-logo.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
