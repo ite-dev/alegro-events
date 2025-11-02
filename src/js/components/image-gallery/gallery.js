@@ -1,4 +1,7 @@
-const importImages = import.meta.glob("/src/assets/gallery/**/*.{jpg,jpeg,png,webp}", { eager: true });
+import { onScreenResize, getIsMobile } from '/src/js/utils/screen-utils.js';
+const importImages = import.meta.glob("/src/assets/gallery/**/*.{jpg,jpeg,png,PNG,webp}", { eager: true });
+
+let isMobile = getIsMobile();
 
 function groupImages(){
     const map = {};
@@ -71,7 +74,9 @@ export function initGallery({ containerSelector, folderKey } = {}){
     };
 
     function handleScroll(){
-        const nearBottom = window.scrollY + window.innerHeight >= document.body.offsetHeight - 600;
+        let offsetVal = 600; 
+        if(isMobile) {offsetVal = 800};
+        const nearBottom = window.scrollY + window.innerHeight >= document.body.offsetHeight - offsetVal;
         if (nearBottom) loadChunk();
     };
 

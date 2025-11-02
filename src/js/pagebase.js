@@ -25,3 +25,21 @@ function initBaseGallery(){
     });
 };
 document.addEventListener("DOMContentLoaded", initBaseGallery);
+
+
+function handleScroll() {
+    const scrollButton = document.querySelector('.btn-up');
+    const scrollPosition = window.visualViewport ? window.visualViewport.pageTop : window.scrollY;
+
+    if (scrollPosition >= 200) {
+        scrollButton.style.bottom = '50px';
+        scrollButton.style.opacity = 1;
+    }
+    else {
+        scrollButton.style.bottom = '-100px';
+        scrollButton.style.opacity = 0;
+    }
+};
+
+document.addEventListener('scroll', handleScroll, { passive: true });
+document.addEventListener('DOMContentLoaded', handleScroll);

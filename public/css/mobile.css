@@ -105,58 +105,6 @@
         border-bottom: unset;
     }
 
-    .typing-text {
-        font-size: .9rem;
-    }
-
-    .animated-typing span {
-        font-size: .9rem !important;
-    }
-
-    .typing-text span {
-        -webkit-text-stroke: .7px var(--secondary);
-    }
-
-    .home-logo-wrapper {
-        min-height: 185px;
-        max-height: 185px;
-    }
-
-    .logo-img:hover {
-        transform: scale(1.05) !important;
-    }
-
-    .logo-img .logo-img-box {
-        transform: translateY(15px);
-        width: 150px;
-        height: 150px;
-    }
-
-    .logo-img .logo-img-box::before {
-        background: unset;
-        width: 150px !important;
-        height: 150px !important;
-        border-right: 1px solid white;
-        border-left: unset;
-    }
-
-    .logo-img .logo-img-box::after {
-        background: unset;
-        width: 150px;
-        height: 150px;
-        border-right: unset;
-        border-left: unset;
-        border-radius: 50%;
-    }
-
-    .logo-img-item {}
-
-    .logo-img-item img {
-
-        min-width: 225px !important;
-        height: unset;
-        transform: unset !important;
-    }
 
     .home-info p {
         text-align: center;
@@ -175,36 +123,64 @@
 }
 
 .general-info{
-    gap: 2em;
-    padding: 0;
+    gap: 0em;
+    padding: 0 0 3em;
 }
 
 .gen-info-box{
     grid-template-columns: 40% 60%;
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 1em;
 }
 .info-box-reverse{
     grid-template-columns: 60% 40%;
 }
 
+.info-box-text{
+    font-size: 18px;
+    padding: 3em .5em 3em 3em;
+    position: relative;
+}
+
+
+.full-width{
+    position: absolute;
+    right: 10px; 
+    bottom: 20px;
+    min-width: 95vw !important;
+}
+.full-width.culinary{
+    bottom: 15px;
+}
+.mobile-hide{
+    display: none;
+}
+.gen-info-box.mobile-show{
+    display: grid;
+}
+
 .info-img-box-left{
-    margin-top: 10em;
-    height: 60%;
+    margin-top: 4em;
+    height: 35%;
     width: 100%;
 }
-.info-img-left{
-    width: 100%;
+.info-img-left {
+    width: 110%;
+    margin: 8% 0em 8% 1em;
 }
+
 .info-img-box-right{
     height: 60%;
     margin-top: 7em;
 }
 
-.info-img-left{
-    margin: 2em 0em 3em 1em;
-}
+
 .info-img-right{
     margin: 2em 0em 3em 0em;
     transform: translateX(-1em);
+}
+.info-img-left.culinary-img{
+    background-image: url('/layout/bg3.jpg');
 }
 /* <!-- ----Mobile Projects Section--------------> */
     .gallery-section {
@@ -226,54 +202,6 @@
         position: relative;
     }
 
-    .carousel-container {
-        margin: 0 0;
-        padding: 0;
-        height: 200px;
-        width: 100%;
-        border-radius: 0px;
-        perspective: 400px;
-        gap: 0;
-    }
-
-    .carousel {
-        width: 100% !important;
-        gap: 0em;
-        overflow: hidden;
-    }
-
-    .carousel-item {
-        transform: rotateY(0);
-        min-width: 200px;
-        max-height: 150px;
-        perspective: 400px;
-        padding: 5px;
-    }
-
-    .carousel-item.right {
-        min-width: 150px;
-        max-height: 100px;
-        transform: rotateY(00deg);
-    }
-
-    .carousel-item.left {
-        min-width: 150px;
-        max-height: 100px;
-        transform: rotateY(00deg);
-    }
-
-    .carousel-item img {}
-
-    .prev-btn {
-        left: 0px;
-    }
-
-    .next-btn {
-        right: 0px;
-    }
-
-
-
 /* <!-- ----Mobile Projects Section End----------> */
 
 /* <!-- ----Mobile About Section--------------> */
@@ -293,32 +221,6 @@
         width: 87%;
         gap: 4px;
     }
-    .info-box-pair{
-        gap: 8px !important;
-    }
-
-    .info-box {
-        min-height: 200px;
-        max-height: 200px;
-        overflow: hidden;
-    }
-
-    .info-box-pair.expanded {
-        min-height: 300px;
-        max-height: 300px;
-    }
-
-    .info-box.text p {
-        padding: 3px;
-        font-size: var(--fs-p) !important;
-        max-height: 80%;
-        overflow: hidden;
-    }
-
-    .info-box.img p {
-        font-size: 1rem;
-    }
-
 /* <!-- ----Mobile About Section End--------------> */
 
 /* <!-- ----Mobile Contact Section--------------> */

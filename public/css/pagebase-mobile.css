@@ -23,7 +23,7 @@ h1{
 }
 
 .general-info{
-    margin: 0;
+    margin: 1em 0 0 0;
 }
 .gen-info-box{
     grid-template-columns: 1fr !important;
@@ -32,31 +32,17 @@ h1{
     margin-top: 1em !important;
     padding: 0;
     min-height: 200px;
-    max-width: 70%;
+    max-width: 55%;
 }
 .info-img-left{
-    margin: 1em !important;
+    margin: 4% 0 0 8% !important;
+    min-width: 115%;
 }
     /* <!-- ----Mobile Projects Section--------------> */
     .gallery-section {
         background-size: 115cqw auto;
-        background-attachment: scroll;
         min-height: calc(100vh - 65px);
-        padding: 3em 0 0;
-    }
-
-    .sticky-title {
-        min-width: 100%;
-        overflow: hidden;
-        border: none;
-        height: 70px;
-        z-index: 5;
-    }
-
-    .sticky-title h2,
-    .projects-menu {
-        z-index: 5;
-        position: relative;
+        padding: .5em 0 3em !important;
     }
 
     .cards-container{

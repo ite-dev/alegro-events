@@ -47,6 +47,40 @@
     background: rgba(0, 0, 0, 0.6);
 }
 
+.sticky-title {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25px;
+    height: 50px;
+    overflow: hidden;
+
+
+    text-align: center;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.sticky-title p {
+    color: var(--accent);
+    text-shadow: -1px 0px black;
+    font-size: 1.15rem;
+}
+
+.sticky-title p:hover {
+    color: goldenrod;
+    font-size: 1.25rem;
+}
+
+.sticky-title h2 {
+    color: var(--secondary) !important;
+}
+
 
 .projects-menu {
     display: flex;
@@ -59,12 +93,6 @@
 .projects-filter {
     cursor: pointer;
     transition: .5s;
-}
-
-.projects-filter:hover {
-    color: #00fbff;
-    text-decoration: underline;
-    font-size: 1rem !important;
 }
 
 .gallery-section h2 {
@@ -86,7 +114,7 @@
 .cards-box p {
     background: rgba(0, 0, 0, 0.645);
     position: absolute;
-    bottom: 25px;
+    bottom: 5px;
     text-align: center;
     padding: 5px;
     font-size: 1rem;
@@ -111,7 +139,7 @@
     object-fit: cover;
     position: absolute;
     min-height: 100%;
-
+    max-height: 100%;
     position: absolute;
     max-width: 100%;
     justify-self: center;
@@ -198,20 +226,11 @@
     .projects-menu {
         display: flex;
         gap: .3em;
-
         font-weight: 600;
-        color: white;
-    }
-
-    .projects-filter:hover {
-        font-size: .75rem !important;
-        padding: .3em .1em;
-        color: #00fbff !important;
     }
 
     .projects-filter {
-        font-size: .75rem !important;
-        padding: .3em .1em;
+
         cursor: pointer;
     }
 
@@ -220,21 +239,25 @@
         font-size: 1.4rem;
     }
 
-    .gallery-section p {
-        font-size: .75rem;
+    .sticky-title p {
+        text-shadow: unset;
+        font-size: 1rem;
         border-radius: 0px !important;
+    }
+    .sticky-title p:hover{
+        font-size: 1.1rem;
     }
 
     .cards-container {
         grid-template-columns: repeat(auto-fit, minmax(175px, 150px));
         width: 98%;
-        row-gap: 1em;
+        gap: .5em;
     }
 
     .cards-box {
         min-width: 175px;
         min-height: 175px;
-        box-shadow: 0px 0px 15px 2px black;
+        box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.075);
     }
 
     .cards-box.visible {
