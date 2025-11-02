@@ -1,5 +1,5 @@
 import { onScreenResize, getIsMobile } from '/src/js/utils/screen-utils.js';
-const importImages = import.meta.glob("/src/assets/gallery/**/*.{jpg,jpeg,png,PNG,webp}", { eager: true });
+const importImages = import.meta.glob("/src/assets/gallery/**/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp}", { eager: true });
 
 let isMobile = getIsMobile();
 
