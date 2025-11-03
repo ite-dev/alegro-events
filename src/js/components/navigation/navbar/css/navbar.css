@@ -181,7 +181,7 @@
 .events-list.dropdown.open,
 .gallery-list.dropdown.open {
     z-index: 100;
-    transform: translateY(-4px);
+    transform: translateY(9px);
     display: flex;
 }
 
@@ -233,11 +233,16 @@
         stroke-width: 3;
         stroke-linecap: butt;
     }
+    .menu-close-icon{
+        stroke: var(--secondary) !important;
+        height: 50px !important;
+        width: 40px !important;
+    }
 
     .checkbox-container {
         flex-direction: column;
         position: fixed;
-        top: -600px;
+        top: -750px;
         right: 0;
         width: 100%;
         z-index: 100;
@@ -259,7 +264,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 1em;
+        margin-top: .2em;
         padding: 2em;
     }
 
@@ -380,8 +385,11 @@
         min-height: unset !important;
         margin-top: unset !important;
         padding: unset !important;
-        gap: 1px !important;
+        gap: 6px !important;
         justify-content: flex-end !important;
+        align-items: center !important;
+        font-size: .9rem !important;
+    
     }
     .mobile-featured-item{
         all: unset;
@@ -393,6 +401,29 @@
     .mobile-featured-item a{
         all: unset;
         color: var(--accent) !important;
+        margin: 2px !important
+    }
+    .mobile-call-btn-li{
+        border: unset !important;
+        max-width: 3rem !important;
+    }
+    .mobile-call-btn{
+        font-size: 2.2rem !important;
+        color: var(--accent);
+        padding: 3px 6px;
+        position: absolute;
+        top: 7px;
+        left: 65px;
+    }
+    .mobile-call-btn:hover{
+/*         border: unset !important;
+        background: unset !important;
+        color: var(--accent) !important;
+        transform: scale(1) !important;
+        margin: unset !important;
+        top: 0px !important;
+        width: unset !important;
+        height: unset !important; */
     }
 }
     /* <!-- ----Mobile Header End--------------> */

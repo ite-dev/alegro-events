@@ -1,4 +1,4 @@
-import {onScreenResize, getIsMobile} from '/src/js/utils/screen-utils.js';
+import {onScreenResize, getIsMobile} from '/src/js/utils/screen-utils.js'
 
 export function initNav(){
     let isMobile = getIsMobile();
@@ -66,7 +66,7 @@ export function initNav(){
                 toggle.style.marginBottom = isOpen ? "325px" : "0px";
                 menu.style.maxHeight = isOpen ? "100%" : "0px";
                 menu.style.minHeight = isOpen ? "300px" : "0px";
-                menuContainer.style.paddingTop = isOpen ? "350px" : "1em";
+                menuContainer.style.paddingTop = isOpen ? "120px" : "1em";
             };
 
             arrow.style.transform = isOpen

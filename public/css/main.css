@@ -443,7 +443,7 @@ button{
     padding: 0 0 7.5em 0;
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 7em;
 }
 
 .gen-info-box.mobile-show{
