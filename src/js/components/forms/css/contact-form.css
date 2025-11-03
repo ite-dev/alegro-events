@@ -200,6 +200,17 @@ form:valid .form-btn {
     color: orangered !important;
 }
 
+.contact-items-box {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+
+    padding: 1em 0;
+}
+.mobile-show {
+    display: none;
+}
+
 @media (max-width:980px) {
 
 
@@ -262,21 +273,34 @@ form:valid .form-btn {
 
     #contact-section h2 {
         font-size: 2rem;
+        align-self: center;
     }
 
     .contact-info {
         width: 100%;
         border-left: unset;
         border-bottom: 1px solid #E7D8BA;
-        padding-right: 2em;
-        padding-bottom: 1em;
+    }
+
+    .contact-items-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        padding: 1em 0;
+    }
+
+    .mobile-show{
+        display: flex;
     }
 
     .contact-info-item{
         align-items: center;
+        gap: 6px;
     }
+
     .contact-info-item a{
         font-size: 2rem;
+
     }
 
     #contact-map {
