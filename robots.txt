@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Disallow: /src/
+Disallow: /pages/test/
+Disallow: /pages/tmp/
+Disallow: /node_modules/
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /README.md
+Disallow: /git/
+Disallow: /*.log$
+
+Sitemap: https://www.alegro-events.co.il/sitemap.xml
+Sitemap: https://www.alegro-events.com/sitemap.xml
+
+Host: www.alegro-events.co.il
