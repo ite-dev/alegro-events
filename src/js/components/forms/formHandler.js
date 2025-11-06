@@ -1,6 +1,8 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
 export function initForm(){
+    addInputValidation();
+    updateHTMLPatterns();
     const submitBtn = document.querySelector("#contactForm button[type=submit]");
 
     document.querySelector("#contactForm")
@@ -41,7 +43,7 @@ export function initForm(){
                 const res = await fetchWithTimeout(API_URL, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email, phone, message, website}, 120000),
+                    body: JSON.stringify({ name, email, phone, message, website}),
                 });
 
                 const data = await res.json();
@@ -53,7 +55,13 @@ export function initForm(){
                 };
             } catch (err) {
                 console.error(err);
-                statusMessage("Something went wrong, please try again..", "error");
+                if(err.message === 'Request timed out'){
+                    statusMessage("Request timed out, please try again", "error");
+                } else if (!navigator.onLine){
+                    statusMessage("No internet connection", "error");
+                } else {
+                    statusMessage("Something went wrong, please try again", "error");
+                };
             } finally {
                 setTimeout(() => submitBtn.disabled = false, 5000)
             };
@@ -72,44 +80,86 @@ function statusMessage(msg, type = "info"){
     if(currentStatus){ currentStatus.remove(); };
 
     status.textContent = msg; 
-    status.className = type === "error" ? "status error" : "status success"; 
+    status.className = `status ${type}`; 
     formContainer.appendChild(status);
 };
 
+async function fetchWithTimeout(url, options, timeout = 120000){
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeout);
+
+    try{
+        const response = await fetch(url, {
+            ...options,
+            signal: controller.signal
+        });
+        clearTimeout(timer);
+        return response;
+    } catch (err) {
+        clearTimeout(timer);
+        if (err.name === 'AbortError'){
+            throw new Error('Request timed out');
+        };
+        throw err;
+    };
+};
+
+const VALIDATION_RULES = {
+    email: {
+        regex: /^[A-Za-z0-9._%+-]{2,}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+        htmlPattern: '[A-Za-z0-9._%+\\-]{2,}@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}',
+        message: 'Invalid email format'
+    },
+    name: {
+        regex: /^([A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?$/,
+        htmlPattern: '.{2,100}',
+        message: 'Name must be 1-4 words, letters and hyphens/apostrophes allowed'
+    },
+    phone: {
+        regex: /^[0-9]{9,15}$/,
+        htmlPattern: '[0-9]{9,15}',
+        message: 'Phone must be 9-15 digits'
+    },
+    message: {
+        regex: /^[A-Za-z0-9\u0590-\u05FF !\.,\-=@#:;\+]{0,500}$/,
+        htmlPattern: '.{0,500}',
+        message: 'Message up to 500 characters, letters and punctuation only'
+    }
+};
+
+function addInputValidation(){
+    const inputs = {
+        email: document.getElementById('email'),
+        name: document.getElementById('name'),
+        phone: document.getElementById('phone'),
+        message: document.getElementById('message')
+    };
+
+    Object.keys(inputs).forEach(key => {
+        inputs[key].addEventListener('input', function (e) {
+            const isValid = VALIDATION_RULES[key].regex.test(e.target.value);
+            e.target.setCustomValidity(
+                isValid ? '' : VALIDATION_RULES[key].message
+            );
+        });
+    });
+};
+
 function inputValidation(data){
-    const nameRegex = /^([A-Za-z\u0590-\u05FF]{2,25}) ([A-Za-z\u0590-\u05FF]{2,25}|\.| |-|')+$/;
-
-    const emailRegex = /^[A-Za-z0-9 +\-\.]+@([a-z]+\.)+[A-Za-z]{2,8}$/;
-    const phoneRegex = /^[0-9]{9,14}$/;
-    const messageRegex = /^[a-zA-Z0-9 !\.,\-=\@#\:\;\+]{0,500}$/;
-
-    if(!nameRegex.test(data.name)) {
-        return statusMessage("Invalid Name: First and Last Name required, 2-30 letters each.", "error");
+    for(const [key, rule] of Object.entries(VALIDATION_RULES)){
+        if(!rule.regex.test(data[key])){
+            return statusMessage(rule.message, "error");
+        };
     };
-    if(!emailRegex.test(data.email)){
-        return statusMessage("Invalid Email Address.", "error");
-    };
-    if(!phoneRegex.test(data.phone)){
-        return statusMessage("Invalid Phone Number: 9-14 digits.", "error");
-    };
-    if(!messageRegex.test(data.message)){
-        return statusMessage("Invalid Message: Max 500 characters.", "error");
-    };
-
     return true;
 };
 
-async function fetchWithTimeout(url, options, timeout = 120000){
-    return new Promise((resolve, reject) => {
-        const timer = setTimeout(() => reject(new Error("Request timed out")), timeout);
-        fetch(url, options)
-            .then(res => {
-                clearTimeout(timer);
-                resolve(res);
-            })
-            .catch(err => {
-                clearTimeout(timer);
-                reject(err);
-            });
+function updateHTMLPatterns(){
+    const inputs = ['email', 'name', 'phone', 'message'];
+    inputs.forEach(key => {
+        const input = document.getElementById(key);
+        if(input && VALIDATION_RULES[key].htmlPattern){
+            input.setAttribute('pattern', VALIDATION_RULES[key].htmlPattern);
+        };
     });
 };
