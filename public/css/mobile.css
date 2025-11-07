@@ -1,3 +1,23 @@
+@media (max-width: 1300px) {
+    .contact-info {
+        width: unset;
+        
+    }
+    .contact-info-item{
+        gap: 1em;
+    }
+    .contact-info-item a{
+        font-size: 2.4rem;
+    }
+    #contact-section p{
+        font-size: 1.2rem;
+    }
+
+    #contact-map {
+        min-width: 288px;
+    }
+}
+
 @media (max-width:980px) {
     :root {
         --fs-h1: 2.3rem;
@@ -231,14 +251,36 @@
 /* <!-- ----Mobile About Section End--------------> */
 
 /* <!-- ----Mobile Contact Section--------------> */
+#contact-section h2{
+    align-self: center;
+    font-size: 1.8rem;
+}
 
+.contact-info{
+    padding: 3em 1em;
+}
+
+.contact-items-box{
+    row-gap: 1em;
+}
+
+.contact-info-item{
+    width: 100%;
+    gap: 16px;
+    justify-content: center;
+}
+.contact-info-item a{
+    font-size: 1.7rem;
+}
 .contact-info-item a[href^="tel"] {
     font-size: 1.1rem !important;
 }
 
 .contact-info-item a[href^="tel"] i{
     font-size: 2rem !important;
+    margin-left: 10px;
 }
+
 /* <!-- ----Mobile Contact Section End----------> */
 
 /* <!-- ----Mobile Scroll-up Button-------------> */

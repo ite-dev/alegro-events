@@ -1,13 +1,11 @@
 .form-container {
+
     position: relative;
-    margin: 1em 0;
-    padding-top: 1em;
-    height: 200px;
+    padding-top: 1.5em;
     
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 .form-container h3{
@@ -23,6 +21,7 @@
     max-height: 30cqh;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
 
     padding: 0px 25px;
@@ -35,12 +34,11 @@
 }
 
 .contact-box form {
-
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: .5em;
-
-    width: 100%;
+    direction: rtl;
 }
 
 .contact-box .input-box {
@@ -182,15 +180,13 @@ form:valid .form-btn {
 }
 
 .status{
-    font-size: 2em !important;
+    font-size: 2.5em !important;
     font-weight: 500 !important;
-    text-align: center !important; 
+    text-align: center; 
     background: #E7D8BA;
-    position: absolute;
-    top: 10px;
-    left: 10px;
 
-    padding: 5px;
+    min-height: 33px;
+    padding: 5px 10px;
 }
 
 .status.success{
@@ -244,9 +240,14 @@ form:valid .form-btn {
         padding: 0;
     }
 
+    .form-container h3{
+        padding-bottom: 1.5em;
+    }
+
     .contact-box {
         min-width: 100%;
         border-bottom: unset;
+        backdrop-filter: unset;
     }
 
     .contact-box .input-box input {
@@ -269,11 +270,7 @@ form:valid .form-btn {
         width: 50%;
         padding: 5px 0px !important;
         grid-column: span 2;
-    }
-
-    #contact-section h2 {
-        font-size: 2rem;
-        align-self: center;
+        margin: 1em 0;
     }
 
     .contact-info {
@@ -295,11 +292,6 @@ form:valid .form-btn {
 
     .contact-info-item{
         align-items: center;
-        gap: 6px;
-    }
-
-    .contact-info-item a{
-        font-size: 2rem;
     }
 
     #contact-map {

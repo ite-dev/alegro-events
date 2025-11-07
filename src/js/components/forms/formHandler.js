@@ -1,5 +1,11 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
+import '../../utils/toastify/css/toast.css';
+import { errorMsg, infoMsg, loadingMsg, successMsg } from '../../utils/toastify/toast';
+
+
 export function initForm(){
     addInputValidation();
     updateHTMLPatterns();
@@ -26,7 +32,7 @@ export function initForm(){
 
             if(website){
                 console.warn("SPAM DETECTED!");
-                statusMessage("Spam Detected!", "error");
+                errorMsg("Spam Detected!!!", "error");
                 return;
             };
 
@@ -37,8 +43,7 @@ export function initForm(){
             };
 
             submitBtn.disabled = true;
-            statusMessage("Sending message, please wait...", "info");
-
+            const toast = loadingMsg("פנייתכם נשלחת ברגעים אלה - אנא המתינו לאישור.")
             try {
                 const res = await fetchWithTimeout(API_URL, {
                     method: "POST",
@@ -48,40 +53,41 @@ export function initForm(){
 
                 const data = await res.json();
                 if(res.ok){
-                    statusMessage("Message Sent!", "success");
+                    toast.hideToast();
+                    formSubmitted();
+                    successMsg("פנייתכם נשלחה בהצלחה - ניצור עימכם קשר בהקדם :)")
                     e.target.reset();
                 } else {
-                    statusMessage("Message failed to send, please try again..", "error");
+                    errorMsg("שליחת הפנייה נכשלה, אנא נסו שנית..")
                 };
             } catch (err) {
                 console.error(err);
+                toast.hideToast();
                 if(err.message === 'Request timed out'){
-                    statusMessage("Request timed out, please try again", "error");
+                    errorMsg("Request timed out, please try again - לקח יותר מידי זמן לבקשה, אנא נסו שנית");
                 } else if (!navigator.onLine){
-                    statusMessage("No internet connection", "error");
+                    errorMsg("No internet connection - אנא וודאו שאתם מחוברים לאינטרנט :)");
                 } else {
-                    statusMessage("Something went wrong, please try again", "error");
+                    errorMsg("something went wrong.. הייתה תקלה בשליחת ההודעה, אנא נסו שנית..")
                 };
             } finally {
-                setTimeout(() => submitBtn.disabled = false, 5000)
+                setTimeout(() => submitBtn.disabled = false, 5000);
             };
     });
 };
 
+function formSubmitted(){
+    const hideForm = document.querySelector("#contactForm");
+    hideForm.remove();
+    const container = document.querySelector(".form-container");
+    const p = document.createElement("p");
+    p.innerText = "פנייתכם נשלחה בהצלחה, ניצור עימכם קשר בהקדם :)";
+
+    container.appendChild(p);
+}
+
 function sanitizeInput(value){
     return value.replace(/[<>]/g, "").replace(/\s+/g, " ");
-};
-
-function statusMessage(msg, type = "info"){
-    const formContainer = document.querySelector(".form-container");
-    const status = document.createElement("p");
-    const currentStatus = document.querySelector(".status");
-
-    if(currentStatus){ currentStatus.remove(); };
-
-    status.textContent = msg; 
-    status.className = `status ${type}`; 
-    formContainer.appendChild(status);
 };
 
 async function fetchWithTimeout(url, options, timeout = 120000){
@@ -148,7 +154,7 @@ function addInputValidation(){
 function inputValidation(data){
     for(const [key, rule] of Object.entries(VALIDATION_RULES)){
         if(!rule.regex.test(data[key])){
-            return statusMessage(rule.message, "error");
+            return errorMsg(rule.message, "error");
         };
     };
     return true;

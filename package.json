@@ -11,5 +11,8 @@
   "devDependencies": {
     "vite": "^7.1.2",
     "vite-plugin-full-reload": "^1.2.0"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0"
   }
 }

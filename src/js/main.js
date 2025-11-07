@@ -3,11 +3,12 @@ import {initCarousel} from './components/image-carousel/carousel.js';
 import {initInfoBox} from './components/info-box/info-box.js'
 import { initGallery } from './components/image-gallery/gallery.js';
 import { initForm } from './components/forms/formHandler.js';
+import { infoMsg } from './utils/toastify/toast.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initForm();
-
+    infoMsg("ברוכים הבאים לאלגרו !");
 /*     initCarousel(); */
 /*     initInfoBox(); */
 });

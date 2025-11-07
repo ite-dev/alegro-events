@@ -19,7 +19,7 @@
     <meta name="geo.position" content="31.750505;35.216992">
     <meta name="ICBM" content="31.750505,35.216992">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Alegro Events">
     <meta name="theme-color" content="#E7D8BA">
 
@@ -454,7 +454,6 @@
 </section>
     <!-- ----------------Contact Section---------------- -->
         <section id="contact-section">
-            <div class="contact-bg"></div>
 
             <div class="contact-info">
                 <h2> יצירת קשר </h2>
@@ -492,17 +491,10 @@
                         <input type="text" name="website" id="website" class="visible-content" tabindex="-1" autocomplete="off"/>
 
                         <div class="input-box">
-                            <input id="message" type="text" name="message" placeholder=" "
-                                maxlength="500"
-                                pattern="[A-Za-z0-9\u0590-\u05FF !\.,\-=@#:;\+]{0,500}"
-                                title="Max 500 characters, letters, punctuation, and Hebrew characters allowed">
-                            <label for="message" class="msg-label">הודעה</label>
-                        </div>
-
-                        <div class="input-box">
-                            <input id="phone" required type="tel" name="phone" placeholder=" " inputmode="numeric" pattern="[0-9]{9,15}" maxlength="15"
-                                title="Must contain 9-15 numbers | Example: 3477549099" autocomplete="tel">
-                            <label for="phone">טלפון</label>
+                            <input id="name" type="text" name="name" required placeholder=" "
+                                pattern="([A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?"
+                                title="1-4 words, letters, hyphens, and apostrophes allowed" autocomplete="on">
+                            <label for="name">שם</label>
                         </div>
 
                         <div class="input-box">
@@ -513,10 +505,18 @@
                         </div>
 
                         <div class="input-box">
-                            <input id="name" type="text" name="name" required placeholder=" "
-                                pattern="([A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?(\s+[A-Za-z\u0590-\u05FF]+[-']?[A-Za-z\u0590-\u05FF]+)?"
-                                title="1-4 words, letters, hyphens, and apostrophes allowed" autocomplete="on">
-                            <label for="name">שם</label>
+                            <input id="phone" required type="tel" name="phone" placeholder=" " inputmode="numeric" pattern="[0-9]{9,15}"
+                                maxlength="15" title="Must contain 9-15 numbers | Example: 3477549099" autocomplete="tel">
+                            <label for="phone">טלפון</label>
+                        </div>
+
+
+                        <div class="input-box">
+                            <input id="message" type="text" name="message" placeholder=" "
+                                maxlength="500"
+                                pattern="[A-Za-z0-9\u0590-\u05FF !\.,\-=@#:;\+]{0,500}"
+                                title="Max 500 characters, letters, punctuation, and Hebrew characters allowed">
+                            <label for="message" class="msg-label">הודעה</label>
                         </div>
 
                         <button type="submit" class="form-btn">שליחה</button>
