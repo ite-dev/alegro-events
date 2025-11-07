@@ -173,8 +173,9 @@
 .full-width{
     position: absolute;
     right: 10px; 
-    bottom: 20px;
+    bottom: 15px;
     min-width: 95vw !important;
+    grid-column: 1 /-1;
 }
 .full-width.culinary{
     bottom: 15px;
