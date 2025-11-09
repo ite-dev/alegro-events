@@ -310,6 +310,7 @@ button{
 
 .meet-us {
     font-size: 2.4rem;
+    font-weight: 600;
     text-decoration: underline;
     align-self: flex-end !important;
     justify-self: flex-end !important;
