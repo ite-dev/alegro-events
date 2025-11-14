@@ -15,14 +15,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const map = document.querySelector("iframe[data-src]");
+
+    if (!map) return;
     const observer = new IntersectionObserver(([entry]) => {
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             map.src = map.dataset.src;
-        observer.disconnect();
-        };
+            observer.disconnect();
+        }
     });
-        observer.observe(map);
+    observer.observe(map);
 });
+
 // Typing Text Animation // 
 /* document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
