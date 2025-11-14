@@ -1,15 +1,28 @@
-import {initNav} from './components/navigation/navbar/navbar.js';
-import { initGallery } from './components/image-gallery/gallery.js';
-import { initForm } from './components/forms/formHandler.js';
-import { infoMsg } from './utils/toastify/toast.js';
+document.addEventListener('DOMContentLoaded', async () => {
 
-document.addEventListener('DOMContentLoaded', () => {
+    const { initNav } = await import('./components/navigation/navbar/navbar.js');
     initNav();
-    initForm();
-    infoMsg("ברוכים הבאים לאלגרו !");
-/*     initInfoBox(); */
+
+    if (document.querySelector('#contactForm')) {
+        const { initForm } = await import('./components/forms/formHandler.js');
+        initForm();
+    }
+
+    import('./utils/toastify/toast.js').then(({ infoMsg }) => {
+        infoMsg("ברוכים הבאים לאלגרו !");
+    });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const map = document.querySelector("iframe[data-src]");
+    const observer = new IntersectionObserver(([entry]) => {
+        if(entry.isIntersecting){
+            map.src = map.dataset.src;
+        observer.disconnect();
+        };
+    });
+        observer.observe(map);
+});
 // Typing Text Animation // 
 /* document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.animated-typing');
@@ -44,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Scroll Position: scroll-up btn display  //
 function handleScroll(){
     const scrollButton = document.querySelector('.btn-up');
-    const scrollPosition = window.visualViewport ? window.visualViewport.pageTop : window.scrollY;
+    const scrollPosition = window.scrollY;
 
     if (scrollPosition >= 200) {
         scrollButton.style.bottom = '50px';
