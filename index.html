@@ -5,53 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.boxicons.com" crossorigin>
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://cdn.boxicons.com">
-    <link rel="preload" as="image" href="/alegro-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Heebo:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Heebo:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    </noscript>
+<link rel="preload" as="image" href="/layout/arrangement-6.webp" importance="high">
 
-    <link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="/css/mobile.css" as="style" onload="this.rel='stylesheet'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap">
 
-    <noscript>
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/mobile.css">
-    </noscript>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/mobile.css" media="(max-width: 1000px)">
 
+<link rel="icon" href="/alegro-logo.png">
+<link rel="apple-touch-icon" href="/alegro-logo.png">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/alegro-logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/alegro-logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/alegro-logo.png">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+<!-- Component CSS lazy-loaded -->
+<link rel="stylesheet" href="/src/js/components/forms/css/contact-form.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/src/js/components/navigation/navbar/css/navbar.css" media="print"
+    onload="this.media='all'">
+<link rel="stylesheet" href="/src/js/components/image-gallery/css/image-gallery.css" media="print"
+    onload="this.media='all'">
+<link rel="stylesheet" href="/src/js/components/reviews/css/reviews.css" media="print" onload="this.media='all'">
 
-    <link rel="stylesheet" href="/src/js/components/forms/css/contact-form.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/src/js/components/navigation/navbar/css/navbar.css" media="print"
-        onload="this.media='all'">
-    <link rel="stylesheet" href="/src/js/components/image-gallery/css/image-gallery.css" media="print"
-        onload="this.media='all'">
-    <link rel="stylesheet" href="/src/js/components/reviews/css/reviews.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="/src/js/components/forms/css/contact-form.css">
-        <link rel="stylesheet" href="/src/js/components/navigation/navbar/css/navbar.css">
-        <link rel="stylesheet" href="/src/js/components/image-gallery/css/image-gallery.css">
-        <link rel="stylesheet" href="/src/js/components/reviews/css/reviews.css">
-    </noscript>
+<noscript>
+    <link rel="stylesheet" href="/src/js/components/forms/css/contact-form.css">
+    <link rel="stylesheet" href="/src/js/components/navigation/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/src/js/components/image-gallery/css/image-gallery.css">
+    <link rel="stylesheet" href="/src/js/components/reviews/css/reviews.css">
+</noscript>
 
-    <script type="module" src="/src/js/main.js"></script>
+<script type="module" src="/src/js/main.js" defer></script>
 
     <meta name="description"
         content="אולמי אלגרו ירושלים - אולם אירועים יוקרתי בעיצוב אלגנטי לחתונות, חינה ובר/בת מצווה. חוויה קולינרית, שירות אישי וליווי צמוד לכל אירוע.">
@@ -329,7 +313,7 @@
                 </h1>
             <div class="home-info">
                 <div class="home-info-logo">
-                <img src="/alegro-logo.png" alt="Alegro Logo" width="400" height="300">
+                <img src="/alegro-logo.png" alt="Alegro Logo" width="400" height="300" fetchpriority="high">
                 </div>
                 <div class="home-info-text">
                     <h2>

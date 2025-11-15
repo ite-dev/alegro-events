@@ -54,6 +54,8 @@
         top: 0;
         left: 0;
         z-index: -1;
+
+        background-image: url('/layout/mobile-home-bg.webp');
     }
 
     .home-info {
@@ -74,9 +76,9 @@
 
     .home-info-logo{
         width: 250px;
-        min-height: 180px;
+        height: 233px;
         position: absolute;
-        top: 1.5em;
+        top: 0em;
         border-radius: 50%;
 
         filter: invert(100%) hue-rotate(180deg);
