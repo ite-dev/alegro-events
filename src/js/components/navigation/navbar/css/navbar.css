@@ -415,15 +415,13 @@
         top: 7px;
         left: 65px;
     }
-    .mobile-call-btn:hover{
-/*         border: unset !important;
-        background: unset !important;
-        color: var(--accent) !important;
-        transform: scale(1) !important;
-        margin: unset !important;
-        top: 0px !important;
-        width: unset !important;
-        height: unset !important; */
-    }
+    .mobile-call-btn svg{
+        width: 35px;
+        height: 35px;
+        stroke: rgb(0, 0, 0, 0);
+        stroke-width: 1;
+        stroke-linecap: butt;
+}
+    
 }
     /* <!-- ----Mobile Header End--------------> */

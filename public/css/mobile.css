@@ -125,6 +125,14 @@
         font-size: 2rem;
     }
 
+    .social-icons-box svg{
+        width: 35px;
+        height: 45px;
+        stroke: rgb(0, 0, 0);
+        stroke-width: 0;
+        stroke-linecap: butt;
+    }
+
     .home-info .social-icons {
         padding: 3px 0px 1em;
         transform: translateY(20px) !important;
@@ -276,6 +284,15 @@
 .contact-info-item a{
     font-size: 1.7rem;
 }
+
+.contact-info-item svg {
+    width: 30;
+    height: 30px;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 1;
+    stroke-linecap: butt;
+}
+
 .contact-info-item a[href^="tel"] {
     font-size: 1.1rem !important;
 }
