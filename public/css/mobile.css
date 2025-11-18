@@ -157,6 +157,7 @@
 }
 
 .gen-info-box{
+    height: 550px;
     grid-template-columns: 40% 60%;
     border-bottom: 1px solid var(--secondary);
     padding-bottom: 1em;

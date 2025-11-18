@@ -472,7 +472,7 @@ button{
     padding: 2em 0 7.5em 0;
     display: flex;
     flex-direction: column;
-    gap: 7em;
+    gap: 10em;
 }
 
 .gen-info-box.mobile-show{
@@ -514,6 +514,13 @@ button{
     background-position: center center;
 }
 
+.img-test{
+float: left;
+shape-outside: url('/layout/dishes-appetizers.webp');
+shape-margin: 1em;
+width: 50vw;
+
+}
 .info-box-reverse {
     position: relative;
 }
