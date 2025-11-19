@@ -275,7 +275,7 @@ button {
     justify-content: space-between;
     padding: 1em 3.5em;
 
-    gap: 1em;
+    gap: 3em;
     min-height: 45cqh;
 
     transform: translateY(-35px);
@@ -317,8 +317,8 @@ button {
 }
 
 .meet-us {
-    font-size: 2.4rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 500;
     text-decoration: underline;
     align-self: flex-end !important;
     justify-self: flex-end !important;
@@ -461,7 +461,7 @@ button {
 
 /* <!-- ----Intro Section--------> */
 .intro-section {
-    padding: 5em 0;
+    padding: 5em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,7 +469,7 @@ button {
 }
 
 .intro-text {
-    width: 66%;
+    width: 56%;
     font-size: 2rem;
     color: #626060;
     text-align: center;

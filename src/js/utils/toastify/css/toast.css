@@ -2,10 +2,10 @@
 
 .toastify {
     direction: rtl;
-    background: black;
+    background: black !important;
     color: #E7D8BA !important;
 
-    border-radius: 12px;
+    border-radius: 12px !important;
     padding: 10px 12px;
     font-weight: 500;
 

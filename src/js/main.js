@@ -3,14 +3,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     const { initNav } = await import('./components/navigation/navbar/navbar.js');
     initNav();
 
-    if (document.querySelector('#contactForm')) {
+    if (document.querySelector('#contactForm')){
         const { initForm } = await import('./components/forms/formHandler.js');
         initForm();
-    }
+    };
+});
 
-    import('./utils/toastify/toast.js').then(({ infoMsg }) => {
+window.addEventListener('load', async () => {
+    if (document.querySelector('#contactForm')) {
+        const {infoMsg} = await import('./utils/toastify/toast.js');
         infoMsg("ברוכים הבאים לאלגרו !");
-    });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
