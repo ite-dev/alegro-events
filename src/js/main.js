@@ -78,3 +78,19 @@ function handleScroll(){
 document.addEventListener('scroll', handleScroll, {passive:true});
 document.addEventListener('DOMContentLoaded', handleScroll);
 // Scroll Position: scroll-up btn display,  //
+
+document.getElementById("faq-container").addEventListener("click", (e) => {
+    const question = e.target.closest("[data-faq-question]");
+    if (!question) return;
+
+    const item = question.parentElement;
+    const allItems = document.querySelectorAll(".faq-item");
+
+    // Close all items
+    allItems.forEach(i => {
+        if (i !== item) i.classList.remove("open");
+    });
+
+    // Toggle clicked item
+    item.classList.toggle("open");
+});

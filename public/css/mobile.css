@@ -90,7 +90,6 @@
     }
 
     .home-info-text {
-        /* height: 333px; */
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -116,7 +115,7 @@
     .meet-us {
         width: 100%;
         margin-top: .8em;
-        font-size: 2rem;
+        font-size: 1.6rem;
         height: 50px;
     }
 
@@ -260,6 +259,25 @@
 
     /* <!-- ----Mobile Projects Section End----------> */
 
+    .faq-section{
+        margin-top: 0em;
+    }
+    .faq-section h2{
+        font-size: 1.8rem;
+    }
+    .faq-container{
+        width: 70%;
+    }
+
+    .faq-question{
+        font-size: .8rem;
+    }
+    .faq-answer{
+        font-size: .85rem;
+    }
+    .faq-item.open .faq-answer{
+        padding: .5em .5em .5em 2.5em;
+    }
     /* <!-- ----Mobile About Section--------------> */
     #about-section {
         padding: 25px 0 50px;
@@ -288,7 +306,7 @@
     }
 
     .contact-info {
-        padding: 3em 1em;
+        padding: 3em 0em;
     }
 
     .contact-items-box {
@@ -299,6 +317,10 @@
         width: 100%;
         gap: 16px;
         justify-content: center;
+    }
+
+    #phone-number{
+        min-width:100px;
     }
 
     .contact-info-item a {
