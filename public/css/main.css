@@ -264,6 +264,7 @@ button {
 }
 
 .home-info-logo img {
+    aspect-ratio: 16 / 9;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -516,7 +517,7 @@ button {
     border: 3px solid #E7D8BA;
     border-left: none;
     width: 70%;
-    height: 90%;
+    height: 100%;
 }
 
 .info-img-left {
@@ -540,7 +541,7 @@ button {
 }
 
 .info-box-reverse {
-    margin-top: 2em;
+    margin-top: 1em;
     position: relative;
 }
 
@@ -606,6 +607,8 @@ button {
 /* <!-- ----Gallery Section---------------> */
 .gallery-section {
     min-height: calc(75vh);
+    max-height: calc(75vh);
+    min-width: 100vw;
     border-top: 1px solid white;
     transition: background-image 0.5s ease-in-out;
 
