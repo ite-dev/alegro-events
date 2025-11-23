@@ -13,11 +13,6 @@ if (window.trustedTypes) {
 document.addEventListener('DOMContentLoaded', async () => {
     const toastUtils = await import('./utils/toastify/toast.js');
 
-    if (document.querySelector('#contactForm')) {
-        toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
-    }
-
-
     const { initNav } = await import('./components/navigation/navbar/navbar.js');
     initNav();
 
@@ -43,7 +38,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     observer.observe(map);
-
+    
+    if (document.querySelector('#contactForm')) {
+        toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
+    };
     handleScroll();
 });
 

@@ -1,6 +1,11 @@
 import Toastify from "toastify-js";
 import "./css/toast.css";
 
+
+const toastifyPolicy = window.trustedTypes?.createPolicy('toastifyPolicy', {
+    createHTML: (input) => input,
+});
+
 const defaultOptions = {
     duration: 3000,
     gravity: "top",
@@ -17,23 +22,15 @@ const defaultOptions = {
  * @returns {object} toast instance
  */
 function createToast(msg, className = "", duration = defaultOptions.duration) {
-    // Create a container div for the toast content
     const node = document.createElement("div");
+    node.style.color = "#E7D8BA";
 
-    // Create a span inside the node for the message
-    const span = document.createElement("span");
-    span.style.color = "#E7D8BA";
-
-    if (window.alegroPolicy && window.trustedTypes) {
-        // Use Trusted Types to safely set HTML if needed
-        span.innerHTML = window.alegroPolicy.createHTML(msg);
+    if (toastifyPolicy) {
+        node.innerHTML = toastifyPolicy.createHTML(msg);
     } else {
-        span.textContent = msg;
+        node.textContent = msg;
     }
 
-    node.appendChild(span);
-
-    // Pass the DOM node to Toastify
     const toast = Toastify({
         ...defaultOptions,
         node,
