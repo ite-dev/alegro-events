@@ -1,7 +1,10 @@
 import Toastify from "toastify-js";
 import "./css/toast.css";
 
-// Use the 'toastifyPolicy' created in main.js
+const toastifyPolicy = window.trustedTypes?.createPolicy('toastifyPolicy', {
+    createHTML: (input) => input,
+});
+
 const defaultOptions = {
     duration: 3000,
     gravity: "top",
@@ -10,22 +13,14 @@ const defaultOptions = {
     close: true,
 };
 
-/**
- * Create a Trusted Types / CSP-compliant toast
- * @param {string} msg - Message to display
- * @param {string} className - CSS class for styling
- * @param {number} duration - Duration of the toast in ms (-1 for persistent)
- * @returns {object} toast instance
- */
 function createToast(msg, className = "", duration = defaultOptions.duration) {
     const node = document.createElement("div");
     node.style.color = "#E7D8BA";
 
-    // Use the pre-created policy from main.js
-    if (window.toastifyPolicy) {
-        node.innerHTML = window.toastifyPolicy.createHTML(msg); // Secure HTML assignment
+    if (toastifyPolicy) {
+        node.innerHTML = toastifyPolicy.createHTML(msg);
     } else {
-        node.textContent = msg; // Fallback for non-trusted types environments
+        node.textContent = msg;
     }
 
     const toast = Toastify({
