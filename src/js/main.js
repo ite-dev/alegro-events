@@ -1,3 +1,11 @@
+
+if (window.trustedTypes) {
+    window.alegroPolicy = window.trustedTypes.createPolicy('alegroApp', {
+        createHTML: (input) => input,
+        createScript: (input) => input
+    });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
 
     const { initNav } = await import('./components/navigation/navbar/navbar.js');
