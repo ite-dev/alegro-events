@@ -4,6 +4,7 @@
     direction: rtl;
     background: black !important;
     color: #E7D8BA !important;
+    display: flex !important;
 
     border-radius: 12px !important;
     padding: 10px 12px;
@@ -11,6 +12,9 @@
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     animation: swoopDown 1.5s cubic-bezier(0.34, 1.36, 0.64, 1);
+}
+.toastify .toastify-content span{
+    color: #E7D8BA !important;
 }
 .toastify-top{
     top: 70px !important;

@@ -1,5 +1,5 @@
-import Toastify from 'toastify-js';
-import './css/toast.css';
+import Toastify from "toastify-js";
+import "./css/toast.css";
 
 const defaultOptions = {
     duration: 3000,
@@ -9,41 +9,36 @@ const defaultOptions = {
     close: true,
 };
 
-export const successMsg = (msg) => {
-    Toastify({
-        ...defaultOptions,
-        duration: 10000,
-        text: window.alegroPolicy ? window.alegroPolicy.createHTML(msg) : msg,
-        className: "success-toast",
-    }).showToast();
-};
+/**
+ * Create a Trusted Types / CSP-compliant toast
+ * @param {string} msg - Message to display
+ * @param {string} className - CSS class for styling
+ * @param {number} duration - Duration of the toast in ms (-1 for persistent)
+ * @returns {object} toast instance
+ */
+function createToast(msg, className = "", duration = defaultOptions.duration) {
+    let node = document.createElement("div");
 
-export const errorMsg = (msg) => {
-    Toastify({
-        ...defaultOptions,
-        text: window.alegroPolicy ? window.alegroPolicy.createHTML(msg) : msg,
-        duration: 5000,
-        className: "error-toast",
-    }).showToast();
-};
+    if (window.alegroPolicy) {
+        node.innerHTML = window.alegroPolicy.createHTML(msg);
+    } else {
+        node.textContent = msg;
+    };
 
-export const infoMsg = (msg) => {
-    Toastify({
-        ...defaultOptions,
-        text: window.alegroPolicy ? window.alegroPolicy.createHTML(msg) : msg,
-        duration: 2500,
-        className: "info-toast",
-    }).showToast();
-};
-
-export const loadingMsg = (msg) => {
+    node.style.color = "#E7D8BA";
     const toast = Toastify({
         ...defaultOptions,
-        text: window.alegroPolicy ? window.alegroPolicy.createHTML(`⏳ ${msg}`) : `⏳ ${msg}`,
-        duration: -1,
-        close: false,
-        className: "loading-toast"
-    }).showToast();
+        node,
+        duration,
+        className,
+        stopOnFocus: true,
+    });
 
+    toast.showToast();
     return toast;
 };
+
+export const successMsg = (msg) => createToast(msg, "success-toast", 10000);
+export const errorMsg = (msg) => createToast(msg, "error-toast", 5000);
+export const infoMsg = (msg) => createToast(msg, "info-toast", 24500);
+export const loadingMsg = (msg) => createToast(`⏳ ${msg}`, "loading-toast", -1);

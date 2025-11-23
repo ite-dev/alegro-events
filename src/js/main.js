@@ -1,5 +1,5 @@
 
-if (window.trustedTypes) {
+if(window.trustedTypes){
     window.alegroPolicy = window.trustedTypes.createPolicy('alegroApp', {
         createHTML: (input) => input,
         createScript: (input) => input
