@@ -5,9 +5,11 @@ if (window.trustedTypes) {
         createScript: (input) => input
     });
 
-    window.toastifyPolicy = window.trustedTypes.createPolicy('toastifyPolicy', {
-        createHTML: (input) => input
-    });
+    if (!window.toastifyPolicy) {
+        window.toastifyPolicy = window.trustedTypes.createPolicy('toastifyPolicy', {
+            createHTML: (input) => input,
+        });
+    };
 };
 
 document.addEventListener('DOMContentLoaded', async () => {

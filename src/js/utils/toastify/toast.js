@@ -1,11 +1,7 @@
 import Toastify from "toastify-js";
 import "./css/toast.css";
 
-
-const toastifyPolicy = window.trustedTypes?.createPolicy('toastifyPolicy', {
-    createHTML: (input) => input,
-});
-
+// Use the 'toastifyPolicy' created in main.js
 const defaultOptions = {
     duration: 3000,
     gravity: "top",
@@ -25,10 +21,11 @@ function createToast(msg, className = "", duration = defaultOptions.duration) {
     const node = document.createElement("div");
     node.style.color = "#E7D8BA";
 
-    if (toastifyPolicy) {
-        node.innerHTML = toastifyPolicy.createHTML(msg);
+    // Use the pre-created policy from main.js
+    if (window.toastifyPolicy) {
+        node.innerHTML = window.toastifyPolicy.createHTML(msg); // Secure HTML assignment
     } else {
-        node.textContent = msg;
+        node.textContent = msg; // Fallback for non-trusted types environments
     }
 
     const toast = Toastify({
