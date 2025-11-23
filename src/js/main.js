@@ -4,7 +4,7 @@ if (window.trustedTypes) {
         createHTML: (input) => input,
         createScript: (input) => input
     });
-}
+};
 
 document.addEventListener('DOMContentLoaded', async () => {
 

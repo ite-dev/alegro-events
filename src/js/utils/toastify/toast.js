@@ -13,7 +13,7 @@ export const successMsg = (msg) => {
     Toastify({
         ...defaultOptions,
         duration: 10000,
-        text: `${msg}`,
+        text: window.alegroPolicy ? window.alegroPolicy.createHTML(msg) : msg,
         className: "success-toast",
     }).showToast();
 };
@@ -21,7 +21,7 @@ export const successMsg = (msg) => {
 export const errorMsg = (msg) => {
     Toastify({
         ...defaultOptions,
-        text: `${msg}`,
+        text: window.alegroPolicy ? window.alegroPolicy.createHTML(msg) : msg,
         duration: 5000,
         className: "error-toast",
     }).showToast();
@@ -30,8 +30,8 @@ export const errorMsg = (msg) => {
 export const infoMsg = (msg) => {
     Toastify({
         ...defaultOptions,
-        text: `${msg}`,
-        duration: 2500, 
+        text: window.alegroPolicy ? window.alegroPolicy.createHTML(msg) : msg,
+        duration: 2500,
         className: "info-toast",
     }).showToast();
 };
@@ -39,11 +39,11 @@ export const infoMsg = (msg) => {
 export const loadingMsg = (msg) => {
     const toast = Toastify({
         ...defaultOptions,
-        text: `⏳ ${msg}`,
-        duration: -1, 
+        text: window.alegroPolicy ? window.alegroPolicy.createHTML(`⏳ ${msg}`) : `⏳ ${msg}`,
+        duration: -1,
         close: false,
         className: "loading-toast"
     }).showToast();
 
-    return toast; 
+    return toast;
 };
