@@ -4,6 +4,10 @@ if (window.trustedTypes) {
         createHTML: (input) => input,
         createScript: (input) => input
     });
+
+    window.toastifyPolicy = window.trustedTypes.createPolicy('toastifyPolicy', {
+        createHTML: (input) => input
+    });
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
