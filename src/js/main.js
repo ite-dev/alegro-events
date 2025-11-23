@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const { initNav } = await import('./components/navigation/navbar/navbar.js');
     initNav();
 
+    const fontLink = document.getElementById('font-stylesheet');
+    if (fontLink) {
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap';
+        fontLink.onload = () => {
+            fontLink.media = 'all';
+            console.log('Assistant font loaded!');
+        };
+    }
+
     if (document.querySelector('#contactForm')){
         const { initForm } = await import('./components/forms/formHandler.js');
         initForm();
@@ -17,13 +26,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     observer.observe(map);
-
-    const fontLink = document.getElementById('font-stylesheet');
-    if (fontLink) {
-        fontLink.addEventListener('load', function () {
-            this.media = 'all';
-        });
-    };
 
     handleScroll();
 });
