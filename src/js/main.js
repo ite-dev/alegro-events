@@ -1,5 +1,5 @@
 
-if(window.trustedTypes){
+if (window.trustedTypes) {
     window.alegroPolicy = window.trustedTypes.createPolicy('alegroApp', {
         createHTML: (input) => input,
         createScript: (input) => input
@@ -7,6 +7,12 @@ if(window.trustedTypes){
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const toastUtils = await import('./utils/toastify/toast.js');
+
+    if (document.querySelector('#contactForm')) {
+        toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
+    }
+
 
     const { initNav } = await import('./components/navigation/navbar/navbar.js');
     initNav();
@@ -37,12 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     handleScroll();
 });
 
-window.addEventListener('load', async () => {
-    if (document.querySelector('#contactForm')) {
-        const {infoMsg} = await import('./utils/toastify/toast.js');
-        infoMsg("ברוכים הבאים לאלגרו !");
-    }
-});
+
 
 // Typing Text Animation // 
 /* document.addEventListener("DOMContentLoaded", function () {
