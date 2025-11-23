@@ -167,7 +167,7 @@
     position: absolute;
     top: 62px;
     left: -40px;
-    background: black;
+    background: rgba(0, 0, 0, 0.542);
     padding: 1em;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(154, 126, 76, 1);
@@ -238,6 +238,15 @@
         height: 50px !important;
         width: 40px !important;
     }
+.hamburger-icon .line-outline {
+    stroke: rgba(0, 0, 0, 0.304);
+    stroke-width: 3.8;
+}
+
+.hamburger-icon line {
+    stroke: white;
+    stroke-width: 2.8;
+}
 
     .checkbox-container {
         flex-direction: column;
@@ -253,7 +262,7 @@
 
     .nav-bar ul {
         gap: .8em;
-        background-color: #080808;
+        background-color: #080808e0;
         justify-content: center;
         align-items: center;
         overflow-y: scroll;
@@ -328,7 +337,7 @@
     }
 
     #checkbox-status:checked~.checkbox-container {
-        top: 0;
+        top: 0px;
     }
 
     #checkbox-status:checked~#coverlay,

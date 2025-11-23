@@ -80,14 +80,17 @@
     }
 
     .home-info-logo {
-        width: 250px;
-        height: 233px;
+        width: 100%;
+        height: 190px;
         position: absolute;
         top: 0em;
         border-radius: 50%;
-
         filter: invert(100%) hue-rotate(180deg);
     }
+    .home-info-logo img{
+        transform: translateX(-4px);
+    }
+
 
     .home-info-text {
         margin: 0;
@@ -115,7 +118,7 @@
     .meet-us {
         width: 100%;
         margin-top: .8em;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         height: 50px;
     }
 
@@ -261,6 +264,7 @@
 
     .faq-section{
         margin-top: 0em;
+        padding: 1em 0 5em 0em
     }
     .faq-section h2{
         font-size: 1.8rem;
