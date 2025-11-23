@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host",
     "clean": "rimraf dist",
-    "build": "npm run clean && vite build && cpx2 static.json dist/",
+    "build": "npm run clean && vite build && npx cpx2 static.json dist/",
     "preview": "vite preview"
   },
   "devDependencies": {
