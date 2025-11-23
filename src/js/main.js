@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         fontLink.href = 'https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap';
         fontLink.onload = () => {
             fontLink.media = 'all';
-            console.log('Assistant font loaded!');
         };
-    }
+    };
 
     if (document.querySelector('#contactForm')){
         const { initForm } = await import('./components/forms/formHandler.js');
