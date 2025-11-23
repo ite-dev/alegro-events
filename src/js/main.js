@@ -7,18 +7,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const { initForm } = await import('./components/forms/formHandler.js');
         initForm();
     };
-});
 
-window.addEventListener('load', async () => {
-    if (document.querySelector('#contactForm')) {
-        const {infoMsg} = await import('./utils/toastify/toast.js');
-        infoMsg("ברוכים הבאים לאלגרו !");
-    }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     const map = document.querySelector("iframe[data-src]");
-
     if (!map) return;
     const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
@@ -27,6 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     observer.observe(map);
+
+    const fontLink = document.getElementById('font-stylesheet');
+    if (fontLink) {
+        fontLink.addEventListener('load', function () {
+            this.media = 'all';
+        });
+    };
+
+    handleScroll();
+});
+
+window.addEventListener('load', async () => {
+    if (document.querySelector('#contactForm')) {
+        const {infoMsg} = await import('./utils/toastify/toast.js');
+        infoMsg("ברוכים הבאים לאלגרו !");
+    }
 });
 
 // Typing Text Animation // 
@@ -76,9 +82,9 @@ function handleScroll(){
 };
 
 document.addEventListener('scroll', handleScroll, {passive:true});
-document.addEventListener('DOMContentLoaded', handleScroll);
 // Scroll Position: scroll-up btn display,  //
 
+// FAQ Section // 
 document.getElementById("faq-container").addEventListener("click", (e) => {
     const question = e.target.closest("[data-faq-question]");
     if (!question) return;
@@ -86,11 +92,8 @@ document.getElementById("faq-container").addEventListener("click", (e) => {
     const item = question.parentElement;
     const allItems = document.querySelectorAll(".faq-item");
 
-    // Close all items
     allItems.forEach(i => {
         if (i !== item) i.classList.remove("open");
     });
-
-    // Toggle clicked item
     item.classList.toggle("open");
 });
