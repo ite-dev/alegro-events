@@ -20,7 +20,7 @@ function createToast(msg, className = "", duration = defaultOptions.duration) {
     let node = document.createElement("div");
 
     if (window.alegroPolicy) {
-        node.innerHTML = window.alegroPolicy.createHTML(msg);
+        node.textContent = window.alegroPolicy.createHTML(msg);
     } else {
         node.textContent = msg;
     };
