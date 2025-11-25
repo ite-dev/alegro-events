@@ -729,9 +729,11 @@ button {
     max-height: 300px;
     padding: 1em 2em;
 }
-
-
 /* <!-- ----End FAQ Section----------> */
+
+.reviews-container{
+    max-width: 85%;
+}
 
 /* <!-- ----Contact Section----------------> */
 #contact-section {
