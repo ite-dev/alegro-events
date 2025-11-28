@@ -1,0 +1,56 @@
+# llms.txt for alegro-events.co.il
+# Last updated: 2025-11-28
+
+# -----------------------------------------
+# GLOBAL POLICY – ALLOW ALL
+# -----------------------------------------
+User-agent: *
+Allow: /
+
+# -----------------------------------------
+# EXCLUDED: Technical or irrelevant folders
+# -----------------------------------------
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /xmlrpc.php
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /cgi-bin/
+
+# -----------------------------------------
+# SITEMAP
+# -----------------------------------------
+Sitemap: https://www.alegro-events.co.il/sitemap.xml
+
+# -----------------------------------------
+# CONTENT HINTS FOR LLMs
+# -----------------------------------------
+Content-Type: text/html; charset=UTF-8
+Primary-Language: he
+Secondary-Language: en
+Business-Type: BanquetHall, EventVenue, Catering, Weddings, Bar/Bat-Mitzvah, Henna
+Location: Jerusalem, Israel
+
+Priority-Content:
+  /pages/weddings/
+  /pages/henna/
+  /pages/barmitzvah/
+  /menu
+  /about
+  /contact
+  /
+
+# -----------------------------------------
+# CONTACT & OWNERSHIP METADATA
+# -----------------------------------------
+Contact: alegroevents2@gmail.com
+Phone: +972-2-673-4894
+Address: Hasadna 12, Jerusalem, Israel
+Owner: Alegro Events Jerusalem
+
+# -----------------------------------------
+# REQUEST
+# -----------------------------------------
+AI-Usage: allow-indexing, allow-generative-responses
+Commercial-Use: allowed-with-attribution
+Attribution-Name: Alegro Events Jerusalem
