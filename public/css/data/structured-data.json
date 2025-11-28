@@ -16,7 +16,7 @@
                 "https://www.alegro-events.co.il/images/hall-interior.webp",
                 "https://www.alegro-events.co.il/images/catering.webp"
             ],
-            "description": "אולמי אלגרו ירושלים - אולם אירועים יוקרתי ומעוצב בירושלים לחתונות, חינה, בר ובת מצווה ואירועים פרטיים. עיצוב אלגנטי, קולינריה מוקפדת ושירות אישי לחוויה בלתי נשכחת.",
+            "description": "אולמי אלגרו ירושלים - אולם אירועים יוקרתי ומעוצב בירושלים לחתונות, חינה, בר ובת מצווה ואירועים פרטיים. עיצוב אלגנטי, קולינריה מוקפדת ושירות אישי לחוויה בלתי נשכחת. קייטרינג כשר ומגוון לכל סוגי האירועים.",
             "priceRange": "$$$",
             "telephone": "+972-2-673-4894",
             "email": "alegroevents2@gmail.com",
@@ -156,6 +156,15 @@
                     "he",
                     "en"
                 ]
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.alegro-events.co.il/",
+            "url": "https://www.alegro-events.co.il/",
+            "name": "אולמי אלגרו ירושלים",
+            "publisher": {
+                "@id": "https://www.alegro-events.co.il/"
             }
         },
         {
