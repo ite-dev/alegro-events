@@ -70,7 +70,7 @@ h2 {
 
 span {
     color: black;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 img {
@@ -459,16 +459,17 @@ button {
 
 /* <!-- ----Intro Section--------> */
 .intro-section {
-    padding: 5em 0em;
+    padding: 2em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #E7D8BA;
+    gap: 1em;
 }
 
-.intro-text {
+.intro-text, .intro-span {
     width: 56%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #626060;
     text-align: center;
     transition: .5s;
@@ -478,6 +479,7 @@ button {
     transform: scale(1.005);
 }
 
+
 /* <!-- ----End Intro Section--------> */
 
 /* <!-- ----General Info Section--------> */
@@ -486,7 +488,7 @@ button {
     padding: 2em 0 7.5em 0;
     display: flex;
     flex-direction: column;
-    gap: 10em;
+    gap: 8em;
 }
 
 .gen-info-box.mobile-show {
@@ -515,7 +517,7 @@ button {
     border: 3px solid #E7D8BA;
     border-left: none;
     width: 70%;
-    height: 100%;
+    height: 88%;
 }
 
 .info-img-left {
@@ -654,7 +656,7 @@ button {
 /* <!-- ----FAQ Section----------> */
 .faq-section {
     margin-top: 5em;
-    padding: 3em 0 5em;
+    padding: 5em 0 5em;
     display: flex;
     flex-direction: column;
     align-items: center;

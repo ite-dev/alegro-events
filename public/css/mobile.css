@@ -161,11 +161,11 @@
     /* <!-- ----Mobile Home Section End----------> */
 
     .intro-section {
-        padding: 3em 0;
+        padding: 2em 0;
         margin: 0;
     }
 
-    .intro-text {
+    .intro-text, .intro-span {
         width: 85%;
         font-size: 1.25rem;
     }
@@ -176,10 +176,13 @@
     }
 
     .gen-info-box {
-        height: 550px;
+        height: 675px;
         grid-template-columns: 40% 60%;
         border-bottom: 1px solid var(--secondary);
         padding-bottom: 1em;
+    }
+    .gen-info-box.mobile-show{
+        height: 740px;
     }
 
     .info-box-reverse {
@@ -188,7 +191,7 @@
 
     .info-box-text {
         font-size: 18px;
-        padding: 3em .5em 3em 3em;
+        padding: 3em .5em 3em 2em;
         position: relative;
     }
 
