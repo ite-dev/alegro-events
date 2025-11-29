@@ -13,6 +13,7 @@ export default defineConfig({
                 gallery: 'pages/gallery.html',
                 weddings: 'pages/weddings.html',
                 contactUs: 'pages/contact-us.html',
+                '404': 'pages/404.html',
             },
         },
     },
