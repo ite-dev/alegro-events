@@ -54,8 +54,6 @@
     top: 25px;
     height: 50px;
     overflow: hidden;
-
-
     text-align: center;
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
@@ -67,7 +65,7 @@
 }
 
 .sticky-title p {
-    color: var(--accent);
+    color: var(--accent) !important;
     text-shadow: -1px 0px black;
     font-size: 1.15rem;
 }
@@ -81,7 +79,6 @@
     color: var(--secondary) !important;
 }
 
-
 .projects-menu {
     display: flex;
     flex-direction: row-reverse;
@@ -93,6 +90,14 @@
 .projects-filter {
     cursor: pointer;
     transition: .5s;
+    color: var(--accent);
+    font-size: 1.1rem;
+    text-shadow: -1px .5px 1px black;
+}
+
+.projects-filter:hover {
+    color: goldenrod;
+    font-size: 1.2rem;
 }
 
 .gallery-section h2 {
@@ -230,8 +235,10 @@
     }
 
     .projects-filter {
-
-        cursor: pointer;
+        transition: .5s;
+        color: var(--accent);
+        font-size: .9rem;
+        text-shadow: -1px .5px 1px black;
     }
 
     .gallery-section h2 {

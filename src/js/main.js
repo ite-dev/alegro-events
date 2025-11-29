@@ -39,8 +39,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     observer.observe(map);
     
-    if (document.querySelector('#contactForm')) {
+    if(document.querySelector('#contactForm')){
         toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
+    };
+
+    if(window.location.pathname === "/" || window.location.pathname === "/index.html"){
+        const homeDefaultBtn = document.querySelector('#homepageDefault');
+        homeDefaultBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.scrollRestoration = "manual";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     };
     handleScroll();
 });
@@ -97,15 +106,18 @@ document.addEventListener('scroll', handleScroll, {passive:true});
 // Scroll Position: scroll-up btn display,  //
 
 // FAQ Section // 
-document.getElementById("faq-container").addEventListener("click", (e) => {
-    const question = e.target.closest("[data-faq-question]");
-    if (!question) return;
+const faqContainer = document.getElementById("faq-container");
+if(faqContainer){
+    faqContainer.addEventListener("click", (e) => {
+        const question = e.target.closest("[data-faq-question]");
+        if (!question) return;
 
-    const item = question.parentElement;
-    const allItems = document.querySelectorAll(".faq-item");
+        const item = question.parentElement;
+        const allItems = document.querySelectorAll(".faq-item");
 
-    allItems.forEach(i => {
-        if (i !== item) i.classList.remove("open");
+        allItems.forEach(i => {
+            if (i !== item) i.classList.remove("open");
+        });
+        item.classList.toggle("open");
     });
-    item.classList.toggle("open");
-});
+};

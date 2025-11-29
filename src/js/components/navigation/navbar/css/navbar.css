@@ -18,8 +18,8 @@
 .nav-bar {
     min-width: 350px;
     max-width: 100%;
-    height: 75px;
-    padding: 0px 1em;
+    height: 65px;
+    padding: 0px 4px;
 
     display: flex;
     flex-direction: row;
@@ -52,7 +52,6 @@
 
 .nav-bar a {
     width: fit-content;
-    
     text-decoration: none;
 }
 
@@ -116,7 +115,8 @@
 }
 
 .nav-bar ul li a,
-.nav-bar ul li p {
+.nav-bar ul li p, 
+.nav-bar ul li button{
     font-size: var(--fs-navli);
     font-weight: 800;
     color: var(--accent);
@@ -125,13 +125,15 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: 0.5s ease;
+    transition: 0.4s ease;
     cursor: pointer;
+    padding: 0 !important;
 }
 
 .nav-bar ul li:hover a,
 .nav-bar ul li:hover p,
-.nav-bar ul li.active a {
+.nav-bar ul li.active a,
+.nav-bar ul li:hover button {
     color: #daad55;
     border-bottom: 2px solid var(--secondary);
 }
@@ -167,7 +169,7 @@
     position: absolute;
     top: 62px;
     left: -40px;
-    background: rgba(0, 0, 0, 0.542);
+    background: rgba(0, 0, 0, 0.942);
     padding: 1em;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(154, 126, 76, 1);
@@ -181,7 +183,7 @@
 .events-list.dropdown.open,
 .gallery-list.dropdown.open {
     z-index: 100;
-    transform: translateY(9px);
+    transform: translateY(0px);
     display: flex;
 }
 
@@ -189,7 +191,7 @@
 .gallery-dropdown-arrow {
     font-size: 30px;
     color: white;
-    transform: translateY(3px);
+    transform: translateY(3px) translateX(-4px);
 }
 
 .events-list.dropdown a,
@@ -278,7 +280,8 @@
     }
 
     .nav-bar ul li a,
-    .nav-bar ul li p {
+    .nav-bar ul li p, 
+    .nav-bar ul li button {
         width: 100%;
         min-height: 100%;
         max-height: 40px;
@@ -366,6 +369,15 @@
         left: 0;
         width: 100%;
         padding: 0px 10px;
+        margin-top: 12px !important; 
+    }
+
+    .nav-bar ul li:hover a,
+    .nav-bar ul li:hover p,
+    .nav-bar ul li.active a,
+    .nav-bar ul li:hover button {
+        color: #daad55;
+        border-bottom: unset !important;
     }
 
     .events-list.dropdown li,

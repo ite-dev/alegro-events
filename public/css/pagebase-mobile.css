@@ -1,7 +1,30 @@
+@media (max-width: 1300px) {
+    .contact-info {
+        width: unset;
+
+    }
+
+    .contact-info-item {
+        gap: 1em;
+    }
+
+    .contact-info-item a {
+        font-size: 2.4rem;
+    }
+
+    #contact-section p {
+        font-size: 1.2rem;
+    }
+
+    #contact-map {
+        min-width: 288px;
+    }
+}
+
 @media (max-width:980px) {
     :root {
-        --fs-h1: 2.3rem;
-        --fs-h1-span: 4rem;
+        --fs-h1: .2rem;
+        --fs-h1-span: 1.6rem;
         --fs-h2: 2.8rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.4rem;
@@ -18,40 +41,201 @@
 
     /* <!-- ----Mobile Wrapper Animation-------> */
     /* <!-- ----Mobile Wrapper Animation End---> */
-h1{
-    font-size: 2rem;
-}
 
-.general-info{
-    margin: 1em 0 0 0;
-}
-.gen-info-box{
-    grid-template-columns: 1fr !important;
-}
-.info-img-box-left{
-    margin-top: 1em !important;
-    padding: 0;
-    min-height: 200px;
-    max-width: 55%;
-}
-.info-img-left{
-    margin: 4% 0 0 8% !important;
-    min-width: 115%;
-}
-    /* <!-- ----Mobile Projects Section--------------> */
-    .gallery-section {
-        background-size: 115cqw auto;
-        min-height: calc(100vh - 65px);
-        padding: .5em 0 3em !important;
+    /* <!-- ----Mobile Home Section--------------> */
+
+    /* <!-- ----Mobile Home Section End----------> */
+    main{
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    h1{
+        padding-top: 1.5em;
+        font-size: 1.3rem;
+    }
+    .intro-section {
+        padding: 2em 0;
+        margin: 0;
     }
 
-    .cards-container{
-        padding: 0em 0em 5em !important;
+    .intro-text,
+    .intro-span {
+        width: 85%;
+        font-size: 1.25rem;
+    }
+
+    .general-info {
+        gap: 0em;
+        padding: 0 0 1em;
+        margin: 0;
+    }
+
+    .gen-info-box {
+        height: 650px;
+        grid-template-columns: 40% 60%;
+        border-bottom: 1px solid var(--secondary);
+        padding-bottom: 1em;
+    }
+
+    .gen-info-box.mobile-show {
+        height: 700px;
+    }
+
+    .contact-us-info-box{
+        height: 533px;
+    }
+
+    .gen-info-box h2{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #96722b !important;
+    }
+
+    .info-box-reverse {
+        grid-template-columns: 60% 40%;
+    }
+
+    .info-box-text {
+        font-size: 18px;
+        padding: 3em .5em 3em 2em;
+        position: relative;
+    }
+    
+    .full-width {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        min-width: 95vw !important;
+        grid-column: 1 /-1;
+    }
+
+    .full-width.culinary {
+        bottom: 15px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .gen-info-box.mobile-show {
+        display: grid;
+    }
+
+    .info-img-box-left {
+        margin-top: 4em;
+        height: 35%;
+        width: 100%;
+    }
+
+    .info-img-left {
+        width: 110%;
+        margin: 8% 0em 8% 1em;
+    }
+
+    .info-img-box-right {
+        height: 60%;
+        margin-top: 7em;
+    }
+
+
+    .info-img-right {
+        margin: 2em 0em 3em 0em;
+        transform: translateX(-1em);
+    }
+
+    .info-img-left.culinary-img {
+        aspect-ratio: 4 / 3;
+        background-image: url('/layout/dishes-appetizers.webp');
+    }
+
+    /* <!-- ----Mobile Projects Section--------------> */
+    .gallery-section {
+        min-height: 350px;
+        padding: 3em 0 0;
+    }
+
+    .sticky-title {
+        min-width: 100%;
+        overflow: hidden;
+        border: none;
+        height: 70px;
+        z-index: 5;
+    }
+
+    .sticky-title h2,
+    .projects-menu {
+        z-index: 5;
+        position: relative;
     }
 
     /* <!-- ----Mobile Projects Section End----------> */
 
+    /* <!-- ----Mobile About Section--------------> */
+    #about-section {
+        padding: 25px 0 50px;
+    }
+
+    .about-bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        pointer-events: none;
+        overflow-x: hidden;
+    }
+
+    .about-content-wrapper {
+        width: 87%;
+        gap: 4px;
+    }
+
+    /* <!-- ----Mobile About Section End--------------> */
+
     /* <!-- ----Mobile Contact Section--------------> */
+    #contact-section h2 {
+        align-self: center;
+        font-size: 1.8rem;
+    }
+
+    .contact-info {
+        padding: 3em 0em;
+    }
+
+    .contact-items-box {
+        row-gap: 1em;
+    }
+
+    .contact-info-item {
+        width: 100%;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    #phone-number {
+        min-width: 100px;
+    }
+
+    .contact-info-item a {
+        font-size: 1.7rem;
+    }
+
+    .contact-info-item svg {
+        width: 30;
+        height: 30px;
+        stroke: rgb(0, 0, 0);
+        stroke-width: 1;
+        stroke-linecap: butt;
+    }
+
+    .contact-info-item a[href^="tel"] {
+        font-size: 1.1rem !important;
+    }
+
+    .contact-info-item a[href^="tel"] i {
+        font-size: 2rem !important;
+        margin-left: 10px;
+    }
+
     /* <!-- ----Mobile Contact Section End----------> */
 
     /* <!-- ----Mobile Scroll-up Button-------------> */
@@ -69,6 +253,10 @@ h1{
 
 
     /* <!-- ----Mobile Footer-----------------------> */
+    #footer {
+        flex-direction: row-reverse;
+    }
+
     #footer h5 {
         font-size: var(--fs-h5);
     }
