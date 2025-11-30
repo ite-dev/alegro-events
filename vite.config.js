@@ -11,7 +11,9 @@ export default defineConfig({
             input: {
                 main: 'index.html',
                 gallery: 'pages/gallery.html',
+                events: 'pages/events.html',
                 weddings: 'pages/weddings.html',
+                culinary: 'pages/culinary.html',
                 contactUs: 'pages/contact-us.html',
                 '404': '404.html',
             },
