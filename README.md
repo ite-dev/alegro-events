@@ -1,13 +1,19 @@
 # Alegro Events Website
 
-This is a custom website built for **Alegro Events** — a premier event venue in Jerusalem. The website provides a showcase for various event types, including **Weddings**, **Private Events**, **Catering**, and more.
+⚠️ **Proprietary Code — Internal Use Only**
+
+This repository contains the custom website for **Alegro Events**, a premier event venue in Jerusalem. 
+
+The website showcases various event types, including **Weddings**, **Private Events**, **Catering**, and more.
 
 ## Project Overview
 
-The **Alegro Events Website** is a **client-specific project** that allows the client to manage and showcase their venue for various events. The codebase is **not open-source** and is **licensed for internal use by the client only**.
+This is a **client-specific project**. The codebase is **private and proprietary**. Unauthorized copying, distribution, or use of any part of this repository is strictly prohibited. 
+
+Only Alegro Events and its authorized developers have the right to access, modify, or deploy this code.
 
 ## License
 
-This repository is protected under the **Client Use License**, which allows the client to use, modify, and deploy the software for their internal purposes only. Redistribution, sublicensing, or commercial use of the software is strictly prohibited without prior written consent from the developer.
+This software is protected under a **Client Use License**. Redistribution, sublicensing, or commercial use without prior written consent from the developer is strictly prohibited.
 
 For full licensing details, see the [LICENSE](./LICENSE) file.
