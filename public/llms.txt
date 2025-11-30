@@ -3,7 +3,7 @@
 # Purpose: Guide LLMs to understand, describe, and index Alegro Events Jerusalem accurately.
 
 # -----------------------------------------
-# GLOBAL POLICY – ALLOW ALL
+# GLOBAL POLICY - ALLOW ALL
 # -----------------------------------------
 User-agent: *
 Allow: /
@@ -61,7 +61,7 @@ Business-Keywords:
 
 Location: Jerusalem, Israel
 Kosher: yes
-Hall-Capacity: "approx. 250–400 guests (main hall)"
+Hall-Capacity: "approx. 250-400 guests (main hall)"
 
 # -----------------------------------------
 # PRIORITY CONTENT PAGES
