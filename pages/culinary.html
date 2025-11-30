@@ -37,6 +37,8 @@
 
     <link rel="stylesheet" href="/src/js/components/forms/css/contact-form.css">
     <link rel="stylesheet" href="/src/js/components/navigation/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/src/js/components/image-gallery/css/image-gallery.css">
+    <link rel="stylesheet" href="/src/js/components/image-gallery/css/lightbox.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/alegro-logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/alegro-logo.png">
@@ -44,14 +46,15 @@
 
     <script type="module" src="/src/js/main.js" defer></script>
     <script type="module" src="/src/js/pagebase.js" defer></script>
-    <title>יצירת קשר - אולמי אלגרו ירושלים | שאלות, תיאום ביקור והצעת מחיר</title>
+
+    <title>תפריט וקולינריה - אולמי אלגרו ירושלים | אוכל גורמה לאירועים</title>
+
     <meta name="description"
-        content="צרו קשר עם אולמי אלגרו ירושלים לקבלת מידע, הצעת מחיר מותאמת אישית או לתיאום ביקור באולם. הצוות שלנו מלווה אתכם מהתכנון ועד לאירוע בלתי נשכח." />
+        content="קולינריה לאירועים ברמה הגבוהה בירושלים - חוויית אוכל איכותית, תפריט מותאם אישית, עיצוב הגשה מוקפד ושירות מקצועי. אולם Alegro מציע חוויה קולינרית יוקרתית לכל סוגי האירועים - חתונות, בר/בת מצווה, אירועים פרטיים ועסקיים.">
     <meta name="keywords"
-        content="אולמי אלגרו, יצירת קשר, שאלות, תיאום ביקור, הצעת מחיר, אירועים בירושלים, קייטרינג, חתונה, חינה, בר/בת מצווה" />
-    <link rel="canonical" href="https://www.alegro-events.co.il/pages/contact-us.html" />
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Alegro Events Jerusalem - אולמי אלגרו אירועים ירושלים">
+        content="קולינריה לאירועים, קייטרינג גורמה ירושלים, אוכל לאירועים ירושלים, תפריט אירועים יוקרתי, Alegro Events" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Alegro Events Jerusalem - אולמי אלגרו אירועים ירושלים" />
     <meta name="format-detection" content="telephone=no">
     <meta name="geo.region" content="IL-JM">
     <meta name="geo.placename" content="Jerusalem">
@@ -62,81 +65,76 @@
     <meta name="theme-color" content="#E7D8BA">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="application-name" content="Alegro Events Jerusalem">
+    <link rel="canonical" href="https://www.alegro-events.co.il/pages/culinary.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:site_name" content="אולמי אלגרו ירושלים - Alegro Events" />
-    <meta property="og:title" content="יצירת קשר - אולמי אלגרו ירושלים" />
+    <meta property="og:title" content="קולינריה לאירועים - תפריט גורמה לאירועים | אולמי אלגרו ירושלים" />
     <meta property="og:description"
-        content="צרו קשר עם אולמי אלגרו ירושלים לקבלת מידע, הצעת מחיר מותאמת אישית או לתיאום ביקור באולם." />
+        content="חוויית קולינריה יוקרתית לאירועים בירושלים - מנות גורמה, תחנות שף, עיצוב הגשה מוקפד ושירות מקצועי. מושלם לחתונות, חינה, בר/בת מצווה ואירועים פרטיים." />
     <meta property="og:image" content="https://www.alegro-events.co.il/alegro-logo.png" />
+    <meta property="og:image:alt" content="תפריט קולינריה יוקרתי לאירועים בירושלים באולמי אלגרו" />
+    <meta property="og:url" content="https://www.alegro-events.co.il/pages/culinary.html" />
+
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="קולינריה לאירועים | Alegro Events Jerusalem" />
+    <meta name="twitter:description"
+        content="תפריט פרימיום לאירועים בירושלים הכולל מנות גורמה, עיצוב הגשה מרהיב וחוויית טעמים ייחודית." />
+    <meta name="twitter:image" content="https://www.alegro-events.co.il/alegro-logo.png" />
+
+    <link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/culinary.html" />
+    <link rel="alternate" hreflang="en" href="https://www.alegro-events.co.il/en/catering/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.alegro-events.com/catering/" />
+
 
     <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "תפריט וקולינריה - אולמי אלגרו ירושלים",
+    "description": "קולינריה איכותית לאירועים בירושלים עם תפריט גורמה, הגשה מעוצבת ושירות מקצועי לכל סוגי האירועים.",
+    "url": "https://alegro-events.co.il/pages/culinary.html",
+
+    "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "Alegro Events",
+        "image": "https://alegro-events.co.il/alegro-logo.png",
+        "url": "https://alegro-events.co.il",
+        "telephone": "+972-2-673-4894",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "ירושלים",
+        "addressRegion": "IL",
+        "addressCountry": "IL"
+        },
+        "servesCuisine": [
+        "Gourmet",
+        "Mediterranean",
+        "Modern Israeli"
+        ],
+        "description": "קולינריה יוקרתית לאירועים בירושלים כולל הגשה מעוצבת, חוויות קולינריות ותחנות אוכל חווייתיות.",
+        "menu": "https://alegro-events.co.il/pages/culinary.html"
+    },
+
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": ["LocalBusiness","BanquetHall"],
-              "@id": "https://www.alegro-events.co.il/pages/contact-us.html",
-              "name": "אולמי אלגרו ירושלים - אולמי אירועים יוקרתיים",
-              "alternateName": "Alegro Events Jerusalem",
-              "url": "https://www.alegro-events.co.il/pages/contact-us.html",
-              "logo": "https://www.alegro-events.co.il/alegro-logo.png",
-              "image": [
-                "https://www.alegro-events.co.il/alegro-logo.png",
-                "https://www.alegro-events.co.il/images/hall-interior.webp",
-                "https://www.alegro-events.co.il/images/catering.webp"
-              ],
-              "description": "צרו קשר עם אולמי אלגרו בירושלים לקבלת מידע, הצעת מחיר מותאמת אישית או לתיאום ביקור באולם.",
-              "priceRange": "$$$",
-              "telephone": "+972-2-673-4894",
-              "email": "alegroevents2@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "הסדנא 12",
-                "addressLocality": "ירושלים",
-                "addressRegion": "ירושלים",
-                "addressCountry": "IL"
-              },
-              "geo": {"@type":"GeoCoordinates","latitude":31.750505,"longitude":35.216992},
-              "openingHoursSpecification": [
-                {
-                  "@type":"OpeningHoursSpecification",
-                  "dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
-                  "opens":"08:00",
-                  "closes":"23:59"
-                }
-              ],
-              "sameAs":[
-                "https://www.facebook.com/AlegroEvents/",
-                "https://www.instagram.com/alegro_event/",
-                "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
-                "https://wa.me/972542500220",
-                "https://g.page/alegro-events-jerusalem",
-                "https://maps.app.goo.gl/ji9isXL3XJRyJyes8",
-                "https://www.waze.com/live-map/directions/il/jerusalem/alegro-events"
-              ]
-            },
-            {
-              "@type": "WebPage",
-              "@id": "https://www.alegro-events.co.il/pages/contact-us.html",
-              "url": "https://www.alegro-events.co.il/pages/contact-us.html",
-              "name": "יצירת קשר - אולמי אלגרו ירושלים",
-              "inLanguage": "he-IL",
-              "description": "צרו קשר עם אולמי אלגרו ירושלים לקבלת מידע, הצעת מחיר מותאמת אישית או לתיאום ביקור באולם.",
-              "breadcrumb": {"@id":"https://www.alegro-events.co.il/pages/contact-us.html#breadcrumb"}
-            },
-            {
-              "@type": "BreadcrumbList",
-              "@id": "https://www.alegro-events.co.il/pages/contact-us.html#breadcrumb",
-              "itemListElement": [
-                {"@type":"ListItem","position":1,"name":"ראשי","item":"https://www.alegro-events.co.il/"},
-                {"@type":"ListItem","position":2,"name":"יצירת קשר","item":"https://www.alegro-events.co.il/pages/contact-us.html"}
-              ]
-            }
-          ]
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Alegro אירועים",
+            "item": "https://alegro-events.co.il"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "קולינריה",
+            "item": "https://alegro-events.co.il/pages/culinary.html"
         }
-        </script>
+        ]
+    }
+    }
+    </script>
 </head>
 
 <body>
@@ -224,49 +222,80 @@
         </nav>
     </header>
 
-    <main>
-        <h1>צרו קשר עם אולמי אלגרו ירושלים</h1>
+    <main aria-label="קולינריה ותפריט אירועים של אלגרו">
+        <h1 class="page-title">חוויה קולינרית מנצחת - אלגרו ירושלים</h1>
 
-        <section class="general-info" id="general-info" aria-label="מידע כללי ליצירת קשר">
-            <div class="gen-info-box contact-us-info-box">
-                <div class="info-img-box-left">
-                    <div class="info-img-left" role="img" aria-label="תמונת אולם אלגרו"></div>
+        <section class="general-info" id="general-info" aria-label="מידע כללי על קולינריה באולם">
+            <div class="gen-info-box culinary-info-box">
+                <div class="info-img-box-left culinary-img-box">
+                    <div class="info-img-left culinary-page-img" role="img" aria-label="תמונת אולם אלגרו"></div>
                 </div>
 
                 <div class="info-box-text">
-                    <h2>מידע חשוב ליצירת קשר ותיאום ביקור</h2>
-
+                    <h2>הקולינריה באולמי אלגרו</h2>
                     <p>
-                        נשמח לעמוד לרשותכם ב-<strong>אולמי אלגרו ירושלים</strong> לכל שאלה, בקשה להצעת מחיר או לתיאום
-                        ביקור
-                        באולם.
+                        חוויית האוכל של אלגרו נבנתה על ידי השף אהרון שאשא מתוך תפיסה שהקולינריה היא חלק בלתי נפרד
+                        מהאירוע -
+                        אנו מלווים אתכם בכל סוגי האירועים.
                     </p>
 
-                    <p class="full-width">
-                        הצוות המקצועי שלנו מלווה אתכם לאורך כל תהליך התכנון וההכנות לאירוע, עם דגש על חוויית אירוח
-                        בלתי נשכחת.
-                        <br> <br>
+                    <div class="full-width">
+                        <p>
+                            כולל אירועי בוקר, אירועי צהריים ואירועי ערב,
+                            חתונות, בר מצווה, בת מצווה, אירועים פרטיים ואירועים עסקיים בירושלים.
+                            ומציעים חוויה קולינרית המותאמת לאופי האירוע ולאווירה שאתם רוצים ליצור.
+                            אצלנו מתחילים במנות פתיחה אלגנטיות, ממשיכים לסגנונות הגשה מגוונים לבחירתכם,
+                            ומסיימים במראות מרשימים של קינוחים ועמדות חווייתיות - הכל ברמה גבוהה ובאיכות בלתי מתפשרת.
+                        </p>
 
-                        תוכלו ליצור איתנו קשר טלפוני, במייל או באמצעות טופס יצירת הקשר באתר. נשמח לספק מידע על סוגי
-                        אירועים
-                        שונים, עיצובים, קייטרינג ושירותי האירוח שלנו.
-                        <br><br>
+                        <h3>עיצוב הגשה וחוויית שירות</h3>
+                        <p>
+                            באולם אלגרו מושם דגש מיוחד על אסתטיקה, פרזנטציה ושירות מוקפד לכל אורח.
+                            סגנונות ההגשה - ישיבה, קוקטייל, תחנות אוכל או בר - מתבצעים בצורה מדויקת ומוקפדת,
+                            מתוך רצון לייצר חוויה אלגנטית, מרשימה וזורמת לאורך כל האירוע.
+                            הצוות המקצועי שלנו מלווה את האירוע מתחילתו ועד סופו ומבטיח חוויית שירות ברמה הגבוהה ביותר.
+                        </p>
+
+                        <h3>עמדות חווייתיות ואפשרויות התאמה</h3>
+                        <p>
+                            אלגרו מציעה תחנות אוכל חווייתיות המותאמות לעיצוב, לקונספט ולצביון של כל חתונה,
+                            בר מצווה, בת מצווה או חינה בירושלים.
+                            עמדות האוכל מוסיפות תחושת יוקרה, יצירתיות ואינטראקטיביות לאורחים,
+                            ונבנות בהתאמה מלאה לטעם האישי שלכם ולסגנון האירוע - בוקר, צהריים או ערב.
+                        </p>
+
+                        <h3>אפשרות לקייטרינג מותאם</h3>
+                        <p>
+                            בנוסף לחוויית האוכל המרשימה באולם עצמו, אנו מציעים גם שירותי קייטרינג לאירועים
+                            ולמשרדים וכן הזמנות פרטיות, עם מענה גמיש ואיכותי ללקוחות המבקשים ליהנות מקולינריה גבוהה
+                            גם מחוץ לאולם - בכל רחבי ירושלים.
+                        </p>
+
                         <span class="event-types">
-                            <a href="#contact-section">
-                                מלאו את הטופס כאן &nbsp; &nbsp;
+                            <a href="/pages/contact-us.html" aria-label="לקביעת ביקור וטעימות באולם אלגרו">
+                                לקביעת ביקור וטעימות באולם
                             </a>
                         </span>
-                    </p>
-
-                    <h3 class="visible-content">מדוע לבחור באולמי אלגרו?</h3>
-                    <ul class="contact-us-bullets visible-content">
-                        <li>עיצוב אלגנטי ואווירה חגיגית לכל סוגי האירועים</li>
-                        <li>תשומת לב לפרטים מהחופה ועד לבר הקוקטיילים</li>
-                        <li>קייטרינג שף ברמה גבוהה</li>
-                        <li>ליווי אישי לכל שלב בתכנון האירוע</li>
-                    </ul>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery-section" onclick="return true" aria-label="גלריית תמונות">
+            <div class="gallery-bg-overlay" aria-hidden="true"></div>
+
+            <div class="sticky-title">
+                <div class="projects-menu" role="tablist" aria-label="סינון גלריה">
+                    <button id="AP" class="projects-filter" role="tab" aria-selected="true">כל התמונות</button>
+                    <button id="BE" class="projects-filter" role="tab" aria-selected="false">חתונות</button>
+                    <button id="JSP" class="projects-filter" role="tab" aria-selected="false">חינה</button>
+                    <button id="RP" class="projects-filter" role="tab" aria-selected="false">בר/בת מצווה</button>
+                    <button id="CU" class="projects-filter" role="tab" aria-selected="false">קולינריה</button>
+                </div>
+            </div>
+
+            <div class="cards-container" data-gallery="venue-arrangements" aria-live="polite"></div>
         </section>
 
         <!-- Reviews / Testimonials (same structure as current site) -->

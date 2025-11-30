@@ -315,7 +315,7 @@
                 </svg>
             </label>
             <label for="checkbox-status" id="coverlay" aria-hidden="true"></label>
-            <ul class="mobile-featured-menu">
+            <ul class="mobile-featured-menu" role="menu" aria-label="תפריט נייד">
 
                 <a href="tel:026734894" class="mobile-call-btn" aria-label="התקשרו לאלגרו אירועים: 02-673-4894">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -327,7 +327,7 @@
                 </a>
 
                 <li class="mobile-featured-item"><a role="menuitem" href="/pages/gallery.html">גלריה</a></li>
-                <li class="mobile-featured-item"><a role="menuitem" href="/pages/catering.html">קייטרינג</a></li>
+                <li class="mobile-featured-item"><a role="menuitem" href="/pages/culinary.html">קייטרינג</a></li>
                 <li class="mobile-featured-item"><a role="menuitem" href="/pages/events.html">אירועים</a></li>
             </ul>
 
@@ -338,13 +338,15 @@
                         <line x1="32" y1="8" x2="8" y2="32" />
                     </svg></label>
                 <ul role="menubar">
-                    <li class="active"><a href="/" aria-current="page" id="homepageDefault">ראשי</a></li>
+                    <li class="active"><a href="/" role="menuItem" aria-current="page" id="homepageDefault">ראשי</a>
+                    </li>
                     <li class="gallery-li expandable-nav-item">
                         <a role="menuitem" href="/pages/gallery.html">גלריה</a>
                     </li>
-                    <li><a role="menuitem" href="/pages/catering.html">קייטרינג</a></li>
+                    <li><a role="menuitem" href="/pages/culinary.html">קייטרינג</a></li>
                     <li class="events-li expandable-nav-item" aria-haspopup="true" aria-expanded="false">
-                        <button type="button" aria-label="פתיחת תפריט אירועים" aria-expanded="false">
+                        <button type="button" aria-label="פתיחת תפריט אירועים" aria-expanded="false"
+                            aria-controls="events-list">
                             <span class="events-dropdown-arrow" aria-hidden="true">&#9662;</span>
                             אירועים
                         </button>
@@ -353,10 +355,10 @@
                                 <a role="menuitem" href="/pages/weddings.html">חתונה</a>
                             </li>
                             <li>
-                                <a role="menuitem" href="/pages/private-events.html">אירועים פרטיים</a>
+                                <a role="menuitem" href="/pages/henna-ceremony.html">טקס חינה</a>
                             </li>
                             <li>
-                                <a role="menuitem" href="/pages/henna-ceremony.html">טקס חינה</a>
+                                <a role="menuitem" href="/pages/private-events.html">אירועים פרטיים</a>
                             </li>
                             <li>
                                 <a role="menuitem" href="/pages/bar-bat-mitzvah.html">בר/בת מצווה</a>
@@ -369,6 +371,9 @@
                             </li>
                             <li>
                                 <a role="menuitem" href="/pages/cocktail-bar.html">בר קוקטיילים</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" href="/pages/events.html">כל האירועים</a>
                             </li>
                         </ul>
                     </li>
@@ -394,7 +399,7 @@
     </div>
     <!-- --------------Wrapper Bars Animation End-------------- -->
 
-    <main>
+    <main aria-label="דף הבית - אלגרו אירועים">
         <!-- --------------Home Section-------------- -->
         <section class="home-section">
             <div class="home-bg-overlay"></div>

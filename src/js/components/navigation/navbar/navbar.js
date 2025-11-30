@@ -33,7 +33,7 @@ export function initNav(){
         toggle.addEventListener('click', (e) => {
             if(!isMobile){
                 toggle.style.marginBottom = "0px";
-                menu.style.maxHeight = "300px";
+                menu.style.maxHeight = "333px";
                 menu.style.minHeight = "150px";
                 menuContainer.style.paddingTop = "0px";
                 arrow.style.color = "black";
@@ -63,10 +63,10 @@ export function initNav(){
             menu.classList.toggle("open");
             const isOpen = menu.classList.contains("open");
             if (isMobile) {
-                toggle.style.marginBottom = isOpen ? "325px" : "0px";
+                toggle.style.marginBottom = isOpen ? "343px" : "0px";
                 menu.style.maxHeight = isOpen ? "100%" : "0px";
-                menu.style.minHeight = isOpen ? "300px" : "0px";
-                menuContainer.style.paddingTop = isOpen ? "120px" : "1em";
+                menu.style.minHeight = isOpen ? "333px" : "0px";
+                menuContainer.style.paddingTop = isOpen ? "220px" : "1em";
             };
 
             arrow.style.transform = isOpen

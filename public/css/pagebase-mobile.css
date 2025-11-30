@@ -84,6 +84,18 @@
     .contact-us-info-box{
         height: 533px;
     }
+    .culinary-info-box{
+        height: 1110px;
+    }
+    .events-info-box{
+        height: 1200px;
+    }
+    .culinary-img-box{
+        height: 17% !important;
+    }
+    .events-img-box{
+        height: 20% !important;
+    }
 
     .gen-info-box h2{
         font-size: 1rem;
@@ -107,6 +119,10 @@
         bottom: 15px;
         min-width: 95vw !important;
         grid-column: 1 /-1;
+
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
     }
 
     .full-width.culinary {
