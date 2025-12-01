@@ -275,6 +275,10 @@ h1{
     background-image: url('/layout/arrangement-6.webp');
 }
 
+.events-img-box{
+    height: 68%;
+}
+
 .info-box-reverse {
     position: relative;
 }

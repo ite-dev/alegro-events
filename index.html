@@ -87,211 +87,218 @@
     <link rel="alternate" hreflang="x-default" href="https://www.alegro-events.com/" />
 
     <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
         {
-        "@context": "https://schema.org",
-        "@graph": [
+        "@type": ["LocalBusiness", "EventVenue"],
+        "@id": "https://www.alegro-events.co.il/#eventvenue",
+        "name": "אולמי אלגרו ירושלים",
+        "alternateName": "Alegro Events Jerusalem",
+        "url": "https://www.alegro-events.co.il/",
+        "logo": "https://www.alegro-events.co.il/alegro-logo.png",
+        "founder": {
+            "@type": "Person",
+            "name": "אולמי אלגרו ירושלים"
+        },
+        "foundingDate": "2013-01-15",
+        "image": [
+            "https://www.alegro-events.co.il/images/alegro-events-hall.webp",
+            "https://www.alegro-events.co.il/images/alegro-events-weddings.webp"
+        ],
+        "description": "אולמי אלגרו בירושלים - אולמי אירועים יוקרתיים לחתונות, חינה, בר/בת מצווה, אירועים פרטיים וקייטרינג כשר. עיצוב אלגנטי, קולינריה מוקפדת ושירות אישי לכל סוגי האירועים.",
+        "priceRange": "$$$",
+        "telephone": "+972-2-673-4894",
+        "email": "alegroevents2@gmail.com",
+        "areaServed": {
+            "@type": "Place",
+            "name": "ירושלים, ישראל"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "הסדנא 12",
+            "addressLocality": "ירושלים",
+            "addressRegion": "ירושלים",
+            "addressCountry": "IL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 31.750505,
+            "longitude": 35.216992
+        },
+        "openingHoursSpecification": [
             {
-            "@type": ["LocalBusiness","BanquetHall", "EventVenue"],
-            "@id": "https://www.alegro-events.co.il/",
-            "name": "אולמי אלגרו ירושלים",
-            "alternateName": "Alegro Events Jerusalem",
-            "url": "https://www.alegro-events.co.il/",
-            "logo": "https://www.alegro-events.co.il/alegro-logo.png",
-            "image": [
-                "https://www.alegro-events.co.il/alegro-logo.png",
-                "https://www.alegro-events.co.il/images/hall-interior.webp",
-                "https://www.alegro-events.co.il/images/catering.webp"
-            ],
-            "description": "אולמי אלגרו בירושלים - אולמי אירועים יוקרתיים לחתונות, חינה, בר/בת מצווה, אירועים פרטיים וקייטרינג כשר. עיצוב אלגנטי, קולינריה מוקפדת ושירות אישי לכל סוגי האירועים.",
-            "priceRange": "$$$",
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "23:59"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/AlegroEvents/",
+            "https://www.instagram.com/alegro_event/",
+            "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
+            "https://wa.me/972542500220",
+            "https://g.page/alegro-events-jerusalem",
+            "https://maps.app.goo.gl/ji9isXL3XJRyJyes8",
+            "https://www.waze.com/live-map/directions/il/jerusalem/alegro-events"
+        ],
+        "hasMenu": {
+            "@type": "Menu",
+            "name": "תפריט אלגרו - קייטרינג כשר",
+            "description": "תפריט קייטרינג מותאם אישית לכל סוגי האירועים - חתונות, חינה, בר/בת מצווה, אירועים פרטיים ועסקיים.",
+            "url": "https://www.alegro-events.co.il/culinary"
+        },
+        "servesCuisine": [
+            "אוכל ישראלי כשר","ים תיכוני","גריל","סושי",
+            "סלטים","בשרים","קינוחים","בר פירות",
+            "בר קוקטיילים","שיפודים","אסאדו","קייטרינג"
+        ],
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification","name": "חניה חינם","value": true},
+            {"@type": "LocationFeatureSpecification","name": "גישה לנכים","value": true},
+            {"@type": "LocationFeatureSpecification","name": "כשרות","value": true},
+            {"@type": "LocationFeatureSpecification","name": "מיזוג אוויר","value": true},
+            {"@type": "LocationFeatureSpecification","name": "WiFi","value": true},
+            {"@type": "LocationFeatureSpecification","name": "במה ומערכת הגברה","value": true},
+            {"@type": "LocationFeatureSpecification","name": "תאורה מקצועית","value": true},
+            {"@type": "LocationFeatureSpecification","name": "מטבח שף כשר","value": true},
+            {"@type": "LocationFeatureSpecification","name": "מעלית","value": true},
+            {"@type": "LocationFeatureSpecification","name": "אבטחה","value": true},
+            {"@type": "LocationFeatureSpecification","name": "חדר כלה","value": true},
+            {"@type": "LocationFeatureSpecification","name": "קייטרינג","value": true},
+            {"@type": "LocationFeatureSpecification","name": "אזור קבלת פנים","value": true},
+            {"@type": "LocationFeatureSpecification","name": "בר פירות","value": true},
+            {"@type": "LocationFeatureSpecification","name": "בר קוקטיילים","value": true}
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
             "telephone": "+972-2-673-4894",
-            "email": "alegroevents2@gmail.com",
-            "areaServered": "Jerusalem",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "הסדנא 12",
-                "addressLocality": "ירושלים",
-                "addressRegion": "ירושלים",
-                "addressCountry": "IL"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 31.750505,
-                "longitude": 35.216992
-            },
-            "openingHoursSpecification": [
-                {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
-                "opens": "08:00",
-                "closes": "23:59"
-                }
-            ],
-            "sameAs": [
-                "https://www.facebook.com/AlegroEvents/",
-                "https://www.instagram.com/alegro_event/",
-                "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
-                "https://wa.me/972542500220",
-                "https://g.page/alegro-events-jerusalem",
-                "https://maps.app.goo.gl/ji9isXL3XJRyJyes8",
-                "https://www.waze.com/live-map/directions/il/jerusalem/alegro-events"
-            ],
-            "hasMenu": {
-                "@type": "Menu",
-                "name": "תפריט אלגרו - קייטרינג כשר",
-                "description": "תפריט קייטרינג מותאם אישית לכל סוגי האירועים - חתונות, חינה, בר/בת מצווה, אירועים פרטיים ועסקיים, ימי הולדת ומשרדים.",
-                "url": "https://www.alegro-events.co.il/menu"
-            },
-            "servesCuisine": ["אוכל ישראלי כשר","ים תיכוני","גריל","סושי","סלטים","בשרים","בר פירות","בר קוקטיילים","שיפודים","אסאדו","קייטרינג"],
-            "amenityFeature": [
-                {"@type": "LocationFeatureSpecification","name": "חניה חינם","value": true},
-                {"@type": "LocationFeatureSpecification","name": "גישה לנכים","value": true},
-                {"@type": "LocationFeatureSpecification","name": "כשרות","value": true},
-                {"@type": "LocationFeatureSpecification","name": "מיזוג אוויר","value": true},
-                {"@type": "LocationFeatureSpecification","name": "WiFi","value": true},
-                {"@type": "LocationFeatureSpecification","name": "במה ומערכת הגברה","value": true},
-                {"@type": "LocationFeatureSpecification","name": "תאורה מקצועית","value": true},
-                {"@type": "LocationFeatureSpecification","name": "מטבח כשר","value": true},
-                {"@type": "LocationFeatureSpecification","name": "מעלית","value": true},
-                {"@type": "LocationFeatureSpecification","name": "אבטחה","value": true},
-                {"@type": "LocationFeatureSpecification","name": "חדר כלה","value": true},
-                {"@type": "LocationFeatureSpecification","name": "קייטרינג","value": true},
-                {"@type": "LocationFeatureSpecification","name": "אזור קבלת פנים","value": true},
-                {"@type": "LocationFeatureSpecification","name": "בר פירות, בר קוקטיילים","value": true}
-            ],
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+972-2-673-4894",
-                "contactType": "customer service",
-                "areaServed": "IL",
-                "availableLanguage": ["he","en"]
+            "contactType": "customer service",
+            "areaServed": "IL",
+            "availableLanguage": ["he","en"]
+        }
+        },
+        {
+        "@type": "WebSite",
+        "@id": "https://www.alegro-events.co.il/#website",
+        "url": "https://www.alegro-events.co.il/",
+        "name": "אולמי אלגרו ירושלים",
+        "publisher": {"@id": "https://www.alegro-events.co.il/#eventvenue"},
+        },
+        {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.alegro-events.co.il/#breadcrumb",
+        "itemListElement": [
+            {"@type": "ListItem","position": 1,"name": "ראשי","item": "https://www.alegro-events.co.il/"}
+        ]
+        },
+        {
+        "@type": "FAQPage",
+        "@id": "https://www.alegro-events.co.il/#faq-section",
+        "mainEntity": [
+            {
+            "@type": "Question",
+            "name": "האם האולם כשר?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "כן, כל המנות באולמי אלגרו ירושלים כשרות ומפוקחות ברמה הגבוהה ביותר, עם שימוש בחומרי גלם טריים ואיכותיים בלבד."
             }
             },
             {
-            "@type": "WebSite",
-            "@id": "https://www.alegro-events.co.il/#website",
-            "url": "https://www.alegro-events.co.il/",
-            "name": "אולמי אלגרו ירושלים",
-            "publisher": {"@id": "https://www.alegro-events.co.il/"},
-            "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.alegro-events.co.il/?s={search_term_string}",
-                "query-input": "required name=search_term_string"
+            "@type": "Question",
+            "name": "מה מספר האורחים שניתן לארח באולם?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "האולם המרכזי מתאים לאירועים עם 250-400 אורחים, בהתאם לפריסה ולעיצוב הרצוי. התאמה בין אירועי בוקר, צהריים וערב מאפשרת לכמות מוזמנים משתנה – צרו קשר לפרטים נוספים."
             }
             },
             {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.alegro-events.co.il/#breadcrumb",
-            "itemListElement": [
-                {"@type": "ListItem","position": 1,"name": "ראשי","item": "https://www.alegro-events.co.il/"},
-                {"@type": "ListItem","position": 2,"name": "אירועים","item": "https://www.alegro-events.co.il/pages/weddings/"},
-                {"@type": "ListItem","position": 3,"name": "חתונות","item": "https://www.alegro-events.co.il/pages/weddings/"},
-                {"@type": "ListItem","position": 4,"name": "חינה","item": "https://www.alegro-events.co.il/pages/henna/"},
-                {"@type": "ListItem","position": 5,"name": "בר/בת מצווה","item": "https://www.alegro-events.co.il/pages/barmitzvah/"},
-                {"@type": "ListItem","position": 6,"name": "קייטרינג","item": "https://www.alegro-events.co.il/menu"}
-            ]
+            "@type": "Question",
+            "name": "האם האולם מציע קייטרינג?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "כן, אולמי אלגרו מציעים קייטרינג כשר בהתאמה אישית עם מגוון מנות – בשרים, אסאדו, סושי, סלטים, גריל, מנות פתיחה, בר קוקטיילים ובר פירות. חומרי גלם טריים וטעמים מרגשים שכל אורח יזכור."
+            }
             },
             {
-            "@type": "FAQPage",
-            "@id": "https://www.alegro-events.co.il/#faq-section",
-            "mainEntity": [
-                {
-                "@type": "Question",
-                "name": "האם האולם כשר?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "כן, כל המנות באולמי אלגרו כשרות ומפוקחות ברמה הגבוהה ביותר. מהדרין / מחפוד."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "מה מספר האורחים שניתן לארח באולם?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "האולם המרכזי מתאים לאירועים עם 250-400 אורחים, בהתאם לפריסה ולעיצוב הרצוי."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "האם האולם מציע קייטרינג?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "אולמי אלגרו מציעים קייטרינג בהתאמה אישית הכולל מגוון רחב של מנות - בשרים, אסאדו, סושי, בר קוקטיילים, בר פירות ועוד."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "האם יש חניה במקום?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "כן, קיימת חניה פנימית, מקורה וחינמית בשפע לאורחי האירוע."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "האם ניתן לערוך חופה בחוץ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "כן, ניתן לערוך חופה מעוצבת בחצר החיצונית, כולל תאורה והגברה מותאמת אישית."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "האם המקום נגיש לנכים?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "האולם נגיש במלואו - כולל מעליות, שירותי נכים וחניה נגישה."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "האם יש מערכת הגברה ותאורה במקום?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "כן, קיימת מערכת הגברה ותאורה מקצועית המותאמת לכל סוגי האירועים. רחבת הריקודים המרווחת של אלגרו מאפשרת אירוח זמרים ולהקות כולל אפשרות טברנה."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "האם ניתן להזמין עיצוב אישי לאירוע?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "בהחלט! באולמי אלגרו תוכלו ליהנות מעיצוב אישי המותאם בדיוק לטעם, לסגנון ולחזון שלכם. צוות העיצוב המקצועי מלווה אתכם לכל אורך התהליך - משלב הקונספט ועד לביצוע המלא, כולל בחירת צבעים, פרחים, תאורה, סידורי שולחנות ואביזרים מיוחדים."
-                }
-                }
-            ]
+            "@type": "Question",
+            "name": "האם יש חניה במקום?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "כן, קיימת חניה פנימית, מקורה וחינמית לאורחי האירוע, כולל חניה נגישה לנכים ומעלית לאולם."
+            }
             },
             {
-            "@type": "Service",
-            "serviceType": "חתונות - Wedding Packages",
-            "provider": {"@id": "https://www.alegro-events.co.il/"},
-            "description": "חבילות חתונה מותאמות אישית באולמי אלגרו בירושלים - עיצוב אלגנטי, קולינריה מוקפדת ושירות אישי לאירוע מושלם."
+            "@type": "Question",
+            "name": "האם ניתן לערוך חופה בחוץ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "כן, ניתן לערוך חופה מעוצבת בחצר החיצונית, כולל תאורה והגברה מותאמת אישית."
+            }
             },
             {
-            "@type": "Service",
-            "serviceType": "חינה - Henna",
-            "provider": {"@id": "https://www.alegro-events.co.il/"},
-            "description": "אירוע חינה ייחודי באולמי אלגרו - עיצוב מסורתי, תפריט מותאם אישית ושירות אישי."
+            "@type": "Question",
+            "name": "האם המקום נגיש לנכים?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "האולם נגיש במלואו – כולל מעליות, שירותי נכים, חניית נכים נגישה ומעברים רחבים בכל המתחם."
+            }
             },
             {
-            "@type": "Service",
-            "serviceType": "בר/בת מצווה - Bar/Bat Mitzvah",
-            "provider": {"@id": "https://www.alegro-events.co.il/"},
-            "description": "אירועים בר/בת מצווה עם תכנון מקיף, עיצוב מותאם וקולינריה מוקפדת."
+            "@type": "Question",
+            "name": "האם יש מערכת הגברה ותאורה במקום?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "כן, קיימת מערכת הגברה ותאורה מקצועית לכל סוגי האירועים. רחבת הריקודים המרווחת מאפשרת אירוח זמרים ולהקות, כולל אפשרות טברנה."
+            }
             },
             {
-            "@type": "Service",
-            "serviceType": "קייטרינג - Catering",
-            "provider": {"@id": "https://www.alegro-events.co.il/"},
-            "description": "קייטרינג כשר ומגוון לכל סוגי האירועים - חתונות, חינה, בר/בת מצווה ואירועים פרטיים. כולל סושי, בשרים, סלטים, אסאדו ובר קוקטיילים."
-            },
-            {
-            "@type": "Service",
-            "serviceType": "אירועים פרטיים ועסקיים - Private & Corporate Events",
-            "provider": {"@id": "https://www.alegro-events.co.il/"},
-            "description": "אירועים פרטיים ועסקיים מותאמים אישית עם ליווי צמוד ושירות מקצועי."
+            "@type": "Question",
+            "name": "האם ניתן להזמין עיצוב אישי לאירוע?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "בהחלט! ניתן ליהנות מעיצוב אישי המותאם לטעם, לסגנון ולחזון שלכם. צוות העיצוב מלווה אתכם לכל אורך התהליך – משלב הקונספט ועד לביצוע מלא, כולל בחירת צבעים, פרחים, תאורה, סידורי שולחנות ואביזרים מיוחדים, כך שכל אירוע מקבל אופי ייחודי ומרגש."
+            }
             }
         ]
+        },
+        {
+        "@type": "Service",
+        "serviceType": "חתונות",
+        "provider": {"@id": "https://www.alegro-events.co.il/#eventvenue"},
+        "url": "https://www.alegro-events.co.il/weddings",
+        "description": "חתונות יוקרתיות עם עיצוב מוקפד, קולינריה ושירות אישי."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "חינה",
+        "provider": {"@id": "https://www.alegro-events.co.il/#eventvenue"},
+        "url": "https://www.alegro-events.co.il/heena-ceremony",
+        "description": "אירועי חינה מעוצבים בהתאמה אישית."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "בר/בת מצווה",
+        "provider": {"@id": "https://www.alegro-events.co.il/#eventvenue"},
+        "url": "https://www.alegro-events.co.il/bar-bat-mitzvah",
+        "description": "אירועי בר/בת מצווה מרגשים עם חוויה קולינרית מושקעת."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "קייטרינג",
+        "provider": {"@id": "https://www.alegro-events.co.il/#eventvenue"},
+        "url": "https://www.alegro-events.co.il/culinary",
+        "description": "קייטרינג כשר ומגוון לכל סוגי האירועים."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "אירועים פרטיים ועסקיים",
+        "provider": {"@id": "https://www.alegro-events.co.il/#eventvenue"},
+        "url": "https://www.alegro-events.co.il/events",
+        "description": "אירועים פרטיים ועסקיים בעיצוב מותאם ושירות אישי."
+        }
+    ]
     }
     </script>
 
