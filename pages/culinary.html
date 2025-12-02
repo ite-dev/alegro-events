@@ -119,20 +119,20 @@
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Alegro אירועים",
-            "item": "https://alegro-events.co.il"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "קולינריה",
-            "item": "https://alegro-events.co.il/pages/culinary.html"
-        }
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Alegro אירועים",
+                "item": "https://alegro-events.co.il"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "קולינריה",
+                "item": "https://alegro-events.co.il/pages/culinary.html"
+            }
         ]
-    }
+        }
     }
     </script>
 </head>
@@ -167,7 +167,7 @@
 
                 <li class="mobile-featured-item"><a role="menuitem" href="/pages/gallery.html">גלריה</a></li>
                 <li class="mobile-featured-item"><a role="menuitem" href="/pages/culinary.html">קייטרינג</a></li>
-                <li class="mobile-featured-item"><a role="menuitem" href="/pages/events.html">אירועים</a></li>
+                <li class="mobile-featured-item"><a role="menuitem" href="/">ראשי</a></li>
             </ul>
 
             <div class="checkbox-container">
@@ -221,7 +221,12 @@
             </div>
         </nav>
     </header>
-
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol>
+                <li><a href="https://www.alegro-events.co.il/">ראשי</a></li>
+                <li><a href="/pages/culinary.html">קולינריה</a></li>
+            </ol>
+        </nav>
     <main aria-label="קולינריה ותפריט אירועים של אלגרו">
         <h1 class="page-title">חוויה קולינרית מנצחת - אלגרו ירושלים</h1>
 
@@ -275,6 +280,7 @@
                             <a href="/pages/contact-us.html" aria-label="לקביעת ביקור וטעימות באולם אלגרו">
                                 לקביעת ביקור וטעימות באולם
                             </a>
+                            &nbsp;&nbsp;&nbsp;
                         </span>
                     </div>
                 </div>
@@ -298,20 +304,17 @@
             <div class="cards-container" data-gallery="venue-arrangements" aria-live="polite"></div>
         </section>
 
-        <!-- Reviews / Testimonials (same structure as current site) -->
         <div class="reviews-wrapper" aria-label="לקוחות ממליצים">
             <h2>לקוחות ממליצים</h2>
+            <h3>חוות דעת מהלקוחות שלנו באלגרו</h3>
             <div class="reviews-container">
                 <script defer async src='https://cdn.trustindex.io/loader.js?57d05705979a0228f4469947f4a'></script>
             </div>
         </div>
 
-        <!-- Contact Section-->
         <section id="contact-section" aria-label="יצירת קשר">
-
             <div class="contact-info">
                 <h2> יצירת קשר </h2>
-
                 <div class="contact-items-box">
 
                     <div class="contact-info-item">
@@ -371,7 +374,7 @@
                 </div>
             </div>
 
-            <div class="form-container"><!----Contact Form---->
+            <div class="form-container">
                 <h3>תיאום פגישה</h3>
                 <div class="contact-box">
                     <form id="contactForm">
