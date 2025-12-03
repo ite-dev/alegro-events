@@ -82,16 +82,19 @@
     }
 
     .contact-us-info-box{
-        height: 533px;
+        height: 540px;
     }
     .culinary-info-box{
-        height: 1110px;
+        height: 1130px;
     }
     .events-info-box{
-        height: 1200px;
+        height: 1233px;
     }
     .gallery-info-box{
         height: 710px
+    }
+    .weddings-info-box{
+        height: 700px;
     }
 
     .culinary-img-box{
