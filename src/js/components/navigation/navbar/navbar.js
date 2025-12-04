@@ -1,4 +1,5 @@
-import {onScreenResize, getIsMobile} from '/src/js/utils/screen-utils.js'
+import {onScreenResize, getIsMobile} from '/src/js/utils/screen-utils.js';
+import './css/navbar.css';
 
 export function initNav(){
     let isMobile = getIsMobile();

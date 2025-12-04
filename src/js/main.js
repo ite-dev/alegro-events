@@ -53,7 +53,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     handleScroll();
 });
-
+window.addEventListener('load', () => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.trustindex.io/loader.js?57d05705979a0228f4469947f4a';
+    script.defer = true;
+    document.querySelector('.reviews-container').appendChild(script);
+});
 
 
 // Typing Text Animation // 
