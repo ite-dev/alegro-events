@@ -9,7 +9,6 @@
 }
 
 .form-container h3{
-    padding-bottom: 2em;
     font-size: 1.75rem;
     text-align: center;
     color: #dfbd79;
@@ -236,10 +235,6 @@ form:valid .form-btn {
         height: 100%;
         margin: 1em 0;
         padding: 0;
-    }
-
-    .form-container h3{
-        padding-bottom: 1.5em;
     }
 
     .form-container p{

@@ -280,11 +280,18 @@
         font-size: .8rem;
     }
     .faq-answer{
-        font-size: .85rem;
+        font-size: .9rem;
     }
     .faq-item.open .faq-answer{
         padding: .5em .5em .5em 2.5em;
     }
+
+        .breadcrumb {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            margin: .5em .5em 0 0;
+            direction: rtl;
+        }
     /* <!-- ----Mobile About Section--------------> */
     #about-section {
         padding: 25px 0 50px;
@@ -309,9 +316,15 @@
     /* <!-- ----Mobile Contact Section--------------> */
     #contact-section h2 {
         align-self: center;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
-
+    #contact-section h3{
+        padding-bottom: .2em;
+    }
+    #contact-section h4{
+        font-size: .9rem;
+        padding-bottom: 3.2em;
+    }
     .contact-info {
         padding: 3em 0em;
     }
