@@ -1,5 +1,5 @@
 
-if(window.trustedTypes){
+if (window.trustedTypes) {
     window.alegroPolicy = window.trustedTypes.createPolicy('alegroApp', {
         createHTML: (input) => input,
         createScript: (input) => input
@@ -10,59 +10,52 @@ if(window.trustedTypes){
     });
 };
 
+document.addEventListener('DOMContentLoaded', async () => {
+    const toastUtils = await import('./utils/toastify/toast.js');
 
-function deferInit(){
-    try{
-        import('./utils/toastify/toast.js').then((toastUtils) => {
+    const { initNav } = await import('./components/navigation/navbar/navbar.js');
+    initNav();
 
-            import('./components/navigation/navbar/navbar.js')
-                .then(({ initNav }) => initNav());
-
-            const fontStylesheet = document.getElementById('font-stylesheet');
-            if(fontStylesheet && !fontStylesheet.href.includes('fonts.googleapis')){
-                fontStylesheet.href = "https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap";
-            };
-
-            if(document.querySelector('#contactForm')){
-                import('./components/forms/formHandler.js')
-                    .then(({ initForm }) => initForm());
-            };
-
-            const map = document.querySelector("iframe[data-src]");
-            if(map){
-                const observer = new IntersectionObserver(([entry]) => {
-                    if(entry.isIntersecting){
-                        map.src = map.dataset.src;
-                        observer.disconnect();
-                    };
-                });
-                observer.observe(map);
-            };
-
-            if(document.querySelector('#contactForm')){
-                toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
-            };
-        });
-
-        if(window.location.pathname === "/" || window.location.pathname === "/index.html"){
-            const homeDefaultBtn = document.querySelector('#homepageDefault');
-            homeDefaultBtn?.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.history.scrollRestoration = "manual";
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+    const fontLink = document.getElementById('font-stylesheet');
+    if (fontLink) {
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap';
+        fontLink.onload = () => {
+            fontLink.media = 'all';
         };
-    } catch (err) {
-        console.error("deferInit() error:", err);
     };
-};
 
-if('requestIdleCallback' in window){
-    requestIdleCallback(deferInit, { timeout: 2000 });
-} else {
-    window.addEventListener('load', deferInit, { once: true });
-    setTimeout(deferInit, 2000);
-};
+    if (document.querySelector('#contactForm')) {
+        const { initForm } = await import('./components/forms/formHandler.js');
+        initForm();
+    };
+
+    const map = document.querySelector("iframe[data-src]");
+    if (!map) {
+
+    } else {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                map.src = map.dataset.src;
+                observer.disconnect();
+            }
+        });
+        observer.observe(map);
+    };
+
+    if (document.querySelector('#contactForm')) {
+        toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
+    };
+
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+        const homeDefaultBtn = document.querySelector('#homepageDefault');
+        homeDefaultBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.scrollRestoration = "manual";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    };
+    handleScroll();
+});
 
 window.addEventListener('load', () => {
     const script = document.createElement('script');
@@ -141,7 +134,6 @@ if(faqContainer){
         allItems.forEach(i => {
             if (i !== item) i.classList.remove("open");
         });
-
         item.classList.toggle("open");
     });
 };

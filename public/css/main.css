@@ -593,7 +593,7 @@ button {
 /* <!-- ----FAQ Section----------> */
 .faq-section {
     margin-top: 5em;
-    padding: 5em 0 5em;
+    padding: 5em 0 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -611,6 +611,7 @@ button {
 }
 
 .faq-container{
+    min-height: 643px;
     width: 40%;
     display: flex;
     flex-direction: column;

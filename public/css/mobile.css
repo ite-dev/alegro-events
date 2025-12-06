@@ -270,7 +270,7 @@
 
     .faq-section {
         margin-top: 0em;
-        padding: 1em 0 5em 0em
+        padding: 1em 0 0em 0em
     }
 
     .faq-section h2 {
@@ -279,6 +279,8 @@
 
     .faq-container {
         width: 70%;
+        min-height: 633px;
+        padding: 1em 0em 6px;
     }
 
     .faq-question {
