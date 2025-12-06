@@ -492,6 +492,13 @@ h1{
     margin-bottom: .5em;
 }
 
+#contact-section h4 {
+    font-size: 1rem;
+    color: var(--secondary);
+    text-align: center !important;
+    padding: .5em 0em 2em;
+}
+
 #contact-section p {
     color: #222222;
     font-size: var(--fs-p);

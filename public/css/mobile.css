@@ -87,7 +87,8 @@
         border-radius: 50%;
         filter: invert(100%) hue-rotate(180deg);
     }
-    .home-info-logo img{
+
+    .home-info-logo img {
         transform: translateX(-4px);
     }
 
@@ -165,7 +166,8 @@
         margin: 0;
     }
 
-    .intro-text, .intro-span {
+    .intro-text,
+    .intro-span {
         width: 85%;
         font-size: 1.25rem;
     }
@@ -181,7 +183,8 @@
         border-bottom: 1px solid var(--secondary);
         padding-bottom: 1em;
     }
-    .gen-info-box.mobile-show{
+
+    .gen-info-box.mobile-show {
         height: 740px;
     }
 
@@ -265,33 +268,38 @@
 
     /* <!-- ----Mobile Projects Section End----------> */
 
-    .faq-section{
+    .faq-section {
         margin-top: 0em;
         padding: 1em 0 5em 0em
     }
-    .faq-section h2{
+
+    .faq-section h2 {
         font-size: 1.8rem;
     }
-    .faq-container{
+
+    .faq-container {
         width: 70%;
     }
 
-    .faq-question{
+    .faq-question {
         font-size: .8rem;
     }
-    .faq-answer{
+
+    .faq-answer {
         font-size: .9rem;
     }
-    .faq-item.open .faq-answer{
+
+    .faq-item.open .faq-answer {
         padding: .5em .5em .5em 2.5em;
     }
 
-        .breadcrumb {
-            font-family: 'Arial', sans-serif;
-            font-size: 0.8rem;
-            margin: .5em .5em 0 0;
-            direction: rtl;
-        }
+    .breadcrumb {
+        font-family: 'Arial', sans-serif;
+        font-size: 0.8rem;
+        margin: .5em .5em 0 0;
+        direction: rtl;
+    }
+
     /* <!-- ----Mobile About Section--------------> */
     #about-section {
         padding: 25px 0 50px;
@@ -318,13 +326,16 @@
         align-self: center;
         font-size: 1.5rem;
     }
-    #contact-section h3{
+
+    #contact-section h3 {
         padding-bottom: .2em;
     }
-    #contact-section h4{
+
+    #contact-section h4 {
         font-size: .9rem;
         padding-bottom: 3.2em;
     }
+
     .contact-info {
         padding: 3em 0em;
     }
@@ -339,8 +350,8 @@
         justify-content: center;
     }
 
-    #phone-number{
-        min-width:100px;
+    #phone-number {
+        min-width: 100px;
     }
 
     .contact-info-item a {

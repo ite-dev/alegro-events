@@ -220,6 +220,11 @@
         font-size: 1.8rem;
     }
 
+    #contact-section h4 {
+        font-size: .9rem;
+        padding-bottom: 3.2em;
+    }
+
     .contact-info {
         padding: 3em 0em;
     }
