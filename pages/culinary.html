@@ -39,12 +39,12 @@
     <script type="module" src="/src/js/main.js" defer></script>
     <script type="module" src="/src/js/pagebase.js" defer></script>
 
-    <title>תפריט וקולינריה - אולמי אלגרו ירושלים | אוכל גורמה לאירועים</title>
+    <title>קולינריה לאירועים - אולמי אלגרו ירושלים | תפריט גורמה של השף</title>
 
     <meta name="description"
-        content="קולינריה לאירועים ברמה הגבוהה בירושלים - חוויית אוכל איכותית, תפריט מותאם אישית, עיצוב הגשה מוקפד ושירות מקצועי. אולם Alegro מציע חוויה קולינרית יוקרתית לכל סוגי האירועים - חתונות, בר/בת מצווה, אירועים פרטיים ועסקיים.">
+        content="קולינריה איכותית לאירועים בירושלים - תפריט גורמה מותאם אישית של השף אהרון שאשא, הגשה מעוצבת וחוויית טעמים ייחודית לחתונות, בר/בת מצווה ואירועים פרטיים.">
     <meta name="keywords"
-        content="קולינריה לאירועים, קייטרינג גורמה ירושלים, אוכל לאירועים ירושלים, תפריט אירועים יוקרתי, Alegro Events" />
+        content="קולינריה באולם, קייטרינג אירועים ירושלים, אוכל לחתונה, תפריט קורמה, שירות קייטרינג פרטי, Alegro Events" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Alegro Events Jerusalem - אולמי אלגרו אירועים ירושלים" />
     <meta name="format-detection" content="telephone=no">
@@ -64,8 +64,8 @@
     <meta property="og:title" content="קולינריה לאירועים - תפריט גורמה לאירועים | אולמי אלגרו ירושלים" />
     <meta property="og:description"
         content="חוויית קולינריה יוקרתית לאירועים בירושלים - מנות גורמה, תחנות שף, עיצוב הגשה מוקפד ושירות מקצועי. מושלם לחתונות, חינה, בר/בת מצווה ואירועים פרטיים." />
-    <meta property="og:image" content="https://www.alegro-events.co.il/alegro-logo.png" />
-    <meta property="og:image:alt" content="תפריט קולינריה יוקרתי לאירועים בירושלים באולמי אלגרו" />
+    <meta property="og:image" content="https://www.alegro-events.co.il/layout/arrangement-6.webp" />
+    <meta property="og:image:alt" content="קולינריה גורמה לאירועים בירושלים - תפריט של השף" />
     <meta property="og:url" content="https://www.alegro-events.co.il/pages/culinary.html" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -82,56 +82,140 @@
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "תפריט וקולינריה - אולמי אלגרו ירושלים",
-    "description": "קולינריה איכותית לאירועים בירושלים עם תפריט גורמה, הגשה מעוצבת ושירות מקצועי לכל סוגי האירועים.",
-    "url": "https://alegro-events.co.il/pages/culinary.html",
-
-    "mainEntity": {
-        "@type": "LocalBusiness",
-        "name": "Alegro Events",
-        "image": "https://alegro-events.co.il/alegro-logo.png",
-        "url": "https://alegro-events.co.il",
-        "telephone": "+972-2-673-4894",
-        "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "ירושלים",
-        "addressRegion": "IL",
-        "addressCountry": "IL"
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.alegro-events.co.il/#organization",
+            "name": "אולמי אלגרו ירושלים",
+            "url": "https://www.alegro-events.co.il/",
+            "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
+            "sameAs": [
+                "https://www.facebook.com/AlegroEvents/",
+                "https://www.instagram.com/alegro_event/",
+                "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
+                "https://wa.me/972542500220"
+            ]
         },
-        "servesCuisine": [
-        "Gourmet",
-        "Mediterranean",
-        "Modern Israeli"
-        ],
-        "description": "קולינריה יוקרתית לאירועים בירושלים כולל הגשה מעוצבת, חוויות קולינריות ותחנות אוכל חווייתיות.",
-        "menu": "https://alegro-events.co.il/pages/culinary.html"
-    },
-
-    "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Alegro אירועים",
-                "item": "https://alegro-events.co.il"
+        {
+            "@type": ["LocalBusiness", "FoodEstablishment", "Catering"],
+            "@id": "https://www.alegro-events.co.il/#eventvenue",
+            "name": "אולמי אלגרו ירושלים",
+            "url": "https://www.alegro-events.co.il/",
+            "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
+            "image": [
+                "https://www.alegro-events.co.il/images/alegro-events-hall.jpeg",
+                "https://www.alegro-events.co.il/images/alegro-events-weddings.jpeg"
+            ],
+            "description": "אולמי אלגרו בירושלים - קייטרינג כשר מוקפד לכל סוגי האירועים עם קולינריה גורמה של השף אהרון שאשא. בשרים, אסאדו, סושי, בר פירות, קוקטיילים וקינוחים עדינים.",
+            "priceRange": "$$$",
+            "telephone": "+972-2-673-4894",
+            "email": "alegroevents2@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "הסדנא 12",
+                "addressLocality": "ירושלים",
+                "addressRegion": "ירושלים",
+                "addressCountry": "IL",
+                "postalCode": "9342163"
             },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "קולינריה",
-                "item": "https://alegro-events.co.il/pages/culinary.html"
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 31.750505,
+                "longitude": 35.216992
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": "ירושלים, ישראל"
+            },
+            "maximumAttendeeCapacity": 450,
+            "amenityFeature": [
+                {"@type":"LocationFeatureSpecification","name":"חניה חינם","value":true},
+                {"@type":"LocationFeatureSpecification","name":"גישה לנכים","value":true},
+                {"@type":"LocationFeatureSpecification","name":"כשרות","value":true},
+                {"@type":"LocationFeatureSpecification","name":"מיזוג אוויר","value":true},
+                {"@type":"LocationFeatureSpecification","name":"מטבח שף כשר","value":true},
+                {"@type":"LocationFeatureSpecification","name":"קייטרינג","value":true}
+            ],
+            "contactPoint": [
+                {
+                "@type": "ContactPoint",
+                "telephone": "+972-2-673-4894",
+                "contactType": "customer service",
+                "areaServed": "IL",
+                "availableLanguage": ["he","en"]
+                },
+                {
+                "@type": "ContactPoint",
+                "contactType": "ReserveAction",
+                "url": "https://wa.me/972542500220",
+                "name": "הזמנת אירועים בוואטסאפ",
+                "availableLanguage": ["he","en"]
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.3",
+                "reviewCount": "749"
+            },
+            "potentialAction": {
+            "@type": "ReserveAction",
+            "target": "https://wa.me/972542500220",
+            "name": "הזמנת קייטרינג בוואטסאפ"
+            },
+            "servesCuisine": [
+                "אוכל ישראלי כשר","ים תיכוני","גריל","סושי",
+                "סלטים","בשרים","קינוחים","בר פירות",
+                "בר קוקטיילים","שיפודים","אסאדו","קייטרינג"
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.alegro-events.co.il/pages/culinary.html",
+            "url": "https://www.alegro-events.co.il/pages/culinary.html",
+            "name": "קולינריה וקייטרינג - אולמי אלגרו ירושלים",
+            "inLanguage": "he-IL",
+            "description": "קולינריה איכותית לאירועים בירושלים באולם אלגרו - תפריט גורמה מותאם אישית של השף אהרון שאשא, חווית טעמים ייחודית, הגשה מעוצבת ושירות מקצועי.",
+            "breadcrumb": { "@id": "https://www.alegro-events.co.il/pages/culinary.html#breadcrumb" }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.alegro-events.co.il/pages/culinary.html#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://www.alegro-events.co.il/" },
+                { "@type": "ListItem", "position": 2, "name": "אירועים", "item": "https://www.alegro-events.co.il/pages/events.html" },
+                { "@type": "ListItem", "position": 3, "name": "קייטרינג", "item": "https://www.alegro-events.co.il/pages/culinary.html" }
+            ]
+        },
+        {
+            "@type": "Service",
+            "serviceType": "קייטרינג",
+            "serviceType_en": "Catering",
+            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
+            "url": "https://www.alegro-events.co.il/pages/culinary.html",
+            "description": "קייטרינג כשר ומגוון בירושלים לכל סוגי האירועים עם קולינריה מוקפדת",
+            "keywords": "קייטרינג, קייטרינג כשר, בשרים, אסאדו, סושי, בר קוקטיילים, בר פירות, ירושלים",
+            "category": "CateringService",
+            "offers": {
+            "@type": "Offer",
+            "url": "https://wa.me/972542500220",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-12-04",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": null,
+                "priceCurrency": "ILS",
+                "description": "בבקשה להתייעץ / Please consult"
             }
-        ]
+            }
         }
+    ]
     }
     </script>
 </head>
 
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNPBLQHR" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNPBLQHR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Header / Navbar -->
     <header class="nav-header">
         <nav class="nav-bar" aria-label="תפריט ראשי">
@@ -215,12 +299,26 @@
             </div>
         </nav>
     </header>
-        <nav class="breadcrumb" aria-label="breadcrumb">
-            <ol>
-                <li><a href="https://www.alegro-events.co.il/">ראשי</a></li>
-                <li><a href="/pages/culinary.html">קולינריה</a></li>
-            </ol>
-        </nav>
+    <nav class="breadcrumb" aria-label="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ol>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">דף הבית</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/pages/events.html">
+                    <span itemprop="name">אירועים</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">קייטרינג</span>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
+    </nav>
     <main aria-label="קולינריה ותפריט אירועים של אלגרו">
         <h1 class="page-title">חוויה קולינרית מנצחת - אלגרו ירושלים</h1>
 

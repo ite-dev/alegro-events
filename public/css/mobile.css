@@ -28,7 +28,7 @@
         --fs-h2: 2.8rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.4rem;
-        --fs-h5: 0.8rem;
+        --fs-h5: 0.65rem;
         --fs-h6: 0.5rem;
         --fs-p: 1rem;
 
@@ -185,7 +185,7 @@
     }
 
     .gen-info-box.mobile-show {
-        height: 740px;
+        height: 755px;
     }
 
     .info-box-reverse {

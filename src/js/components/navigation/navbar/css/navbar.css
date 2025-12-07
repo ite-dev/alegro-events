@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     padding-right: .8em;
+    opacity: 1;
 }
 
 .mobile-featured-menu{
@@ -31,8 +32,7 @@
     
     visibility: hidden;
     opacity: 0;
-    animation: show-content 1.2s linear forwards;
-    animation-delay: 0.5s;
+    animation: show-content .8s linear forwards;
 }
 
 .navbar-logo {
@@ -84,19 +84,6 @@
     display: none;
 }
 
-.nav-bar .logoImage {
-    font-size: var(--fs-navlogo);
-    font-weight: 800;
-    transition: .5s ease-in-out;
-    padding: 5px;
-}
-
-.nav-bar .logoImage:hover {
-    transform: scale(1.05) translateY(-2%);
-    border-bottom: 2px solid var(--accent3);
-    color: goldenrod;
-}
-
 .nav-bar ul {
     display: flex;
     flex-direction: row-reverse;
@@ -111,7 +98,7 @@
 }
 
 .nav-bar ul li:hover {
-    transform: scale(1.1) translateY(-5%);
+    transform: scale(1.07) translateY(-3%);
 }
 
 .nav-bar ul li a,
@@ -135,7 +122,7 @@
 .nav-bar ul li.active a,
 .nav-bar ul li:hover button {
     color: #daad55;
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
 }
 
 .expandable-nav-item {
@@ -157,15 +144,17 @@
 }
 
 .events-list.dropdown{
-        transform: translateX(1500px);
+    transform: translateX(1500px);
 }
 .gallery-list.dropdown{
-        transform: translateX(1200px);
+    transform: translateX(1200px);
 }
 .events-list.dropdown,
 .gallery-list.dropdown {
+    opacity: 1;
     transition: .8s;
     width: 210px;
+    height: unset;
     position: absolute;
     top: 62px;
     left: -40px;
@@ -203,7 +192,7 @@
 .events-list.dropdown:hover a,
 .gallery-list.dropdown:hover a {
     border-bottom: none;
-    font-size: 1.25rem;
+    
     color: rgba(154, 126, 76, 1);
 }
 
@@ -285,7 +274,7 @@
         width: 100%;
         min-height: 100%;
         max-height: 40px;
-        padding: 0.5em !important;
+        padding: 0.2em !important;
         display: flex;
         justify-content: center !important;
         font-size: 1.2em;
@@ -303,28 +292,14 @@
     }
 
     .nav-bar ul li:hover {
-        width: 80%;
         align-self: center;
-        margin: 15px;
-    }
-
-    .nav-bar ul li a {}
-
-    .nav-bar ul li:hover a,
-    .nav-bar ul li:hover p {
-        border-bottom: unset;
-
-    }
-
-    .nav-bar ul li.active a {
-        border-bottom: unset;
+        margin: 5px;
     }
 
     .nav-bar ul li a:hover,
     .nav-bar ul li.active a:hover {
-        background-color: goldenrod;
-        color: black;
-        border: 1px solid black;
+        color: var(--accent);
+        border-bottom: 1px solid var(--accent2);
     }
 
     .checkON,
@@ -376,8 +351,7 @@
     .nav-bar ul li:hover p,
     .nav-bar ul li.active a,
     .nav-bar ul li:hover button {
-        color: #daad55;
-        border-bottom: unset !important;
+        border-bottom: unset;
     }
 
     .events-list.dropdown li,
@@ -425,16 +399,17 @@
         margin: 2px !important
     }
     .mobile-call-btn-li{
+        all: unset !important;
         border: unset !important;
-        max-width: 3rem !important;
+        position: absolute !important;
+        top: 7px !important;
+        left: 55px !important;
+        width: 50px !important;
     }
+
     .mobile-call-btn{
-        font-size: 2.2rem !important;
         color: var(--accent);
         padding: 3px 6px;
-        position: absolute;
-        top: 7px;
-        left: 65px;
     }
     .mobile-call-btn svg{
         width: 35px;
