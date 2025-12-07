@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     };
+    
     handleScroll();
 });
 
@@ -65,47 +66,20 @@ window.addEventListener('load', () => {
     if (container) container.appendChild(script);
 });
 
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector('.animated-typing');
-    const words = [
-        "אולמי אלגרו ירושלים".split('').reverse().join(''),
-        "Weddings.",
-        "Events.",
-        "Bar / Bat  Mitzvah.",
-        "Henna  Ceremony.",
-        "Catering.",
-        "Brit Mila",
-        "עליה לתורה".split('').reverse().join('')
-    ];
+const blocks = document.querySelectorAll('.block');
+const blockReverse = document.querySelectorAll('.block-reverse');
 
-    let currentWordIndex = 0;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
 
-    const animateText = (textToAnimate) => {
-        container.innerHTML = '';
-
-        for (let i = 0; i < textToAnimate.length; i++) {
-            const letter = textToAnimate[i];
-            const span = document.createElement('span');
-            span.textContent = letter;
-            span.style.animationDelay = `${i * 0.1}s`;
-            container.appendChild(span);
-        }
-    };
-
-    const startAnimation = () => {
-        const word = words[currentWordIndex];
-
-        animateText(word);
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-
-        setTimeout(() => {
-            startAnimation();
-        }, word.length * 100 + 2000);
-    };
-    startAnimation();
+            entry.target.classList.add('frozen');
+            observer.unobserve(entry.target);
+        };
+    });
 });
-*/
+blocks.forEach(block => observer.observe(block));
+blockReverse.forEach(block => observer.observe(block));
 
 function handleScroll(){
     const scrollButton = document.querySelector('.btn-up');

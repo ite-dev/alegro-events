@@ -149,8 +149,8 @@
             "@type": "Organization",
             "@id": "https://www.alegro-events.co.il/#organization",
             "name": "אולמי אלגרו ירושלים",
-            "name_en": "Alegro Event Hall Jerusalem",
-            "alternateName": "Alegro Event Hall Jerusalem",
+            "name_en": "Alegro Events Hall Jerusalem",
+            "alternateName": "Alegro Events Hall Jerusalem",
             "url": "https://www.alegro-events.co.il/",
             "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
             "foundingDate": "2013-01-15",
@@ -173,8 +173,8 @@
             "@type": ["LocalBusiness", "EventVenue", "FoodEstablishment", "Catering"],
             "@id": "https://www.alegro-events.co.il/#eventvenue",
             "name": "אולמי אלגרו ירושלים",
-            "name_en": "Alegro Event Hall Jerusalem",
-            "alternateName": "Alegro Event Hall Jerusalem",
+            "name_en": "Alegro Events Hall Jerusalem",
+            "alternateName": "Alegro Events Hall Jerusalem",
             "url": "https://www.alegro-events.co.il/",
             "logo": "https://www.alegro-events.co.il/alegro-logo.png",
             "image": [
@@ -522,7 +522,7 @@
             <label for="checkbox-status" id="coverlay" aria-hidden="true"></label>
             <ul class="mobile-featured-menu" role="menu" aria-label="תפריט נייד">
 
-                <li class="mobile-call-btn-li">
+                <li role="menuItem" class="mobile-call-btn-li">
                     <a href="tel:026734894" class="mobile-call-btn" aria-label="התקשרו לאלגרו אירועים: 02-673-4894">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24" alt="חייגו לטלפון של אלגרו">
                             <path
@@ -746,8 +746,8 @@
 
         <!-- ----------------General Info Section---------------- -->
         <section class="general-info" id="general-info">
-            <div class="gen-info-box">
-                <div class="info-img-box-left">
+            <div class="gen-info-box view">
+                <div class="info-img-box-left block">
                     <div class="info-img-left"></div>
                 </div>
 
@@ -849,13 +849,13 @@
                         </span>
                     </div>
                 </div>
-                <div class="info-img-box-right">
+                <div class="info-img-box-right block-reverse">
                     <div class="info-img-right"></div>
                 </div>
             </div>
 
             <div class="gen-info-box mobile-show">
-                <div class="info-img-box-left">
+                <div class="info-img-box-left block">
                     <div class="info-img-left culinary-img"></div>
                 </div>
 
@@ -914,12 +914,12 @@
         <!-- ----------------End General Info Section---------------- -->
 
         <!-- ----------------FAQ Section---------------- -->
-        <div class="faq-section" id="faq-section">
+        <div class="faq-section view" id="faq-section">
             <h2>שאלות נפוצות</h2>
 
             <div class="faq-container" id="faq-container">
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם האולם כשר?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -936,7 +936,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>מה מספר האורחים שניתן לארח באולם?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -954,7 +954,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם האולם מציע קייטרינג?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -972,7 +972,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם יש חניה במקום?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -987,7 +987,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם ניתן לערוך חופה בחוץ?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -1001,7 +1001,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם המקום נגיש לנכים?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -1016,7 +1016,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם יש מערכת הגברה ותאורה במקום?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -1031,7 +1031,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item block">
                     <div class="faq-question" data-faq-question>
                         <h3>האם ניתן להזמין עיצוב אישי לאירוע?</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
