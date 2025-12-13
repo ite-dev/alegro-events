@@ -71,8 +71,10 @@ window.addEventListener('load', () => {
     const container = document.querySelector('.reviews-container');
     const feedContainer = document.querySelector('.instagram-feed');
 
-    if(container && feedContainer){
+    if(container){
         container.appendChild(script);
+    };
+    if(feedContainer){
         feedContainer.appendChild(instaFeed);
     };
 });
