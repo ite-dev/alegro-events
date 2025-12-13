@@ -250,7 +250,7 @@ button {
     box-shadow: 2px -5px 15px 1px var(--secondary);
     resize: horizontal;
 
-    transition: 1.5s;
+    transition: .5s;
 }
 
 .home-info:hover {
@@ -586,7 +586,7 @@ button {
 
 /* <!-- ----FAQ Section----------> */
 .faq-section {
-    margin-top: 5em;
+    margin-top: 1em;
     padding: 5em 0 1em;
     display: flex;
     flex-direction: column;
@@ -599,7 +599,7 @@ button {
 }
 
 .faq-section h2{
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     color: black;
     font-weight: 500;
 }
@@ -666,7 +666,7 @@ button {
 /* <!-- ----End FAQ Section----------> */
 
 .reviews-wrapper {
-    margin-top: 5em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -691,7 +691,7 @@ button {
 
 .reviews-container {
     max-width: 85%;
-    height: 400px;
+    /* height: 400px; */
     margin-bottom: 1em;
 
     display: flex;
@@ -700,9 +700,15 @@ button {
     gap: 1.2em;
 }
 
+.instagram-wrapper{
+    padding: 0 2em;
+    margin-top: 10em;
+    border-bottom: 1px solid var(--secondary);
+}
+
 @media (max-width:980px) {
-    .reviews-wrapper {
-        margin-top: 3em;
+    .reviews-wrapper, .instagram-wrapper {
+        margin-top: 2em;
     }
 
     .reviews-container {
@@ -795,7 +801,7 @@ button {
     stroke: rgb(0, 0, 0);
     stroke-width: 0;
     stroke-linecap: butt;
-    transition: 3.4s;
+    transition: 1.4s;
 }
 .contact-info-item:hover {
     transform: scale(1.02);

@@ -58,12 +58,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     handleScroll();
 });
 
+
 window.addEventListener('load', () => {
     const script = document.createElement('script');
     script.src = 'https://cdn.trustindex.io/loader.js?57d05705979a0228f4469947f4a';
     script.defer = true;
+
+    const instaFeed = document.createElement('script');
+    instaFeed.src = 'https://cdn.trustindex.io/loader-feed.js?63526185946e88162136db9c518';
+    instaFeed.defer = true;
+
     const container = document.querySelector('.reviews-container');
-    if (container) container.appendChild(script);
+    const feedContainer = document.querySelector('.instagram-feed');
+
+    if(container && feedContainer){
+        container.appendChild(script);
+        feedContainer.appendChild(instaFeed);
+    };
 });
 
 const blocks = document.querySelectorAll('.block');
@@ -95,19 +106,21 @@ function handleScroll(){
     };
 };
 document.addEventListener('scroll', handleScroll, { passive: true });
+    const faqContainer = document.getElementById("faq-container");
+    if(faqContainer){
+        const allItems = faqContainer.querySelectorAll(".faq-item");
+        if(allItems.length){
+            allItems[0].classList.add("open");
+        };
 
-const faqContainer = document.getElementById("faq-container");
-if(faqContainer){
-    faqContainer.addEventListener("click", (e) => {
-        const question = e.target.closest("[data-faq-question]");
-        if (!question) return;
+        faqContainer.addEventListener("click", (e) => {
+            const question = e.target.closest("[data-faq-question]");
+            if (!question) return;
+            const item = question.parentElement;
 
-        const item = question.parentElement;
-        const allItems = document.querySelectorAll(".faq-item");
-
-        allItems.forEach(i => {
-            if (i !== item) i.classList.remove("open");
+            allItems.forEach(i => {
+                if (i !== item) i.classList.remove("open");
+            });
+            item.classList.toggle("open");
         });
-        item.classList.toggle("open");
-    });
 };
