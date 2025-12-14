@@ -201,22 +201,34 @@ h1{
     font-weight: 500;
 }
 
+a{
+    color: black;
+
+}
 /* <!-- ----Intro Section--------> */
 .intro-section {
-    display: none !important;
     padding: 3em ;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #E7D8BA;
+    direction: rtl;
+}
+
+.intro-section h2{
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 .intro-text {
     width: 60%;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: #626060;
     text-align: center;
     transition: .5s;
+}
+.intro-text p{
+    text-align: center;
 }
 
 .intro-text:hover {
@@ -269,22 +281,32 @@ h1{
 
 .culinary-page-img {
     background-image: url('/layout/bg5.webp');
+    width: 110%;
+    margin: 2em 0em 0em 2.5em;
 }
-
 .events-page-img {
     background-image: url('/layout/arrangement-6.webp');
 }
+.weddings-page-img{
+    background-image: url('/images/alegro-events-weddings-3.jpg');
+    width: 105%;
+}
 
 .events-img-box{
+    margin-top: 3em;
     height: 550px;
 }
 .culinary-img-box{
-    margin-top: 2em;
+    margin-top: 3em;
     height: 550px;
 }
-.culinary-page-img{
-    width: 110%;
-    margin: 2em 0em 0em 2.5em;
+.weddings-img-box{
+    margin-top: 2em;
+    height: 450px;
+}
+
+.events-info-box p a{
+    font-size: 1.15rem;
 }
 
 .info-box-reverse {

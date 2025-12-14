@@ -57,11 +57,16 @@
         padding: 2em 0;
         margin: 0;
     }
+    .intro-section h2 {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: .5em;
+    }
 
     .intro-text,
     .intro-span {
         width: 85%;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 
     .general-info {
@@ -88,20 +93,23 @@
         height: 1130px;
     }
     .events-info-box{
-        height: 1233px;
+        height: 1420px;
     }
     .gallery-info-box{
         height: 710px
     }
     .weddings-info-box{
-        height: 700px;
+        height: 1028px;
     }
 
     .culinary-img-box{
         height: 17% !important;
     }
     .events-img-box{
-        height: 20% !important;
+        height: 233px !important;
+    }
+    .weddings-img-box{
+        height: 250px !important;
     }
 
     .gen-info-box h2{
@@ -126,7 +134,7 @@
         bottom: 15px;
         min-width: 95vw !important;
         grid-column: 1 /-1;
-
+        padding: 0 0 0 6px;
         display: flex;
         flex-direction: column;
         gap: .5em;
