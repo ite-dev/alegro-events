@@ -50,7 +50,8 @@
     position: sticky;
     top: 25px;
     height: 50px;
-    overflow: hidden;
+    margin-bottom: 100px;
+
     text-align: center;
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
@@ -59,17 +60,6 @@
     align-items: center;
     justify-content: center;
     z-index: 50;
-}
-
-.sticky-title p {
-    color: var(--accent) !important;
-    text-shadow: -1px 0px black;
-    font-size: 1.15rem;
-}
-
-.sticky-title p:hover {
-    color: goldenrod;
-    font-size: 1.25rem;
 }
 
 .sticky-title h2 {
@@ -88,13 +78,13 @@
     cursor: pointer;
     transition: .5s;
     color: var(--accent);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-shadow: -1px .5px 1px black;
 }
 
 .gallery-filter:hover {
     color: goldenrod;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .gallery-section h2 {
@@ -228,7 +218,7 @@
 .load-more-btn {
     display: block;
     margin: 2em auto;
-    padding: 1em 2em;
+    padding: .4em 2em;
     background-color: #96722b;
     color: #fff;
     border: none;
@@ -243,32 +233,29 @@
 }
 
 @media (max-width:980px) {
+    .sticky-title{
+        margin-bottom: 0px;
+    }
     .gallery-menu {
         display: flex;
-        gap: .3em;
+        gap: .6em;
         font-weight: 600;
     }
 
     .gallery-filter {
         transition: .5s;
-        color: var(--accent);
-        font-size: .9rem;
-        text-shadow: -1px .5px 1px black;
+    
+        font-size: 1rem;
+        text-shadow: -1px .5px 1px rgba(0, 0, 0, 0.036);
+        font-weight: 700;
+    }
+    .gallery-filter:hover{
+        font-size: 1rem;
     }
 
     .gallery-section h2 {
         min-width: 100%;
         font-size: 1.4rem;
-    }
-
-    .sticky-title p {
-        text-shadow: unset;
-        font-size: 1rem;
-        border-radius: 0px !important;
-    }
-
-    .sticky-title p:hover {
-        font-size: 1.1rem;
     }
 
     .cards-container {
@@ -296,5 +283,9 @@
         background: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
         transition: background 1.25s ease-in-out;
+    }
+
+    .load-more-btn{
+        padding: 6px 12px;
     }
 }
