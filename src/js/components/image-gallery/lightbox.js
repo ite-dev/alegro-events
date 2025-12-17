@@ -1,7 +1,6 @@
 
 
-export function initLightbox(containerSelector = ".cards-container"){
-    const container = document.querySelector(containerSelector);
+export function initLightbox(container){
     if (!container) return;
 
     let lightbox, lightboxImg, currentIndex = 0;

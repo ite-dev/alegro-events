@@ -252,7 +252,7 @@
         padding: 3em 0 0;
     }
 
-    .sticky-title {
+    /*     .sticky-title {
         min-width: 100%;
         overflow: hidden;
         border: none;
@@ -261,10 +261,10 @@
     }
 
     .sticky-title h2,
-    .projects-menu {
+    .gallery-menu {
         z-index: 5;
         position: relative;
-    }
+    } */
 
     /* <!-- ----Mobile Projects Section End----------> */
 

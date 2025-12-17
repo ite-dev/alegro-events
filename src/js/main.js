@@ -30,23 +30,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     const map = document.querySelector("iframe[data-src]");
-    if (!map) {
-
+    if(!map){
     } else {
         const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
+            if(entry.isIntersecting){
                 map.src = map.dataset.src;
                 observer.disconnect();
-            }
+            };
         });
         observer.observe(map);
     };
 
-    if (document.querySelector('#contactForm')) {
-        toastUtils.infoMsg("ברוכים הבאים לאלגרו !");
-    };
+    if(window.location.pathname === "/" || window.location.pathname === "/index.html") { toastUtils.infoMsg("ברוכים הבאים לאלגרו !"); };
+/*     if(window.location.pathname === "/pages/events.html") 
+        { toastUtils.infoMsg(""); }; */
 
-    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html"){
         const homeDefaultBtn = document.querySelector('#homepageDefault');
         homeDefaultBtn?.addEventListener('click', (e) => {
             e.preventDefault();
@@ -85,7 +84,6 @@ const blockReverse = document.querySelectorAll('.block-reverse');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting){
-
             entry.target.classList.add('frozen');
             observer.unobserve(entry.target);
         };

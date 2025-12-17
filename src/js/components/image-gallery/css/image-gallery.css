@@ -1,4 +1,3 @@
-
 .cards-container {
     display: none;
     background: transparent;
@@ -27,18 +26,16 @@
     overflow: hidden;
     transition: .6s;
     cursor: pointer;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.712);
 }
 
-.no-scroll{
+.no-scroll {
     overflow: hidden;
 }
 
 .cards-box:hover {
     transform: scale(1.04);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
     border-radius: 10px;
-    border: 1px solid var(--secondary);
     z-index: 1;
 }
 
@@ -79,7 +76,7 @@
     color: var(--secondary) !important;
 }
 
-.projects-menu {
+.gallery-menu {
     display: flex;
     flex-direction: row-reverse;
     gap: 1em;
@@ -87,7 +84,7 @@
     font-weight: 700;
 }
 
-.projects-filter {
+.gallery-filter {
     cursor: pointer;
     transition: .5s;
     color: var(--accent);
@@ -95,7 +92,7 @@
     text-shadow: -1px .5px 1px black;
 }
 
-.projects-filter:hover {
+.gallery-filter:hover {
     color: goldenrod;
     font-size: 1.2rem;
 }
@@ -133,7 +130,7 @@
     min-height: 100%;
     max-height: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 75%;
     overflow: hidden;
     position: relative;
 }
@@ -154,10 +151,11 @@
     bottom: 0;
 }
 
-.cards-box:hover img,
-.cards-box img:hover {
-    scale: 1.04;
+.cards-box:hover img {
+    scale: 1.06;
+    transform: rotateY(20deg);
 }
+
 
 .card-tags {
     background: #052c62;
@@ -227,14 +225,31 @@
     box-shadow: 0 0 8px var(--secondary);
 }
 
+.load-more-btn {
+    display: block;
+    margin: 2em auto;
+    padding: 1em 2em;
+    background-color: #96722b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #b0894f;
+}
+
 @media (max-width:980px) {
-    .projects-menu {
+    .gallery-menu {
         display: flex;
         gap: .3em;
         font-weight: 600;
     }
 
-    .projects-filter {
+    .gallery-filter {
         transition: .5s;
         color: var(--accent);
         font-size: .9rem;
@@ -251,7 +266,8 @@
         font-size: 1rem;
         border-radius: 0px !important;
     }
-    .sticky-title p:hover{
+
+    .sticky-title p:hover {
         font-size: 1.1rem;
     }
 

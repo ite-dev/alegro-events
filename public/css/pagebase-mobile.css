@@ -45,18 +45,21 @@
     /* <!-- ----Mobile Home Section--------------> */
 
     /* <!-- ----Mobile Home Section End----------> */
-    main{
+    main {
         max-width: 100vw;
         overflow: hidden;
     }
-    h1{
+
+    h1 {
         padding-top: 1.5em;
         font-size: 1.3rem;
     }
+
     .intro-section {
         padding: 2em 0;
         margin: 0;
     }
+
     .intro-section h2 {
         text-align: center;
         font-size: 1.1rem;
@@ -86,33 +89,39 @@
         height: 700px;
     }
 
-    .contact-us-info-box{
+    .contact-us-info-box {
         height: 585px;
     }
-    .culinary-info-box{
+
+    .culinary-info-box {
         height: 1130px;
     }
-    .events-info-box{
+
+    .events-info-box {
         height: 1420px;
     }
-    .gallery-info-box{
+
+    .gallery-info-box {
         height: 710px
     }
-    .weddings-info-box{
+
+    .weddings-info-box {
         height: 1028px;
     }
 
-    .culinary-img-box{
+    .culinary-img-box {
         height: 17% !important;
     }
-    .events-img-box{
+
+    .events-img-box {
         height: 233px !important;
     }
-    .weddings-img-box{
+
+    .weddings-img-box {
         height: 250px !important;
     }
 
-    .gen-info-box h2{
+    .gen-info-box h2 {
         font-size: 1rem;
         font-weight: 600;
         color: #96722b !important;
@@ -127,7 +136,7 @@
         padding: 3em .5em 3em 2em;
         position: relative;
     }
-    
+
     .full-width {
         position: absolute;
         right: 10px;
@@ -185,7 +194,7 @@
         padding: 3em 0 0;
     }
 
-    .sticky-title {
+    /*     .sticky-title {
         min-width: 100%;
         overflow: hidden;
         border: none;
@@ -194,10 +203,10 @@
     }
 
     .sticky-title h2,
-    .projects-menu {
+    .gallery-menu {
         z-index: 5;
         position: relative;
-    }
+    } */
 
     /* <!-- ----Mobile Projects Section End----------> */
 

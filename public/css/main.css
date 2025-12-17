@@ -959,12 +959,12 @@ button {
         .block {
             animation: appear 1.5s forwards;
             animation-timeline: view();
-            animation-range: entry 0% cover 30%;
+            animation-range: entry 20% cover 30%;
         }
 
         .block-reverse {
             animation: appearReverse 1.5s forwards;
             animation-timeline: view();
-            animation-range: entry 0% cover 30%;
+            animation-range: entry 20% cover 30%;
         }
     }
