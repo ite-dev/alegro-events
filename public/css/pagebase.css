@@ -195,7 +195,7 @@ button {
 }
 
 h1{
-    width: 100%;
+    width: 95%;
     font-size: 3rem;
     text-align: center;
     margin-top: .5em;
@@ -304,6 +304,10 @@ a{
     background-image: url('/layout/weddings.webp');
     width: 105%;
 }
+.bar-mitzvah-page-img{
+    background-image: url('/layout/weddings5.webp');
+    width: 105%;
+}
 
 .events-img-box{
     margin-top: 3em;
@@ -316,6 +320,14 @@ a{
 .weddings-img-box{
     margin-top: 2em;
     height: 500px;
+}
+.bar-mitzvah-img-box{
+    margin-top: 2em;
+    height: 500px;
+}
+.gallery-img-box{
+    margin-top: 2em;
+    height: 533px;
 }
 
 .events-info-box p a{

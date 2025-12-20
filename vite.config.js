@@ -17,6 +17,7 @@ export default defineConfig({
                 gallery: "pages/gallery.html",
                 events: "pages/events.html",
                 weddings: "pages/weddings.html",
+                barbatmitzvah: "pages/bar-bat-mitzvah.html",
                 culinary: "pages/culinary.html",
                 contactUs: "pages/contact-us.html",
                 "404": "404.html",

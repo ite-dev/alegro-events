@@ -97,15 +97,19 @@
     }
 
     .events-info-box {
-        height: 1450px;
+        height: 1510px;
     }
 
     .gallery-info-box {
-        height: 710px
+        height: 895px;
     }
 
     .weddings-info-box {
         height: 1028px;
+    }
+
+    .bar-mitzvah-info-box{
+        height: 1180px;
     }
 
     .culinary-img-box {
@@ -118,6 +122,10 @@
 
     .weddings-img-box {
         height: 250px !important;
+    }
+
+    .bar-mitzvah-img-box{
+        height: 280px !important;
     }
 
     .gen-info-box h2 {

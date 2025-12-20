@@ -12,7 +12,7 @@
 }
 
 .cards-box {
-    background: rgba(0, 0, 0, 0.2);
+    background: transparent;
     object-fit: contain;
     min-width: 250px;
     min-height: 250px;
@@ -26,7 +26,6 @@
     overflow: hidden;
     transition: .6s;
     cursor: pointer;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.712);
 }
 
 .no-scroll {
@@ -123,6 +122,7 @@
     padding-top: 75%;
     overflow: hidden;
     position: relative;
+
 }
 
 .cards-img-box img {
@@ -139,6 +139,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.712);
 }
 
 .cards-box:hover img {
