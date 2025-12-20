@@ -71,7 +71,7 @@ Priority-Content:
   /pages/gallery/
   /pages/contact-us/
   /pages/henna/
-  /pages/barmitzvah/
+  /pages/bar-bat-mitzvah/
   /menu
   /about
   /
