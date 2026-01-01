@@ -2,7 +2,7 @@
     min-width: 100vw;
     max-width: 100vw;
     position: fixed;
-    height: 75px;
+    height: 50px;
     left: 0;
     top: 0;
     z-index: 100;
@@ -19,7 +19,7 @@
 .nav-bar {
     min-width: 350px;
     max-width: 100%;
-    height: 65px;
+    height: 50px;
     padding: 0px 4px;
 
     display: flex;
@@ -32,32 +32,12 @@
     
     visibility: hidden;
     opacity: 0;
-    animation: show-content .3s linear forwards;
-}
-
-.navbar-logo {
-    overflow: visible;
-    display: none;
-}
-
-.navbar-logo img {
-    position: absolute;
-    top: 0px;
-    left: 25px;
-    transform: translateY(-5px);
-    width: 158px !important;
-    height: 115px !important;
-    z-index: 2;
+    animation: show-content .2s linear forwards;
 }
 
 .nav-bar a {
     width: fit-content;
     text-decoration: none;
-}
-
-.nav-bar img {
-    width: 50px;
-    height: 50px;
 }
 
 .checkbox-container img {
@@ -94,7 +74,7 @@
 .nav-bar ul li {
     width: fit-content;
     list-style-type: none;
-    transition: .5s;
+    transition: .2s;
 }
 
 .nav-bar ul li:hover {
@@ -107,7 +87,7 @@
     font-size: var(--fs-navli);
     font-weight: 800;
     color: var(--accent);
-    text-shadow: -1px 1px rgba(0, 0, 0, 1);
+    text-shadow: 0px 1px rgba(0, 0, 0, 1);
     height: 100%;
     display: flex;
     align-items: center;
