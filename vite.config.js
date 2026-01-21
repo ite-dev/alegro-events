@@ -10,7 +10,7 @@ export default defineConfig({
         target: "es2018",
         sourcemap: false,
         cssCodeSplit: true,
-        assetsInlineLimit: 4096, // inline small images/fonts <4KB
+        assetsInlineLimit: 4096,
         rollupOptions: {
             input: {
                 main: "index.html",
