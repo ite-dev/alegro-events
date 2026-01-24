@@ -113,6 +113,12 @@ span {
 .nav-header{
     position: relative !important;
 }
+
+.nav-bar ul li a,
+.nav-bar ul li p,
+.nav-bar ul li button {
+    color: #dfbd79 !important;
+}
 /* <!-- ----Wrapper Animation--------> */
 .wrapper-animation {
     margin: 0;

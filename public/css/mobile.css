@@ -44,21 +44,19 @@
 
     /* <!-- ----Mobile Home Section--------------> */
     .home-section {
-        min-height: 550px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        height: calc(100svh + 0px);
-
+        margin-top: 55px;
+        padding: .5em 1em 1em 1em;
+        height: calc(100svh - 55px);
+        min-height: unset;
+        max-height: calc(100svh - 55px);
     }
 
     .home-bg-overlay {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        max-height: 100%;
         z-index: -1;
-
         background-image: url('/layout/mobile-home-bg.webp');
     }
 
@@ -123,16 +121,15 @@
         height: 50px;
     }
 
-    .home-info .social-icons {
-        margin-top: 2.5em;
+    .social-icons{
+        padding: 0; 
     }
 
-    .home-section .social-icons-box {
-
+    .social-icons-box {
         gap: 1px;
     }
 
-    .home-section .social-icons .social-icons-box a {
+    .social-icons .social-icons-box a {
         font-size: 2rem;
     }
 
@@ -143,16 +140,6 @@
         stroke-width: 0;
         stroke-linecap: butt;
     }
-
-    .home-info .social-icons {
-        padding: 3px 0px 1em;
-        transform: translateY(20px) !important;
-        border-bottom: unset;
-
-        position: absolute;
-        bottom: 15px;
-    }
-
 
     .home-info p {
         text-align: right;
@@ -246,6 +233,13 @@
         background-image: url('/layout/dishes-appetizers.webp');
     }
 
+    .instagram-wrapper{
+        padding: 0;
+        margin: 0;
+    }
+    .instagram-feed{
+        padding: 0em 2em;
+    }
     /* <!-- ----Mobile Projects Section--------------> */
     .gallery-section {
         min-height: 350px;
@@ -270,7 +264,8 @@
 
     .faq-section {
         margin-top: 0em;
-        padding: 1em 0 0em 0em
+        padding: 2.5em 0 0em 0em;
+        gap: 1em;
     }
 
     .faq-section h2 {
@@ -339,7 +334,7 @@
     }
 
     .contact-info {
-        padding: 3em 0em;
+        padding: 2em 0em;
     }
 
     .contact-items-box {

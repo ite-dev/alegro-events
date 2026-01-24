@@ -199,19 +199,20 @@ button {
 
 /* <!-- ----Home Section--------> */
 .home-section {
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    height: 100vh;
+    
+    height: calc(98vh - 60px);
     min-height: 750px;
     max-height: 3000px;
     min-width: 100%;
     max-width: 100%;
-
+    padding: 0em 1.5em 1.5em 1.5em;
     position: relative;
 
-    box-shadow: 0px 0px 15px 1px var(--secondary);
+/*     box-shadow: 0px 0px 15px 1px var(--secondary); */
 }
 
 .home-bg-overlay {
@@ -225,13 +226,11 @@ button {
     background-repeat: no-repeat;
     background-position: center center;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    border-radius: 50px;
 }
 
 .home-info {
+    display: none !important;
     padding-top: 1em;
     display: flex;
     flex-direction: column;
@@ -333,17 +332,19 @@ button {
     transform: scale(1.005);
 }
 
-.home-info .social-icons {
+.social-icons {
     padding: 3px 15px 1em;
     transform: translateY(15px);
     display: flex;
     align-items: center;
+    justify-content: center;
     opacity: 0;
     animation: show-content 1s linear forwards;
     animation-delay: 1.1s;
+    border-bottom: 1px solid #E7D8BA;
 }
 
-.home-section .social-icons .social-icons-box a {
+.social-icons .social-icons-box a {
     display: inline-flex;
     padding: 10px;
     margin: 0 8px;
@@ -353,16 +354,13 @@ button {
     transition: 0.3s;
 }
 
-.home-section .social-icons .social-icons-box a:hover {
+.social-icons .social-icons-box a:hover {
     box-shadow: 0 0 1px var(--accent);
     transform: scale(1.1) translateY(-5%);
 }
 
-
-
 .social-icons {
     transform: translateY(-0px) !important;
-
 }
 
 .social-icons-box {
@@ -422,7 +420,7 @@ button {
 }
 
 .intro-text, .intro-span {
-    width: 56%;
+    width: 70%;
     font-size: 1.8rem;
     color: #626060;
     text-align: center;
@@ -702,11 +700,10 @@ button {
 .instagram-wrapper{
     padding: 0 2em;
     margin-top: 10em;
-    border-bottom: 1px solid var(--secondary);
 }
 
 @media (max-width:980px) {
-    .reviews-wrapper, .instagram-wrapper {
+    .reviews-wrapper{
         margin-top: 2em;
     }
 
