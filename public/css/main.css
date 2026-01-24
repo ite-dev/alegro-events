@@ -804,6 +804,7 @@ button {
 }
 
 #contact-map {
+    min-height: 250px;
     width: 25%;
     border-right: 1px solid #E7D8BA;
     display: flex;

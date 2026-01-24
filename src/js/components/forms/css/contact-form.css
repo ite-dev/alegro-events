@@ -274,6 +274,7 @@ form:valid .form-btn {
     .contact-info {
         width: 100%;
         border-left: unset;
+            border-bottom: 1px solid #E7D8BA;
     }
 
     .contact-items-box{
