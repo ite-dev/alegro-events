@@ -40,9 +40,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
-            min-height: 100vh;
-            max-height: 3000px;
+
             min-width: 100%;
             max-width: 100%;
         }
@@ -661,20 +659,6 @@
         <!-- --------------Home Section End-------------- -->
 
         <!-- ----------------Intro Section---------------- -->
-        <nav class="breadcrumb" aria-label="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <ol>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="/">
-                        <span itemprop="name">דף הבית</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">אלגרו</span>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ol>
-        </nav>
 
         <section class="intro-section" id="intro-section">
             <p class="intro-text">
@@ -694,13 +678,27 @@
             </p>
             <span class="intro-span">במקום שתפור בדיוק בשבילכם.</span>
         </section>
+                <nav class="breadcrumb" aria-label="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <ol>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">דף הבית</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span itemprop="name">אלגרו</span>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
+                </nav>
         <!-- ----------------End Intro Section---------------- -->
 
         <!-- ----------------General Info Section---------------- -->
         <section class="general-info" id="general-info">
             <div class="gen-info-box view">
                 <div class="info-img-box-left block">
-                    <div class="info-img-left"></div>
+                    <div class="info-img-left img-1"></div>
                 </div>
 
                 <div class="info-box-text">
@@ -708,17 +706,16 @@
                     <p>
                         אולם אלגרו מציע חלל אירועים מודרני, מרווח ומעוצב עד הפרט האחרון. ומארח בין
                         <span>250 ל־400 אורחים</span>
-                        העיצוב משלב אלגנטיות נקייה עם אווירה חמה, כך שכל אירוע מרגיש אישי,
+                        העיצוב משלב אלגנטיות נקייה עם אווירה חמה, כך שכל אירוע מרגיש אישי, מוקפד,
+                        <span>ומתאים בדיוק לסגנון שלכם.</span>
                     </p>
-                    <div class="full-width">
-                        <p>
-                            מוקפד
-                            <span>ומתאים בדיוק לסגנון שלכם.</span>
-                        </p>
                         <p>
                             החלל הגדול מאפשר
                             <span>התאמה מושלמת לאירועים מכל סוג</span>
-                            חתונות, חינה, בר או בת מצווה, אירועים פרטיים ואירועים עסקיים בירושלים
+                            חתונות, חינה, בר או בת מצווה, אירועים פרטיים ואירועים עסקיים 
+                            <strong>
+                            בירושלים.
+                            </strong>
                         </p>
 
                         <p>
@@ -738,17 +735,19 @@
                         <span class="event-types">
                             <a href="/pages/events.html" aria-label="למידע על כל סוגי האירועים באולם אלגרו">
                                 סוגי אירועים
-                                &nbsp;
-                                &nbsp;
-                                &nbsp;
+                                                                &nbsp;
+                                                                &nbsp;
+                                                                &nbsp;
                             </a>
                         </span>
-                    </div>
                 </div>
             </div>
 
-            <div class="gen-info-box info-box-reverse mobile-hide">
-                <div class="info-box-text text-right">
+            <div class="gen-info-box">
+                <div class="info-img-box-left block">
+                    <div class="info-img-left img-2"></div>
+                </div>
+                <div class="info-box-text">
                     <h2>קולינריה
                         <span class="visible-content">desktop</span>
                     </h2>
@@ -760,7 +759,7 @@
                         ויצירתיות
                         <span>בלתי מתפשרת.</span>
                     </p>
-                    <div class="full-width culinary">
+
                         <p>
                             התפריט מציע
                             <span>גיוון והתאמה אישית</span>
@@ -800,68 +799,66 @@
                                 &nbsp;
                             </a>
                         </span>
-                    </div>
+
                 </div>
-                <div class="info-img-box-right block-reverse">
-                    <div class="info-img-right"></div>
-                </div>
+
             </div>
 
-            <div class="gen-info-box mobile-show">
-                <div class="info-img-box-left block">
-                    <div class="info-img-left culinary-img"></div>
-                </div>
+            <!--     <div class="gen-info-box mobile-hide ">
+                    <div class="info-img-box-left block">
+                        <div class="info-img-left culinary-img"></div>
+                    </div>
 
-                <div class="info-box-text">
-                    <h2>קולינריה</h2>
-                    <p>
-                        באלגרו, השף אהרון שאשא יוצר
-                        <span>חוויה קולינרית</span>
-                        מוקפדת
-                        <span>מחומרי גלם איכותיים</span>
-                        ויצירתיות
-                        <span>בלתי מתפשרת.</span>
-                    </p>
-                    <p>
-                        התפריט מציע
-                        <span>גיוון והתאמה אישית</span>
-                        המשלב בין חומרי גלם טריים, טכניקות מודרניות וטעמים מרגשים שכל אורח זוכר.
-                    </p>
-                    <div class="full-width culinary">
+                    <div class="info-box-text">
+                        <h2>קולינריה</h2>
                         <p>
-                            מגוון רחב של מנות פתיחה, עיקריות וקינוחים, עם אפשרות להתאמה אישית לכל סוג של אירוע -
-                            <em>חתונות</em>,
-                            <em>חינה</em>,
-                            <em>בר ובת מצווה</em>,
-                            אירועים פרטיים ואירועים עסקיים בירושלים.
+                            באלגרו, השף אהרון שאשא יוצר
+                            <span>חוויה קולינרית</span>
+                            מוקפדת
+                            <span>מחומרי גלם איכותיים</span>
+                            ויצירתיות
+                            <span>בלתי מתפשרת.</span>
                         </p>
-
                         <p>
-                            הגישה שלנו היא ליצור אוכל אסתטי, מוקפד ונדיב, המוגש באהבה ובסטנדרט שמציב את אלגרו ברמה אחת
-                            מעל
-                            והופכים כל מנה לחלק
-                            <span>
-                                בלתי נשכח מהאירוע.
+                            התפריט מציע
+                            <span>גיוון והתאמה אישית</span>
+                            המשלב בין חומרי גלם טריים, טכניקות מודרניות וטעמים מרגשים שכל אורח זוכר.
+                        </p>
+                        <div class="full-width culinary">
+                            <p>
+                                מגוון רחב של מנות פתיחה, עיקריות וקינוחים, עם אפשרות להתאמה אישית לכל סוג של אירוע -
+                                <em>חתונות</em>,
+                                <em>חינה</em>,
+                                <em>בר ובת מצווה</em>,
+                                אירועים פרטיים ואירועים עסקיים בירושלים.
+                            </p>
+
+                            <p>
+                                הגישה שלנו היא ליצור אוכל אסתטי, מוקפד ונדיב, המוגש באהבה ובסטנדרט שמציב את אלגרו ברמה אחת
+                                מעל
+                                והופכים כל מנה לחלק
+                                <span>
+                                    בלתי נשכח מהאירוע.
+                                </span>
+                            </p>
+
+                            <P>
+                                כל אירוע תקבלו חוויה קולינרית שלמה שילוב מדויק בין טעם, נראות ושירות, שמעניק לאירוע שלכם
+                                אופי ייחודי ואווירה מפנקת
+                                באמת.
+                            </P>
+
+                            <span class="event-types">
+                                <a href="/pages/culinary.html" aria-label="לקביעת ביקור וטעימות באולם אלגרו">
+                                    טעימה מהאוכל שלנו
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                </a>
                             </span>
-                        </p>
-
-                        <P>
-                            כל אירוע תקבלו חוויה קולינרית שלמה שילוב מדויק בין טעם, נראות ושירות, שמעניק לאירוע שלכם
-                            אופי ייחודי ואווירה מפנקת
-                            באמת.
-                        </P>
-
-                        <span class="event-types">
-                            <a href="/pages/culinary.html" aria-label="לקביעת ביקור וטעימות באולם אלגרו">
-                                טעימה מהאוכל שלנו
-                                &nbsp;
-                                &nbsp;
-                                &nbsp;
-                            </a>
-                        </span>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
             </div>
         </section>
         <!-- ----------------End General Info Section---------------- -->

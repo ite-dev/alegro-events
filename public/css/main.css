@@ -199,17 +199,15 @@ button {
 
 /* <!-- ----Home Section--------> */
 .home-section {
-    margin-top: 75px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    height: calc(98vh - 60px);
-    min-height: 750px;
-    max-height: 3000px;
+    height: calc(80vh - 60px);
     min-width: 100%;
     max-width: 100%;
-    padding: 0em 1.5em 1.5em 1.5em;
+    padding: 0em 2.5em 1.5em;
     position: relative;
 
 /*     box-shadow: 0px 0px 15px 1px var(--secondary); */
@@ -437,10 +435,10 @@ button {
 /* <!-- ----General Info Section--------> */
 
 .general-info {
-    padding: 2em 0 7.5em 0;
+    padding: 2em 0 0;
     display: flex;
     flex-direction: column;
-    gap: 8em;
+    gap: 3em;
 }
 
 .gen-info-box.mobile-show {
@@ -448,9 +446,8 @@ button {
 }
 
 .gen-info-box {
-    height: 500px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 47% 53%;
 }
 
 .gen-info-box h2 {
@@ -465,23 +462,43 @@ button {
 }
 
 .info-img-box-left {
-    margin-top: 3em;
-    border: 3px solid #E7D8BA;
+    display: flex;
+    align-items: center;
+/*     border: 3px solid #E7D8BA; */
     border-left: none;
-    width: 70%;
-    height: 88%;
+    width: 93%;
+    height: 600px;
+    
 }
 
 .info-img-left {
-    margin: 4.5% 0em 0em 2.5em;
-
-    height: 88%;
-    width: 110%;
+    margin-left: 5em;
+    height: 80%;
+    width: 80%;
     aspect-ratio: 16 / 9;
-    background-image: url('/layout/bg2.jpg');
+/*     background-image: url('/layout/bg2.jpg'); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    border-radius: 50px;
+}
+.img-1{
+        background-image: url('/layout/arrangement-5.webp');
+}
+.img-2{
+        background-image: url('/layout/קולינריה.webp');
+}
+.info-img-left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            #fafafa 0%,
+            rgba(250, 250, 250, 0.99) 20%,
+            rgba(250, 250, 250, 0.85) 25%,
+            rgba(250, 250, 250, 0.75) 30%,
+            rgba(250, 250, 250, 0) 40%);
+    pointer-events: none;
 }
 
 .img-test {
@@ -501,7 +518,7 @@ button {
     right: 0;
     top: 0;
     margin-top: 5em;
-    border: 3px solid #E7D8BA;
+    /* border: 3px solid #E7D8BA; */
     border-right: none;
     width: 37%;
     height: 110%;
@@ -509,7 +526,7 @@ button {
 
 .info-img-right {
     margin: 2em 0em 0em 0em;
-
+    border-radius: 50px;
     height: 88%;
     width: 105%;
     aspect-ratio: 4 / 3;
@@ -530,7 +547,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 4em 2.5em 2em 2.5em;
+    padding: 2em 2.5em 2em 2.5em;
 
 }
 
@@ -545,7 +562,7 @@ button {
 .event-types {
     text-decoration: underline;
     cursor: pointer;
-
+    direction: rtl;
     transition: .5s;
 }
 
@@ -699,7 +716,7 @@ button {
 
 .instagram-wrapper{
     padding: 0 2em;
-    margin-top: 10em;
+    margin-top: 2em;
 }
 
 @media (max-width:980px) {
