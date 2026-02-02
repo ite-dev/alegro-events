@@ -53,21 +53,21 @@ export function initForm(){
                 if(res.ok){
                     toast.hideToast();
                     formSubmitted();
-                    successMsg("פנייתכם נשלחה בהצלחה - ניצור עימכם קשר בהקדם :)");
+                    successMsg("פנייתכם נשלחה בהצלחה - ניצור עמכם קשר בהקדם :)");
                     e.target.reset();
                 } else {
                     toast.hideToast();
-                    errorMsg("שליחת הפנייה נכשלה, אנא נסו שנית..");
+                    errorMsg("שליחת הפנייה נכשלה, אנא נסו שנית.");
                 };
             } catch (err) {
                 console.error(err);
                 toast.hideToast();
                 if(err.message === 'Request timed out'){
-                    errorMsg("Request timed out, please try again - לקח יותר מידי זמן לבקשה, אנא נסו שנית");
+                    errorMsg(".הבקשה נמשכה זמן רב מדי, אנא נסו שנית");
                 } else if (!navigator.onLine){
-                    errorMsg("No internet connection - אנא וודאו שאתם מחוברים לאינטרנט :)");
+                    errorMsg("No internet connection - אנא ודאו שאתם מחוברים לאינטרנט :)");
                 } else {
-                    errorMsg("something went wrong.. הייתה תקלה בשליחת ההודעה, אנא נסו שנית..");
+                    errorMsg("אירעה תקלה בשליחת ההודעה, אנא נסו שנית.");
                 };
             } finally {
                 setTimeout(() => submitBtn.disabled = false, 5000);
