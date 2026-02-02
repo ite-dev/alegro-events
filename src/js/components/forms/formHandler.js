@@ -53,10 +53,11 @@ export function initForm(){
                 if(res.ok){
                     toast.hideToast();
                     formSubmitted();
-                    successMsg("פנייתכם נשלחה בהצלחה - ניצור עימכם קשר בהקדם :)")
+                    successMsg("פנייתכם נשלחה בהצלחה - ניצור עימכם קשר בהקדם :)");
                     e.target.reset();
                 } else {
-                    errorMsg("שליחת הפנייה נכשלה, אנא נסו שנית..")
+                    toast.hideToast();
+                    errorMsg("שליחת הפנייה נכשלה, אנא נסו שנית..");
                 };
             } catch (err) {
                 console.error(err);
@@ -66,7 +67,7 @@ export function initForm(){
                 } else if (!navigator.onLine){
                     errorMsg("No internet connection - אנא וודאו שאתם מחוברים לאינטרנט :)");
                 } else {
-                    errorMsg("something went wrong.. הייתה תקלה בשליחת ההודעה, אנא נסו שנית..")
+                    errorMsg("something went wrong.. הייתה תקלה בשליחת ההודעה, אנא נסו שנית..");
                 };
             } finally {
                 setTimeout(() => submitBtn.disabled = false, 5000);

@@ -721,6 +721,7 @@ button {
 
 @media (max-width:980px) {
     .reviews-wrapper{
+        min-height: 650px;
         margin-top: 2em;
     }
 

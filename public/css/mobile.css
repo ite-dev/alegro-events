@@ -48,8 +48,8 @@
         flex-direction: column-reverse;
         align-items: center;
         margin-top: 55px;
-        padding: .5em 1em 1em 1em;
-        height: calc(100svh - 55px);
+        padding: .5em 1em 1.5em 1em;
+        height: calc(99svh - 55px);
         min-height: unset;
         max-height: calc(99svh - 55px);
     }
@@ -149,19 +149,19 @@
     /* <!-- ----Mobile Home Section End----------> */
 
     .intro-section {
-        padding: 0 0 2em 0;
+        padding: .5em 0 2em 0;
         margin: 0;
     }
 
     .intro-text,
     .intro-span {
-        width: 85%;
+        width: 88%;
         font-size: 1.25rem;
     }
 
     .general-info {
         gap: 0em;
-        padding: 0 0 3em;
+        padding: 0 0 2em 0 ;
     }
 
     .gen-info-box {
@@ -244,6 +244,7 @@
     }
 
     .instagram-wrapper{
+        min-height: 550px;
         padding: 0;
         margin: 0;
     }
