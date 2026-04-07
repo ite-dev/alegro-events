@@ -101,6 +101,7 @@
     width: fit-content;
     list-style-type: none;
     transition: .2s;
+    border-radius: unset;
 }
 
 .nav-bar ul li:hover {

@@ -78,13 +78,14 @@
     }
 
     .gen-info-box {
-        height: 650px;
-        grid-template-columns: 40% 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         border-bottom: 1px solid var(--secondary);
-        padding-bottom: 1em;
+        padding: 2em 0 0 0;
     }
 
-    .gen-info-box.mobile-show {
+    /* .gen-info-box.mobile-show {
         height: 700px;
     }
 
@@ -127,7 +128,7 @@
     .bar-mitzvah-img-box{
         height: 280px !important;
     }
-
+ */
     .gen-info-box h2 {
         font-size: 1rem;
         font-weight: 600;
@@ -145,7 +146,7 @@
 
     .info-box-text {
         font-size: 18px;
-        padding: 3em .5em 3em 2em;
+        padding: 1em;
         position: relative;
     }
 
@@ -174,32 +175,19 @@
     }
 
     .info-img-box-left {
-        margin-top: 4em;
-        height: 35%;
-        width: 100%;
-
-        position: static;
-        top: auto;
+        min-height: unset;
+        width: 81%;
+        margin-left: unset;
+        position: unset;
     }
 
     .info-img-left {
-        width: 110%;
-        margin: 8% 0em 8% 1em;
+        height: 250px;
+        width: 100%;
     }
 
-    .info-img-box-right {
-        height: 60%;
-        margin-top: 7em;
-    }
-
-
-    .info-img-right {
-        margin: 2em 0em 3em 0em;
-        transform: translateX(-1em);
-    }
 
     .info-img-left.culinary-img {
-        aspect-ratio: 4 / 3;
         background-image: url('/layout/dishes-appetizers.webp');
     }
 

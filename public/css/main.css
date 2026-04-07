@@ -79,6 +79,13 @@ img {
     height: auto;
 }
 
+#nav-logo{
+    height: unset;
+    width: unset;
+    padding: unset;
+    margin: unset;
+}
+
 h1,
 h2,
 h3,
@@ -117,56 +124,6 @@ button {
 
 
 /* <!-- ----Wrapper Animation--------> */
-.wrapper-animation {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.wrapper-animation .bar {
-    width: 100%;
-    height: 100%;
-    background: white;
-
-    transform: translateY(-100%);
-    animation: show-bars .7s ease-in forwards;
-    animation-delay: calc(.07s * var(--i));
-    opacity: 1;
-
-    overflow: hidden;
-}
-
-@keyframes show-bars {
-    1% {
-        transform: translateY(-50%);
-    }
-
-    25% {
-        transform: translateY(0%);
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: translateY(50%);
-        opacity: 0.6;
-    }
-
-    75% {
-        transform: translateY(125%);
-        opacity: 0.4;
-        color: black;
-    }
-
-    100% {
-        opacity: 0;
-        color: white;
-        visibility: hidden;
-    }
-}
 
 @keyframes show-content {
     10% {

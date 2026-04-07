@@ -110,38 +110,7 @@ span {
 
 /* <!-- --------Desktop CSS--------------> */
 
-.nav-header{
-    position: relative !important;
-}
-
-.nav-bar ul li a,
-.nav-bar ul li p,
-.nav-bar ul li button {
-    color: #dfbd79 !important;
-}
 /* <!-- ----Wrapper Animation--------> */
-.wrapper-animation {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.wrapper-animation .bar {
-    width: 100%;
-    height: 100%;
-    background: white;
-
-    transform: translateY(-100%);
-    animation: show-bars .7s ease-in forwards;
-    animation-delay: calc(.07s * var(--i));
-    opacity: 1;
-
-    overflow: hidden;
-}
 
 @keyframes show-bars {
     1% {
@@ -196,7 +165,6 @@ button {
     font-weight: bold;
     color: black;
     padding: 1px 5px;
-    border-radius: 15px;
     border: none;
 }
 
@@ -213,7 +181,6 @@ a{
 }
 
 .nav-header, .nav-bar{
-    background: black;
     height: 58px !important;
 }
 
@@ -274,25 +241,38 @@ a{
 }
 
 .info-img-box-left {
-    margin-top: 0em;
-    border: 3px solid #E7D8BA;
+    margin-left: 5em;
     border-left: none;
-    width: 65%;
-    height: 100%;
+    width: 72%;
+    min-height: 500px;
+    height: 40%;
     position: sticky;
     top: 133px;
     left: 0;
 }
 
 .info-img-left {
-    margin: 1.5em 0em 0em 3em;
-
-    height: 90%;
-    width: 110%;
     background-image: url('/layout/IMG_0692.jpg');
-    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+
+.info-img-left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            #fafafa 0%,
+            rgba(250, 250, 250, 0.99) 20%,
+            rgba(250, 250, 250, 0.85) 25%,
+            rgba(250, 250, 250, 0.75) 30%,
+            rgba(250, 250, 250, 0) 40%);
+    pointer-events: none;
 }
 
 .gallery-page-img{
@@ -300,22 +280,18 @@ a{
 }
 .culinary-page-img {
     background-image: url('/layout/bg5.webp');
-    width: 110%;
-    margin: 2em 0em 0em 2.5em;
 }
 .events-page-img {
     background-image: url('/layout/weddings5.webp');
 }
 .weddings-page-img{
     background-image: url('/layout/weddings.webp');
-    width: 105%;
 }
 .bar-mitzvah-page-img{
     background-image: url('/layout/weddings5.webp');
-    width: 105%;
 }
 
-.events-img-box{
+/* .events-img-box{
     margin-top: 3em;
     height: 550px;
 }
@@ -335,7 +311,7 @@ a{
     margin-top: 2em;
     height: 533px;
 }
-
+ */
 .events-info-box p a{
     font-size: 1.15rem;
 }
