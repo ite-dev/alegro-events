@@ -22,7 +22,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-    <link rel="preload" as="image" href="/layout/arrangement-6.webp" importance="high" fetchpriority="high">
+    <link rel="preload" as="image" href="/layout/arrangement-6.webp" imagesrcset="/layout/arrangement-6.webp 1600w"
+        imagesizes="100vw" importance="high" fetchpriority="high">
+    <link rel="preload" as="image" href="/layout/mobile-home-bg.webp" media="(max-width:599px)" importance="high"
+        fetchpriority="high">
     <link rel="preload" href="/alegro-logo.webp" as="image" fetchpriority="high">
 
     <link id="font-stylesheet" rel="preload"
@@ -87,6 +90,23 @@
             opacity: 0;
             color: #dfbd79;
             font-size: 1rem;
+        }
+    </style>
+
+    <style id="critical-hero">
+        .home-bg-overlay {
+            background-image: none !important;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .home-bg-overlay img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50px;
+            display: block;
         }
     </style>
 
@@ -608,8 +628,12 @@
             <!-- <div class="home-bg-overlay" data-bg="/layout/arrangement-6.webp" aria-hidden="true"></div> -->
 
             <picture class="home-bg-overlay">
-                <!-- <source srcset="/layout/arrangement-6.webp" type="image/webp"> -->
-                <!-- <img src="/layout/arrangement-6.webp" alt="" loading="eager" fetchpriority="high" alt="עיצוב שולחן חתונה אלגרו אירועים ירושלים"> -->
+                <source srcset="/layout/arrangement-6.webp" type="image/webp" media="(min-width:600px)">
+                <source srcset="/layout/mobile-home-bg.webp" type="image/webp" media="(max-width:599px)">
+                <img src="/layout/arrangement-6.webp"
+                    srcset="/layout/mobile-home-bg.webp 480w, /layout/arrangement-6.webp 1600w" sizes="100vw"
+                    alt="עיצוב שולחן חתונה אלגרו אירועים ירושלים" loading="eager" fetchpriority="high" width="1600"
+                    height="900">
             </picture>
 
             <h1>
