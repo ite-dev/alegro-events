@@ -84,4 +84,11 @@ export function initNav(){
             isMobile = mobile;
         }
     });
+
+    const glass = document.querySelector(".nav-bar");
+    window.addEventListener("scroll", () => {
+        const progress = Math.min(window.scrollY / 300, 1);
+        glass.style.setProperty("--p", progress);
+    });
 };
+
