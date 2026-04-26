@@ -1,8 +1,38 @@
+@font-face {
+    font-family: 'AssistantLocal';
+    src: url('/fonts/assistant-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AssistantLocal';
+    src: url('/fonts/assistant-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AssistantLocal';
+    src: url('/fonts/assistant-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AssistantLocal';
+    src: url('/fonts/assistant-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Assistant', sans-serif !important;
+    font-family: 'AssistantLocal', Arial, sans-serif;
     text-decoration: none;
     text-align: right;
     text-underline-offset: 10px;
@@ -169,21 +199,26 @@ button {
 
 /*     box-shadow: 0px 0px 15px 1px var(--secondary); */
 }
+    .home-bg-overlay {
+        background-image: none;
+        display: block;
+        min-height: 100%;
+        max-height: 700px;
+        min-width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 50px;
+    }
 
-.home-bg-overlay {
-    height: 100%;
-    width: 100%;
-
-    aspect-ratio: 16 / 9;
-    background-image: url('/layout/arrangement-6.webp');
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    border-radius: 50px;
-}
-
+    .home-bg-overlay img {
+        aspect-ratio: 16 / 9;
+        min-height: 100%;
+        max-height: 700px;
+        min-width: 100%;
+        max-height: 100%;
+        border-radius: 50px;
+        object-fit: cover;
+    }
 .home-info {
     display: none !important;
     padding-top: 1em;
@@ -888,6 +923,17 @@ button {
     text-align: justify;
     font-size: var(--fs-h6);
     padding-right: 1em;
+}
+
+.btn-up {
+    bottom: -100px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.btn-up.show-btn {
+    bottom: 50px;
+    opacity: 1;
 }
 
 /* <!-- ----Footer--------------------------> */

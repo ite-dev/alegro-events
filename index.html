@@ -6,40 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>אולמי אלגרו ירושלים - אולם אירועים בירושלים חתונות, חינה, בר/בת מצווה</title>
-
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TNPBLQHR');
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-    <link rel="preload" as="image" href="/layout/arrangement-6.webp" imagesrcset="/layout/arrangement-6.webp 1600w"
-        imagesizes="100vw" importance="high" fetchpriority="high">
-    <link rel="preload" as="image" href="/layout/mobile-home-bg.webp" media="(max-width:599px)" importance="high"
-        fetchpriority="high">
-    <link rel="preload" href="/alegro-logo.webp" as="image" fetchpriority="high">
-
-    <link id="font-stylesheet" rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" as="style" crossorigin
-        onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap">
-    </noscript>
-
+    <meta name="description"
+        content="אולמי אלגרו ירושלים - אולם אירועים יוקרתי בעיצוב אלגנטי, קולינריה מוקפדת ושירות אישי ומקצועי. מושלם לחתונות, חינה, בר/בת מצווה, אירועים פרטיים, קייטרינג כשר.">
+    <link rel="canonical" href="https://www.alegro-events.co.il/">
+    
     <style>
-        :root {
-            font-display: swap;
-        }
-
         .home-section {
             display: flex;
             flex-direction: column;
@@ -63,22 +34,23 @@
             opacity: 0;
         }
 
-        .home-info-logo {
-            margin-top: 2em;
-            width: 400px;
-            height: 300px;
+        .home-bg-overlay{
+        display:block;
+        aspect-ratio:16/9;
+        border-radius:50px;
+        overflow:hidden;
         }
 
-        .home-info-logo img {
-            aspect-ratio: 16 / 9;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+        .home-bg-overlay img{
+        width:100%;
+        height:100%;
+        max-height: 780px;
+        object-fit:cover;
+        border-radius:50px;
         }
 
         .nav-header {
-            min-width: 100vw;
-            max-width: 100vw;
+            width: 100%;
             position: fixed;
             height: 75px;
             left: 0;
@@ -93,39 +65,18 @@
         }
     </style>
 
-    <style id="critical-hero">
-        .home-bg-overlay {
-            background-image: none !important;
-            display: block;
-            height: 100%;
-            width: 100%;
-        }
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="(max-width:1000px)">
 
-        .home-bg-overlay img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50px;
-            display: block;
-        }
-    </style>
+    <link rel="preload" href="/fonts/assistant-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/assistant-600.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="preload" href="/css/main.css" as="style">
-    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="/css/main.css">
-    </noscript>
-    <link rel="stylesheet" href="/css/mobile.css" media="(max-width: 1000px)">
+    <!-- <link rel="preload" as="image" href="/layout/arrangement-6.webp" fetchpriority="high" media="(min-width: 1000px)"> -->
+    <link rel="preload" as="image" href="/layout/mobile-home-bg.webp" media="(max-width:599px)" fetchpriority="high">
 
-    <link rel="icon" href="/logo-s.png" type="image/png">
+    <link rel="icon" href="/logo-s.png">
     <link rel="apple-touch-icon" href="/alegro-logo.webp">
 
-    <!--     <link rel="stylesheet" href="/src/js/components/forms/css/contact-form.css">
-    <link rel="stylesheet" href="/src/js/components/navigation/navbar/css/navbar.css">
-    <link rel="stylesheet" href="/src/js/components/image-gallery/css/image-gallery.css"> -->
-
-    <meta name="description"
-        content="אולמי אלגרו ירושלים - אולם אירועים יוקרתי בעיצוב אלגנטי, קולינריה מוקפדת ושירות אישי ומקצועי. מושלם לחתונות, חינה, בר/בת מצווה, אירועים פרטיים, קייטרינג כשר.">
     <meta name="keywords"
         content="אולם אירועים ירושלים, חתונות בירושלים, אולם חינה, בר מצווה, בת מצווה, קייטרינג בירושלים, Alegro Events">
     <meta name="robots" content="index, follow">
@@ -158,364 +109,9 @@
     <meta name="twitter:description"
         content="אולם אירועים בירושלים בעיצוב אלגנטי עם קולינריה מוקפדת ושירות אישי לכל סוג אירוע.">
     <meta name="twitter:image" content="https://www.alegro-events.co.il/alegro-logo.webp">
-
-    <link rel="canonical" href="https://www.alegro-events.co.il/">
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "Organization",
-            "@id": "https://www.alegro-events.co.il/#organization",
-            "name": "אולמי אלגרו ירושלים",
-            "name_en": "Alegro Events Hall Jerusalem",
-            "alternateName": "Alegro Events Hall Jerusalem",
-            "url": "https://www.alegro-events.co.il/",
-            "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
-            "foundingDate": "2013-01-15",
-            "founder": {
-                "@type": "Person",
-                "name": "אלגרו",
-                "name_en": "Alegro"
-                },
-            "sameAs": [
-                "https://www.facebook.com/AlegroEvents/",
-                "https://www.instagram.com/alegro_events/",
-                "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
-                "https://wa.me/972542500220",
-                "https://g.page/r/Ca75aq_FDOyFEAE",
-                "https://maps.app.goo.gl/ji9isXL3XJRyJyes8",
-                "https://ul.waze.com/ul?place=ChIJzXNr_uHXAhURrvlqr8UM7IU&ll=31.75050070%2C35.21441760&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-            ]
-        },
-        {
-            "@type": ["LocalBusiness", "EventVenue", "FoodEstablishment", "Catering"],
-            "@id": "https://www.alegro-events.co.il/#eventvenue",
-            "name": "אולמי אלגרו ירושלים",
-            "name_en": "Alegro Events Hall Jerusalem",
-            "alternateName": "Alegro Events Hall Jerusalem",
-            "url": "https://www.alegro-events.co.il/",
-            "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
-            "image": [
-                "https://www.alegro-events.co.il/images/alegro-events-hall.jpeg",
-                "https://www.alegro-events.co.il/images/alegro-events-weddings.jpeg"
-            ],
-            "description": "אולמי אלגרו בירושלים - אולמי אירועים יוקרתי לחתונות, חינה, בר/בת מצווה, אירועים פרטיים, עסקיים וקייטרינג כשר. עיצוב אלגנטי, קולינריה מוקפדת של השף אהרון שאשא, צוות מקצועי, חניה ונגישות מלאה.",
-            "description_en": "Alegro Event Hall Jerusalem - elegant venue for weddings, henna, bar/bat mitzvahs, private and corporate events with kosher catering. Fine dining by Chef Aharon Shasha, professional staff, parking, and full accessibility.",
-            "priceRange": "$$$",
-            "telephone": "+972-2-673-4894",
-            "email": "alegroevents2@gmail.com",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "הסדנא 12",
-                "addressLocality": "ירושלים",
-                "addressRegion": "ירושלים",
-                "addressCountry": "IL",
-                "postalCode": "9342163"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 31.750505,
-                "longitude": 35.216992
-            },
-            "areaServed": {
-                "@type": "Place", 
-                "name": "ירושלים, ישראל",
-                "name_en": "Jerusalem, Israel" 
-            },
-            "maximumAttendeeCapacity": 450,
-            "openingHoursSpecification": [
-                { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "00:00", "closes": "23:59" },
-                { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "07:00", "closes": "15:00" },
-                { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "00:00", "closes": "00:00" }
-            ],
-            "amenityFeature": [
-                {"@type":"LocationFeatureSpecification","name":"חניה חינם","name_en":"Free Parking","value":true},
-                {"@type":"LocationFeatureSpecification","name":"גישה לנכים","name_en":"Accessibility","value":true},
-                {"@type":"LocationFeatureSpecification","name":"כשרות","name_en":"Kosher","value":true},
-                {"@type":"LocationFeatureSpecification","name":"מיזוג אוויר","name_en":"Air Conditioning","value":true},
-                {"@type":"LocationFeatureSpecification","name":"WiFi","value":true},
-                {"@type":"LocationFeatureSpecification","name":"במה ומערכת הגברה","name_en":"Stage and Sound System","value":true},
-                {"@type":"LocationFeatureSpecification","name":"תאורה מקצועית","name_en":"Professional Lighting","value":true},
-                {"@type":"LocationFeatureSpecification","name":"מטבח שף כשר","name_en":"Kosher Chef Kitchen","value":true},
-                {"@type":"LocationFeatureSpecification","name":"מעלית","name_en":"Elevator","value":true},
-                {"@type":"LocationFeatureSpecification","name":"אבטחה","name_en":"Security","value":true},
-                {"@type":"LocationFeatureSpecification","name":"חדר כלה","name_en":"Bridal Room","value":true},
-                {"@type":"LocationFeatureSpecification","name":"קייטרינג","name_en":"Catering","value":true},
-                {"@type":"LocationFeatureSpecification","name":"אזור קבלת פנים","name_en":"Reception Area","value":true},
-                {"@type":"LocationFeatureSpecification","name":"בר פירות","name_en":"Fruit Bar","value":true},
-                {"@type":"LocationFeatureSpecification","name":"בר קוקטיילים","name_en":"Cocktail Bar","value":true}
-            ],
-            "contactPoint": [
-                {
-                "@type": "ContactPoint",
-                "telephone": "+972-2-673-4894",
-                "contactType": "customer service",
-                "areaServed": "IL",
-                "availableLanguage": ["he","en"]
-                },
-                {
-                "@type": "ContactPoint",
-                "contactType": "ReserveAction",
-                "url": "https://wa.me/972542500220",
-                "name": "הזמנת אירועים בוואטסאפ",
-                "name_en":"Event Reservation via WhatsApp",
-                "availableLanguage": ["he","en"]
-                }
-            ],
-            "potentialAction": {
-            "@type": "ReserveAction",
-            "target": "https://wa.me/972542500220",
-            "name": "לתיאום אירועים בוואטסאפ",
-            "name_en":"Reserve Event via WhatsApp"
-            },
-            "hasMenu": {
-                "@type": "Menu",
-                "name": "תפריט אלגרו - קייטרינג כשר",
-                "name_en":"Alegro Menu - Kosher Catering",
-                "description":"תפריט קייטרינג מותאם אישית לכל סוגי האירועים - חתונות, חינה, בר/בת מצווה, אירועים פרטיים ועסקיים.",
-                "description_en":"Customized kosher catering menu for all types of events - weddings, henna, bar/bat mitzvahs, private and corporate events.",
-                "url":"https://www.alegro-events.co.il/pages/culinary.html"
-            },
-            "servesCuisine": [
-                "אוכל ישראלי כשר","ים תיכוני","גריל","סושי",
-                "סלטים","בשרים","קינוחים","בר פירות",
-                "בר קוקטיילים","שיפודים","אסאדו","קייטרינג"
-            ]
-        },
-        {
-            "@type": "VideoObject",
-            "@id": "https://www.alegro-events.co.il/#video",
-            "name": "Alegro Events Jerusalem - Overview",
-            "description": "A short video overview of Alegro Event Hall Jerusalem - elegant venue for weddings, events and catering.",
-            "thumbnailUrl": "https://www.alegro-events.co.il/images/alegro-events-hall.jpeg",
-            "uploadDate": "2022-02-22T08:00:00+08:00",
-            "contentUrl": "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
-            "embedUrl": "https://youtu.be/26SRDPMxhso?si=E0wjb88OLKZRDiS-/",
-            "publisher": { "@id": "https://www.alegro-events.co.il/#organization" }
-        },
-        {
-            "@type": "WebSite",
-            "@id": "https://www.alegro-events.co.il/#website",
-            "url": "https://www.alegro-events.co.il/",
-            "name": "אולמי אלגרו ירושלים",
-            "name_en":"Alegro Event Hall Jerusalem",
-            "publisher": {"@id": "https://www.alegro-events.co.il/#organization"}
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.alegro-events.co.il/#homepage",
-            "url": "https://www.alegro-events.co.il/",
-            "name": "אולמי אלגרו ירושלים - אולם אירועים בירושלים",
-            "name_en":"Alegro Event Hall Jerusalem - Event Venue in Jerusalem",
-            "isPartOf": { "@id": "https://www.alegro-events.co.il/#website" },
-            "mainEntity": { "@id": "https://www.alegro-events.co.il/#eventvenue" }
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.alegro-events.co.il/#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://www.alegro-events.co.il/" },
-                { "@type": "ListItem", "position": 2, "name": "אירועים", "item": "https://www.alegro-events.co.il/pages/events.html" },
-                { "@type": "ListItem", "position": 3, "name": "חתונות", "item": "https://www.alegro-events.co.il/pages/weddings.html" },
-                { "@type": "ListItem", "position": 4, "name": "בר ובת מצווה", "item": "https://www.alegro-events.co.il/pages/bar-bat-mitzvah.html" },
-                { "@type": "ListItem", "position": 5, "name": "קייטרינג", "item": "https://www.alegro-events.co.il/pages/culinary.html" }
-            ]
-        },
-        {
-            "@type":"FAQPage",
-            "@id":"https://www.alegro-events.co.il/#faq-section",
-            "mainEntity":[
-                {
-                "@type":"Question",
-                "name":"האם האולם כשר?",
-                "name_en":"Is the hall kosher?",
-                "acceptedAnswer":{
-                    "@type":"Answer",
-                    "text":"כן, כל המנות באולמי אלגרו ירושלים כשרות ומפוקחות ברמה הגבוהה ביותר, עם שימוש בחומרי גלם טריים ואיכותיים בלבד.",
-                    "text_en":"Yes, all dishes at Alegro Event Hall Jerusalem are kosher and supervised at the highest level, using only fresh, high-quality ingredients."
-                }
-                },
-                {
-                "@type":"Question",
-                "name":"מה מספר האורחים שניתן לארח באולם?",
-                "name_en":"How many guests can the hall accommodate?",
-                "acceptedAnswer":{
-                    "@type":"Answer",
-                    "text":"האולם המרכזי מתאים לאירועים עם 250-400 אורחים, בהתאם לפריסה ולעיצוב הרצוי. התאמה בין אירועי בוקר, צהריים וערב מאפשרת לכמות מוזמנים משתנה - צרו קשר לפרטים נוספים.",
-                    "text_en":"The main hall can host 250-400 guests depending on layout and design. Morning, afternoon, and evening events allow variable guest counts - contact us for details."
-                }
-                },
-                {
-                "@type":"Question",
-                "name":"האם האולם מציע קייטרינג?",
-                "name_en":"Does the hall offer catering?",
-                "acceptedAnswer":{
-                    "@type":"Answer",
-                    "text":"כן, אולמי אלגרו מציעים קייטרינג כשר בהתאמה אישית עם מגוון מנות - בשרים, אסאדו, סושי, סלטים, גריל, מנות פתיחה, בר קוקטיילים ובר פירות. חומרי גלם טריים וטעמים מרגשים שכל אורח יזכור.",
-                    "text_en":"Yes, Alegro Event Hall offers kosher catering customized with a variety of dishes - meats, asado, sushi, salads, grill, appetizers, cocktail bar and fruit bar. Fresh ingredients and unforgettable flavors."
-                }
-                },
-                {
-                "@type":"Question",
-                "name":"האם יש חניה במקום?",
-                "name_en":"Is there parking?",
-                "acceptedAnswer":{
-                    "@type":"Answer",
-                    "text":"כן, קיימת חניה פנימית, מקורה וחינמית לאורחי האירוע, כולל חניה נגישה לנכים ומעלית לאולם.",
-                    "text_en":"Yes, there is internal, covered, free parking for event guests, including accessible parking and elevator access."
-                }
-                },
-                {
-                "@type":"Question",
-                "name":"האם ניתן לערוך חופה בחוץ?",
-                "name_en":"Can the ceremony be outdoors?",
-                "acceptedAnswer":{
-                    "@type":"Answer",
-                    "text":"כן, ניתן לערוך חופה מעוצבת בחצר החיצונית, כולל תאורה והגברה מותאמת אישית.",
-                    "text_en":"Yes, a styled ceremony can be arranged outdoors with lighting and sound tailored to the event."
-                }
-                },
-                {
-                "@type":"Question",
-                "name":"האם המקום נגיש לנכים?",
-                "name_en":"Is the venue accessible?",
-                "acceptedAnswer":{
-                    "@type":"Answer",
-                    "text":"האולם נגיש במלואו - כולל מעליות, שירותי נכים, חניית נכים נגישה ומעברים רחבים בכל המתחם.",
-                    "text_en":"The hall is fully accessible - including elevators, disabled facilities, accessible parking and wide passages throughout the venue."
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "Service",
-            "serviceType": "חתונות",
-            "serviceType_en": "Weddings",
-            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
-            "url": "https://www.alegro-events.co.il/pages/weddings.html",
-            "description": "חתונות יוקרתיות בירושלים, אולם עם עיצוב מוקפד, קולינריה ושירות אישי.",
-            "description_en": "Luxury weddings in Jerusalem, hall with elegant design, fine dining, and personal service.",
-            "keywords": "חתונה, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, אולם לחתונה, אירועי יוקרה",
-            "category": "EventService",
-            "offers": {
-            "@type": "Offer",
-            "url": "https://wa.me/972542500220",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2025-12-04",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": null,
-                "priceCurrency": "ILS",
-                "description": "בבקשה להתייעץ / Please consult"
-            }
-            }
-        },
-        {
-            "@type": "Service",
-            "serviceType": "חינה",
-            "serviceType_en": "Henna Ceremony",
-            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
-            "url": "https://www.alegro-events.co.il/pages/henna-ceremony.html",
-            "description": "אירועי חינה בירושלים מעוצבים בהתאמה אישית.",
-            "description_en": "Personalized henna ceremonies in Jerusalem.",
-            "keywords": "חינה, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, henna, henna party",
-            "category": "EventService",
-            "offers": {
-            "@type": "Offer",
-            "url": "https://wa.me/972542500220",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2025-12-04",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": null,
-                "priceCurrency": "ILS",
-                "description": "בבקשה להתייעץ / Please consult"
-            }
-            }
-        },
-        {
-            "@type": "Service",
-            "serviceType": "בר/בת מצווה",
-            "serviceType_en": "Bar/Bat Mitzvah",
-            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
-            "url": "https://www.alegro-events.co.il/pages/bar-bat-mitzvah.html",
-            "description": "אירועי בר/בת מצווה מרגשים עם חוויה קולינרית מושקעת.",
-            "description_en": "Exciting bar/bat mitzvah events with exquisite culinary experience.",
-            "keywords": "בר מצווה, בת מצווה, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, bar mitzvah, bat mitzvah, אירועי ילדים",
-            "category": "EventService",
-            "offers": {
-            "@type": "Offer",
-            "url": "https://wa.me/972542500220",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2025-12-04",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": null,
-                "priceCurrency": "ILS",
-                "description": "בבקשה להתייעץ / Please consult"
-            }
-            }
-        },
-        {
-            "@type": "Service",
-            "serviceType": "קייטרינג",
-            "serviceType_en": "Catering",
-            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
-            "url": "https://www.alegro-events.co.il/pages/culinary.html",
-            "description": "קייטרינג כשר ומגוון בירושלים לכל סוגי האירועים.",
-            "description_en": "Kosher and diverse catering in Jerusalem for all types of events.",
-            "keywords": "קייטרינג, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, kosher catering, food service, אירועי אוכל",
-            "category": "FoodService",
-            "offers": {
-            "@type": "Offer",
-            "url": "https://wa.me/972542500220",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2025-12-04",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": null,
-                "priceCurrency": "ILS",
-                "description": "בבקשה להתייעץ / Please consult"
-            }
-            }
-        },
-        {
-            "@type": "Service",
-            "serviceType": "אירועים פרטיים ועסקיים",
-            "serviceType_en": "Private & Corporate Events",
-            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
-            "url": "https://www.alegro-events.co.il/pages/events.html",
-            "description": "אירועים פרטיים ועסקיים בירושלים בעיצוב מותאם ושירות אישי.",
-            "description_en": "Private and corporate events in Jerusalem with custom design and personal service.",
-            "keywords": "אירועים פרטיים, אירועים עסקיים, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, private events, corporate events, Jerusalem venue",
-            "category": "EventService",
-            "offers": {
-            "@type": "Offer",
-            "url": "https://wa.me/972542500220",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2025-12-04",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": null,
-                "priceCurrency": "ILS",
-                "description": "בבקשה להתייעץ / Please consult"
-            }
-            }
-        }
-    ]
-}
-</script>
-    <script type="text/javascript" defer async
-        src="https://cdn.trustindex.io/assets/js/richsnippet.js?3c0469377303ga8b"></script>
-
-    <link rel="modulepreload" href="/src/js/main.js">
-    <script type="module" src="/src/js/main.js" defer></script>
 </head>
 
 <body>
-
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNPBLQHR" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- --------------Header Start-------------- -->
@@ -628,12 +224,11 @@
             <!-- <div class="home-bg-overlay" data-bg="/layout/arrangement-6.webp" aria-hidden="true"></div> -->
 
             <picture class="home-bg-overlay">
-                <source srcset="/layout/arrangement-6.webp" type="image/webp" media="(min-width:600px)">
-                <source srcset="/layout/mobile-home-bg.webp" type="image/webp" media="(max-width:599px)">
-                <img src="/layout/arrangement-6.webp"
-                    srcset="/layout/mobile-home-bg.webp 480w, /layout/arrangement-6.webp 1600w" sizes="100vw"
-                    alt="עיצוב שולחן חתונה אלגרו אירועים ירושלים" loading="eager" fetchpriority="high" width="1600"
-                    height="900">
+                <source media="(max-width:599px)" srcset="/layout/mobile-home-bg.webp">
+                <source media="(min-width:600px)" srcset="/layout/arrangement-6.webp">
+            
+                <img src="/layout/mobile-home-bg.webp" width="600" height="400" alt="עיצוב שולחן חתונה אלגרו אירועים ירושלים"
+                    loading="eager" fetchpriority="high" decoding="async" alt="עיצוב שולחן חתונה אלגרו אולם אירועים ירושלים">
             </picture>
 
             <h1>
@@ -1233,5 +828,375 @@
         })();
     </script> -->
 </body>
+<script type="module" src="/src/js/main.js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const s = document.createElement('script');
+            s.src =
+                'https://www.googletagmanager.com/gtm.js?id=GTM-TNPBLQHR';
+            s.async = true;
+            document.head.appendChild(s);
+        }, 2500);
+    });
+</script>
+<script>
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const s = document.createElement('script');
+            s.src = 'https://cdn.trustindex.io/assets/js/richsnippet.js?3c0469377303ga8b';
+            s.async = true;
+            document.body.appendChild(s);
+        }, 3000);
+    });
+</script>
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.alegro-events.co.il/#organization",
+            "name": "אולמי אלגרו ירושלים",
+            "name_en": "Alegro Events Hall Jerusalem",
+            "alternateName": "Alegro Events Hall Jerusalem",
+            "url": "https://www.alegro-events.co.il/",
+            "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
+            "foundingDate": "2013-01-15",
+            "founder": {
+                "@type": "Person",
+                "name": "אלגרו",
+                "name_en": "Alegro"
+                },
+            "sameAs": [
+                "https://www.facebook.com/AlegroEvents/",
+                "https://www.instagram.com/alegro_events/",
+                "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
+                "https://wa.me/972542500220",
+                "https://g.page/r/Ca75aq_FDOyFEAE",
+                "https://maps.app.goo.gl/ji9isXL3XJRyJyes8",
+                "https://ul.waze.com/ul?place=ChIJzXNr_uHXAhURrvlqr8UM7IU&ll=31.75050070%2C35.21441760&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+            ]
+        },
+        {
+            "@type": ["LocalBusiness", "EventVenue", "FoodEstablishment", "Catering"],
+            "@id": "https://www.alegro-events.co.il/#eventvenue",
+            "name": "אולמי אלגרו ירושלים",
+            "name_en": "Alegro Events Hall Jerusalem",
+            "alternateName": "Alegro Events Hall Jerusalem",
+            "url": "https://www.alegro-events.co.il/",
+            "logo": "https://www.alegro-events.co.il/alegro-logo.webp",
+            "image": [
+                "https://www.alegro-events.co.il/images/alegro-events-hall.jpeg",
+                "https://www.alegro-events.co.il/images/alegro-events-weddings.jpeg"
+            ],
+            "description": "אולמי אלגרו בירושלים - אולמי אירועים יוקרתי לחתונות, חינה, בר/בת מצווה, אירועים פרטיים, עסקיים וקייטרינג כשר. עיצוב אלגנטי, קולינריה מוקפדת של השף אהרון שאשא, צוות מקצועי, חניה ונגישות מלאה.",
+            "description_en": "Alegro Event Hall Jerusalem - elegant venue for weddings, henna, bar/bat mitzvahs, private and corporate events with kosher catering. Fine dining by Chef Aharon Shasha, professional staff, parking, and full accessibility.",
+            "priceRange": "$$$",
+            "telephone": "+972-2-673-4894",
+            "email": "alegroevents2@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "הסדנא 12",
+                "addressLocality": "ירושלים",
+                "addressRegion": "ירושלים",
+                "addressCountry": "IL",
+                "postalCode": "9342163"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 31.750505,
+                "longitude": 35.216992
+            },
+            "areaServed": {
+                "@type": "Place", 
+                "name": "ירושלים, ישראל",
+                "name_en": "Jerusalem, Israel" 
+            },
+            "maximumAttendeeCapacity": 450,
+            "openingHoursSpecification": [
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "00:00", "closes": "23:59" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "07:00", "closes": "15:00" },
+                { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "00:00", "closes": "00:00" }
+            ],
+            "amenityFeature": [
+                {"@type":"LocationFeatureSpecification","name":"חניה חינם","name_en":"Free Parking","value":true},
+                {"@type":"LocationFeatureSpecification","name":"גישה לנכים","name_en":"Accessibility","value":true},
+                {"@type":"LocationFeatureSpecification","name":"כשרות","name_en":"Kosher","value":true},
+                {"@type":"LocationFeatureSpecification","name":"מיזוג אוויר","name_en":"Air Conditioning","value":true},
+                {"@type":"LocationFeatureSpecification","name":"WiFi","value":true},
+                {"@type":"LocationFeatureSpecification","name":"במה ומערכת הגברה","name_en":"Stage and Sound System","value":true},
+                {"@type":"LocationFeatureSpecification","name":"תאורה מקצועית","name_en":"Professional Lighting","value":true},
+                {"@type":"LocationFeatureSpecification","name":"מטבח שף כשר","name_en":"Kosher Chef Kitchen","value":true},
+                {"@type":"LocationFeatureSpecification","name":"מעלית","name_en":"Elevator","value":true},
+                {"@type":"LocationFeatureSpecification","name":"אבטחה","name_en":"Security","value":true},
+                {"@type":"LocationFeatureSpecification","name":"חדר כלה","name_en":"Bridal Room","value":true},
+                {"@type":"LocationFeatureSpecification","name":"קייטרינג","name_en":"Catering","value":true},
+                {"@type":"LocationFeatureSpecification","name":"אזור קבלת פנים","name_en":"Reception Area","value":true},
+                {"@type":"LocationFeatureSpecification","name":"בר פירות","name_en":"Fruit Bar","value":true},
+                {"@type":"LocationFeatureSpecification","name":"בר קוקטיילים","name_en":"Cocktail Bar","value":true}
+            ],
+            "contactPoint": [
+                {
+                "@type": "ContactPoint",
+                "telephone": "+972-2-673-4894",
+                "contactType": "customer service",
+                "areaServed": "IL",
+                "availableLanguage": ["he","en"]
+                },
+                {
+                "@type": "ContactPoint",
+                "contactType": "ReserveAction",
+                "url": "https://wa.me/972542500220",
+                "name": "הזמנת אירועים בוואטסאפ",
+                "name_en":"Event Reservation via WhatsApp",
+                "availableLanguage": ["he","en"]
+                }
+            ],
+            "potentialAction": {
+            "@type": "ReserveAction",
+            "target": "https://wa.me/972542500220",
+            "name": "לתיאום אירועים בוואטסאפ",
+            "name_en":"Reserve Event via WhatsApp"
+            },
+            "hasMenu": {
+                "@type": "Menu",
+                "name": "תפריט אלגרו - קייטרינג כשר",
+                "name_en":"Alegro Menu - Kosher Catering",
+                "description":"תפריט קייטרינג מותאם אישית לכל סוגי האירועים - חתונות, חינה, בר/בת מצווה, אירועים פרטיים ועסקיים.",
+                "description_en":"Customized kosher catering menu for all types of events - weddings, henna, bar/bat mitzvahs, private and corporate events.",
+                "url":"https://www.alegro-events.co.il/pages/culinary.html"
+            },
+            "servesCuisine": [
+                "אוכל ישראלי כשר","ים תיכוני","גריל","סושי",
+                "סלטים","בשרים","קינוחים","בר פירות",
+                "בר קוקטיילים","שיפודים","אסאדו","קייטרינג"
+            ]
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.alegro-events.co.il/#video",
+            "name": "Alegro Events Jerusalem - Overview",
+            "description": "A short video overview of Alegro Event Hall Jerusalem - elegant venue for weddings, events and catering.",
+            "thumbnailUrl": "https://www.alegro-events.co.il/images/alegro-events-hall.jpeg",
+            "uploadDate": "2022-02-22T08:00:00+08:00",
+            "contentUrl": "https://www.youtube.com/channel/UC7wwEjjdFY19t8rOxXAYaRg/",
+            "embedUrl": "https://youtu.be/26SRDPMxhso?si=E0wjb88OLKZRDiS-/",
+            "publisher": { "@id": "https://www.alegro-events.co.il/#organization" }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.alegro-events.co.il/#website",
+            "url": "https://www.alegro-events.co.il/",
+            "name": "אולמי אלגרו ירושלים",
+            "name_en":"Alegro Event Hall Jerusalem",
+            "publisher": {"@id": "https://www.alegro-events.co.il/#organization"}
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.alegro-events.co.il/#homepage",
+            "url": "https://www.alegro-events.co.il/",
+            "name": "אולמי אלגרו ירושלים - אולם אירועים בירושלים",
+            "name_en":"Alegro Event Hall Jerusalem - Event Venue in Jerusalem",
+            "isPartOf": { "@id": "https://www.alegro-events.co.il/#website" },
+            "mainEntity": { "@id": "https://www.alegro-events.co.il/#eventvenue" }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.alegro-events.co.il/#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://www.alegro-events.co.il/" },
+                { "@type": "ListItem", "position": 2, "name": "אירועים", "item": "https://www.alegro-events.co.il/pages/events.html" },
+                { "@type": "ListItem", "position": 3, "name": "חתונות", "item": "https://www.alegro-events.co.il/pages/weddings.html" },
+                { "@type": "ListItem", "position": 4, "name": "בר ובת מצווה", "item": "https://www.alegro-events.co.il/pages/bar-bat-mitzvah.html" },
+                { "@type": "ListItem", "position": 5, "name": "קייטרינג", "item": "https://www.alegro-events.co.il/pages/culinary.html" }
+            ]
+        },
+        {
+            "@type":"FAQPage",
+            "@id":"https://www.alegro-events.co.il/#faq-section",
+            "mainEntity":[
+                {
+                "@type":"Question",
+                "name":"האם האולם כשר?",
+                "name_en":"Is the hall kosher?",
+                "acceptedAnswer":{
+                    "@type":"Answer",
+                    "text":"כן, כל המנות באולמי אלגרו ירושלים כשרות ומפוקחות ברמה הגבוהה ביותר, עם שימוש בחומרי גלם טריים ואיכותיים בלבד.",
+                    "text_en":"Yes, all dishes at Alegro Event Hall Jerusalem are kosher and supervised at the highest level, using only fresh, high-quality ingredients."
+                }
+                },
+                {
+                "@type":"Question",
+                "name":"מה מספר האורחים שניתן לארח באולם?",
+                "name_en":"How many guests can the hall accommodate?",
+                "acceptedAnswer":{
+                    "@type":"Answer",
+                    "text":"האולם המרכזי מתאים לאירועים עם 250-400 אורחים, בהתאם לפריסה ולעיצוב הרצוי. התאמה בין אירועי בוקר, צהריים וערב מאפשרת לכמות מוזמנים משתנה - צרו קשר לפרטים נוספים.",
+                    "text_en":"The main hall can host 250-400 guests depending on layout and design. Morning, afternoon, and evening events allow variable guest counts - contact us for details."
+                }
+                },
+                {
+                "@type":"Question",
+                "name":"האם האולם מציע קייטרינג?",
+                "name_en":"Does the hall offer catering?",
+                "acceptedAnswer":{
+                    "@type":"Answer",
+                    "text":"כן, אולמי אלגרו מציעים קייטרינג כשר בהתאמה אישית עם מגוון מנות - בשרים, אסאדו, סושי, סלטים, גריל, מנות פתיחה, בר קוקטיילים ובר פירות. חומרי גלם טריים וטעמים מרגשים שכל אורח יזכור.",
+                    "text_en":"Yes, Alegro Event Hall offers kosher catering customized with a variety of dishes - meats, asado, sushi, salads, grill, appetizers, cocktail bar and fruit bar. Fresh ingredients and unforgettable flavors."
+                }
+                },
+                {
+                "@type":"Question",
+                "name":"האם יש חניה במקום?",
+                "name_en":"Is there parking?",
+                "acceptedAnswer":{
+                    "@type":"Answer",
+                    "text":"כן, קיימת חניה פנימית, מקורה וחינמית לאורחי האירוע, כולל חניה נגישה לנכים ומעלית לאולם.",
+                    "text_en":"Yes, there is internal, covered, free parking for event guests, including accessible parking and elevator access."
+                }
+                },
+                {
+                "@type":"Question",
+                "name":"האם ניתן לערוך חופה בחוץ?",
+                "name_en":"Can the ceremony be outdoors?",
+                "acceptedAnswer":{
+                    "@type":"Answer",
+                    "text":"כן, ניתן לערוך חופה מעוצבת בחצר החיצונית, כולל תאורה והגברה מותאמת אישית.",
+                    "text_en":"Yes, a styled ceremony can be arranged outdoors with lighting and sound tailored to the event."
+                }
+                },
+                {
+                "@type":"Question",
+                "name":"האם המקום נגיש לנכים?",
+                "name_en":"Is the venue accessible?",
+                "acceptedAnswer":{
+                    "@type":"Answer",
+                    "text":"האולם נגיש במלואו - כולל מעליות, שירותי נכים, חניית נכים נגישה ומעברים רחבים בכל המתחם.",
+                    "text_en":"The hall is fully accessible - including elevators, disabled facilities, accessible parking and wide passages throughout the venue."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Service",
+            "serviceType": "חתונות",
+            "serviceType_en": "Weddings",
+            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
+            "url": "https://www.alegro-events.co.il/pages/weddings.html",
+            "description": "חתונות יוקרתיות בירושלים, אולם עם עיצוב מוקפד, קולינריה ושירות אישי.",
+            "description_en": "Luxury weddings in Jerusalem, hall with elegant design, fine dining, and personal service.",
+            "keywords": "חתונה, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, אולם לחתונה, אירועי יוקרה",
+            "category": "EventService",
+            "offers": {
+            "@type": "Offer",
+            "url": "https://wa.me/972542500220",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-12-04",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": null,
+                "priceCurrency": "ILS",
+                "description": "בבקשה להתייעץ / Please consult"
+            }
+            }
+        },
+        {
+            "@type": "Service",
+            "serviceType": "חינה",
+            "serviceType_en": "Henna Ceremony",
+            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
+            "url": "https://www.alegro-events.co.il/pages/henna-ceremony.html",
+            "description": "אירועי חינה בירושלים מעוצבים בהתאמה אישית.",
+            "description_en": "Personalized henna ceremonies in Jerusalem.",
+            "keywords": "חינה, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, henna, henna party",
+            "category": "EventService",
+            "offers": {
+            "@type": "Offer",
+            "url": "https://wa.me/972542500220",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-12-04",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": null,
+                "priceCurrency": "ILS",
+                "description": "בבקשה להתייעץ / Please consult"
+            }
+            }
+        },
+        {
+            "@type": "Service",
+            "serviceType": "בר/בת מצווה",
+            "serviceType_en": "Bar/Bat Mitzvah",
+            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
+            "url": "https://www.alegro-events.co.il/pages/bar-bat-mitzvah.html",
+            "description": "אירועי בר/בת מצווה מרגשים עם חוויה קולינרית מושקעת.",
+            "description_en": "Exciting bar/bat mitzvah events with exquisite culinary experience.",
+            "keywords": "בר מצווה, בת מצווה, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, bar mitzvah, bat mitzvah, אירועי ילדים",
+            "category": "EventService",
+            "offers": {
+            "@type": "Offer",
+            "url": "https://wa.me/972542500220",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-12-04",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": null,
+                "priceCurrency": "ILS",
+                "description": "בבקשה להתייעץ / Please consult"
+            }
+            }
+        },
+        {
+            "@type": "Service",
+            "serviceType": "קייטרינג",
+            "serviceType_en": "Catering",
+            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
+            "url": "https://www.alegro-events.co.il/pages/culinary.html",
+            "description": "קייטרינג כשר ומגוון בירושלים לכל סוגי האירועים.",
+            "description_en": "Kosher and diverse catering in Jerusalem for all types of events.",
+            "keywords": "קייטרינג, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, kosher catering, food service, אירועי אוכל",
+            "category": "FoodService",
+            "offers": {
+            "@type": "Offer",
+            "url": "https://wa.me/972542500220",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-12-04",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": null,
+                "priceCurrency": "ILS",
+                "description": "בבקשה להתייעץ / Please consult"
+            }
+            }
+        },
+        {
+            "@type": "Service",
+            "serviceType": "אירועים פרטיים ועסקיים",
+            "serviceType_en": "Private & Corporate Events",
+            "provider": { "@id": "https://www.alegro-events.co.il/#eventvenue" },
+            "url": "https://www.alegro-events.co.il/pages/events.html",
+            "description": "אירועים פרטיים ועסקיים בירושלים בעיצוב מותאם ושירות אישי.",
+            "description_en": "Private and corporate events in Jerusalem with custom design and personal service.",
+            "keywords": "אירועים פרטיים, אירועים עסקיים, אירוע, אירועים, אולם, אולמות, ירושלים, אלגרו, private events, corporate events, Jerusalem venue",
+            "category": "EventService",
+            "offers": {
+            "@type": "Offer",
+            "url": "https://wa.me/972542500220",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-12-04",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": null,
+                "priceCurrency": "ILS",
+                "description": "בבקשה להתייעץ / Please consult"
+            }
+            }
+        }
+    ]
+}
+</script>
 </html>

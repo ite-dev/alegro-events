@@ -11,18 +11,8 @@ if (window.trustedTypes) {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const toastUtils = await import('./utils/toastify/toast.js');
-
     const { initNav } = await import('./components/navigation/navbar/navbar.js');
     initNav();
-
-    const fontLink = document.getElementById('font-stylesheet');
-    if (fontLink) {
-        fontLink.href = 'https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap';
-        fontLink.onload = () => {
-            fontLink.media = 'all';
-        };
-    };
 
     if (document.querySelector('#contactForm')) {
         const { initForm } = await import('./components/forms/formHandler.js');
@@ -41,7 +31,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         observer.observe(map);
     };
 
-    if(window.location.pathname === "/" || window.location.pathname === "/index.html") { toastUtils.infoMsg("ברוכים הבאים לאלגרו !"); };
 /*     if(window.location.pathname === "/pages/events.html") 
         { toastUtils.infoMsg(""); }; */
 
@@ -53,63 +42,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     };
-    
-    handleScroll();
-});
+    const blocks = document.querySelectorAll('.block');
+    const blockReverse = document.querySelectorAll('.block-reverse');
 
-
-window.addEventListener('load', () => {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.trustindex.io/loader.js?57d05705979a0228f4469947f4a';
-    script.defer = true;
-
-    const instaFeed = document.createElement('script');
-    instaFeed.src = 'https://cdn.trustindex.io/loader-feed.js?63526185946e88162136db9c518';
-    instaFeed.defer = true;
-
-    const container = document.querySelector('.reviews-container');
-    const feedContainer = document.querySelector('.instagram-feed');
-
-    if(container){
-        container.appendChild(script);
-    };
-    if(feedContainer){
-        feedContainer.appendChild(instaFeed);
-    };
-});
-
-const blocks = document.querySelectorAll('.block');
-const blockReverse = document.querySelectorAll('.block-reverse');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('frozen');
-            observer.unobserve(entry.target);
-        };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('frozen');
+                observer.unobserve(entry.target);
+            };
+        });
     });
-});
-blocks.forEach(block => observer.observe(block));
-blockReverse.forEach(block => observer.observe(block));
+    blocks.forEach(block => observer.observe(block));
+    blockReverse.forEach(block => observer.observe(block));
 
-function handleScroll(){
-    const scrollButton = document.querySelector('.btn-up');
-    if (!scrollButton) return;
+    function handleScroll() {
+        const scrollButton = document.querySelector('.btn-up');
+        if (!scrollButton) return;
 
-    const scrollPosition = window.scrollY;
-    if(scrollPosition >= 200){
-        scrollButton.style.bottom = '50px';
-        scrollButton.style.opacity = 1;
-    } else {
-        scrollButton.style.bottom = '-100px';
-        scrollButton.style.opacity = 0;
+        scrollButton.classList.toggle('show-btn', window.scrollY >= 200);
     };
-};
-document.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('scroll', handleScroll, { passive: true });
+
     const faqContainer = document.getElementById("faq-container");
-    if(faqContainer){
+    if (faqContainer) {
         const allItems = faqContainer.querySelectorAll(".faq-item");
-        if(allItems.length){
+        if (allItems.length) {
             allItems[0].classList.add("open");
         };
 
@@ -123,4 +81,36 @@ document.addEventListener('scroll', handleScroll, { passive: true });
             });
             item.classList.toggle("open");
         });
-};
+    };
+    handleScroll();
+});
+
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.trustindex.io/loader.js?57d05705979a0228f4469947f4a';
+        script.defer = true;
+
+        const instaFeed = document.createElement('script');
+        instaFeed.src = 'https://cdn.trustindex.io/loader-feed.js?63526185946e88162136db9c518';
+        instaFeed.defer = true;
+
+        const container = document.querySelector('.reviews-container');
+        const feedContainer = document.querySelector('.instagram-feed');
+
+        if (container) {
+            container.appendChild(script);
+        };
+        if (feedContainer) {
+            feedContainer.appendChild(instaFeed);
+        };
+
+    }, 5000);
+});
+
+
+requestIdleCallback(async () => {
+    const toastUtils = await import(('./utils/toastify/toast.js'));
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") { toastUtils.infoMsg("ברוכים הבאים לאלגרו !"); };
+});
