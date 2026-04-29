@@ -42,11 +42,21 @@ export function initGallery({ container, folderKey } = {}){
     const BATCH = 12;
 
     const loadMoreBtn = document.createElement("button");
-    loadMoreBtn.textContent = "להצגת תמונות נוספות";
+    loadMoreBtn.textContent = "תמונות נוספות";
     loadMoreBtn.className = "load-more-btn";
-    loadMoreBtn.style.display = "none";
     loadMoreBtn.setAttribute("aria-label", "טען עוד תמונות לגלריה");
-    container.after(loadMoreBtn);
+    
+    const loadAllBtn = document.createElement("button");
+    loadAllBtn.textContent = "כל התמונות";
+    loadAllBtn.className = "load-more-btn";
+    loadAllBtn.setAttribute("aria-label", "הצג את כל התמונות בגלריה");
+
+    const galleryBtns = document.createElement("div");
+    galleryBtns.className = "gallery-btns";
+    galleryBtns.style.display = "none";
+    galleryBtns.append(loadMoreBtn, loadAllBtn);
+    container.after(galleryBtns);
+
 
     function createCard(image, number){
         const card = document.createElement("div");
@@ -68,9 +78,10 @@ export function initGallery({ container, folderKey } = {}){
         return card;
     };
 
-    function loadChunk(){
-        if (currentIndex >= images.length) return;
-        const next = currentIndex + BATCH;
+    function loadChunk(all = false){
+        if (!all && currentIndex >= images.length) return;
+        let next = currentIndex + BATCH;
+        if (all === true) next = images.length;
         const slice = images.slice(currentIndex, next);
 
         slice.forEach((image, i) => {
@@ -81,9 +92,9 @@ export function initGallery({ container, folderKey } = {}){
         currentIndex = next;
 
         if(images.length > 24 && currentIndex >= 24 && currentIndex < images.length){
-            loadMoreBtn.style.display = "block";
+            galleryBtns.style.display = "flex";
         } else {
-            loadMoreBtn.style.display = "none";
+            galleryBtns.style.display = "none";
         };
 
         if(currentIndex >= 24){
@@ -97,7 +108,8 @@ export function initGallery({ container, folderKey } = {}){
     };
 
     if (images.length > 12) window.addEventListener("scroll", handleScroll);
-    loadMoreBtn.addEventListener("click", loadChunk);
+    loadMoreBtn.addEventListener('click', loadChunk);
+    loadAllBtn.addEventListener('click', () => {loadChunk(true)});
     loadChunk();
 
     function handleScroll(){

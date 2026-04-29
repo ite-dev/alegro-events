@@ -56,10 +56,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     blocks.forEach(block => observer.observe(block));
     blockReverse.forEach(block => observer.observe(block));
 
-    function handleScroll() {
+    function handleScroll(){
         const scrollButton = document.querySelector('.btn-up');
         if (!scrollButton) return;
-
         scrollButton.classList.toggle('show-btn', window.scrollY >= 200);
     };
     document.addEventListener('scroll', handleScroll, { passive: true });
@@ -106,7 +105,7 @@ window.addEventListener('load', () => {
             feedContainer.appendChild(instaFeed);
         };
 
-    }, 5000);
+    }, 1500);
 });
 
 
