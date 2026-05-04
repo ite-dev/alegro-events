@@ -1,5 +1,5 @@
 import Toastify from "toastify-js";
-import "./css/toast.css";
+
 
 const defaultOptions = {
     duration: 3000,

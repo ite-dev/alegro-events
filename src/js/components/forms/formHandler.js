@@ -1,7 +1,5 @@
 const API_URL = import.meta.env.VITE_API_URL;
-import './css/contact-form.css';
 import 'toastify-js/src/toastify.css';
-import '../../utils/toastify/css/toast.css';
 import { errorMsg, loadingMsg, successMsg } from '../../utils/toastify/toast';
 
 export function initForm(){

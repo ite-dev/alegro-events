@@ -6,7 +6,7 @@
     <!-- Home Page -->
     <url>
         <loc>https://www.alegro-events.co.il/</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/" />
@@ -16,7 +16,7 @@
     <!-- Weddings Page -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/weddings.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/weddings.html" />
@@ -26,7 +26,7 @@
     <!-- Bar Bat MitzvahPage -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/bar-bat-mitzvah.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/bar-bat-mitzvah.html" />
@@ -36,7 +36,7 @@
     <!-- Gallery Page -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/gallery.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/gallery.html" />
@@ -46,7 +46,7 @@
     <!-- Contact Page -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/contact-us.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/contact-us.html" />
@@ -56,7 +56,7 @@
     <!-- Culinary Page -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/culinary.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/culinary.html" />
@@ -66,7 +66,7 @@
     <!-- Events Page -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/events.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2026-05-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/events.html" />
