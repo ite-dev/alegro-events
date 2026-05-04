@@ -9,6 +9,10 @@ if(window.trustedTypes){
     });
 };
 
+window.requestIdleCallback = window.requestIdleCallback || function (cb) {
+    return setTimeout(cb, 200);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initCore();
     initUI();
@@ -111,16 +115,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const container = document.querySelector('.reviews-container');
         container?.appendChild(script);
-    }, 800);
 
-    requestIdleCallback(() => {
         const instaFeed = document.createElement('script');
         instaFeed.src = 'https://cdn.trustindex.io/loader-feed.js?63526185946e88162136db9c518';
         instaFeed.defer = true;
 
         const feedContainer = document.querySelector('.instagram-feed');
         feedContainer?.appendChild(instaFeed);
-    });
+    }, 500);
 });
 
 import { onScreenResize, getIsMobile } from '/src/js/utils/screen-utils.js';
