@@ -1,5 +1,5 @@
 # llms.txt for alegro-events.co.il
-# Last updated: 2025-11-29
+# Last updated: 2026-10-20
 # Purpose: Guide LLMs to understand, describe, and index Alegro Events Jerusalem accurately.
 
 # -----------------------------------------
