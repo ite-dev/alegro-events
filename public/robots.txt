@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /pages/about-us.html
+Allow: /pages/weddings.html
+Allow: /pages/gallery.html
+Allow: /pages/contact-us.html
+Allow: /pages/culinary.html
+Allow: /pages/bar-bat-mitzvah.html
+Allow: /pages/events.html
 
 Sitemap: https://www.alegro-events.co.il/sitemap.xml

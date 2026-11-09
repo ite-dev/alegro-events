@@ -1,5 +1,5 @@
 # llms.txt for alegro-events.co.il
-# Last updated: 2026-10-20
+# Last updated: 2026-11-09
 # Purpose: Guide LLMs to understand, describe, and index Alegro Events Jerusalem accurately.
 
 # -----------------------------------------
@@ -67,6 +67,7 @@ Hall-Capacity: "approx. 250-400 guests (main hall)"
 # PRIORITY CONTENT PAGES
 # -----------------------------------------
 Priority-Content:
+  /pages/about-us/
   /pages/weddings/
   /pages/gallery/
   /pages/contact-us/
@@ -81,6 +82,7 @@ Priority-Content:
 # -----------------------------------------
 Page-Definitions:
   /: "Homepage for Alegro Events Jerusalem — overview of venue, event types (weddings, bar/bat-mitzvah, henna, corporate & private events), gallery highlights, menus, and general service overview. Hebrew keywords: אירועים בירושלים, אולם אירועים, חתונות, קייטרינג כשר."
+  /pages/about-us/: "Overview of Alegro Events Jerusalem — venue story, hospitality philosophy, event types, personalized planning, and the warm service approach behind every celebration. Hebrew: אודות, עלינו, אולם אירועים ירושלים."
   /pages/weddings/: "Detailed information for weddings: hall design, seating & capacity, catering options and menu, event packages, decoration styles, photo gallery, and booking info. Hebrew: חתונות, אולם אירועים בירושלים, חתונה."
   /pages/gallery/: "Photo gallery showcasing different events — wedding setups, henna nights, bar/bat-mitzvah decorations, catering dishes, hall layout, lighting and ambiance examples."
   /pages/contact-us/: "Contact page including contact form, phone, email, address, WhatsApp link, directions and booking inquiries. Hebrew: יצירת קשר, אולם אירועים ירושלים."

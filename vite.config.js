@@ -20,6 +20,7 @@ export default defineConfig({
                 barbatmitzvah: "pages/bar-bat-mitzvah.html",
                 culinary: "pages/culinary.html",
                 contactUs: "pages/contact-us.html",
+                aboutUs: "pages/about-us.html",
                 "404": "404.html",
             },
             output: {

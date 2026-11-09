@@ -43,6 +43,16 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alegro-events.co.il/pages/gallery.html" />
     </url>
 
+    <!-- About Us Page -->
+    <url>
+        <loc>https://www.alegro-events.co.il/pages/about-us.html</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="he" href="https://www.alegro-events.co.il/pages/about-us.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alegro-events.co.il/pages/about-us.html" />
+    </url>
+
     <!-- Contact Page -->
     <url>
         <loc>https://www.alegro-events.co.il/pages/contact-us.html</loc>
